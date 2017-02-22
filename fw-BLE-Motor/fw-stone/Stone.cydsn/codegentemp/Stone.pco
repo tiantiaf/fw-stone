@@ -1,0 +1,34 @@
+# Stone
+# 2017-02-22 18:13:58Z
+
+# IO_6@[IOP=(0)][IoId=(6)] is reserved: SWDDebugEnabled
+dont_use_io iocell 0 6
+# IO_7@[IOP=(0)][IoId=(7)] is reserved: SWDDebugEnabled
+dont_use_io iocell 0 7
+set_location "ClockGenBlock" m0s8clockgenblockcell -1 -1 0
+set_location "ClockBlock" m0s8clockblockcell -1 -1 0
+set_io "LED(0)" iocell 1 2
+set_io "Motor(0)" iocell 1 3
+set_location "ClockBlock_LFCLK__SYNC_1" 0 1 5 1
+set_location "\Stone_PWM:PWMUDB:status_2\" 1 1 0 1
+set_location "\Stone_Timer:TimerUDB:status_tc\" 0 0 1 0
+set_location "\BLE_STONE:cy_m0s8_ble\" p4blecell -1 -1 0
+set_location "\BLE_STONE:bless_isr\" interrupt -1 -1 12
+set_location "\Stone_PWM:PWMUDB:genblk1:ctrlreg\" 1 1 6
+set_location "\Stone_PWM:PWMUDB:genblk8:stsreg\" 1 1 4
+set_location "\Stone_PWM:PWMUDB:sP16:pwmdp:u0\" 0 1 2
+set_location "\Stone_PWM:PWMUDB:sP16:pwmdp:u1\" 1 1 2
+set_location "ClockBlock_LFCLK__SYNC" 0 1 5 0
+set_location "trigger_isr" interrupt -1 -1 3
+set_location "\Stone_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\" 1 0 6
+set_location "\Stone_Timer:TimerUDB:rstSts:stsreg\" 0 0 4
+set_location "\Stone_Timer:TimerUDB:sT16:timerdp:u0\" 1 0 2
+set_location "\Stone_Timer:TimerUDB:sT16:timerdp:u1\" 0 0 2
+set_location "ms_isr" interrupt -1 -1 1
+set_location "tc_isr" interrupt -1 -1 2
+set_location "\Stone_PWM:PWMUDB:runmode_enable\" 1 1 0 0
+set_location "\Stone_PWM:PWMUDB:prevCompare1\" 1 1 1 0
+set_location "\Stone_PWM:PWMUDB:status_0\" 1 1 1 1
+set_location "Net_255" 1 1 0 3
+set_location "Net_667" 0 1 0 1
+set_location "Net_165" 0 0 1 1

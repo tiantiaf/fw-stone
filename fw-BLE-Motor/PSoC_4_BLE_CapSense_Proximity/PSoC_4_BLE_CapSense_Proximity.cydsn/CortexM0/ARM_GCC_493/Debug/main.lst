@@ -1,0 +1,1686 @@
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"main.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.global	initializeCapSenseBaseline
+  18              		.data
+  19              		.type	initializeCapSenseBaseline, %object
+  20              		.size	initializeCapSenseBaseline, 1
+  21              	initializeCapSenseBaseline:
+  22 0000 01       		.byte	1
+  23              		.section	.text.main,"ax",%progbits
+  24              		.align	2
+  25              		.global	main
+  26              		.code	16
+  27              		.thumb_func
+  28              		.type	main, %function
+  29              	main:
+  30              	.LFB37:
+  31              		.file 1 ".\\main.c"
+   1:.\main.c      **** /******************************************************************************
+   2:.\main.c      **** * Project Name		: PSoC_4_BLE_CapSense_Proximity
+   3:.\main.c      **** * File Name			: main.c
+   4:.\main.c      **** * Version 			: 1.0
+   5:.\main.c      **** * Device Used		: CY8C4247LQI-BL483
+   6:.\main.c      **** * Software Used		: PSoC Creator 3.1
+   7:.\main.c      **** * Compiler    		: ARM GCC 4.8.4, ARM RVDS Generic, ARM MDK Generic
+   8:.\main.c      **** * Related Hardware	: CY8CKIT-042-BLE Bluetooth Low Energy Pioneer Kit 
+   9:.\main.c      **** * Owner				: ROIT
+  10:.\main.c      **** *
+  11:.\main.c      **** ********************************************************************************
+  12:.\main.c      **** * Copyright (2014), Cypress Semiconductor Corporation. All Rights Reserved.
+  13:.\main.c      **** ********************************************************************************
+  14:.\main.c      **** * This software is owned by Cypress Semiconductor Corporation (Cypress)
+  15:.\main.c      **** * and is protected by and subject to worldwide patent protection (United
+  16:.\main.c      **** * States and foreign), United States copyright laws and international treaty
+  17:.\main.c      **** * provisions. Cypress hereby grants to licensee a personal, non-exclusive,
+  18:.\main.c      **** * non-transferable license to copy, use, modify, create derivative works of,
+  19:.\main.c      **** * and compile the Cypress Source Code and derivative works for the sole
+  20:.\main.c      **** * purpose of creating custom software in support of licensee product to be
+  21:.\main.c      **** * used only in conjunction with a Cypress integrated circuit as specified in
+  22:.\main.c      **** * the applicable agreement. Any reproduction, modification, translation,
+  23:.\main.c      **** * compilation, or representation of this software except as specified above 
+  24:.\main.c      **** * is prohibited without the express written permission of Cypress.
+  25:.\main.c      **** *
+  26:.\main.c      **** * Disclaimer: CYPRESS MAKES NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, WITH 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 2
+
+
+  27:.\main.c      **** * REGARD TO THIS MATERIAL, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+  28:.\main.c      **** * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  29:.\main.c      **** * Cypress reserves the right to make changes without further notice to the 
+  30:.\main.c      **** * materials described herein. Cypress does not assume any liability arising out 
+  31:.\main.c      **** * of the application or use of any product or circuit described herein. Cypress 
+  32:.\main.c      **** * does not authorize its products for use as critical components in life-support 
+  33:.\main.c      **** * systems where a malfunction or failure may reasonably be expected to result in 
+  34:.\main.c      **** * significant injury to the user. The inclusion of Cypress' product in a life-
+  35:.\main.c      **** * support systems application implies that the manufacturer assumes all risk of 
+  36:.\main.c      **** * such use and in doing so indemnifies Cypress against all charges. 
+  37:.\main.c      **** *
+  38:.\main.c      **** * Use of this Software may be limited by and subject to the applicable Cypress
+  39:.\main.c      **** * software license agreement. 
+  40:.\main.c      **** *******************************************************************************/
+  41:.\main.c      **** 
+  42:.\main.c      **** /******************************************************************************
+  43:.\main.c      **** *                           THEORY OF OPERATION
+  44:.\main.c      **** *******************************************************************************
+  45:.\main.c      **** * The project will show case the capability of PSoC 4 BLE to communicate with
+  46:.\main.c      **** * a BLE Central device. The data communicated is the CapSense proximity value,
+  47:.\main.c      **** * sent from PSoC 4 BLE over a custom service. This custom service allows
+  48:.\main.c      **** * notifications to be sent to central device after notifications are enabled.
+  49:.\main.c      **** * This project utilizes CapSense component to detect the change in capacitance
+  50:.\main.c      **** * of the proximity sensor and report this to central device over BLE.
+  51:.\main.c      **** * The BLE central device can be either BLE capable smartphone with associated 
+  52:.\main.c      **** * mobile application or CySmart PC tool.
+  53:.\main.c      **** * This project also inludes low power mode operation, idle for battery operated 
+  54:.\main.c      **** * devices. The project utlizes Deep Sleep feature of both BLESS and CPU to remain 
+  55:.\main.c      **** * in low power mode as much as possible, while maintaining the BLE connection and  
+  56:.\main.c      **** * data transfer. This allows the device to run on coin cell battery for long time.
+  57:.\main.c      **** *
+  58:.\main.c      **** * Note:
+  59:.\main.c      **** * The programming pins have been configured as GPIO, and not SWD. This is because 
+  60:.\main.c      **** * when programming pins are configured for SWD, then the silicon consumes extra
+  61:.\main.c      **** * power through the pins. To prevent the leakage of power, the pins have been set 
+  62:.\main.c      **** * to GPIO. With this setting, the kit can still be acquired by PSoC Creator or
+  63:.\main.c      **** * PSoC Programmer software tools for programming, but the project cannot be 
+  64:.\main.c      **** * externally debugged. To re-enable debugging, go to PSoC_4_BLE_CapSense.cydwr from
+  65:.\main.c      **** * Workspace Explorer, go to Systems tab, and set the Debug Select option to 'SWD'.
+  66:.\main.c      **** * Build and program this project to enable external Debugging.
+  67:.\main.c      **** *
+  68:.\main.c      **** * Refer to BLE Pioneer Kit user guide for details.
+  69:.\main.c      **** *******************************************************************************
+  70:.\main.c      **** * Hardware connection required for testing -
+  71:.\main.c      **** * PROX pin 		- P2[0] (requires an external wire-loop connection to PROX sensor)
+  72:.\main.c      **** * Cmod pin		- P4[0] (hard-wired in the PSoC 4 BLE Module)
+  73:.\main.c      **** * User Button	- P2[7] (hard-wired on BLE Pioneer Kit)
+  74:.\main.c      **** * Status LED	- P3[7] (hard-wired on BLE Pioneer Kit)
+  75:.\main.c      **** ******************************************************************************/
+  76:.\main.c      **** #include <main.h>
+  77:.\main.c      **** 
+  78:.\main.c      **** /*'deviceConnected' flag is used by application to know whether a Central device  
+  79:.\main.c      **** * has been connected. This is updated in BLE event callback */
+  80:.\main.c      **** extern uint8 deviceConnected;
+  81:.\main.c      **** 
+  82:.\main.c      **** /*'startNotification' flag is set when the central device writes to CCC (Client  
+  83:.\main.c      **** * Characteristic Configuration) of the CapSense proximity characteristic to 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 3
+
+
+  84:.\main.c      **** * enable notifications */
+  85:.\main.c      **** extern uint8 startNotification;	
+  86:.\main.c      **** 
+  87:.\main.c      **** /* 'restartAdvertisement' flag is used to restart advertisement */
+  88:.\main.c      **** extern uint8 restartAdvertisement;
+  89:.\main.c      **** 
+  90:.\main.c      **** /* 'initializeCapSenseBaseline' flag is used to call the function once that initializes 
+  91:.\main.c      **** * all CapSense baseline. The baseline is initialized when the first advertisement 
+  92:.\main.c      **** * is started. This is done so that any external disturbance while powering the kit does 
+  93:.\main.c      **** * not infliuence the baseline value, that may cause wrong readings. */
+  94:.\main.c      **** uint8 initializeCapSenseBaseline = TRUE;
+  95:.\main.c      **** 
+  96:.\main.c      **** /*******************************************************************************
+  97:.\main.c      **** * Function Name: main
+  98:.\main.c      **** ********************************************************************************
+  99:.\main.c      **** * Summary:
+ 100:.\main.c      **** *        System entrance point. This calls the BLE routine functions as well as
+ 101:.\main.c      **** * function for handling CapSense Proximity changes
+ 102:.\main.c      **** *
+ 103:.\main.c      **** * Parameters:
+ 104:.\main.c      **** *  void
+ 105:.\main.c      **** *
+ 106:.\main.c      **** * Return:
+ 107:.\main.c      **** *  int
+ 108:.\main.c      **** *
+ 109:.\main.c      **** 
+ 110:.\main.c      **** *******************************************************************************/
+ 111:.\main.c      **** int main()
+ 112:.\main.c      **** {
+  32              		.loc 1 112 0
+  33              		.cfi_startproc
+  34 0000 80B5     		push	{r7, lr}
+  35              		.cfi_def_cfa_offset 8
+  36              		.cfi_offset 7, -8
+  37              		.cfi_offset 14, -4
+  38 0002 00AF     		add	r7, sp, #0
+  39              		.cfi_def_cfa_register 7
+ 113:.\main.c      ****     /* This function will initialize the system resources such as BLE and CapSense */
+ 114:.\main.c      **** 	InitializeSystem();
+  40              		.loc 1 114 0
+  41 0004 FFF7FEFF 		bl	InitializeSystem
+  42              	.L5:
+ 115:.\main.c      **** 	
+ 116:.\main.c      ****     for(;;)
+ 117:.\main.c      ****     {
+ 118:.\main.c      **** 		/*Process Event callback to handle BLE events. The events generated and 
+ 119:.\main.c      **** 		* used for this application are inside the 'CustomEventHandler' routine*/
+ 120:.\main.c      **** 		CyBle_ProcessEvents();
+  43              		.loc 1 120 0
+  44 0008 FFF7FEFF 		bl	CyBle_ProcessEvents
+ 121:.\main.c      **** 		
+ 122:.\main.c      **** 		/* Function to handle LED status depending on BLE state */
+ 123:.\main.c      **** 		HandleStatusLED();
+  45              		.loc 1 123 0
+  46 000c FFF7FEFF 		bl	HandleStatusLED
+ 124:.\main.c      **** 		
+ 125:.\main.c      **** 		/* Handle proximity data and CCCD value update only if BLE device is connected */
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 4
+
+
+ 126:.\main.c      **** 		if(TRUE == deviceConnected) 
+  47              		.loc 1 126 0
+  48 0010 104B     		ldr	r3, .L6
+  49 0012 1B78     		ldrb	r3, [r3]
+  50 0014 012B     		cmp	r3, #1
+  51 0016 12D1     		bne	.L2
+ 127:.\main.c      **** 		{	
+ 128:.\main.c      **** 			/* When the Client Characteristic Configuration descriptor (CCCD) is written
+ 129:.\main.c      **** 			* by Central device for enabling/disabling notifications, then the same
+ 130:.\main.c      **** 			* descriptor value has to be explicitly updated in application so that
+ 131:.\main.c      **** 			* it reflects the correct value when the descriptor is read */
+ 132:.\main.c      **** 			UpdateNotificationCCCD();
+  52              		.loc 1 132 0
+  53 0018 FFF7FEFF 		bl	UpdateNotificationCCCD
+ 133:.\main.c      **** 			
+ 134:.\main.c      **** 			/* If CapSense Initialize Baseline API has not been called yet, call the
+ 135:.\main.c      **** 			* API and reset the flag. */
+ 136:.\main.c      **** 			if(initializeCapSenseBaseline)
+  54              		.loc 1 136 0
+  55 001c 0E4B     		ldr	r3, .L6+4
+  56 001e 1B78     		ldrb	r3, [r3]
+  57 0020 002B     		cmp	r3, #0
+  58 0022 04D0     		beq	.L3
+ 137:.\main.c      **** 			{
+ 138:.\main.c      **** 				/* Reset 'initializeCapSenseBaseline' flag*/
+ 139:.\main.c      **** 				initializeCapSenseBaseline = FALSE;
+  59              		.loc 1 139 0
+  60 0024 0C4B     		ldr	r3, .L6+4
+  61 0026 0022     		mov	r2, #0
+  62 0028 1A70     		strb	r2, [r3]
+ 140:.\main.c      **** 				
+ 141:.\main.c      **** 				/* Initialize all CapSense Baseline */
+ 142:.\main.c      **** 				CapSense_InitializeAllBaselines();
+  63              		.loc 1 142 0
+  64 002a FFF7FEFF 		bl	CapSense_InitializeAllBaselines
+  65              	.L3:
+ 143:.\main.c      **** 			}
+ 144:.\main.c      **** 			
+ 145:.\main.c      **** 			/* Send proximity data when notifications are enabled */
+ 146:.\main.c      **** 			if(startNotification & CCCD_NTF_BIT_MASK)
+  66              		.loc 1 146 0
+  67 002e 0B4B     		ldr	r3, .L6+8
+  68 0030 1B78     		ldrb	r3, [r3]
+  69 0032 1A1C     		mov	r2, r3
+  70 0034 0123     		mov	r3, #1
+  71 0036 1340     		and	r3, r2
+  72 0038 01D0     		beq	.L2
+ 147:.\main.c      **** 			{
+ 148:.\main.c      **** 				/*Check for CapSense proximity change and report to BLE central device*/
+ 149:.\main.c      **** 				HandleCapSenseProximity();
+  73              		.loc 1 149 0
+  74 003a FFF7FEFF 		bl	HandleCapSenseProximity
+  75              	.L2:
+ 150:.\main.c      **** 			}
+ 151:.\main.c      **** 		}
+ 152:.\main.c      **** 
+ 153:.\main.c      **** 		if(restartAdvertisement)
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 5
+
+
+  76              		.loc 1 153 0
+  77 003e 084B     		ldr	r3, .L6+12
+  78 0040 1B78     		ldrb	r3, [r3]
+  79 0042 002B     		cmp	r3, #0
+  80 0044 05D0     		beq	.L4
+ 154:.\main.c      **** 		{
+ 155:.\main.c      **** 			/* Reset 'restartAdvertisement' flag*/
+ 156:.\main.c      **** 			restartAdvertisement = FALSE;
+  81              		.loc 1 156 0
+  82 0046 064B     		ldr	r3, .L6+12
+  83 0048 0022     		mov	r2, #0
+  84 004a 1A70     		strb	r2, [r3]
+ 157:.\main.c      **** 			
+ 158:.\main.c      **** 			/* Start Advertisement and enter Discoverable mode*/
+ 159:.\main.c      **** 			CyBle_GappStartAdvertisement(CYBLE_ADVERTISING_FAST);	
+  85              		.loc 1 159 0
+  86 004c 0020     		mov	r0, #0
+  87 004e FFF7FEFF 		bl	CyBle_GappStartAdvertisement
+  88              	.L4:
+ 160:.\main.c      **** 		}
+ 161:.\main.c      ****     }	/* This is end of for(;;) */
+  89              		.loc 1 161 0
+  90 0052 D9E7     		b	.L5
+  91              	.L7:
+  92              		.align	2
+  93              	.L6:
+  94 0054 00000000 		.word	deviceConnected
+  95 0058 00000000 		.word	initializeCapSenseBaseline
+  96 005c 00000000 		.word	startNotification
+  97 0060 00000000 		.word	restartAdvertisement
+  98              		.cfi_endproc
+  99              	.LFE37:
+ 100              		.size	main, .-main
+ 101              		.section	.text.InitializeSystem,"ax",%progbits
+ 102              		.align	2
+ 103              		.global	InitializeSystem
+ 104              		.code	16
+ 105              		.thumb_func
+ 106              		.type	InitializeSystem, %function
+ 107              	InitializeSystem:
+ 108              	.LFB38:
+ 162:.\main.c      **** }
+ 163:.\main.c      **** 
+ 164:.\main.c      **** /*******************************************************************************
+ 165:.\main.c      **** * Function Name: InitializeSystem
+ 166:.\main.c      **** ********************************************************************************
+ 167:.\main.c      **** * Summary:
+ 168:.\main.c      **** *        Starts the components and initializes CapSense baselines
+ 169:.\main.c      **** *
+ 170:.\main.c      **** * Parameters:
+ 171:.\main.c      **** *  void
+ 172:.\main.c      **** *
+ 173:.\main.c      **** * Return:
+ 174:.\main.c      **** *  void
+ 175:.\main.c      **** *
+ 176:.\main.c      **** 
+ 177:.\main.c      **** *******************************************************************************/
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 6
+
+
+ 178:.\main.c      **** void InitializeSystem(void)
+ 179:.\main.c      **** {
+ 109              		.loc 1 179 0
+ 110              		.cfi_startproc
+ 111 0000 80B5     		push	{r7, lr}
+ 112              		.cfi_def_cfa_offset 8
+ 113              		.cfi_offset 7, -8
+ 114              		.cfi_offset 14, -4
+ 115 0002 00AF     		add	r7, sp, #0
+ 116              		.cfi_def_cfa_register 7
+ 180:.\main.c      **** 	/* Enable global interrupt mask */
+ 181:.\main.c      **** 	CyGlobalIntEnable;
+ 117              		.loc 1 181 0
+ 118              	@ 181 ".\main.c" 1
+ 119 0004 62B6     		CPSIE   i
+ 120              	@ 0 "" 2
+ 182:.\main.c      **** 
+ 183:.\main.c      **** 	/* Start BLE component and register the CustomEventHandler function. This 
+ 184:.\main.c      **** 	* function exposes the events from BLE component for application use */
+ 185:.\main.c      **** 	CyBle_Start(CustomEventHandler);					
+ 121              		.loc 1 185 0
+ 122              		.code	16
+ 123 0006 074B     		ldr	r3, .L9
+ 124 0008 181C     		mov	r0, r3
+ 125 000a FFF7FEFF 		bl	CyBle_Start
+ 186:.\main.c      **** 	
+ 187:.\main.c      **** 	/* Set drive mode of the status LED pin to Strong*/
+ 188:.\main.c      **** 	Status_LED_SetDriveMode(Status_LED_DM_STRONG);	
+ 126              		.loc 1 188 0
+ 127 000e 0620     		mov	r0, #6
+ 128 0010 FFF7FEFF 		bl	Status_LED_SetDriveMode
+ 189:.\main.c      **** 	
+ 190:.\main.c      **** 	#ifdef CAPSENSE_ENABLED
+ 191:.\main.c      **** 	/* Enable the proximity widget explicitly and start CapSense component. 
+ 192:.\main.c      **** 	* Initialization of the baseline is done when the first connection 
+ 193:.\main.c      **** 	* happens  */
+ 194:.\main.c      **** 	CapSense_EnableWidget(CapSense_PROXIMITYSENSOR0__PROX);
+ 129              		.loc 1 194 0
+ 130 0014 0020     		mov	r0, #0
+ 131 0016 FFF7FEFF 		bl	CapSense_EnableWidget
+ 195:.\main.c      **** 	CapSense_Start();
+ 132              		.loc 1 195 0
+ 133 001a FFF7FEFF 		bl	CapSense_Start
+ 196:.\main.c      **** 	#endif
+ 197:.\main.c      **** 		
+ 198:.\main.c      **** }
+ 134              		.loc 1 198 0
+ 135 001e BD46     		mov	sp, r7
+ 136              		@ sp needed
+ 137 0020 80BD     		pop	{r7, pc}
+ 138              	.L10:
+ 139 0022 C046     		.align	2
+ 140              	.L9:
+ 141 0024 00000000 		.word	CustomEventHandler
+ 142              		.cfi_endproc
+ 143              	.LFE38:
+ 144              		.size	InitializeSystem, .-InitializeSystem
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 7
+
+
+ 145              		.section	.text.HandleCapSenseProximity,"ax",%progbits
+ 146              		.align	2
+ 147              		.global	HandleCapSenseProximity
+ 148              		.code	16
+ 149              		.thumb_func
+ 150              		.type	HandleCapSenseProximity, %function
+ 151              	HandleCapSenseProximity:
+ 152              	.LFB39:
+ 199:.\main.c      **** 
+ 200:.\main.c      **** /*******************************************************************************
+ 201:.\main.c      **** * Function Name: HandleCapSenseProximity
+ 202:.\main.c      **** ********************************************************************************
+ 203:.\main.c      **** * Summary:
+ 204:.\main.c      **** *       Read the proximity data from the sensor and update the BLE
+ 205:.\main.c      **** *		custom notification value.
+ 206:.\main.c      **** *
+ 207:.\main.c      **** * Parameters:
+ 208:.\main.c      **** *  void
+ 209:.\main.c      **** *
+ 210:.\main.c      **** * Return:
+ 211:.\main.c      **** *  void
+ 212:.\main.c      **** *
+ 213:.\main.c      **** *******************************************************************************/
+ 214:.\main.c      **** void HandleCapSenseProximity(void)
+ 215:.\main.c      **** {
+ 153              		.loc 1 215 0
+ 154              		.cfi_startproc
+ 155 0000 90B5     		push	{r4, r7, lr}
+ 156              		.cfi_def_cfa_offset 12
+ 157              		.cfi_offset 4, -12
+ 158              		.cfi_offset 7, -8
+ 159              		.cfi_offset 14, -4
+ 160 0002 83B0     		sub	sp, sp, #12
+ 161              		.cfi_def_cfa_offset 24
+ 162 0004 00AF     		add	r7, sp, #0
+ 163              		.cfi_def_cfa_register 7
+ 216:.\main.c      **** 	#ifdef CAPSENSE_ENABLED
+ 217:.\main.c      **** 	/* Static variable used as counter for reading the new proximity value */
+ 218:.\main.c      **** 	static uint16 proxCounter = TRUE;			
+ 219:.\main.c      **** 				
+ 220:.\main.c      **** 	/* 'proximityValue' stores the proximity value read from CapSense component */
+ 221:.\main.c      **** 	uint8 proximityValue;	
+ 222:.\main.c      **** 		
+ 223:.\main.c      **** 	/* Check if proxCounter has reached its counting value */
+ 224:.\main.c      **** 	if(FALSE == (--proxCounter))			
+ 164              		.loc 1 224 0
+ 165 0006 124B     		ldr	r3, .L14
+ 166 0008 1B88     		ldrh	r3, [r3]
+ 167 000a 013B     		sub	r3, r3, #1
+ 168 000c 9AB2     		uxth	r2, r3
+ 169 000e 104B     		ldr	r3, .L14
+ 170 0010 1A80     		strh	r2, [r3]
+ 171 0012 0F4B     		ldr	r3, .L14
+ 172 0014 1B88     		ldrh	r3, [r3]
+ 173 0016 002B     		cmp	r3, #0
+ 174 0018 17D1     		bne	.L11
+ 225:.\main.c      **** 	{
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 8
+
+
+ 226:.\main.c      **** 		/* Set 'proxCounter' to the PROX_COUNTER_VALUE. This counter prevents sending 
+ 227:.\main.c      **** 		   of large number of CapSense proximity data to BLE Central device */
+ 228:.\main.c      **** 		proxCounter = PROX_COUNTER_VALUE;
+ 175              		.loc 1 228 0
+ 176 001a 0D4B     		ldr	r3, .L14
+ 177 001c 0522     		mov	r2, #5
+ 178 001e 1A80     		strh	r2, [r3]
+ 229:.\main.c      **** 
+ 230:.\main.c      **** 		/* Scan the Proximity Widget */
+ 231:.\main.c      **** 		CapSense_ScanWidget(CapSense_PROXIMITYSENSOR0__PROX);				
+ 179              		.loc 1 231 0
+ 180 0020 0020     		mov	r0, #0
+ 181 0022 FFF7FEFF 		bl	CapSense_ScanWidget
+ 232:.\main.c      **** 		
+ 233:.\main.c      **** 		/* Wait for CapSense scanning to be complete. This could take about 5 ms */
+ 234:.\main.c      **** 		while(CapSense_IsBusy())
+ 182              		.loc 1 234 0
+ 183 0026 C046     		mov	r8, r8
+ 184              	.L13:
+ 185              		.loc 1 234 0 is_stmt 0 discriminator 1
+ 186 0028 FFF7FEFF 		bl	CapSense_IsBusy
+ 187 002c 031E     		sub	r3, r0, #0
+ 188 002e FBD1     		bne	.L13
+ 235:.\main.c      **** 		{
+ 236:.\main.c      **** 		}
+ 237:.\main.c      **** 		
+ 238:.\main.c      **** 		/* Update CapSense Baseline */
+ 239:.\main.c      **** 		CapSense_UpdateEnabledBaselines();			
+ 189              		.loc 1 239 0 is_stmt 1
+ 190 0030 FFF7FEFF 		bl	CapSense_UpdateEnabledBaselines
+ 240:.\main.c      **** 
+ 241:.\main.c      **** 		/* Get the Diffcount between proximity raw data and baseline */
+ 242:.\main.c      **** 		proximityValue = CapSense_GetDiffCountData(CapSense_PROXIMITYSENSOR0__PROX);
+ 191              		.loc 1 242 0
+ 192 0034 FC1D     		add	r4, r7, #7
+ 193 0036 0020     		mov	r0, #0
+ 194 0038 FFF7FEFF 		bl	CapSense_GetDiffCountData
+ 195 003c 031C     		mov	r3, r0
+ 196 003e 2370     		strb	r3, [r4]
+ 243:.\main.c      **** 		
+ 244:.\main.c      **** 		/* Send the proximity data to BLE central device by notifications*/
+ 245:.\main.c      **** 		SendDataOverCapSenseNotification(proximityValue);
+ 197              		.loc 1 245 0
+ 198 0040 FB1D     		add	r3, r7, #7
+ 199 0042 1B78     		ldrb	r3, [r3]
+ 200 0044 181C     		mov	r0, r3
+ 201 0046 FFF7FEFF 		bl	SendDataOverCapSenseNotification
+ 202              	.L11:
+ 246:.\main.c      **** 			
+ 247:.\main.c      **** 	}
+ 248:.\main.c      **** 	#endif
+ 249:.\main.c      **** }
+ 203              		.loc 1 249 0
+ 204 004a BD46     		mov	sp, r7
+ 205 004c 03B0     		add	sp, sp, #12
+ 206              		@ sp needed
+ 207 004e 90BD     		pop	{r4, r7, pc}
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 9
+
+
+ 208              	.L15:
+ 209              		.align	2
+ 210              	.L14:
+ 211 0050 02000000 		.word	proxCounter.7056
+ 212              		.cfi_endproc
+ 213              	.LFE39:
+ 214              		.size	HandleCapSenseProximity, .-HandleCapSenseProximity
+ 215              		.data
+ 216 0001 00       		.align	1
+ 217              		.type	proxCounter.7056, %object
+ 218              		.size	proxCounter.7056, 2
+ 219              	proxCounter.7056:
+ 220 0002 0100     		.short	1
+ 221              		.text
+ 222              	.Letext0:
+ 223              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 224              		.file 3 "Generated_Source\\PSoC4/BLE_Stack.h"
+ 225              		.section	.debug_info,"",%progbits
+ 226              	.Ldebug_info0:
+ 227 0000 E6020000 		.4byte	0x2e6
+ 228 0004 0400     		.2byte	0x4
+ 229 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 230 000a 04       		.byte	0x4
+ 231 000b 01       		.uleb128 0x1
+ 232 000c D5060000 		.4byte	.LASF89
+ 233 0010 01       		.byte	0x1
+ 234 0011 81010000 		.4byte	.LASF90
+ 235 0015 BF030000 		.4byte	.LASF91
+ 236 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 237 001d 00000000 		.4byte	0
+ 238 0021 00000000 		.4byte	.Ldebug_line0
+ 239 0025 02       		.uleb128 0x2
+ 240 0026 01       		.byte	0x1
+ 241 0027 06       		.byte	0x6
+ 242 0028 32050000 		.4byte	.LASF0
+ 243 002c 02       		.uleb128 0x2
+ 244 002d 01       		.byte	0x1
+ 245 002e 08       		.byte	0x8
+ 246 002f C8040000 		.4byte	.LASF1
+ 247 0033 02       		.uleb128 0x2
+ 248 0034 02       		.byte	0x2
+ 249 0035 05       		.byte	0x5
+ 250 0036 C0000000 		.4byte	.LASF2
+ 251 003a 02       		.uleb128 0x2
+ 252 003b 02       		.byte	0x2
+ 253 003c 07       		.byte	0x7
+ 254 003d 4D060000 		.4byte	.LASF3
+ 255 0041 02       		.uleb128 0x2
+ 256 0042 04       		.byte	0x4
+ 257 0043 05       		.byte	0x5
+ 258 0044 EB020000 		.4byte	.LASF4
+ 259 0048 02       		.uleb128 0x2
+ 260 0049 04       		.byte	0x4
+ 261 004a 07       		.byte	0x7
+ 262 004b C3050000 		.4byte	.LASF5
+ 263 004f 02       		.uleb128 0x2
+ 264 0050 08       		.byte	0x8
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 10
+
+
+ 265 0051 05       		.byte	0x5
+ 266 0052 46080000 		.4byte	.LASF6
+ 267 0056 02       		.uleb128 0x2
+ 268 0057 08       		.byte	0x8
+ 269 0058 07       		.byte	0x7
+ 270 0059 D4020000 		.4byte	.LASF7
+ 271 005d 03       		.uleb128 0x3
+ 272 005e 04       		.byte	0x4
+ 273 005f 05       		.byte	0x5
+ 274 0060 696E7400 		.ascii	"int\000"
+ 275 0064 02       		.uleb128 0x2
+ 276 0065 04       		.byte	0x4
+ 277 0066 07       		.byte	0x7
+ 278 0067 9B050000 		.4byte	.LASF8
+ 279 006b 04       		.uleb128 0x4
+ 280 006c 90040000 		.4byte	.LASF9
+ 281 0070 02       		.byte	0x2
+ 282 0071 9801     		.2byte	0x198
+ 283 0073 2C000000 		.4byte	0x2c
+ 284 0077 04       		.uleb128 0x4
+ 285 0078 7A010000 		.4byte	.LASF10
+ 286 007c 02       		.byte	0x2
+ 287 007d 9901     		.2byte	0x199
+ 288 007f 3A000000 		.4byte	0x3a
+ 289 0083 02       		.uleb128 0x2
+ 290 0084 04       		.byte	0x4
+ 291 0085 04       		.byte	0x4
+ 292 0086 24000000 		.4byte	.LASF11
+ 293 008a 02       		.uleb128 0x2
+ 294 008b 08       		.byte	0x8
+ 295 008c 04       		.byte	0x4
+ 296 008d 1C080000 		.4byte	.LASF12
+ 297 0091 02       		.uleb128 0x2
+ 298 0092 01       		.byte	0x1
+ 299 0093 08       		.byte	0x8
+ 300 0094 D0060000 		.4byte	.LASF13
+ 301 0098 02       		.uleb128 0x2
+ 302 0099 04       		.byte	0x4
+ 303 009a 07       		.byte	0x7
+ 304 009b E4000000 		.4byte	.LASF14
+ 305 009f 05       		.uleb128 0x5
+ 306 00a0 01       		.byte	0x1
+ 307 00a1 03       		.byte	0x3
+ 308 00a2 4201     		.2byte	0x142
+ 309 00a4 5C020000 		.4byte	0x25c
+ 310 00a8 06       		.uleb128 0x6
+ 311 00a9 00020000 		.4byte	.LASF15
+ 312 00ad 00       		.sleb128 0
+ 313 00ae 06       		.uleb128 0x6
+ 314 00af 49010000 		.4byte	.LASF16
+ 315 00b3 01       		.sleb128 1
+ 316 00b4 06       		.uleb128 0x6
+ 317 00b5 75090000 		.4byte	.LASF17
+ 318 00b9 02       		.sleb128 2
+ 319 00ba 06       		.uleb128 0x6
+ 320 00bb 6C080000 		.4byte	.LASF18
+ 321 00bf 03       		.sleb128 3
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 11
+
+
+ 322 00c0 06       		.uleb128 0x6
+ 323 00c1 13010000 		.4byte	.LASF19
+ 324 00c5 04       		.sleb128 4
+ 325 00c6 06       		.uleb128 0x6
+ 326 00c7 7D030000 		.4byte	.LASF20
+ 327 00cb 05       		.sleb128 5
+ 328 00cc 06       		.uleb128 0x6
+ 329 00cd 59000000 		.4byte	.LASF21
+ 330 00d1 06       		.sleb128 6
+ 331 00d2 06       		.uleb128 0x6
+ 332 00d3 CA080000 		.4byte	.LASF22
+ 333 00d7 20       		.sleb128 32
+ 334 00d8 06       		.uleb128 0x6
+ 335 00d9 D5050000 		.4byte	.LASF23
+ 336 00dd 21       		.sleb128 33
+ 337 00de 06       		.uleb128 0x6
+ 338 00df 00000000 		.4byte	.LASF24
+ 339 00e3 22       		.sleb128 34
+ 340 00e4 06       		.uleb128 0x6
+ 341 00e5 99030000 		.4byte	.LASF25
+ 342 00e9 23       		.sleb128 35
+ 343 00ea 06       		.uleb128 0x6
+ 344 00eb 7F050000 		.4byte	.LASF26
+ 345 00ef 24       		.sleb128 36
+ 346 00f0 06       		.uleb128 0x6
+ 347 00f1 CA000000 		.4byte	.LASF27
+ 348 00f5 25       		.sleb128 37
+ 349 00f6 06       		.uleb128 0x6
+ 350 00f7 34030000 		.4byte	.LASF28
+ 351 00fb 26       		.sleb128 38
+ 352 00fc 06       		.uleb128 0x6
+ 353 00fd 15030000 		.4byte	.LASF29
+ 354 0101 27       		.sleb128 39
+ 355 0102 06       		.uleb128 0x6
+ 356 0103 FF090000 		.4byte	.LASF30
+ 357 0107 28       		.sleb128 40
+ 358 0108 06       		.uleb128 0x6
+ 359 0109 0D060000 		.4byte	.LASF31
+ 360 010d 29       		.sleb128 41
+ 361 010e 06       		.uleb128 0x6
+ 362 010f 80060000 		.4byte	.LASF32
+ 363 0113 2A       		.sleb128 42
+ 364 0114 06       		.uleb128 0x6
+ 365 0115 BC070000 		.4byte	.LASF33
+ 366 0119 2B       		.sleb128 43
+ 367 011a 06       		.uleb128 0x6
+ 368 011b 9C010000 		.4byte	.LASF34
+ 369 011f 2C       		.sleb128 44
+ 370 0120 06       		.uleb128 0x6
+ 371 0121 8A020000 		.4byte	.LASF35
+ 372 0125 2D       		.sleb128 45
+ 373 0126 06       		.uleb128 0x6
+ 374 0127 9C000000 		.4byte	.LASF36
+ 375 012b 2E       		.sleb128 46
+ 376 012c 06       		.uleb128 0x6
+ 377 012d 630A0000 		.4byte	.LASF37
+ 378 0131 2F       		.sleb128 47
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 12
+
+
+ 379 0132 06       		.uleb128 0x6
+ 380 0133 ED000000 		.4byte	.LASF38
+ 381 0137 30       		.sleb128 48
+ 382 0138 06       		.uleb128 0x6
+ 383 0139 6C040000 		.4byte	.LASF39
+ 384 013d 31       		.sleb128 49
+ 385 013e 06       		.uleb128 0x6
+ 386 013f B3020000 		.4byte	.LASF40
+ 387 0143 32       		.sleb128 50
+ 388 0144 06       		.uleb128 0x6
+ 389 0145 A9060000 		.4byte	.LASF41
+ 390 0149 33       		.sleb128 51
+ 391 014a 06       		.uleb128 0x6
+ 392 014b 72000000 		.4byte	.LASF42
+ 393 014f C000     		.sleb128 64
+ 394 0151 06       		.uleb128 0x6
+ 395 0152 A8050000 		.4byte	.LASF43
+ 396 0156 C100     		.sleb128 65
+ 397 0158 06       		.uleb128 0x6
+ 398 0159 450A0000 		.4byte	.LASF44
+ 399 015d C200     		.sleb128 66
+ 400 015f 06       		.uleb128 0x6
+ 401 0160 5C010000 		.4byte	.LASF45
+ 402 0164 C300     		.sleb128 67
+ 403 0166 06       		.uleb128 0x6
+ 404 0167 33090000 		.4byte	.LASF46
+ 405 016b C400     		.sleb128 68
+ 406 016d 06       		.uleb128 0x6
+ 407 016e EE080000 		.4byte	.LASF47
+ 408 0172 C500     		.sleb128 69
+ 409 0174 06       		.uleb128 0x6
+ 410 0175 28010000 		.4byte	.LASF48
+ 411 0179 C600     		.sleb128 70
+ 412 017b 06       		.uleb128 0x6
+ 413 017c 14050000 		.4byte	.LASF49
+ 414 0180 C700     		.sleb128 71
+ 415 0182 06       		.uleb128 0x6
+ 416 0183 58050000 		.4byte	.LASF50
+ 417 0187 C800     		.sleb128 72
+ 418 0189 06       		.uleb128 0x6
+ 419 018a 71020000 		.4byte	.LASF51
+ 420 018e C900     		.sleb128 73
+ 421 0190 06       		.uleb128 0x6
+ 422 0191 7F070000 		.4byte	.LASF52
+ 423 0195 CA00     		.sleb128 74
+ 424 0197 06       		.uleb128 0x6
+ 425 0198 C0010000 		.4byte	.LASF53
+ 426 019c CB00     		.sleb128 75
+ 427 019e 06       		.uleb128 0x6
+ 428 019f 3E050000 		.4byte	.LASF54
+ 429 01a3 CC00     		.sleb128 76
+ 430 01a5 06       		.uleb128 0x6
+ 431 01a6 3F000000 		.4byte	.LASF55
+ 432 01aa CD00     		.sleb128 77
+ 433 01ac 06       		.uleb128 0x6
+ 434 01ad 15090000 		.4byte	.LASF56
+ 435 01b1 CE00     		.sleb128 78
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 13
+
+
+ 436 01b3 06       		.uleb128 0x6
+ 437 01b4 D6040000 		.4byte	.LASF57
+ 438 01b8 CF00     		.sleb128 79
+ 439 01ba 06       		.uleb128 0x6
+ 440 01bb E0090000 		.4byte	.LASF58
+ 441 01bf D000     		.sleb128 80
+ 442 01c1 06       		.uleb128 0x6
+ 443 01c2 9D070000 		.4byte	.LASF59
+ 444 01c6 D100     		.sleb128 81
+ 445 01c8 06       		.uleb128 0x6
+ 446 01c9 5C030000 		.4byte	.LASF60
+ 447 01cd D200     		.sleb128 82
+ 448 01cf 06       		.uleb128 0x6
+ 449 01d0 F4020000 		.4byte	.LASF61
+ 450 01d4 D300     		.sleb128 83
+ 451 01d6 06       		.uleb128 0x6
+ 452 01d7 DF010000 		.4byte	.LASF62
+ 453 01db D400     		.sleb128 84
+ 454 01dd 06       		.uleb128 0x6
+ 455 01de 210A0000 		.4byte	.LASF63
+ 456 01e2 D500     		.sleb128 85
+ 457 01e4 06       		.uleb128 0x6
+ 458 01e5 BE090000 		.4byte	.LASF64
+ 459 01e9 D600     		.sleb128 86
+ 460 01eb 06       		.uleb128 0x6
+ 461 01ec 95090000 		.4byte	.LASF65
+ 462 01f0 D700     		.sleb128 87
+ 463 01f2 06       		.uleb128 0x6
+ 464 01f3 2A060000 		.4byte	.LASF66
+ 465 01f7 D800     		.sleb128 88
+ 466 01f9 06       		.uleb128 0x6
+ 467 01fa A2040000 		.4byte	.LASF67
+ 468 01fe F000     		.sleb128 112
+ 469 0200 06       		.uleb128 0x6
+ 470 0201 A4080000 		.4byte	.LASF68
+ 471 0205 F100     		.sleb128 113
+ 472 0207 06       		.uleb128 0x6
+ 473 0208 63070000 		.4byte	.LASF69
+ 474 020c F200     		.sleb128 114
+ 475 020e 06       		.uleb128 0x6
+ 476 020f 17020000 		.4byte	.LASF70
+ 477 0213 F300     		.sleb128 115
+ 478 0215 06       		.uleb128 0x6
+ 479 0216 4E040000 		.4byte	.LASF71
+ 480 021a F400     		.sleb128 116
+ 481 021c 06       		.uleb128 0x6
+ 482 021d EC050000 		.4byte	.LASF72
+ 483 0221 F500     		.sleb128 117
+ 484 0223 06       		.uleb128 0x6
+ 485 0224 35020000 		.4byte	.LASF73
+ 486 0228 F600     		.sleb128 118
+ 487 022a 06       		.uleb128 0x6
+ 488 022b 85080000 		.4byte	.LASF74
+ 489 022f F700     		.sleb128 119
+ 490 0231 06       		.uleb128 0x6
+ 491 0232 F9070000 		.4byte	.LASF75
+ 492 0236 F800     		.sleb128 120
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 14
+
+
+ 493 0238 06       		.uleb128 0x6
+ 494 0239 23080000 		.4byte	.LASF76
+ 495 023d F900     		.sleb128 121
+ 496 023f 06       		.uleb128 0x6
+ 497 0240 51090000 		.4byte	.LASF77
+ 498 0244 FA00     		.sleb128 122
+ 499 0246 06       		.uleb128 0x6
+ 500 0247 DB070000 		.4byte	.LASF78
+ 501 024b FA01     		.sleb128 250
+ 502 024d 06       		.uleb128 0x6
+ 503 024e F5040000 		.4byte	.LASF79
+ 504 0252 FB01     		.sleb128 251
+ 505 0254 06       		.uleb128 0x6
+ 506 0255 87090000 		.4byte	.LASF80
+ 507 0259 FF01     		.sleb128 255
+ 508 025b 00       		.byte	0
+ 509 025c 07       		.uleb128 0x7
+ 510 025d 0E010000 		.4byte	.LASF81
+ 511 0261 01       		.byte	0x1
+ 512 0262 6F       		.byte	0x6f
+ 513 0263 5D000000 		.4byte	0x5d
+ 514 0267 00000000 		.4byte	.LFB37
+ 515 026b 64000000 		.4byte	.LFE37-.LFB37
+ 516 026f 01       		.uleb128 0x1
+ 517 0270 9C       		.byte	0x9c
+ 518 0271 08       		.uleb128 0x8
+ 519 0272 60060000 		.4byte	.LASF82
+ 520 0276 01       		.byte	0x1
+ 521 0277 B2       		.byte	0xb2
+ 522 0278 00000000 		.4byte	.LFB38
+ 523 027c 28000000 		.4byte	.LFE38-.LFB38
+ 524 0280 01       		.uleb128 0x1
+ 525 0281 9C       		.byte	0x9c
+ 526 0282 09       		.uleb128 0x9
+ 527 0283 54080000 		.4byte	.LASF92
+ 528 0287 01       		.byte	0x1
+ 529 0288 D6       		.byte	0xd6
+ 530 0289 00000000 		.4byte	.LFB39
+ 531 028d 54000000 		.4byte	.LFE39-.LFB39
+ 532 0291 01       		.uleb128 0x1
+ 533 0292 9C       		.byte	0x9c
+ 534 0293 B7020000 		.4byte	0x2b7
+ 535 0297 0A       		.uleb128 0xa
+ 536 0298 96040000 		.4byte	.LASF83
+ 537 029c 01       		.byte	0x1
+ 538 029d DA       		.byte	0xda
+ 539 029e 77000000 		.4byte	0x77
+ 540 02a2 05       		.uleb128 0x5
+ 541 02a3 03       		.byte	0x3
+ 542 02a4 02000000 		.4byte	proxCounter.7056
+ 543 02a8 0A       		.uleb128 0xa
+ 544 02a9 71060000 		.4byte	.LASF84
+ 545 02ad 01       		.byte	0x1
+ 546 02ae DD       		.byte	0xdd
+ 547 02af 6B000000 		.4byte	0x6b
+ 548 02b3 02       		.uleb128 0x2
+ 549 02b4 91       		.byte	0x91
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 15
+
+
+ 550 02b5 6F       		.sleb128 -17
+ 551 02b6 00       		.byte	0
+ 552 02b7 0B       		.uleb128 0xb
+ 553 02b8 8C000000 		.4byte	.LASF85
+ 554 02bc 01       		.byte	0x1
+ 555 02bd 50       		.byte	0x50
+ 556 02be 6B000000 		.4byte	0x6b
+ 557 02c2 0B       		.uleb128 0xb
+ 558 02c3 8A010000 		.4byte	.LASF86
+ 559 02c7 01       		.byte	0x1
+ 560 02c8 55       		.byte	0x55
+ 561 02c9 6B000000 		.4byte	0x6b
+ 562 02cd 0B       		.uleb128 0xb
+ 563 02ce 2A000000 		.4byte	.LASF87
+ 564 02d2 01       		.byte	0x1
+ 565 02d3 58       		.byte	0x58
+ 566 02d4 6B000000 		.4byte	0x6b
+ 567 02d8 0C       		.uleb128 0xc
+ 568 02d9 56020000 		.4byte	.LASF88
+ 569 02dd 01       		.byte	0x1
+ 570 02de 5E       		.byte	0x5e
+ 571 02df 6B000000 		.4byte	0x6b
+ 572 02e3 05       		.uleb128 0x5
+ 573 02e4 03       		.byte	0x3
+ 574 02e5 00000000 		.4byte	initializeCapSenseBaseline
+ 575 02e9 00       		.byte	0
+ 576              		.section	.debug_abbrev,"",%progbits
+ 577              	.Ldebug_abbrev0:
+ 578 0000 01       		.uleb128 0x1
+ 579 0001 11       		.uleb128 0x11
+ 580 0002 01       		.byte	0x1
+ 581 0003 25       		.uleb128 0x25
+ 582 0004 0E       		.uleb128 0xe
+ 583 0005 13       		.uleb128 0x13
+ 584 0006 0B       		.uleb128 0xb
+ 585 0007 03       		.uleb128 0x3
+ 586 0008 0E       		.uleb128 0xe
+ 587 0009 1B       		.uleb128 0x1b
+ 588 000a 0E       		.uleb128 0xe
+ 589 000b 55       		.uleb128 0x55
+ 590 000c 17       		.uleb128 0x17
+ 591 000d 11       		.uleb128 0x11
+ 592 000e 01       		.uleb128 0x1
+ 593 000f 10       		.uleb128 0x10
+ 594 0010 17       		.uleb128 0x17
+ 595 0011 00       		.byte	0
+ 596 0012 00       		.byte	0
+ 597 0013 02       		.uleb128 0x2
+ 598 0014 24       		.uleb128 0x24
+ 599 0015 00       		.byte	0
+ 600 0016 0B       		.uleb128 0xb
+ 601 0017 0B       		.uleb128 0xb
+ 602 0018 3E       		.uleb128 0x3e
+ 603 0019 0B       		.uleb128 0xb
+ 604 001a 03       		.uleb128 0x3
+ 605 001b 0E       		.uleb128 0xe
+ 606 001c 00       		.byte	0
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 16
+
+
+ 607 001d 00       		.byte	0
+ 608 001e 03       		.uleb128 0x3
+ 609 001f 24       		.uleb128 0x24
+ 610 0020 00       		.byte	0
+ 611 0021 0B       		.uleb128 0xb
+ 612 0022 0B       		.uleb128 0xb
+ 613 0023 3E       		.uleb128 0x3e
+ 614 0024 0B       		.uleb128 0xb
+ 615 0025 03       		.uleb128 0x3
+ 616 0026 08       		.uleb128 0x8
+ 617 0027 00       		.byte	0
+ 618 0028 00       		.byte	0
+ 619 0029 04       		.uleb128 0x4
+ 620 002a 16       		.uleb128 0x16
+ 621 002b 00       		.byte	0
+ 622 002c 03       		.uleb128 0x3
+ 623 002d 0E       		.uleb128 0xe
+ 624 002e 3A       		.uleb128 0x3a
+ 625 002f 0B       		.uleb128 0xb
+ 626 0030 3B       		.uleb128 0x3b
+ 627 0031 05       		.uleb128 0x5
+ 628 0032 49       		.uleb128 0x49
+ 629 0033 13       		.uleb128 0x13
+ 630 0034 00       		.byte	0
+ 631 0035 00       		.byte	0
+ 632 0036 05       		.uleb128 0x5
+ 633 0037 04       		.uleb128 0x4
+ 634 0038 01       		.byte	0x1
+ 635 0039 0B       		.uleb128 0xb
+ 636 003a 0B       		.uleb128 0xb
+ 637 003b 3A       		.uleb128 0x3a
+ 638 003c 0B       		.uleb128 0xb
+ 639 003d 3B       		.uleb128 0x3b
+ 640 003e 05       		.uleb128 0x5
+ 641 003f 01       		.uleb128 0x1
+ 642 0040 13       		.uleb128 0x13
+ 643 0041 00       		.byte	0
+ 644 0042 00       		.byte	0
+ 645 0043 06       		.uleb128 0x6
+ 646 0044 28       		.uleb128 0x28
+ 647 0045 00       		.byte	0
+ 648 0046 03       		.uleb128 0x3
+ 649 0047 0E       		.uleb128 0xe
+ 650 0048 1C       		.uleb128 0x1c
+ 651 0049 0D       		.uleb128 0xd
+ 652 004a 00       		.byte	0
+ 653 004b 00       		.byte	0
+ 654 004c 07       		.uleb128 0x7
+ 655 004d 2E       		.uleb128 0x2e
+ 656 004e 00       		.byte	0
+ 657 004f 3F       		.uleb128 0x3f
+ 658 0050 19       		.uleb128 0x19
+ 659 0051 03       		.uleb128 0x3
+ 660 0052 0E       		.uleb128 0xe
+ 661 0053 3A       		.uleb128 0x3a
+ 662 0054 0B       		.uleb128 0xb
+ 663 0055 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 17
+
+
+ 664 0056 0B       		.uleb128 0xb
+ 665 0057 49       		.uleb128 0x49
+ 666 0058 13       		.uleb128 0x13
+ 667 0059 11       		.uleb128 0x11
+ 668 005a 01       		.uleb128 0x1
+ 669 005b 12       		.uleb128 0x12
+ 670 005c 06       		.uleb128 0x6
+ 671 005d 40       		.uleb128 0x40
+ 672 005e 18       		.uleb128 0x18
+ 673 005f 9642     		.uleb128 0x2116
+ 674 0061 19       		.uleb128 0x19
+ 675 0062 00       		.byte	0
+ 676 0063 00       		.byte	0
+ 677 0064 08       		.uleb128 0x8
+ 678 0065 2E       		.uleb128 0x2e
+ 679 0066 00       		.byte	0
+ 680 0067 3F       		.uleb128 0x3f
+ 681 0068 19       		.uleb128 0x19
+ 682 0069 03       		.uleb128 0x3
+ 683 006a 0E       		.uleb128 0xe
+ 684 006b 3A       		.uleb128 0x3a
+ 685 006c 0B       		.uleb128 0xb
+ 686 006d 3B       		.uleb128 0x3b
+ 687 006e 0B       		.uleb128 0xb
+ 688 006f 27       		.uleb128 0x27
+ 689 0070 19       		.uleb128 0x19
+ 690 0071 11       		.uleb128 0x11
+ 691 0072 01       		.uleb128 0x1
+ 692 0073 12       		.uleb128 0x12
+ 693 0074 06       		.uleb128 0x6
+ 694 0075 40       		.uleb128 0x40
+ 695 0076 18       		.uleb128 0x18
+ 696 0077 9642     		.uleb128 0x2116
+ 697 0079 19       		.uleb128 0x19
+ 698 007a 00       		.byte	0
+ 699 007b 00       		.byte	0
+ 700 007c 09       		.uleb128 0x9
+ 701 007d 2E       		.uleb128 0x2e
+ 702 007e 01       		.byte	0x1
+ 703 007f 3F       		.uleb128 0x3f
+ 704 0080 19       		.uleb128 0x19
+ 705 0081 03       		.uleb128 0x3
+ 706 0082 0E       		.uleb128 0xe
+ 707 0083 3A       		.uleb128 0x3a
+ 708 0084 0B       		.uleb128 0xb
+ 709 0085 3B       		.uleb128 0x3b
+ 710 0086 0B       		.uleb128 0xb
+ 711 0087 27       		.uleb128 0x27
+ 712 0088 19       		.uleb128 0x19
+ 713 0089 11       		.uleb128 0x11
+ 714 008a 01       		.uleb128 0x1
+ 715 008b 12       		.uleb128 0x12
+ 716 008c 06       		.uleb128 0x6
+ 717 008d 40       		.uleb128 0x40
+ 718 008e 18       		.uleb128 0x18
+ 719 008f 9642     		.uleb128 0x2116
+ 720 0091 19       		.uleb128 0x19
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 18
+
+
+ 721 0092 01       		.uleb128 0x1
+ 722 0093 13       		.uleb128 0x13
+ 723 0094 00       		.byte	0
+ 724 0095 00       		.byte	0
+ 725 0096 0A       		.uleb128 0xa
+ 726 0097 34       		.uleb128 0x34
+ 727 0098 00       		.byte	0
+ 728 0099 03       		.uleb128 0x3
+ 729 009a 0E       		.uleb128 0xe
+ 730 009b 3A       		.uleb128 0x3a
+ 731 009c 0B       		.uleb128 0xb
+ 732 009d 3B       		.uleb128 0x3b
+ 733 009e 0B       		.uleb128 0xb
+ 734 009f 49       		.uleb128 0x49
+ 735 00a0 13       		.uleb128 0x13
+ 736 00a1 02       		.uleb128 0x2
+ 737 00a2 18       		.uleb128 0x18
+ 738 00a3 00       		.byte	0
+ 739 00a4 00       		.byte	0
+ 740 00a5 0B       		.uleb128 0xb
+ 741 00a6 34       		.uleb128 0x34
+ 742 00a7 00       		.byte	0
+ 743 00a8 03       		.uleb128 0x3
+ 744 00a9 0E       		.uleb128 0xe
+ 745 00aa 3A       		.uleb128 0x3a
+ 746 00ab 0B       		.uleb128 0xb
+ 747 00ac 3B       		.uleb128 0x3b
+ 748 00ad 0B       		.uleb128 0xb
+ 749 00ae 49       		.uleb128 0x49
+ 750 00af 13       		.uleb128 0x13
+ 751 00b0 3F       		.uleb128 0x3f
+ 752 00b1 19       		.uleb128 0x19
+ 753 00b2 3C       		.uleb128 0x3c
+ 754 00b3 19       		.uleb128 0x19
+ 755 00b4 00       		.byte	0
+ 756 00b5 00       		.byte	0
+ 757 00b6 0C       		.uleb128 0xc
+ 758 00b7 34       		.uleb128 0x34
+ 759 00b8 00       		.byte	0
+ 760 00b9 03       		.uleb128 0x3
+ 761 00ba 0E       		.uleb128 0xe
+ 762 00bb 3A       		.uleb128 0x3a
+ 763 00bc 0B       		.uleb128 0xb
+ 764 00bd 3B       		.uleb128 0x3b
+ 765 00be 0B       		.uleb128 0xb
+ 766 00bf 49       		.uleb128 0x49
+ 767 00c0 13       		.uleb128 0x13
+ 768 00c1 3F       		.uleb128 0x3f
+ 769 00c2 19       		.uleb128 0x19
+ 770 00c3 02       		.uleb128 0x2
+ 771 00c4 18       		.uleb128 0x18
+ 772 00c5 00       		.byte	0
+ 773 00c6 00       		.byte	0
+ 774 00c7 00       		.byte	0
+ 775              		.section	.debug_aranges,"",%progbits
+ 776 0000 2C000000 		.4byte	0x2c
+ 777 0004 0200     		.2byte	0x2
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 19
+
+
+ 778 0006 00000000 		.4byte	.Ldebug_info0
+ 779 000a 04       		.byte	0x4
+ 780 000b 00       		.byte	0
+ 781 000c 0000     		.2byte	0
+ 782 000e 0000     		.2byte	0
+ 783 0010 00000000 		.4byte	.LFB37
+ 784 0014 64000000 		.4byte	.LFE37-.LFB37
+ 785 0018 00000000 		.4byte	.LFB38
+ 786 001c 28000000 		.4byte	.LFE38-.LFB38
+ 787 0020 00000000 		.4byte	.LFB39
+ 788 0024 54000000 		.4byte	.LFE39-.LFB39
+ 789 0028 00000000 		.4byte	0
+ 790 002c 00000000 		.4byte	0
+ 791              		.section	.debug_ranges,"",%progbits
+ 792              	.Ldebug_ranges0:
+ 793 0000 00000000 		.4byte	.LFB37
+ 794 0004 64000000 		.4byte	.LFE37
+ 795 0008 00000000 		.4byte	.LFB38
+ 796 000c 28000000 		.4byte	.LFE38
+ 797 0010 00000000 		.4byte	.LFB39
+ 798 0014 54000000 		.4byte	.LFE39
+ 799 0018 00000000 		.4byte	0
+ 800 001c 00000000 		.4byte	0
+ 801              		.section	.debug_line,"",%progbits
+ 802              	.Ldebug_line0:
+ 803 0000 AD000000 		.section	.debug_str,"MS",%progbits,1
+ 803      02005200 
+ 803      00000201 
+ 803      FB0E0D00 
+ 803      01010101 
+ 804              	.LASF24:
+ 805 0000 4359424C 		.ascii	"CYBLE_EVT_GAP_PASSKEY_ENTRY_REQUEST\000"
+ 805      455F4556 
+ 805      545F4741 
+ 805      505F5041 
+ 805      53534B45 
+ 806              	.LASF11:
+ 807 0024 666C6F61 		.ascii	"float\000"
+ 807      7400
+ 808              	.LASF87:
+ 809 002a 72657374 		.ascii	"restartAdvertisement\000"
+ 809      61727441 
+ 809      64766572 
+ 809      74697365 
+ 809      6D656E74 
+ 810              	.LASF55:
+ 811 003f 4359424C 		.ascii	"CYBLE_EVT_GATTC_WRITE_RSP\000"
+ 811      455F4556 
+ 811      545F4741 
+ 811      5454435F 
+ 811      57524954 
+ 812              	.LASF21:
+ 813 0059 4359424C 		.ascii	"CYBLE_EVT_MEMORY_REQUEST\000"
+ 813      455F4556 
+ 813      545F4D45 
+ 813      4D4F5259 
+ 813      5F524551 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 20
+
+
+ 814              	.LASF42:
+ 815 0072 4359424C 		.ascii	"CYBLE_EVT_GATTC_ERROR_RSP\000"
+ 815      455F4556 
+ 815      545F4741 
+ 815      5454435F 
+ 815      4552524F 
+ 816              	.LASF85:
+ 817 008c 64657669 		.ascii	"deviceConnected\000"
+ 817      6365436F 
+ 817      6E6E6563 
+ 817      74656400 
+ 818              	.LASF36:
+ 819 009c 4359424C 		.ascii	"CYBLE_EVT_GAP_KEYPRESS_NOTIFICATION\000"
+ 819      455F4556 
+ 819      545F4741 
+ 819      505F4B45 
+ 819      59505245 
+ 820              	.LASF2:
+ 821 00c0 73686F72 		.ascii	"short int\000"
+ 821      7420696E 
+ 821      7400
+ 822              	.LASF27:
+ 823 00ca 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_FAILED\000"
+ 823      455F4556 
+ 823      545F4741 
+ 823      505F4155 
+ 823      54485F46 
+ 824              	.LASF14:
+ 825 00e4 73697A65 		.ascii	"sizetype\000"
+ 825      74797065 
+ 825      00
+ 826              	.LASF38:
+ 827 00ed 4359424C 		.ascii	"CYBLE_EVT_GAP_DATA_LENGTH_CHANGE\000"
+ 827      455F4556 
+ 827      545F4741 
+ 827      505F4441 
+ 827      54415F4C 
+ 828              	.LASF81:
+ 829 010e 6D61696E 		.ascii	"main\000"
+ 829      00
+ 830              	.LASF19:
+ 831 0113 4359424C 		.ascii	"CYBLE_EVT_HCI_STATUS\000"
+ 831      455F4556 
+ 831      545F4843 
+ 831      495F5354 
+ 831      41545553 
+ 832              	.LASF48:
+ 833 0128 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BY_TYPE_RSP\000"
+ 833      455F4556 
+ 833      545F4741 
+ 833      5454435F 
+ 833      52454144 
+ 834              	.LASF16:
+ 835 0149 4359424C 		.ascii	"CYBLE_EVT_STACK_ON\000"
+ 835      455F4556 
+ 835      545F5354 
+ 835      41434B5F 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 21
+
+
+ 835      4F4E00
+ 836              	.LASF45:
+ 837 015c 4359424C 		.ascii	"CYBLE_EVT_GATTS_XCNHG_MTU_REQ\000"
+ 837      455F4556 
+ 837      545F4741 
+ 837      5454535F 
+ 837      58434E48 
+ 838              	.LASF10:
+ 839 017a 75696E74 		.ascii	"uint16\000"
+ 839      313600
+ 840              	.LASF90:
+ 841 0181 2E5C6D61 		.ascii	".\\main.c\000"
+ 841      696E2E63 
+ 841      00
+ 842              	.LASF86:
+ 843 018a 73746172 		.ascii	"startNotification\000"
+ 843      744E6F74 
+ 843      69666963 
+ 843      6174696F 
+ 843      6E00
+ 844              	.LASF34:
+ 845 019c 4359424C 		.ascii	"CYBLE_EVT_GAP_KEYINFO_EXCHNGE_CMPLT\000"
+ 845      455F4556 
+ 845      545F4741 
+ 845      505F4B45 
+ 845      59494E46 
+ 846              	.LASF53:
+ 847 01c0 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_MULTI_RSP\000"
+ 847      455F4556 
+ 847      545F4741 
+ 847      5454435F 
+ 847      52454144 
+ 848              	.LASF62:
+ 849 01df 4359424C 		.ascii	"CYBLE_EVT_GATTS_HANDLE_VALUE_CNF\000"
+ 849      455F4556 
+ 849      545F4741 
+ 849      5454535F 
+ 849      48414E44 
+ 850              	.LASF15:
+ 851 0200 4359424C 		.ascii	"CYBLE_EVT_HOST_INVALID\000"
+ 851      455F4556 
+ 851      545F484F 
+ 851      53545F49 
+ 851      4E56414C 
+ 852              	.LASF70:
+ 853 0217 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_CONN_IND\000"
+ 853      455F4556 
+ 853      545F4C32 
+ 853      4341505F 
+ 853      43424643 
+ 854              	.LASF73:
+ 855 0235 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DISCONN_CNF\000"
+ 855      455F4556 
+ 855      545F4C32 
+ 855      4341505F 
+ 855      43424643 
+ 856              	.LASF88:
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 22
+
+
+ 857 0256 696E6974 		.ascii	"initializeCapSenseBaseline\000"
+ 857      69616C69 
+ 857      7A654361 
+ 857      7053656E 
+ 857      73654261 
+ 858              	.LASF51:
+ 859 0271 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_RSP\000"
+ 859      455F4556 
+ 859      545F4741 
+ 859      5454435F 
+ 859      52454144 
+ 860              	.LASF35:
+ 861 028a 4359424C 		.ascii	"CYBLE_EVT_GAP_NUMERIC_COMPARISON_REQUEST\000"
+ 861      455F4556 
+ 861      545F4741 
+ 861      505F4E55 
+ 861      4D455249 
+ 862              	.LASF40:
+ 863 02b3 4359424C 		.ascii	"CYBLE_EVT_GAPC_DIRECT_ADV_REPORT\000"
+ 863      455F4556 
+ 863      545F4741 
+ 863      50435F44 
+ 863      49524543 
+ 864              	.LASF7:
+ 865 02d4 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 865      206C6F6E 
+ 865      6720756E 
+ 865      7369676E 
+ 865      65642069 
+ 866              	.LASF4:
+ 867 02eb 6C6F6E67 		.ascii	"long int\000"
+ 867      20696E74 
+ 867      00
+ 868              	.LASF61:
+ 869 02f4 4359424C 		.ascii	"CYBLE_EVT_GATTC_HANDLE_VALUE_IND\000"
+ 869      455F4556 
+ 869      545F4741 
+ 869      5454435F 
+ 869      48414E44 
+ 870              	.LASF29:
+ 871 0315 4359424C 		.ascii	"CYBLE_EVT_GAP_DEVICE_CONNECTED\000"
+ 871      455F4556 
+ 871      545F4741 
+ 871      505F4445 
+ 871      56494345 
+ 872              	.LASF28:
+ 873 0334 4359424C 		.ascii	"CYBLE_EVT_GAPP_ADVERTISEMENT_START_STOP\000"
+ 873      455F4556 
+ 873      545F4741 
+ 873      50505F41 
+ 873      44564552 
+ 874              	.LASF60:
+ 875 035c 4359424C 		.ascii	"CYBLE_EVT_GATTC_HANDLE_VALUE_NTF\000"
+ 875      455F4556 
+ 875      545F4741 
+ 875      5454435F 
+ 875      48414E44 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 23
+
+
+ 876              	.LASF20:
+ 877 037d 4359424C 		.ascii	"CYBLE_EVT_STACK_BUSY_STATUS\000"
+ 877      455F4556 
+ 877      545F5354 
+ 877      41434B5F 
+ 877      42555359 
+ 878              	.LASF25:
+ 879 0399 4359424C 		.ascii	"CYBLE_EVT_GAP_PASSKEY_DISPLAY_REQUEST\000"
+ 879      455F4556 
+ 879      545F4741 
+ 879      505F5041 
+ 879      53534B45 
+ 880              	.LASF91:
+ 881 03bf 453A5C50 		.ascii	"E:\\Psoc\\PSoC-4-BLE-master\\100_Projects_in_100_Da"
+ 881      736F635C 
+ 881      50536F43 
+ 881      2D342D42 
+ 881      4C452D6D 
+ 882 03ef 79735C44 		.ascii	"ys\\Day004_CapSense_Proximity\\PSoC_4_BLE_CapSense_"
+ 882      61793030 
+ 882      345F4361 
+ 882      7053656E 
+ 882      73655F50 
+ 883 0420 50726F78 		.ascii	"Proximity\\PSoC_4_BLE_CapSense_Proximity.cydsn\000"
+ 883      696D6974 
+ 883      795C5053 
+ 883      6F435F34 
+ 883      5F424C45 
+ 884              	.LASF71:
+ 885 044e 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_CONN_CNF\000"
+ 885      455F4556 
+ 885      545F4C32 
+ 885      4341505F 
+ 885      43424643 
+ 886              	.LASF39:
+ 887 046c 4359424C 		.ascii	"CYBLE_EVT_GAP_ENHANCE_CONN_COMPLETE\000"
+ 887      455F4556 
+ 887      545F4741 
+ 887      505F454E 
+ 887      48414E43 
+ 888              	.LASF9:
+ 889 0490 75696E74 		.ascii	"uint8\000"
+ 889      3800
+ 890              	.LASF83:
+ 891 0496 70726F78 		.ascii	"proxCounter\000"
+ 891      436F756E 
+ 891      74657200 
+ 892              	.LASF67:
+ 893 04a2 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CONN_PARAM_UPDATE_REQ\000"
+ 893      455F4556 
+ 893      545F4C32 
+ 893      4341505F 
+ 893      434F4E4E 
+ 894              	.LASF1:
+ 895 04c8 756E7369 		.ascii	"unsigned char\000"
+ 895      676E6564 
+ 895      20636861 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 24
+
+
+ 895      7200
+ 896              	.LASF57:
+ 897 04d6 4359424C 		.ascii	"CYBLE_EVT_GATTS_PREP_WRITE_REQ\000"
+ 897      455F4556 
+ 897      545F4741 
+ 897      5454535F 
+ 897      50524550 
+ 898              	.LASF79:
+ 899 04f5 4359424C 		.ascii	"CYBLE_EVT_LE_PING_AUTH_TIMEOUT\000"
+ 899      455F4556 
+ 899      545F4C45 
+ 899      5F50494E 
+ 899      475F4155 
+ 900              	.LASF49:
+ 901 0514 4359424C 		.ascii	"CYBLE_EVT_GATTC_FIND_INFO_RSP\000"
+ 901      455F4556 
+ 901      545F4741 
+ 901      5454435F 
+ 901      46494E44 
+ 902              	.LASF0:
+ 903 0532 7369676E 		.ascii	"signed char\000"
+ 903      65642063 
+ 903      68617200 
+ 904              	.LASF54:
+ 905 053e 4359424C 		.ascii	"CYBLE_EVT_GATTS_WRITE_REQ\000"
+ 905      455F4556 
+ 905      545F4741 
+ 905      5454535F 
+ 905      57524954 
+ 906              	.LASF50:
+ 907 0558 4359424C 		.ascii	"CYBLE_EVT_GATTC_FIND_BY_TYPE_VALUE_RSP\000"
+ 907      455F4556 
+ 907      545F4741 
+ 907      5454435F 
+ 907      46494E44 
+ 908              	.LASF26:
+ 909 057f 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_COMPLETE\000"
+ 909      455F4556 
+ 909      545F4741 
+ 909      505F4155 
+ 909      54485F43 
+ 910              	.LASF8:
+ 911 059b 756E7369 		.ascii	"unsigned int\000"
+ 911      676E6564 
+ 911      20696E74 
+ 911      00
+ 912              	.LASF43:
+ 913 05a8 4359424C 		.ascii	"CYBLE_EVT_GATT_CONNECT_IND\000"
+ 913      455F4556 
+ 913      545F4741 
+ 913      54545F43 
+ 913      4F4E4E45 
+ 914              	.LASF5:
+ 915 05c3 6C6F6E67 		.ascii	"long unsigned int\000"
+ 915      20756E73 
+ 915      69676E65 
+ 915      6420696E 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 25
+
+
+ 915      7400
+ 916              	.LASF23:
+ 917 05d5 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_REQ\000"
+ 917      455F4556 
+ 917      545F4741 
+ 917      505F4155 
+ 917      54485F52 
+ 918              	.LASF72:
+ 919 05ec 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DISCONN_IND\000"
+ 919      455F4556 
+ 919      545F4C32 
+ 919      4341505F 
+ 919      43424643 
+ 920              	.LASF31:
+ 921 060d 4359424C 		.ascii	"CYBLE_EVT_GAP_ENCRYPT_CHANGE\000"
+ 921      455F4556 
+ 921      545F4741 
+ 921      505F454E 
+ 921      43525950 
+ 922              	.LASF66:
+ 923 062a 4359424C 		.ascii	"CYBLE_EVT_GATTC_LONG_PROCEDURE_END\000"
+ 923      455F4556 
+ 923      545F4741 
+ 923      5454435F 
+ 923      4C4F4E47 
+ 924              	.LASF3:
+ 925 064d 73686F72 		.ascii	"short unsigned int\000"
+ 925      7420756E 
+ 925      7369676E 
+ 925      65642069 
+ 925      6E7400
+ 926              	.LASF82:
+ 927 0660 496E6974 		.ascii	"InitializeSystem\000"
+ 927      69616C69 
+ 927      7A655379 
+ 927      7374656D 
+ 927      00
+ 928              	.LASF84:
+ 929 0671 70726F78 		.ascii	"proximityValue\000"
+ 929      696D6974 
+ 929      7956616C 
+ 929      756500
+ 930              	.LASF32:
+ 931 0680 4359424C 		.ascii	"CYBLE_EVT_GAP_CONNECTION_UPDATE_COMPLETE\000"
+ 931      455F4556 
+ 931      545F4741 
+ 931      505F434F 
+ 931      4E4E4543 
+ 932              	.LASF41:
+ 933 06a9 4359424C 		.ascii	"CYBLE_EVT_GAP_SMP_NEGOTIATED_AUTH_INFO\000"
+ 933      455F4556 
+ 933      545F4741 
+ 933      505F534D 
+ 933      505F4E45 
+ 934              	.LASF13:
+ 935 06d0 63686172 		.ascii	"char\000"
+ 935      00
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 26
+
+
+ 936              	.LASF89:
+ 937 06d5 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 937      4320342E 
+ 937      392E3320 
+ 937      32303135 
+ 937      30333033 
+ 938 0708 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 938      20726576 
+ 938      6973696F 
+ 938      6E203232 
+ 938      31323230 
+ 939 073b 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 939      66756E63 
+ 939      74696F6E 
+ 939      2D736563 
+ 939      74696F6E 
+ 940              	.LASF69:
+ 941 0763 4359424C 		.ascii	"CYBLE_EVT_L2CAP_COMMAND_REJ\000"
+ 941      455F4556 
+ 941      545F4C32 
+ 941      4341505F 
+ 941      434F4D4D 
+ 942              	.LASF52:
+ 943 077f 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BLOB_RSP\000"
+ 943      455F4556 
+ 943      545F4741 
+ 943      5454435F 
+ 943      52454144 
+ 944              	.LASF59:
+ 945 079d 4359424C 		.ascii	"CYBLE_EVT_GATTC_EXEC_WRITE_RSP\000"
+ 945      455F4556 
+ 945      545F4741 
+ 945      5454435F 
+ 945      45584543 
+ 946              	.LASF33:
+ 947 07bc 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_START_STOP\000"
+ 947      455F4556 
+ 947      545F4741 
+ 947      50435F53 
+ 947      43414E5F 
+ 948              	.LASF78:
+ 949 07db 4359424C 		.ascii	"CYBLE_EVT_PENDING_FLASH_WRITE\000"
+ 949      455F4556 
+ 949      545F5045 
+ 949      4E44494E 
+ 949      475F464C 
+ 950              	.LASF75:
+ 951 07f9 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_RX_CREDIT_IND\000"
+ 951      455F4556 
+ 951      545F4C32 
+ 951      4341505F 
+ 951      43424643 
+ 952              	.LASF12:
+ 953 081c 646F7562 		.ascii	"double\000"
+ 953      6C6500
+ 954              	.LASF76:
+ 955 0823 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_TX_CREDIT_IND\000"
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 27
+
+
+ 955      455F4556 
+ 955      545F4C32 
+ 955      4341505F 
+ 955      43424643 
+ 956              	.LASF6:
+ 957 0846 6C6F6E67 		.ascii	"long long int\000"
+ 957      206C6F6E 
+ 957      6720696E 
+ 957      7400
+ 958              	.LASF92:
+ 959 0854 48616E64 		.ascii	"HandleCapSenseProximity\000"
+ 959      6C654361 
+ 959      7053656E 
+ 959      73655072 
+ 959      6F78696D 
+ 960              	.LASF18:
+ 961 086c 4359424C 		.ascii	"CYBLE_EVT_HARDWARE_ERROR\000"
+ 961      455F4556 
+ 961      545F4841 
+ 961      52445741 
+ 961      52455F45 
+ 962              	.LASF74:
+ 963 0885 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DATA_READ\000"
+ 963      455F4556 
+ 963      545F4C32 
+ 963      4341505F 
+ 963      43424643 
+ 964              	.LASF68:
+ 965 08a4 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CONN_PARAM_UPDATE_RSP\000"
+ 965      455F4556 
+ 965      545F4C32 
+ 965      4341505F 
+ 965      434F4E4E 
+ 966              	.LASF22:
+ 967 08ca 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_PROGRESS_RESULT\000"
+ 967      455F4556 
+ 967      545F4741 
+ 967      50435F53 
+ 967      43414E5F 
+ 968              	.LASF47:
+ 969 08ee 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BY_GROUP_TYPE_RSP\000"
+ 969      455F4556 
+ 969      545F4741 
+ 969      5454435F 
+ 969      52454144 
+ 970              	.LASF56:
+ 971 0915 4359424C 		.ascii	"CYBLE_EVT_GATTS_WRITE_CMD_REQ\000"
+ 971      455F4556 
+ 971      545F4741 
+ 971      5454535F 
+ 971      57524954 
+ 972              	.LASF46:
+ 973 0933 4359424C 		.ascii	"CYBLE_EVT_GATTC_XCHNG_MTU_RSP\000"
+ 973      455F4556 
+ 973      545F4741 
+ 973      5454435F 
+ 973      5843484E 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 28
+
+
+ 974              	.LASF77:
+ 975 0951 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DATA_WRITE_IND\000"
+ 975      455F4556 
+ 975      545F4C32 
+ 975      4341505F 
+ 975      43424643 
+ 976              	.LASF17:
+ 977 0975 4359424C 		.ascii	"CYBLE_EVT_TIMEOUT\000"
+ 977      455F4556 
+ 977      545F5449 
+ 977      4D454F55 
+ 977      5400
+ 978              	.LASF80:
+ 979 0987 4359424C 		.ascii	"CYBLE_EVT_MAX\000"
+ 979      455F4556 
+ 979      545F4D41 
+ 979      5800
+ 980              	.LASF65:
+ 981 0995 4359424C 		.ascii	"CYBLE_EVT_GATTS_READ_CHAR_VAL_ACCESS_REQ\000"
+ 981      455F4556 
+ 981      545F4741 
+ 981      5454535F 
+ 981      52454144 
+ 982              	.LASF64:
+ 983 09be 4359424C 		.ascii	"CYBLE_EVT_GATTC_STOP_CMD_COMPLETE\000"
+ 983      455F4556 
+ 983      545F4741 
+ 983      5454435F 
+ 983      53544F50 
+ 984              	.LASF58:
+ 985 09e0 4359424C 		.ascii	"CYBLE_EVT_GATTS_EXEC_WRITE_REQ\000"
+ 985      455F4556 
+ 985      545F4741 
+ 985      5454535F 
+ 985      45584543 
+ 986              	.LASF30:
+ 987 09ff 4359424C 		.ascii	"CYBLE_EVT_GAP_DEVICE_DISCONNECTED\000"
+ 987      455F4556 
+ 987      545F4741 
+ 987      505F4445 
+ 987      56494345 
+ 988              	.LASF63:
+ 989 0a21 4359424C 		.ascii	"CYBLE_EVT_GATTS_DATA_SIGNED_CMD_REQ\000"
+ 989      455F4556 
+ 989      545F4741 
+ 989      5454535F 
+ 989      44415441 
+ 990              	.LASF44:
+ 991 0a45 4359424C 		.ascii	"CYBLE_EVT_GATT_DISCONNECT_IND\000"
+ 991      455F4556 
+ 991      545F4741 
+ 991      54545F44 
+ 991      4953434F 
+ 992              	.LASF37:
+ 993 0a63 4359424C 		.ascii	"CYBLE_EVT_GAP_OOB_GENERATED_NOTIFICATION\000"
+ 993      455F4556 
+ 993      545F4741 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccy53z0V.s 			page 29
+
+
+ 993      505F4F4F 
+ 993      425F4745 
+ 994              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

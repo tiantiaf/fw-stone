@@ -1,0 +1,40 @@
+E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/CortexM0/ARM_GCC_493/Debug/BLE_STONE_gatt.o : E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_Stack.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGap.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGatt.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGattClient.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGattDb.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGattServer.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackHostMain.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackL2cap.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_custom.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_eventHandler.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_gatt.c E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_gatt.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/CyFlash.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/CyLFClk.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/CyLib.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cyfitter.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE.h : 
+
+E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_Stack.h : 
+
+E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGap.h : 
+
+E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGatt.h : 
+
+E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGattClient.h : 
+
+E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGattDb.h : 
+
+E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGattServer.h : 
+
+E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackHostMain.h : 
+
+E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackL2cap.h : 
+
+E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_custom.h : 
+
+E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_eventHandler.h : 
+
+E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_gatt.c : 
+
+E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_gatt.h : 
+
+E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/CyFlash.h : 
+
+E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/CyLFClk.h : 
+
+E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/CyLib.h : 
+
+E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cydevice_trm.h : 
+
+E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cyfitter.h : 
+
+E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cytypes.h : 
+

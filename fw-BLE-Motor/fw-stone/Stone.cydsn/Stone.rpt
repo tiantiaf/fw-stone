@@ -1,0 +1,1973 @@
+Loading plugins phase: Elapsed time ==> 0s.853ms
+Initializing data phase: Elapsed time ==> 0s.000ms
+<CYPRESSTAG name="CyDsfit arguments...">
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cyprj -d CYBLE-014008-00 -s E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE</CYPRESSTAG>
+<CYPRESSTAG name="Design elaboration results...">
+</CYPRESSTAG>
+Elaboration phase: Elapsed time ==> 3s.391ms
+<CYPRESSTAG name="HDL generation results...">
+</CYPRESSTAG>
+HDL generation phase: Elapsed time ==> 0s.085ms
+<CYPRESSTAG name="Synthesis results...">
+
+     | | | | | | |
+   _________________
+  -|               |-
+  -|               |-
+  -|               |-
+  -|    CYPRESS    |-
+  -|               |-
+  -|               |-   Warp Verilog Synthesis Compiler: Version 6.3 IR 41
+  -|               |-   Copyright (C) 1991-2001 Cypress Semiconductor
+   |_______________|
+     | | | | | | |
+
+======================================================================
+Compiling:  Stone.v
+Program  :   D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\bin/warp.exe
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cyprj -dcpsoc3 Stone.v -verilog
+======================================================================
+
+======================================================================
+Compiling:  Stone.v
+Program  :   D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\bin/warp.exe
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cyprj -dcpsoc3 Stone.v -verilog
+======================================================================
+
+======================================================================
+Compiling:  Stone.v
+Program  :   vlogfe
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cyprj -dcpsoc3 -verilog Stone.v
+======================================================================
+
+vlogfe V6.3 IR 41:  Verilog parser
+Wed Feb 22 10:13:52 2017
+
+
+======================================================================
+Compiling:  Stone.v
+Program  :   vpp
+Options  :    -yv2 -q10 Stone.v
+======================================================================
+
+vpp V6.3 IR 41:  Verilog Pre-Processor
+Wed Feb 22 10:13:52 2017
+
+Flattening file 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.v'
+Flattening file 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'
+Flattening file 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_PWM_v3_30\B_PWM_v3_30.v'
+Flattening file 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.v'
+Flattening file 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'
+Flattening file 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
+Flattening file 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v'
+Flattening file 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_Timer_v2_70\B_Timer_v2_70.v'
+Flattening file 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.v'
+
+vpp:  No errors.
+
+Library 'work' => directory 'lcpsoc3'
+General_symbol_table
+General_symbol_table
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Using control file 'Stone.ctl'.
+D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_PWM_v3_30\B_PWM_v3_30.v (line 947, col 46):  Note: Substituting module 'sub_vi_vv' for '-'.
+D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_PWM_v3_30\B_PWM_v3_30.v (line 977, col 46):  Note: Substituting module 'add_vi_vv' for '+'.
+D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_Timer_v2_70\B_Timer_v2_70.v (line 368, col 46):  Note: Substituting module 'cmp_vv_vv' for '='.
+D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_Timer_v2_70\B_Timer_v2_70.v (line 374, col 62):  Note: Substituting module 'add_vv_vv' for '+'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
+
+vlogfe:  No errors.
+
+
+======================================================================
+Compiling:  Stone.v
+Program  :   tovif
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cyprj -dcpsoc3 -verilog Stone.v
+======================================================================
+
+tovif V6.3 IR 41:  High-level synthesis
+Wed Feb 22 10:13:52 2017
+
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\codegentemp\Stone.ctl'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.v'.
+Linking 'E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\codegentemp\Stone.v'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_PWM_v3_30\B_PWM_v3_30.v'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.v'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_Timer_v2_70\B_Timer_v2_70.v'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\lcpsoc3\stdlogic\mod_cnst.vif'.
+
+tovif:  No errors.
+
+
+======================================================================
+Compiling:  Stone.v
+Program  :   topld
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cyprj -dcpsoc3 -verilog Stone.v
+======================================================================
+
+topld V6.3 IR 41:  Synthesis and optimization
+Wed Feb 22 10:13:53 2017
+
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\codegentemp\Stone.ctl'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.v'.
+Linking 'E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\codegentemp\Stone.v'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_PWM_v3_30\B_PWM_v3_30.v'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.v'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_Timer_v2_70\B_Timer_v2_70.v'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\lcpsoc3\stdlogic\mod_cnst.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\lcpsoc3\stdlogic\cpsoc3.vif'.
+
+----------------------------------------------------------
+Detecting unused logic.
+----------------------------------------------------------
+    User names
+	Net_17
+	\BLE_STONE:Net_55\
+	\Stone_PWM:PWMUDB:km_run\
+	\Stone_PWM:PWMUDB:ctrl_cmpmode2_2\
+	\Stone_PWM:PWMUDB:ctrl_cmpmode2_1\
+	\Stone_PWM:PWMUDB:ctrl_cmpmode2_0\
+	\Stone_PWM:PWMUDB:ctrl_cmpmode1_2\
+	\Stone_PWM:PWMUDB:ctrl_cmpmode1_1\
+	\Stone_PWM:PWMUDB:ctrl_cmpmode1_0\
+	\Stone_PWM:PWMUDB:capt_rising\
+	\Stone_PWM:PWMUDB:capt_falling\
+	\Stone_PWM:PWMUDB:trig_rise\
+	\Stone_PWM:PWMUDB:trig_fall\
+	\Stone_PWM:PWMUDB:sc_kill\
+	\Stone_PWM:PWMUDB:min_kill\
+	\Stone_PWM:PWMUDB:db_tc\
+	\Stone_PWM:PWMUDB:dith_sel\
+	\Stone_PWM:PWMUDB:compare2\
+	Net_196
+	Net_197
+	\Stone_PWM:PWMUDB:MODULE_1:b_31\
+	\Stone_PWM:PWMUDB:MODULE_1:b_30\
+	\Stone_PWM:PWMUDB:MODULE_1:b_29\
+	\Stone_PWM:PWMUDB:MODULE_1:b_28\
+	\Stone_PWM:PWMUDB:MODULE_1:b_27\
+	\Stone_PWM:PWMUDB:MODULE_1:b_26\
+	\Stone_PWM:PWMUDB:MODULE_1:b_25\
+	\Stone_PWM:PWMUDB:MODULE_1:b_24\
+	\Stone_PWM:PWMUDB:MODULE_1:b_23\
+	\Stone_PWM:PWMUDB:MODULE_1:b_22\
+	\Stone_PWM:PWMUDB:MODULE_1:b_21\
+	\Stone_PWM:PWMUDB:MODULE_1:b_20\
+	\Stone_PWM:PWMUDB:MODULE_1:b_19\
+	\Stone_PWM:PWMUDB:MODULE_1:b_18\
+	\Stone_PWM:PWMUDB:MODULE_1:b_17\
+	\Stone_PWM:PWMUDB:MODULE_1:b_16\
+	\Stone_PWM:PWMUDB:MODULE_1:b_15\
+	\Stone_PWM:PWMUDB:MODULE_1:b_14\
+	\Stone_PWM:PWMUDB:MODULE_1:b_13\
+	\Stone_PWM:PWMUDB:MODULE_1:b_12\
+	\Stone_PWM:PWMUDB:MODULE_1:b_11\
+	\Stone_PWM:PWMUDB:MODULE_1:b_10\
+	\Stone_PWM:PWMUDB:MODULE_1:b_9\
+	\Stone_PWM:PWMUDB:MODULE_1:b_8\
+	\Stone_PWM:PWMUDB:MODULE_1:b_7\
+	\Stone_PWM:PWMUDB:MODULE_1:b_6\
+	\Stone_PWM:PWMUDB:MODULE_1:b_5\
+	\Stone_PWM:PWMUDB:MODULE_1:b_4\
+	\Stone_PWM:PWMUDB:MODULE_1:b_3\
+	\Stone_PWM:PWMUDB:MODULE_1:b_2\
+	\Stone_PWM:PWMUDB:MODULE_1:b_1\
+	\Stone_PWM:PWMUDB:MODULE_1:b_0\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_31\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_30\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_29\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_28\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_27\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_26\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_25\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_24\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_31\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_30\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_29\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_28\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_27\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_26\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_25\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_24\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_23\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_22\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_21\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_20\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_19\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_18\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_17\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_16\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_15\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_14\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_13\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_12\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_11\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_10\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_9\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_8\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_7\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_6\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_5\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_4\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_3\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_2\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_1\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:b_0\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_31\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_30\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_29\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_28\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_27\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_26\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_25\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_24\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_23\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_22\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_21\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_20\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_19\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_18\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_17\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_16\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_15\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_14\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_13\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_12\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_11\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_10\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_9\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_8\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_7\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_6\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_5\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_4\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_3\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_2\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_31\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_30\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_29\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_28\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_27\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_26\
+	\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_25\
+	\Stone_PWM:Net_139\
+	\Stone_PWM:Net_138\
+	\Stone_PWM:Net_183\
+	\Stone_PWM:Net_181\
+	\Stone_Timer:TimerUDB:ctrl_ten\
+	\Stone_Timer:TimerUDB:ctrl_cmode_0\
+	\Stone_Timer:TimerUDB:ctrl_tmode_1\
+	\Stone_Timer:TimerUDB:ctrl_tmode_0\
+	\Stone_Timer:TimerUDB:ctrl_ic_1\
+	\Stone_Timer:TimerUDB:ctrl_ic_0\
+	Net_121
+	\Stone_Timer:TimerUDB:zeros_3\
+	\Stone_Timer:TimerUDB:zeros_2\
+
+    Synthesized names
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_31\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_30\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_29\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_28\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_27\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_26\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_25\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_24\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_23\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_22\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_21\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_20\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_19\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_18\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_17\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_16\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_15\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_14\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_13\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_12\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_11\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_10\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_9\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_8\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_7\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_6\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_5\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_4\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_3\
+	\Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_2\
+
+Deleted 142 User equations/components.
+Deleted 30 Synthesized equations/components.
+
+------------------------------------------------------
+Alias Detection
+------------------------------------------------------
+Aliasing one to tmpOE__LED_net_0
+Aliasing \Stone_PWM:Net_180\ to zero
+Aliasing \Stone_PWM:PWMUDB:hwCapture\ to zero
+Aliasing \Stone_PWM:Net_178\ to zero
+Aliasing \Stone_PWM:PWMUDB:trig_out\ to tmpOE__LED_net_0
+Aliasing \Stone_PWM:Net_186\ to zero
+Aliasing \Stone_PWM:PWMUDB:runmode_enable\\S\ to zero
+Aliasing \Stone_PWM:Net_179\ to tmpOE__LED_net_0
+Aliasing \Stone_PWM:PWMUDB:ltch_kill_reg\\R\ to \Stone_PWM:PWMUDB:runmode_enable\\R\
+Aliasing \Stone_PWM:PWMUDB:ltch_kill_reg\\S\ to zero
+Aliasing \Stone_PWM:PWMUDB:km_tc\ to zero
+Aliasing \Stone_PWM:PWMUDB:min_kill_reg\\R\ to \Stone_PWM:PWMUDB:runmode_enable\\R\
+Aliasing \Stone_PWM:PWMUDB:min_kill_reg\\S\ to zero
+Aliasing \Stone_PWM:PWMUDB:final_kill\ to tmpOE__LED_net_0
+Aliasing \Stone_PWM:PWMUDB:dith_count_1\\R\ to \Stone_PWM:PWMUDB:runmode_enable\\R\
+Aliasing \Stone_PWM:PWMUDB:dith_count_1\\S\ to zero
+Aliasing \Stone_PWM:PWMUDB:dith_count_0\\R\ to \Stone_PWM:PWMUDB:runmode_enable\\R\
+Aliasing \Stone_PWM:PWMUDB:dith_count_0\\S\ to zero
+Aliasing \Stone_PWM:PWMUDB:status_6\ to zero
+Aliasing \Stone_PWM:PWMUDB:status_4\ to zero
+Aliasing \Stone_PWM:PWMUDB:cmp2\ to zero
+Aliasing \Stone_PWM:PWMUDB:cmp1_status_reg\\R\ to \Stone_PWM:PWMUDB:runmode_enable\\R\
+Aliasing \Stone_PWM:PWMUDB:cmp1_status_reg\\S\ to zero
+Aliasing \Stone_PWM:PWMUDB:cmp2_status_reg\\R\ to \Stone_PWM:PWMUDB:runmode_enable\\R\
+Aliasing \Stone_PWM:PWMUDB:cmp2_status_reg\\S\ to zero
+Aliasing \Stone_PWM:PWMUDB:final_kill_reg\\R\ to \Stone_PWM:PWMUDB:runmode_enable\\R\
+Aliasing \Stone_PWM:PWMUDB:final_kill_reg\\S\ to zero
+Aliasing \Stone_PWM:PWMUDB:cs_addr_0\ to \Stone_PWM:PWMUDB:runmode_enable\\R\
+Aliasing \Stone_PWM:PWMUDB:pwm1_i\ to zero
+Aliasing \Stone_PWM:PWMUDB:pwm2_i\ to zero
+Aliasing \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_23\ to zero
+Aliasing \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_22\ to zero
+Aliasing \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_21\ to zero
+Aliasing \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_20\ to zero
+Aliasing \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_19\ to zero
+Aliasing \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_18\ to zero
+Aliasing \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_17\ to zero
+Aliasing \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_16\ to zero
+Aliasing \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_15\ to zero
+Aliasing \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_14\ to zero
+Aliasing \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_13\ to zero
+Aliasing \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_12\ to zero
+Aliasing \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_11\ to zero
+Aliasing \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_10\ to zero
+Aliasing \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_9\ to zero
+Aliasing \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_8\ to zero
+Aliasing \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_7\ to zero
+Aliasing \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_6\ to zero
+Aliasing \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_5\ to zero
+Aliasing \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_4\ to zero
+Aliasing \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_3\ to zero
+Aliasing \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_2\ to zero
+Aliasing \Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\ to tmpOE__LED_net_0
+Aliasing \Stone_Timer:TimerUDB:ctrl_cmode_1\ to zero
+Aliasing \Stone_Timer:TimerUDB:trigger_enable\ to tmpOE__LED_net_0
+Aliasing \Stone_Timer:TimerUDB:status_6\ to zero
+Aliasing \Stone_Timer:TimerUDB:status_5\ to zero
+Aliasing \Stone_Timer:TimerUDB:status_4\ to zero
+Aliasing \Stone_Timer:TimerUDB:status_0\ to \Stone_Timer:TimerUDB:tc_i\
+Aliasing Net_12 to zero
+Aliasing tmpOE__Motor_net_0 to tmpOE__LED_net_0
+Aliasing \Stone_PWM:PWMUDB:prevCompare1\\D\ to \Stone_PWM:PWMUDB:pwm_temp\
+Aliasing \Stone_PWM:PWMUDB:tc_i_reg\\D\ to \Stone_PWM:PWMUDB:status_2\
+Aliasing \Stone_Timer:TimerUDB:capture_last\\D\ to zero
+Aliasing \Stone_Timer:TimerUDB:hwEnable_reg\\D\ to \Stone_Timer:TimerUDB:run_mode\
+Aliasing \Stone_Timer:TimerUDB:capture_out_reg_i\\D\ to \Stone_Timer:TimerUDB:capt_fifo_load_int\
+Removing Lhs of wire one[14] = tmpOE__LED_net_0[9]
+Removing Lhs of wire \Stone_PWM:Net_68\[19] = Net_207[395]
+Removing Lhs of wire \Stone_PWM:PWMUDB:ctrl_enable\[30] = \Stone_PWM:PWMUDB:control_7\[22]
+Removing Lhs of wire \Stone_PWM:Net_180\[38] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:hwCapture\[41] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:hwEnable\[42] = \Stone_PWM:PWMUDB:control_7\[22]
+Removing Lhs of wire \Stone_PWM:Net_178\[44] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:trig_out\[47] = tmpOE__LED_net_0[9]
+Removing Lhs of wire \Stone_PWM:PWMUDB:runmode_enable\\R\[49] = zero[10]
+Removing Lhs of wire \Stone_PWM:Net_186\[50] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:runmode_enable\\S\[51] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:final_enable\[52] = \Stone_PWM:PWMUDB:runmode_enable\[48]
+Removing Lhs of wire \Stone_PWM:Net_179\[55] = tmpOE__LED_net_0[9]
+Removing Lhs of wire \Stone_PWM:PWMUDB:ltch_kill_reg\\R\[57] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:ltch_kill_reg\\S\[58] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:km_tc\[59] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:min_kill_reg\\R\[60] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:min_kill_reg\\S\[61] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:final_kill\[64] = tmpOE__LED_net_0[9]
+Removing Lhs of wire \Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_1\[67] = \Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_1\[354]
+Removing Lhs of wire \Stone_PWM:PWMUDB:add_vi_vv_MODGEN_1_0\[69] = \Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_0\[355]
+Removing Lhs of wire \Stone_PWM:PWMUDB:dith_count_1\\R\[70] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:dith_count_1\\S\[71] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:dith_count_0\\R\[72] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:dith_count_0\\S\[73] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:status_6\[76] = zero[10]
+Removing Rhs of wire \Stone_PWM:PWMUDB:status_5\[77] = \Stone_PWM:PWMUDB:final_kill_reg\[91]
+Removing Lhs of wire \Stone_PWM:PWMUDB:status_4\[78] = zero[10]
+Removing Rhs of wire \Stone_PWM:PWMUDB:status_3\[79] = \Stone_PWM:PWMUDB:fifo_full\[98]
+Removing Rhs of wire \Stone_PWM:PWMUDB:status_1\[81] = \Stone_PWM:PWMUDB:cmp2_status_reg\[90]
+Removing Rhs of wire \Stone_PWM:PWMUDB:status_0\[82] = \Stone_PWM:PWMUDB:cmp1_status_reg\[89]
+Removing Lhs of wire \Stone_PWM:PWMUDB:cmp2_status\[87] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:cmp2\[88] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:cmp1_status_reg\\R\[92] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:cmp1_status_reg\\S\[93] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:cmp2_status_reg\\R\[94] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:cmp2_status_reg\\S\[95] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:final_kill_reg\\R\[96] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:final_kill_reg\\S\[97] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:cs_addr_2\[99] = \Stone_PWM:PWMUDB:tc_i\[54]
+Removing Lhs of wire \Stone_PWM:PWMUDB:cs_addr_1\[100] = \Stone_PWM:PWMUDB:runmode_enable\[48]
+Removing Lhs of wire \Stone_PWM:PWMUDB:cs_addr_0\[101] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:compare1\[182] = \Stone_PWM:PWMUDB:cmp1_less\[153]
+Removing Lhs of wire \Stone_PWM:PWMUDB:pwm1_i\[187] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:pwm2_i\[189] = zero[10]
+Removing Rhs of wire Net_667[191] = \Stone_PWM:PWMUDB:tc_i_reg\[190]
+Removing Rhs of wire Net_255[192] = \Stone_PWM:PWMUDB:pwm_i_reg\[184]
+Removing Lhs of wire \Stone_PWM:PWMUDB:pwm_temp\[195] = \Stone_PWM:PWMUDB:cmp1\[85]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_23\[236] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_22\[237] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_21\[238] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_20\[239] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_19\[240] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_18\[241] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_17\[242] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_16\[243] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_15\[244] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_14\[245] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_13\[246] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_12\[247] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_11\[248] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_10\[249] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_9\[250] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_8\[251] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_7\[252] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_6\[253] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_5\[254] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_4\[255] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_3\[256] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_2\[257] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_1\[258] = \Stone_PWM:PWMUDB:MODIN1_1\[259]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODIN1_1\[259] = \Stone_PWM:PWMUDB:dith_count_1\[66]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:a_0\[260] = \Stone_PWM:PWMUDB:MODIN1_0\[261]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODIN1_0\[261] = \Stone_PWM:PWMUDB:dith_count_0\[68]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_0\[393] = tmpOE__LED_net_0[9]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\[394] = tmpOE__LED_net_0[9]
+Removing Lhs of wire \Stone_Timer:TimerUDB:ctrl_enable\[417] = \Stone_Timer:TimerUDB:control_7\[409]
+Removing Lhs of wire \Stone_Timer:TimerUDB:ctrl_cmode_1\[419] = zero[10]
+Removing Rhs of wire \Stone_Timer:TimerUDB:timer_enable\[428] = \Stone_Timer:TimerUDB:runmode_enable\[441]
+Removing Rhs of wire \Stone_Timer:TimerUDB:run_mode\[429] = \Stone_Timer:TimerUDB:hwEnable\[430]
+Removing Lhs of wire \Stone_Timer:TimerUDB:run_mode\[429] = \Stone_Timer:TimerUDB:control_7\[409]
+Removing Lhs of wire \Stone_Timer:TimerUDB:trigger_enable\[432] = tmpOE__LED_net_0[9]
+Removing Lhs of wire \Stone_Timer:TimerUDB:tc_i\[434] = \Stone_Timer:TimerUDB:status_tc\[431]
+Removing Rhs of wire Net_165[437] = \Stone_Timer:TimerUDB:tc_reg_i\[435]
+Removing Lhs of wire \Stone_Timer:TimerUDB:capt_fifo_load_int\[440] = \Stone_Timer:TimerUDB:capt_fifo_load\[427]
+Removing Lhs of wire \Stone_Timer:TimerUDB:status_6\[443] = zero[10]
+Removing Lhs of wire \Stone_Timer:TimerUDB:status_5\[444] = zero[10]
+Removing Lhs of wire \Stone_Timer:TimerUDB:status_4\[445] = zero[10]
+Removing Lhs of wire \Stone_Timer:TimerUDB:status_0\[446] = \Stone_Timer:TimerUDB:status_tc\[431]
+Removing Lhs of wire \Stone_Timer:TimerUDB:status_1\[447] = \Stone_Timer:TimerUDB:capt_fifo_load\[427]
+Removing Rhs of wire \Stone_Timer:TimerUDB:status_2\[448] = \Stone_Timer:TimerUDB:fifo_full\[449]
+Removing Rhs of wire \Stone_Timer:TimerUDB:status_3\[450] = \Stone_Timer:TimerUDB:fifo_nempty\[451]
+Removing Lhs of wire Net_12[453] = zero[10]
+Removing Lhs of wire \Stone_Timer:TimerUDB:cs_addr_2\[455] = zero[10]
+Removing Lhs of wire \Stone_Timer:TimerUDB:cs_addr_1\[456] = \Stone_Timer:TimerUDB:trig_reg\[442]
+Removing Lhs of wire \Stone_Timer:TimerUDB:cs_addr_0\[457] = \Stone_Timer:TimerUDB:per_zero\[433]
+Removing Lhs of wire tmpOE__Motor_net_0[541] = tmpOE__LED_net_0[9]
+Removing Lhs of wire \Stone_PWM:PWMUDB:prevCapture\\D\[548] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:trig_last\\D\[549] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:prevCompare1\\D\[555] = \Stone_PWM:PWMUDB:cmp1\[85]
+Removing Lhs of wire \Stone_PWM:PWMUDB:cmp1_status_reg\\D\[556] = \Stone_PWM:PWMUDB:cmp1_status\[86]
+Removing Lhs of wire \Stone_PWM:PWMUDB:cmp2_status_reg\\D\[557] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:pwm_i_reg\\D\[559] = \Stone_PWM:PWMUDB:pwm_i\[185]
+Removing Lhs of wire \Stone_PWM:PWMUDB:pwm1_i_reg\\D\[560] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:pwm2_i_reg\\D\[561] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:tc_i_reg\\D\[562] = \Stone_PWM:PWMUDB:status_2\[80]
+Removing Lhs of wire \Stone_Timer:TimerUDB:capture_last\\D\[563] = zero[10]
+Removing Lhs of wire \Stone_Timer:TimerUDB:tc_reg_i\\D\[564] = \Stone_Timer:TimerUDB:status_tc\[431]
+Removing Lhs of wire \Stone_Timer:TimerUDB:hwEnable_reg\\D\[565] = \Stone_Timer:TimerUDB:control_7\[409]
+Removing Lhs of wire \Stone_Timer:TimerUDB:capture_out_reg_i\\D\[566] = \Stone_Timer:TimerUDB:capt_fifo_load\[427]
+
+------------------------------------------------------
+Aliased 0 equations, 110 wires.
+------------------------------------------------------
+
+----------------------------------------------------------
+Circuit simplification
+----------------------------------------------------------
+
+Substituting virtuals - pass 1:
+
+Note:  Expanding virtual equation for 'tmpOE__LED_net_0' (cost = 0):
+tmpOE__LED_net_0 <=  ('1') ;
+
+Note:  Expanding virtual equation for 'zero' (cost = 0):
+zero <=  ('0') ;
+
+Note:  Expanding virtual equation for '\Stone_PWM:PWMUDB:cmp1\' (cost = 0):
+\Stone_PWM:PWMUDB:cmp1\ <= (\Stone_PWM:PWMUDB:cmp1_less\);
+
+Note:  Expanding virtual equation for '\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_1\' (cost = 0):
+\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_1\ <= (\Stone_PWM:PWMUDB:dith_count_0\);
+
+Note:  Expanding virtual equation for '\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_0\' (cost = 0):
+\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_0\ <= (not \Stone_PWM:PWMUDB:dith_count_0\);
+
+Note:  Expanding virtual equation for '\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_17\' (cost = 0):
+\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_17\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_9\' (cost = 0):
+\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_9\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_2\' (cost = 0):
+\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_2\ <= ((\Stone_PWM:PWMUDB:dith_count_1\ and \Stone_PWM:PWMUDB:dith_count_0\));
+
+Note:  Expanding virtual equation for '\Stone_Timer:TimerUDB:fifo_load_polarized\' (cost = 0):
+\Stone_Timer:TimerUDB:fifo_load_polarized\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\Stone_Timer:TimerUDB:timer_enable\' (cost = 0):
+\Stone_Timer:TimerUDB:timer_enable\ <= (\Stone_Timer:TimerUDB:control_7\);
+
+
+Substituting virtuals - pass 2:
+
+Note:  Expanding virtual equation for '\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_1\' (cost = 2):
+\Stone_PWM:PWMUDB:MODULE_1:g2:a0:s_1\ <= ((not \Stone_PWM:PWMUDB:dith_count_0\ and \Stone_PWM:PWMUDB:dith_count_1\)
+	OR (not \Stone_PWM:PWMUDB:dith_count_1\ and \Stone_PWM:PWMUDB:dith_count_0\));
+
+Note:  Expanding virtual equation for '\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_18\' (cost = 0):
+\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_18\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_10\' (cost = 0):
+\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_10\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_3\' (cost = 0):
+\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_3\ <=  ('0') ;
+
+
+Substituting virtuals - pass 3:
+
+Note:  Expanding virtual equation for '\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_19\' (cost = 0):
+\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_19\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_11\' (cost = 0):
+\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_11\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_4\' (cost = 0):
+\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_4\ <=  ('0') ;
+
+
+Substituting virtuals - pass 4:
+
+Note:  Expanding virtual equation for '\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_20\' (cost = 0):
+\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_20\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_12\' (cost = 0):
+\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_12\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_5\' (cost = 0):
+\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_5\ <=  ('0') ;
+
+
+Substituting virtuals - pass 5:
+
+Note:  Expanding virtual equation for '\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_21\' (cost = 0):
+\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_21\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_13\' (cost = 0):
+\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_13\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_6\' (cost = 0):
+\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_6\ <=  ('0') ;
+
+
+Substituting virtuals - pass 6:
+
+Note:  Expanding virtual equation for '\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_22\' (cost = 0):
+\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_22\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_14\' (cost = 0):
+\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_14\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_7\' (cost = 0):
+\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_7\ <=  ('0') ;
+
+
+Substituting virtuals - pass 7:
+
+Note:  Expanding virtual equation for '\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_23\' (cost = 0):
+\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_23\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_15\' (cost = 0):
+\Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_15\ <=  ('0') ;
+
+
+Substituting virtuals - pass 8:
+
+
+----------------------------------------------------------
+Circuit simplification results:
+
+	Expanded 28 signals.
+	Turned 0 signals into soft nodes.
+	Maximum default expansion cost was set at 3.
+----------------------------------------------------------
+
+------------------------------------------------------
+Alias Detection
+------------------------------------------------------
+Aliasing \Stone_PWM:PWMUDB:final_capture\ to zero
+Aliasing \Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_24\ to zero
+Aliasing \Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_16\ to zero
+Aliasing \Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\ to zero
+Aliasing \Stone_Timer:TimerUDB:capt_fifo_load\ to zero
+Aliasing \Stone_PWM:PWMUDB:min_kill_reg\\D\ to tmpOE__LED_net_0
+Aliasing \Stone_PWM:PWMUDB:ltch_kill_reg\\D\ to tmpOE__LED_net_0
+Aliasing \Stone_PWM:PWMUDB:final_kill_reg\\D\ to zero
+Removing Lhs of wire \Stone_PWM:PWMUDB:final_capture\[103] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_24\[364] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_16\[374] = zero[10]
+Removing Lhs of wire \Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\[384] = zero[10]
+Removing Lhs of wire \Stone_Timer:TimerUDB:capt_fifo_load\[427] = zero[10]
+Removing Lhs of wire \Stone_Timer:TimerUDB:trig_reg\[442] = \Stone_Timer:TimerUDB:control_7\[409]
+Removing Lhs of wire \Stone_PWM:PWMUDB:min_kill_reg\\D\[547] = tmpOE__LED_net_0[9]
+Removing Lhs of wire \Stone_PWM:PWMUDB:runmode_enable\\D\[550] = \Stone_PWM:PWMUDB:control_7\[22]
+Removing Lhs of wire \Stone_PWM:PWMUDB:ltch_kill_reg\\D\[552] = tmpOE__LED_net_0[9]
+Removing Lhs of wire \Stone_PWM:PWMUDB:final_kill_reg\\D\[558] = zero[10]
+
+------------------------------------------------------
+Aliased 0 equations, 10 wires.
+------------------------------------------------------
+
+----------------------------------------------------------
+Circuit simplification
+----------------------------------------------------------
+
+Eliminating unused logic - pass 1:
+
+
+Eliminating unused logic - pass 2:
+
+
+Substituting virtuals - pass 1:
+
+
+----------------------------------------------------------
+Circuit simplification results:
+
+	Expanded 0 signals.
+	Turned 0 signals into soft nodes.
+	Maximum default expansion cost was set at 3.
+----------------------------------------------------------
+
+topld:  No errors.
+
+CYPRESS_DIR    : D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp
+Warp Program   : D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\bin/warp.exe
+Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cyprj -dcpsoc3 Stone.v -verilog
+</CYPRESSTAG>
+Warp synthesis phase: Elapsed time ==> 3s.521ms
+<CYPRESSTAG name="Fitter results...">
+<CYPRESSTAG name="Fitter startup details...">
+cyp3fit: V3.3.0.9604, Family: PSoC3, Started at: Wednesday, 22 February 2017 10:13:54
+Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cyprj -d CYBLE-014008-00 Stone.v -verilog
+</CYPRESSTAG>
+<CYPRESSTAG name="Design parsing">
+Design parsing phase: Elapsed time ==> 0s.018ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Tech mapping">
+<CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
+    Removed wire end \Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_24\ kept zero
+    Removed wire end \Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_16\ kept zero
+    Removed wire end \Stone_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\ kept zero
+    Converted constant MacroCell: \Stone_PWM:PWMUDB:prevCapture\ from registered to combinatorial
+    Converted constant MacroCell: \Stone_PWM:PWMUDB:trig_last\ from registered to combinatorial
+    Converted constant MacroCell: \Stone_PWM:PWMUDB:status_1\ from registered to combinatorial
+    Converted constant MacroCell: \Stone_PWM:PWMUDB:status_5\ from registered to combinatorial
+    Converted constant MacroCell: \Stone_PWM:PWMUDB:pwm1_i_reg\ from registered to combinatorial
+    Converted constant MacroCell: \Stone_PWM:PWMUDB:pwm2_i_reg\ from registered to combinatorial
+    Converted constant MacroCell: \Stone_Timer:TimerUDB:capture_last\ from registered to combinatorial
+    Converted constant MacroCell: \Stone_Timer:TimerUDB:capture_out_reg_i\ from registered to combinatorial
+Assigning clock BLE_STONE_LFCLK to clock LFCLK because it is a pass-through
+Assigning clock timer_clock to clock LFCLK because it is a pass-through
+
+Removing unused cells resulting from optimization
+Done removing unused cells.
+<CYPRESSTAG name="Global Clock Selection" icon="FILE_RPT_TECHM">
+    Digital Clock 0: Automatic-assigning  clock 'Motor_Clock'. Fanout=1, Signal=Net_207_digital
+<CYPRESSTAG name="UDB Clock/Enable Remapping Results">
+    UDB Clk/Enable \Stone_PWM:PWMUDB:clock_enable_block\: with output requested to be synchronous
+        ClockIn: ClockGenBlock:m0s8clockgenblockcell.gen_clk_out_0 was determined to be a global clock that is synchronous to HFCLK
+        EnableIn: Constant 1 was determined to be synchronous to ClockIn
+        ClockOut: ClockGenBlock:m0s8clockgenblockcell.gen_clk_out_0, EnableOut: Constant 1
+    UDB Clk/Enable \Stone_Timer:TimerUDB:clock_enable_block\: with output requested to be synchronous
+        ClockIn: LFCLK was determined to be a routed clock that is asynchronous
+        EnableIn: Constant 1 was determined to be synchronous to ClockIn
+        ClockOut: HFCLK, EnableOut: ClockBlock_LFCLK__SYNC:synccell.out
+    UDB Clk/Enable \Stone_Timer:TimerUDB:sCTRLReg:SyncCtl:cy_psoc3_udb_Ctl_Clk_Sync\: with output requested to be synchronous
+        ClockIn: LFCLK was determined to be a routed clock that is asynchronous
+        EnableIn: Constant 1 was determined to be synchronous to ClockIn
+        ClockOut: HFCLK, EnableOut: ClockBlock_LFCLK__SYNC_1:synccell.out
+</CYPRESSTAG>
+</CYPRESSTAG>
+
+Removing unused cells resulting from optimization
+Done removing unused cells.
+
+Removing unused cells resulting from optimization
+Done removing unused cells.
+<CYPRESSTAG name="Duplicate Macrocell detection">
+</CYPRESSTAG>
+</CYPRESSTAG>
+<CYPRESSTAG name="Duplicate Macrocell detection">
+
+Removing unused cells resulting from optimization
+Done removing unused cells.
+</CYPRESSTAG>
+<CYPRESSTAG name="Design Equations" icon="FILE_RPT_EQUATION">
+
+------------------------------------------------------------
+Design Equations
+------------------------------------------------------------
+    <CYPRESSTAG name="Pin listing">
+
+    ------------------------------------------------------------
+    Pin listing
+    ------------------------------------------------------------
+
+    Pin : Name = LED(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: AUTO
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: CMOS_OUT
+            VTrip: EITHER
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilitites: DIGITAL
+            Initial Value: 0
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => LED(0)__PA ,
+            pad => LED(0)_PAD );
+        Properties:
+        {
+        }
+
+    Pin : Name = Motor(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: AUTO
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: CMOS_OUT
+            VTrip: EITHER
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilitites: DIGITAL
+            Initial Value: 0
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => Motor(0)__PA ,
+            pad => Motor(0)_PAD );
+        Properties:
+        {
+        }
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Macrocell listing" icon="FILE_RPT_EQUATION">
+
+    ------------------------------------------------------------
+    Macrocell listing
+    ------------------------------------------------------------
+
+    MacroCell: Name=\Stone_PWM:PWMUDB:status_2\, Mode=(Combinatorial)
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \Stone_PWM:PWMUDB:runmode_enable\ * \Stone_PWM:PWMUDB:tc_i\
+        );
+        Output = \Stone_PWM:PWMUDB:status_2\ (fanout=1)
+
+    MacroCell: Name=\Stone_Timer:TimerUDB:status_tc\, Mode=(Combinatorial)
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \Stone_Timer:TimerUDB:control_7\ * 
+              \Stone_Timer:TimerUDB:per_zero\
+        );
+        Output = \Stone_Timer:TimerUDB:status_tc\ (fanout=1)
+
+    MacroCell: Name=\Stone_PWM:PWMUDB:runmode_enable\, Mode=(D-Register)
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_207_digital) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \Stone_PWM:PWMUDB:control_7\
+        );
+        Output = \Stone_PWM:PWMUDB:runmode_enable\ (fanout=5)
+
+    MacroCell: Name=\Stone_PWM:PWMUDB:prevCompare1\, Mode=(D-Register)
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_207_digital) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \Stone_PWM:PWMUDB:cmp1_less\
+        );
+        Output = \Stone_PWM:PWMUDB:prevCompare1\ (fanout=1)
+
+    MacroCell: Name=\Stone_PWM:PWMUDB:status_0\, Mode=(D-Register)
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_207_digital) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\Stone_PWM:PWMUDB:prevCompare1\ * \Stone_PWM:PWMUDB:cmp1_less\
+        );
+        Output = \Stone_PWM:PWMUDB:status_0\ (fanout=1)
+
+    MacroCell: Name=Net_255, Mode=(D-Register)
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_207_digital) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \Stone_PWM:PWMUDB:runmode_enable\ * 
+              \Stone_PWM:PWMUDB:cmp1_less\
+        );
+        Output = Net_255 (fanout=1)
+
+    MacroCell: Name=Net_667, Mode=(D-Register)
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_207_digital) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \Stone_PWM:PWMUDB:runmode_enable\ * \Stone_PWM:PWMUDB:tc_i\
+        );
+        Output = Net_667 (fanout=1)
+
+    MacroCell: Name=Net_165, Mode=(D-Register)
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (ClockBlock_HFCLK) => Global
+            Clock Enable: PosEdge(ClockBlock_LFCLK__SYNC_OUT)
+        Main Equation            : 1 pterm
+        (
+              \Stone_Timer:TimerUDB:control_7\ * 
+              \Stone_Timer:TimerUDB:per_zero\
+        );
+        Output = Net_165 (fanout=1)
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Datapath listing">
+
+    ------------------------------------------------------------
+    Datapath listing
+    ------------------------------------------------------------
+
+    datapathcell: Name =\Stone_PWM:PWMUDB:sP16:pwmdp:u0\
+        PORT MAP (
+            clock => Net_207_digital ,
+            cs_addr_2 => \Stone_PWM:PWMUDB:tc_i\ ,
+            cs_addr_1 => \Stone_PWM:PWMUDB:runmode_enable\ ,
+            chain_out => \Stone_PWM:PWMUDB:sP16:pwmdp:carry\ );
+        Properties:
+        {
+            a0_init = "00000000"
+            a1_init = "00000000"
+            ce0_sync = 1
+            ce1_sync = 1
+            cl0_sync = 1
+            cl1_sync = 1
+            cmsb_sync = 1
+            co_msb_sync = 1
+            cy_dpconfig = "0000000001000000000000001100000001000000010000000000000011000000000000001100000000000000110000000000000011000000000000001100000011111111000000001111111111111111101000000000000000000100000000000000000000011000"
+            d0_init = "00000000"
+            d1_init = "00000000"
+            f0_blk_sync = 1
+            f0_bus_sync = 1
+            f1_blk_sync = 1
+            f1_bus_sync = 1
+            ff0_sync = 1
+            ff1_sync = 1
+            ov_msb_sync = 1
+            so_sync = 1
+            z0_sync = 1
+            z1_sync = 1
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+        Next in chain : \Stone_PWM:PWMUDB:sP16:pwmdp:u1\
+
+    datapathcell: Name =\Stone_PWM:PWMUDB:sP16:pwmdp:u1\
+        PORT MAP (
+            clock => Net_207_digital ,
+            cs_addr_2 => \Stone_PWM:PWMUDB:tc_i\ ,
+            cs_addr_1 => \Stone_PWM:PWMUDB:runmode_enable\ ,
+            cl0_comb => \Stone_PWM:PWMUDB:cmp1_less\ ,
+            z0_comb => \Stone_PWM:PWMUDB:tc_i\ ,
+            f1_blk_stat_comb => \Stone_PWM:PWMUDB:status_3\ ,
+            chain_in => \Stone_PWM:PWMUDB:sP16:pwmdp:carry\ );
+        Properties:
+        {
+            a0_init = "00000000"
+            a1_init = "00000000"
+            ce0_sync = 1
+            ce1_sync = 1
+            cl0_sync = 1
+            cl1_sync = 1
+            cmsb_sync = 1
+            co_msb_sync = 1
+            cy_dpconfig = "0000000001000000000000001100000001000000010000000000000011000000000000001100000000000000110000000000000011000000000000001100000011111111000000001111111111111111101011110000000000000100000011110000000000011000"
+            d0_init = "00000000"
+            d1_init = "00000000"
+            f0_blk_sync = 1
+            f0_bus_sync = 1
+            f1_blk_sync = 1
+            f1_bus_sync = 1
+            ff0_sync = 1
+            ff1_sync = 1
+            ov_msb_sync = 1
+            so_sync = 1
+            z0_sync = 1
+            z1_sync = 1
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+        Previous in chain : \Stone_PWM:PWMUDB:sP16:pwmdp:u0\
+
+    datapathcell: Name =\Stone_Timer:TimerUDB:sT16:timerdp:u0\
+        PORT MAP (
+            clock => ClockBlock_HFCLK ,
+            cs_addr_1 => \Stone_Timer:TimerUDB:control_7\ ,
+            cs_addr_0 => \Stone_Timer:TimerUDB:per_zero\ ,
+            chain_out => \Stone_Timer:TimerUDB:sT16:timerdp:carry\ ,
+            clk_en => ClockBlock_LFCLK__SYNC_OUT );
+        Properties:
+        {
+            a0_init = "00000000"
+            a1_init = "00000000"
+            ce0_sync = 1
+            ce1_sync = 1
+            cl0_sync = 1
+            cl1_sync = 1
+            cmsb_sync = 1
+            co_msb_sync = 1
+            cy_dpconfig = "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111000000000000000000000001000000000000000000011000"
+            d0_init = "00000000"
+            d1_init = "00000000"
+            f0_blk_sync = 1
+            f0_bus_sync = 1
+            f1_blk_sync = 1
+            f1_bus_sync = 1
+            ff0_sync = 1
+            ff1_sync = 1
+            ov_msb_sync = 1
+            so_sync = 1
+            z0_sync = 1
+            z1_sync = 1
+        }
+        Clock Polarity: Active High
+        Clock Enable: PosEdge(ClockBlock_LFCLK__SYNC_OUT)
+        Next in chain : \Stone_Timer:TimerUDB:sT16:timerdp:u1\
+
+    datapathcell: Name =\Stone_Timer:TimerUDB:sT16:timerdp:u1\
+        PORT MAP (
+            clock => ClockBlock_HFCLK ,
+            cs_addr_1 => \Stone_Timer:TimerUDB:control_7\ ,
+            cs_addr_0 => \Stone_Timer:TimerUDB:per_zero\ ,
+            z0_comb => \Stone_Timer:TimerUDB:per_zero\ ,
+            f0_bus_stat_comb => \Stone_Timer:TimerUDB:status_3\ ,
+            f0_blk_stat_comb => \Stone_Timer:TimerUDB:status_2\ ,
+            chain_in => \Stone_Timer:TimerUDB:sT16:timerdp:carry\ ,
+            clk_en => ClockBlock_LFCLK__SYNC_OUT );
+        Properties:
+        {
+            a0_init = "00000000"
+            a1_init = "00000000"
+            ce0_sync = 1
+            ce1_sync = 1
+            cl0_sync = 1
+            cl1_sync = 1
+            cmsb_sync = 1
+            co_msb_sync = 1
+            cy_dpconfig = "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000"
+            d0_init = "00000000"
+            d1_init = "00000000"
+            f0_blk_sync = 1
+            f0_bus_sync = 1
+            f1_blk_sync = 1
+            f1_bus_sync = 1
+            ff0_sync = 1
+            ff1_sync = 1
+            ov_msb_sync = 1
+            so_sync = 1
+            z0_sync = 1
+            z1_sync = 1
+        }
+        Clock Polarity: Active High
+        Clock Enable: PosEdge(ClockBlock_LFCLK__SYNC_OUT)
+        Previous in chain : \Stone_Timer:TimerUDB:sT16:timerdp:u0\
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Status register listing">
+    </CYPRESSTAG>
+    <CYPRESSTAG name="StatusI register listing">
+
+    ------------------------------------------------------------
+    StatusI register listing
+    ------------------------------------------------------------
+
+    statusicell: Name =\Stone_PWM:PWMUDB:genblk8:stsreg\
+        PORT MAP (
+            clock => Net_207_digital ,
+            status_3 => \Stone_PWM:PWMUDB:status_3\ ,
+            status_2 => \Stone_PWM:PWMUDB:status_2\ ,
+            status_0 => \Stone_PWM:PWMUDB:status_0\ );
+        Properties:
+        {
+            cy_force_order = 1
+            cy_int_mask = "1111111"
+            cy_md_select = "0100111"
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+
+    statusicell: Name =\Stone_Timer:TimerUDB:rstSts:stsreg\
+        PORT MAP (
+            clock => ClockBlock_HFCLK ,
+            status_3 => \Stone_Timer:TimerUDB:status_3\ ,
+            status_2 => \Stone_Timer:TimerUDB:status_2\ ,
+            status_0 => \Stone_Timer:TimerUDB:status_tc\ ,
+            clk_en => ClockBlock_LFCLK__SYNC_OUT );
+        Properties:
+        {
+            cy_force_order = 1
+            cy_int_mask = "1111111"
+            cy_md_select = "0000011"
+        }
+        Clock Polarity: Active High
+        Clock Enable: PosEdge(ClockBlock_LFCLK__SYNC_OUT)
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Sync listing">
+
+    ------------------------------------------------------------
+    Sync listing
+    ------------------------------------------------------------
+
+    synccell: Name =ClockBlock_LFCLK__SYNC_1
+        PORT MAP (
+            in => ClockBlock_LFCLK ,
+            out => ClockBlock_LFCLK__SYNC_OUT_1 ,
+            clock => ClockBlock_HFCLK );
+        Clock Polarity: Active High
+        Clock Enable: True
+
+    synccell: Name =ClockBlock_LFCLK__SYNC
+        PORT MAP (
+            in => ClockBlock_LFCLK ,
+            out => ClockBlock_LFCLK__SYNC_OUT ,
+            clock => ClockBlock_HFCLK );
+        Clock Polarity: Active High
+        Clock Enable: True
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Control register listing">
+
+    ------------------------------------------------------------
+    Control register listing
+    ------------------------------------------------------------
+
+    controlcell: Name =\Stone_PWM:PWMUDB:genblk1:ctrlreg\
+        PORT MAP (
+            clock => Net_207_digital ,
+            control_7 => \Stone_PWM:PWMUDB:control_7\ ,
+            control_6 => \Stone_PWM:PWMUDB:control_6\ ,
+            control_5 => \Stone_PWM:PWMUDB:control_5\ ,
+            control_4 => \Stone_PWM:PWMUDB:control_4\ ,
+            control_3 => \Stone_PWM:PWMUDB:control_3\ ,
+            control_2 => \Stone_PWM:PWMUDB:control_2\ ,
+            control_1 => \Stone_PWM:PWMUDB:control_1\ ,
+            control_0 => \Stone_PWM:PWMUDB:control_0\ );
+        Properties:
+        {
+            cy_ctrl_mode_0 = "11111111"
+            cy_ctrl_mode_1 = "00000000"
+            cy_ext_reset = 0
+            cy_force_order = 1
+            cy_init_value = "00000000"
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+
+    controlcell: Name =\Stone_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\
+        PORT MAP (
+            clock => ClockBlock_HFCLK ,
+            control_7 => \Stone_Timer:TimerUDB:control_7\ ,
+            control_6 => \Stone_Timer:TimerUDB:control_6\ ,
+            control_5 => \Stone_Timer:TimerUDB:control_5\ ,
+            control_4 => \Stone_Timer:TimerUDB:control_4\ ,
+            control_3 => \Stone_Timer:TimerUDB:control_3\ ,
+            control_2 => \Stone_Timer:TimerUDB:control_2\ ,
+            control_1 => \Stone_Timer:TimerUDB:control_1\ ,
+            control_0 => \Stone_Timer:TimerUDB:control_0\ ,
+            clk_en => ClockBlock_LFCLK__SYNC_OUT_1 );
+        Properties:
+        {
+            cy_ctrl_mode_0 = "11111111"
+            cy_ctrl_mode_1 = "00000000"
+            cy_ext_reset = 0
+            cy_force_order = 1
+            cy_init_value = "00000000"
+        }
+        Clock Polarity: Active High
+        Clock Enable: PosEdge(ClockBlock_LFCLK__SYNC_OUT_1)
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Count7 listing">
+    </CYPRESSTAG>
+    <CYPRESSTAG name="DRQ listing">
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Interrupt listing">
+
+    ------------------------------------------------------------
+    Interrupt listing
+    ------------------------------------------------------------
+
+    interrupt: Name =\BLE_STONE:bless_isr\
+        PORT MAP (
+            interrupt => \BLE_STONE:Net_15\ );
+        Properties:
+        {
+            int_type = "10"
+        }
+
+    interrupt: Name =trigger_isr
+        PORT MAP (
+            interrupt => Net_255 );
+        Properties:
+        {
+            int_type = "10"
+        }
+
+    interrupt: Name =ms_isr
+        PORT MAP (
+            interrupt => Net_165 );
+        Properties:
+        {
+            int_type = "10"
+        }
+
+    interrupt: Name =tc_isr
+        PORT MAP (
+            interrupt => Net_667 );
+        Properties:
+        {
+            int_type = "10"
+        }
+    </CYPRESSTAG>
+</CYPRESSTAG>
+<CYPRESSTAG name="Technology mapping summary" expanded>
+
+------------------------------------------------------------
+Technology mapping summary
+------------------------------------------------------------
+
+Resource Type                 : Used : Free :  Max :  % Used
+============================================================
+Digital Clocks                :    1 :    3 :    4 : 25.00 %
+Interrupts                    :    4 :   28 :   32 : 12.50 %
+IO                            :    4 :   23 :   27 : 14.81 %
+Segment LCD                   :    0 :    1 :    1 :  0.00 %
+CapSense                      :    0 :    1 :    1 :  0.00 %
+Die Temp                      :    0 :    1 :    1 :  0.00 %
+Serial Communication (SCB)    :    0 :    2 :    2 :  0.00 %
+BLE                           :    1 :    0 :    1 : 100.00 %
+Timer/Counter/PWM             :    0 :    4 :    4 :  0.00 %
+UDB                           :      :      :      :        
+  Macrocells                  :    8 :   24 :   32 : 25.00 %
+  Unique P-terms              :    6 :   58 :   64 :  9.38 %
+  Total P-terms               :    8 :      :      :        
+  Datapath Cells              :    4 :    0 :    4 : 100.00 %
+  Status Cells                :    3 :    1 :    4 : 75.00 %
+    StatusI Registers         :    2 :      :      :        
+    Sync Cells (x2)           :    1 :      :      :        
+  Control Cells               :    2 :    2 :    4 : 50.00 %
+    Control Registers         :    2 :      :      :        
+Comparator/Opamp              :    0 :    4 :    4 :  0.00 %
+LP Comparator                 :    0 :    2 :    2 :  0.00 %
+SAR ADC                       :    0 :    1 :    1 :  0.00 %
+DAC                           :      :      :      :        
+  7-bit IDAC                  :    0 :    1 :    1 :  0.00 %
+  8-bit IDAC                  :    0 :    1 :    1 :  0.00 %
+</CYPRESSTAG>
+Technology Mapping: Elapsed time ==> 0s.067ms
+Tech mapping phase: Elapsed time ==> 0s.125ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Analog Placement">
+<CYPRESSTAG name="Analog Placement">
+Elapsed time ==> 0.1928755s
+</CYPRESSTAG>
+Analog Placement phase: Elapsed time ==> 0s.574ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Analog Routing">
+<CYPRESSTAG name="Analog Routing">
+Route success=True, Iterations=1 Elapsed=0.0019688 secs
+</CYPRESSTAG>
+Analog Routing phase: Elapsed time ==> 0s.003ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Analog Code Generation">
+============ Analog Final Answer Routes ============
+Dump of CyAnalogRoutingResultsDB
+Map of net to items {
+}
+Map of item to net {
+}
+Mux Info {
+}
+Analog Code Generation phase: Elapsed time ==> 0s.039ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Digital Placement">
+<CYPRESSTAG name="Detailed placement messages">
+I2076: Total run-time: 0.5 sec.
+
+</CYPRESSTAG>
+<CYPRESSTAG name="PLD Packing">
+<CYPRESSTAG name="PLD Packing Summary" expanded>
+
+------------------------------------------------------------
+PLD Packing Summary
+------------------------------------------------------------
+            Resource Type : Used : Free :  Max :  % Used
+    ====================================================
+                     PLDs :    4 :    4 :    8 :  50.00%
+
+<CYPRESSTAG name="PLD Statistics">
+
+        PLD Resource Type :     Average/LAB
+    =======================================
+                   Inputs :            2.50
+                   Pterms :            1.75
+               Macrocells :            2.00
+</CYPRESSTAG>
+<CYPRESSTAG name="Packed PLD Contents">
+Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
+</CYPRESSTAG>
+PLD Packing: Elapsed time ==> 0s.002ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Partitioning">
+<CYPRESSTAG name="Initial Partitioning Summary">
+Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
+<CYPRESSTAG name="Final Partitioning Summary">
+Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
+Partitioning: Elapsed time ==> 0s.021ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Simulated Annealing">
+Annealing: Elapsed time ==> 0s.002ms
+<CYPRESSTAG name="Simulated Annealing Results">
+The seed used for moves was 114161200.
+Inital cost was 69, final cost is 69 (0.00% improvement).</CYPRESSTAG>
+</CYPRESSTAG>
+<CYPRESSTAG name="Final Placement Summary">
+
+------------------------------------------------------------
+Final Placement Summary
+------------------------------------------------------------
+
+       Resource Type :      Count : Avg Inputs : Avg Outputs
+    ========================================================
+                 UDB :          4 :       2.25 :       2.00
+<CYPRESSTAG name="Final Placement Details">
+<CYPRESSTAG name="Component Details">
+
+------------------------------------------------------------
+Component Placement Details
+------------------------------------------------------------
+UDB [UDB=(0,0)] contents:
+LAB@[UDB=(0,0)][LB=1] #macrocells=2, #inputs=2, #pterms=1
+{
+    [McSlotId=0]:     MacroCell: Name=\Stone_Timer:TimerUDB:status_tc\, Mode=(Combinatorial) @ [UDB=(0,0)][LB=1][MC=0]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \Stone_Timer:TimerUDB:control_7\ * 
+              \Stone_Timer:TimerUDB:per_zero\
+        );
+        Output = \Stone_Timer:TimerUDB:status_tc\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=Net_165, Mode=(D-Register) @ [UDB=(0,0)][LB=1][MC=1]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (ClockBlock_HFCLK) => Global
+            Clock Enable: PosEdge(ClockBlock_LFCLK__SYNC_OUT)
+        Main Equation            : 1 pterm
+        (
+              \Stone_Timer:TimerUDB:control_7\ * 
+              \Stone_Timer:TimerUDB:per_zero\
+        );
+        Output = Net_165 (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+datapathcell: Name =\Stone_Timer:TimerUDB:sT16:timerdp:u1\
+    PORT MAP (
+        clock => ClockBlock_HFCLK ,
+        cs_addr_1 => \Stone_Timer:TimerUDB:control_7\ ,
+        cs_addr_0 => \Stone_Timer:TimerUDB:per_zero\ ,
+        z0_comb => \Stone_Timer:TimerUDB:per_zero\ ,
+        f0_bus_stat_comb => \Stone_Timer:TimerUDB:status_3\ ,
+        f0_blk_stat_comb => \Stone_Timer:TimerUDB:status_2\ ,
+        chain_in => \Stone_Timer:TimerUDB:sT16:timerdp:carry\ ,
+        clk_en => ClockBlock_LFCLK__SYNC_OUT );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: PosEdge(ClockBlock_LFCLK__SYNC_OUT)
+    Previous in chain : \Stone_Timer:TimerUDB:sT16:timerdp:u0\
+
+statusicell: Name =\Stone_Timer:TimerUDB:rstSts:stsreg\
+    PORT MAP (
+        clock => ClockBlock_HFCLK ,
+        status_3 => \Stone_Timer:TimerUDB:status_3\ ,
+        status_2 => \Stone_Timer:TimerUDB:status_2\ ,
+        status_0 => \Stone_Timer:TimerUDB:status_tc\ ,
+        clk_en => ClockBlock_LFCLK__SYNC_OUT );
+    Properties:
+    {
+        cy_force_order = 1
+        cy_int_mask = "1111111"
+        cy_md_select = "0000011"
+    }
+    Clock Polarity: Active High
+    Clock Enable: PosEdge(ClockBlock_LFCLK__SYNC_OUT)
+
+UDB [UDB=(0,1)] contents:
+LAB@[UDB=(0,1)][LB=0] #macrocells=1, #inputs=2, #pterms=1
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]:     MacroCell: Name=Net_667, Mode=(D-Register) @ [UDB=(0,1)][LB=0][MC=1]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_207_digital) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \Stone_PWM:PWMUDB:runmode_enable\ * \Stone_PWM:PWMUDB:tc_i\
+        );
+        Output = Net_667 (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+datapathcell: Name =\Stone_PWM:PWMUDB:sP16:pwmdp:u0\
+    PORT MAP (
+        clock => Net_207_digital ,
+        cs_addr_2 => \Stone_PWM:PWMUDB:tc_i\ ,
+        cs_addr_1 => \Stone_PWM:PWMUDB:runmode_enable\ ,
+        chain_out => \Stone_PWM:PWMUDB:sP16:pwmdp:carry\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000001000000000000001100000001000000010000000000000011000000000000001100000000000000110000000000000011000000000000001100000011111111000000001111111111111111101000000000000000000100000000000000000000011000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Next in chain : \Stone_PWM:PWMUDB:sP16:pwmdp:u1\
+
+synccell: Name =ClockBlock_LFCLK__SYNC
+    PORT MAP (
+        in => ClockBlock_LFCLK ,
+        out => ClockBlock_LFCLK__SYNC_OUT ,
+        clock => ClockBlock_HFCLK );
+    Properties:
+    {
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+synccell: Name =ClockBlock_LFCLK__SYNC_1
+    PORT MAP (
+        in => ClockBlock_LFCLK ,
+        out => ClockBlock_LFCLK__SYNC_OUT_1 ,
+        clock => ClockBlock_HFCLK );
+    Properties:
+    {
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(1,0)] contents:
+datapathcell: Name =\Stone_Timer:TimerUDB:sT16:timerdp:u0\
+    PORT MAP (
+        clock => ClockBlock_HFCLK ,
+        cs_addr_1 => \Stone_Timer:TimerUDB:control_7\ ,
+        cs_addr_0 => \Stone_Timer:TimerUDB:per_zero\ ,
+        chain_out => \Stone_Timer:TimerUDB:sT16:timerdp:carry\ ,
+        clk_en => ClockBlock_LFCLK__SYNC_OUT );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111000000000000000000000001000000000000000000011000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: PosEdge(ClockBlock_LFCLK__SYNC_OUT)
+    Next in chain : \Stone_Timer:TimerUDB:sT16:timerdp:u1\
+
+controlcell: Name =\Stone_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\
+    PORT MAP (
+        clock => ClockBlock_HFCLK ,
+        control_7 => \Stone_Timer:TimerUDB:control_7\ ,
+        control_6 => \Stone_Timer:TimerUDB:control_6\ ,
+        control_5 => \Stone_Timer:TimerUDB:control_5\ ,
+        control_4 => \Stone_Timer:TimerUDB:control_4\ ,
+        control_3 => \Stone_Timer:TimerUDB:control_3\ ,
+        control_2 => \Stone_Timer:TimerUDB:control_2\ ,
+        control_1 => \Stone_Timer:TimerUDB:control_1\ ,
+        control_0 => \Stone_Timer:TimerUDB:control_0\ ,
+        clk_en => ClockBlock_LFCLK__SYNC_OUT_1 );
+    Properties:
+    {
+        cy_ctrl_mode_0 = "11111111"
+        cy_ctrl_mode_1 = "00000000"
+        cy_ext_reset = 0
+        cy_force_order = 1
+        cy_init_value = "00000000"
+    }
+    Clock Polarity: Active High
+    Clock Enable: PosEdge(ClockBlock_LFCLK__SYNC_OUT_1)
+
+UDB [UDB=(1,1)] contents:
+LAB@[UDB=(1,1)][LB=0] #macrocells=3, #inputs=4, #pterms=3
+{
+    [McSlotId=0]:     MacroCell: Name=\Stone_PWM:PWMUDB:runmode_enable\, Mode=(D-Register) @ [UDB=(1,1)][LB=0][MC=0]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_207_digital) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \Stone_PWM:PWMUDB:control_7\
+        );
+        Output = \Stone_PWM:PWMUDB:runmode_enable\ (fanout=5)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\Stone_PWM:PWMUDB:status_2\, Mode=(Combinatorial) @ [UDB=(1,1)][LB=0][MC=1]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \Stone_PWM:PWMUDB:runmode_enable\ * \Stone_PWM:PWMUDB:tc_i\
+        );
+        Output = \Stone_PWM:PWMUDB:status_2\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=Net_255, Mode=(D-Register) @ [UDB=(1,1)][LB=0][MC=3]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_207_digital) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \Stone_PWM:PWMUDB:runmode_enable\ * 
+              \Stone_PWM:PWMUDB:cmp1_less\
+        );
+        Output = Net_255 (fanout=1)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(1,1)][LB=1] #macrocells=2, #inputs=2, #pterms=2
+{
+    [McSlotId=0]:     MacroCell: Name=\Stone_PWM:PWMUDB:prevCompare1\, Mode=(D-Register) @ [UDB=(1,1)][LB=1][MC=0]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_207_digital) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \Stone_PWM:PWMUDB:cmp1_less\
+        );
+        Output = \Stone_PWM:PWMUDB:prevCompare1\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\Stone_PWM:PWMUDB:status_0\, Mode=(D-Register) @ [UDB=(1,1)][LB=1][MC=1]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_207_digital) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\Stone_PWM:PWMUDB:prevCompare1\ * \Stone_PWM:PWMUDB:cmp1_less\
+        );
+        Output = \Stone_PWM:PWMUDB:status_0\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+datapathcell: Name =\Stone_PWM:PWMUDB:sP16:pwmdp:u1\
+    PORT MAP (
+        clock => Net_207_digital ,
+        cs_addr_2 => \Stone_PWM:PWMUDB:tc_i\ ,
+        cs_addr_1 => \Stone_PWM:PWMUDB:runmode_enable\ ,
+        cl0_comb => \Stone_PWM:PWMUDB:cmp1_less\ ,
+        z0_comb => \Stone_PWM:PWMUDB:tc_i\ ,
+        f1_blk_stat_comb => \Stone_PWM:PWMUDB:status_3\ ,
+        chain_in => \Stone_PWM:PWMUDB:sP16:pwmdp:carry\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000001000000000000001100000001000000010000000000000011000000000000001100000000000000110000000000000011000000000000001100000011111111000000001111111111111111101011110000000000000100000011110000000000011000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Previous in chain : \Stone_PWM:PWMUDB:sP16:pwmdp:u0\
+
+statusicell: Name =\Stone_PWM:PWMUDB:genblk8:stsreg\
+    PORT MAP (
+        clock => Net_207_digital ,
+        status_3 => \Stone_PWM:PWMUDB:status_3\ ,
+        status_2 => \Stone_PWM:PWMUDB:status_2\ ,
+        status_0 => \Stone_PWM:PWMUDB:status_0\ );
+    Properties:
+    {
+        cy_force_order = 1
+        cy_int_mask = "1111111"
+        cy_md_select = "0100111"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+controlcell: Name =\Stone_PWM:PWMUDB:genblk1:ctrlreg\
+    PORT MAP (
+        clock => Net_207_digital ,
+        control_7 => \Stone_PWM:PWMUDB:control_7\ ,
+        control_6 => \Stone_PWM:PWMUDB:control_6\ ,
+        control_5 => \Stone_PWM:PWMUDB:control_5\ ,
+        control_4 => \Stone_PWM:PWMUDB:control_4\ ,
+        control_3 => \Stone_PWM:PWMUDB:control_3\ ,
+        control_2 => \Stone_PWM:PWMUDB:control_2\ ,
+        control_1 => \Stone_PWM:PWMUDB:control_1\ ,
+        control_0 => \Stone_PWM:PWMUDB:control_0\ );
+    Properties:
+    {
+        cy_ctrl_mode_0 = "11111111"
+        cy_ctrl_mode_1 = "00000000"
+        cy_ext_reset = 0
+        cy_force_order = 1
+        cy_init_value = "00000000"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+Intr container @ [IntrContainer=(0)]: 
+  Intr@ [IntrContainer=(0)][IntrId=(1)] 
+    interrupt: Name =ms_isr
+        PORT MAP (
+            interrupt => Net_165 );
+        Properties:
+        {
+            int_type = "10"
+        }
+  Intr@ [IntrContainer=(0)][IntrId=(2)] 
+    interrupt: Name =tc_isr
+        PORT MAP (
+            interrupt => Net_667 );
+        Properties:
+        {
+            int_type = "10"
+        }
+  Intr@ [IntrContainer=(0)][IntrId=(3)] 
+    interrupt: Name =trigger_isr
+        PORT MAP (
+            interrupt => Net_255 );
+        Properties:
+        {
+            int_type = "10"
+        }
+  Intr@ [IntrContainer=(0)][IntrId=(12)] 
+    interrupt: Name =\BLE_STONE:bless_isr\
+        PORT MAP (
+            interrupt => \BLE_STONE:Net_15\ );
+        Properties:
+        {
+            int_type = "10"
+        }
+Port 0 is empty
+Port 1 contains the following IO cells:
+[IoId=2]: 
+Pin : Name = LED(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => LED(0)__PA ,
+        pad => LED(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=3]: 
+Pin : Name = Motor(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => Motor(0)__PA ,
+        pad => Motor(0)_PAD );
+    Properties:
+    {
+    }
+
+Port 2 is empty
+Port 3 is empty
+Port 4 is empty
+Clock group 0: 
+    M0S8 Clock Block @ F(Clock,0): 
+    m0s8clockblockcell: Name =ClockBlock
+        PORT MAP (
+            hfclk => ClockBlock_HFCLK ,
+            imo => ClockBlock_IMO ,
+            ext => ClockBlock_EXTCLK ,
+            sysclk => ClockBlock_SYSCLK ,
+            eco => ClockBlock_ECO ,
+            ilo => ClockBlock_ILO ,
+            lfclk => ClockBlock_LFCLK ,
+            wco => ClockBlock_WCO ,
+            dsi_in_0 => ClockBlock_Routed1 ,
+            udb_div_0 => dclk_to_genclk );
+        Properties:
+        {
+        }
+PM group 0: empty
+SPC group 0: empty
+WDT group 0: empty
+FSS group 0: empty
+LP Comparator group 0: empty
+Serial Communication (SCB) group 0: empty
+CapSense group 0: empty
+8-bit IDAC group 0: empty
+7-bit IDAC group 0: empty
+Timer/Counter/PWM group 0: empty
+Comparator/Opamp group 0: empty
+Die Temp group 0: empty
+SAR ADC group 0: empty
+Segment LCD group 0: empty
+CLK_GEN group 0: 
+    M0S8 Clock Gen Block @ F(CLK_GEN,0): 
+    m0s8clockgenblockcell: Name =ClockGenBlock
+        PORT MAP (
+            gen_clk_out_0 => Net_207_digital ,
+            gen_clk_in_0 => dclk_to_genclk );
+        Properties:
+        {
+        }
+LPCOMPBLOCK group 0: empty
+PASSBLOCK group 0: empty
+ANAPUMP group 0: empty
+BLE group 0: 
+    BLE Block @ F(BLE,0): 
+    p4blecell: Name =\BLE_STONE:cy_m0s8_ble\
+        PORT MAP (
+            interrupt => \BLE_STONE:Net_15\ ,
+            rfctrl_extpa_en => Net_18 );
+        Properties:
+        {
+            cy_registers = ""
+        }
+GANGED_PICU group 0: empty
+WCO group 0: empty
+</CYPRESSTAG>
+<CYPRESSTAG name="Port Configuration Details">
+
+------------------------------------------------------------
+Port Configuration report
+------------------------------------------------------------
+     |     |       | Interrupt |                  |          | 
+Port | Pin | Fixed |      Type |       Drive Mode |     Name | Connections
+-----+-----+-------+-----------+------------------+----------+------------
+   1 |   2 |     * |      NONE |         CMOS_OUT |   LED(0) | 
+     |   3 |     * |      NONE |         CMOS_OUT | Motor(0) | 
+--------------------------------------------------------------------------
+</CYPRESSTAG>
+</CYPRESSTAG>
+</CYPRESSTAG>
+Digital component placer commit/Report: Elapsed time ==> 0s.002ms
+Digital Placement phase: Elapsed time ==> 3s.201ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Digital Routing">
+Routing successful.
+Digital Routing phase: Elapsed time ==> 3s.377ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Bitstream and API generation">
+Bitstream and API generation phase: Elapsed time ==> 0s.484ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Bitstream verification">
+Bitstream verification phase: Elapsed time ==> 0s.034ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Static timing analysis">
+Warning: sta.M0019: Stone_timing.html: Warning-1366: Setup time violation found in a path from clock ( CyHFCLK ) to clock ( CyHFCLK ). (File=E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone_timing.html)
+Timing report is in Stone_timing.html.
+Static timing analysis phase: Elapsed time ==> 1s.982ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Data reporting">
+Data reporting phase: Elapsed time ==> 0s.000ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Database update...">
+Design database save phase: Elapsed time ==> 0s.237ms
+</CYPRESSTAG>
+cydsfit: Elapsed time ==> 10s.101ms
+</CYPRESSTAG>
+Fitter phase: Elapsed time ==> 10s.179ms
+API generation phase: Elapsed time ==> 4s.485ms
+Dependency generation phase: Elapsed time ==> 0s.020ms
+Cleanup phase: Elapsed time ==> 0s.001ms

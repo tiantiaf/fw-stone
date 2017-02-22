@@ -1,0 +1,2598 @@
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"Stone_PWM.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.Stone_PWM_Enable,"ax",%progbits
+  18              		.align	2
+  19              		.global	Stone_PWM_Enable
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	Stone_PWM_Enable, %function
+  23              	Stone_PWM_Enable:
+  24              	.LFB4:
+  25              		.file 1 ".\\Generated_Source\\PSoC4\\Stone_PWM.c"
+   1:.\Generated_Source\PSoC4/Stone_PWM.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC4/Stone_PWM.c **** * File Name: Stone_PWM.c
+   3:.\Generated_Source\PSoC4/Stone_PWM.c **** * Version 3.30
+   4:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+   5:.\Generated_Source\PSoC4/Stone_PWM.c **** * Description:
+   6:.\Generated_Source\PSoC4/Stone_PWM.c **** *  The PWM User Module consist of an 8 or 16-bit counter with two 8 or 16-bit
+   7:.\Generated_Source\PSoC4/Stone_PWM.c **** *  comparitors. Each instance of this user module is capable of generating
+   8:.\Generated_Source\PSoC4/Stone_PWM.c **** *  two PWM outputs with the same period. The pulse width is selectable between
+   9:.\Generated_Source\PSoC4/Stone_PWM.c **** *  1 and 255/65535. The period is selectable between 2 and 255/65536 clocks.
+  10:.\Generated_Source\PSoC4/Stone_PWM.c **** *  The compare value output may be configured to be active when the present
+  11:.\Generated_Source\PSoC4/Stone_PWM.c **** *  counter is less than or less than/equal to the compare value.
+  12:.\Generated_Source\PSoC4/Stone_PWM.c **** *  A terminal count output is also provided. It generates a pulse one clock
+  13:.\Generated_Source\PSoC4/Stone_PWM.c **** *  width wide when the counter is equal to zero.
+  14:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+  15:.\Generated_Source\PSoC4/Stone_PWM.c **** * Note:
+  16:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+  17:.\Generated_Source\PSoC4/Stone_PWM.c **** *******************************************************************************
+  18:.\Generated_Source\PSoC4/Stone_PWM.c **** * Copyright 2008-2014, Cypress Semiconductor Corporation.  All rights reserved.
+  19:.\Generated_Source\PSoC4/Stone_PWM.c **** * You may use this file only in accordance with the license, terms, conditions,
+  20:.\Generated_Source\PSoC4/Stone_PWM.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  21:.\Generated_Source\PSoC4/Stone_PWM.c **** * the software package with which this file was provided.
+  22:.\Generated_Source\PSoC4/Stone_PWM.c **** ********************************************************************************/
+  23:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+  24:.\Generated_Source\PSoC4/Stone_PWM.c **** #include "Stone_PWM.h"
+  25:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+  26:.\Generated_Source\PSoC4/Stone_PWM.c **** /* Error message for removed <resource> through optimization */
+  27:.\Generated_Source\PSoC4/Stone_PWM.c **** #ifdef Stone_PWM_PWMUDB_genblk1_ctrlreg__REMOVED
+  28:.\Generated_Source\PSoC4/Stone_PWM.c ****     #error PWM_v3_30 detected with a constant 0 for the enable or \
+  29:.\Generated_Source\PSoC4/Stone_PWM.c ****          constant 1 for reset. This will prevent the component from operating.
+  30:.\Generated_Source\PSoC4/Stone_PWM.c **** #endif /* Stone_PWM_PWMUDB_genblk1_ctrlreg__REMOVED */
+  31:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+  32:.\Generated_Source\PSoC4/Stone_PWM.c **** uint8 Stone_PWM_initVar = 0u;
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 2
+
+
+  33:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+  34:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+  35:.\Generated_Source\PSoC4/Stone_PWM.c **** /*******************************************************************************
+  36:.\Generated_Source\PSoC4/Stone_PWM.c **** * Function Name: Stone_PWM_Start
+  37:.\Generated_Source\PSoC4/Stone_PWM.c **** ********************************************************************************
+  38:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+  39:.\Generated_Source\PSoC4/Stone_PWM.c **** * Summary:
+  40:.\Generated_Source\PSoC4/Stone_PWM.c **** *  The start function initializes the pwm with the default values, the
+  41:.\Generated_Source\PSoC4/Stone_PWM.c **** *  enables the counter to begin counting.  It does not enable interrupts,
+  42:.\Generated_Source\PSoC4/Stone_PWM.c **** *  the EnableInt command should be called if interrupt generation is required.
+  43:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+  44:.\Generated_Source\PSoC4/Stone_PWM.c **** * Parameters:
+  45:.\Generated_Source\PSoC4/Stone_PWM.c **** *  None
+  46:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+  47:.\Generated_Source\PSoC4/Stone_PWM.c **** * Return:
+  48:.\Generated_Source\PSoC4/Stone_PWM.c **** *  None
+  49:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+  50:.\Generated_Source\PSoC4/Stone_PWM.c **** * Global variables:
+  51:.\Generated_Source\PSoC4/Stone_PWM.c **** *  Stone_PWM_initVar: Is modified when this function is called for the
+  52:.\Generated_Source\PSoC4/Stone_PWM.c **** *   first time. Is used to ensure that initialization happens only once.
+  53:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+  54:.\Generated_Source\PSoC4/Stone_PWM.c **** *******************************************************************************/
+  55:.\Generated_Source\PSoC4/Stone_PWM.c **** void Stone_PWM_Start(void) 
+  56:.\Generated_Source\PSoC4/Stone_PWM.c **** {
+  57:.\Generated_Source\PSoC4/Stone_PWM.c ****     /* If not Initialized then initialize all required hardware and software */
+  58:.\Generated_Source\PSoC4/Stone_PWM.c ****     if(Stone_PWM_initVar == 0u)
+  59:.\Generated_Source\PSoC4/Stone_PWM.c ****     {
+  60:.\Generated_Source\PSoC4/Stone_PWM.c ****         Stone_PWM_Init();
+  61:.\Generated_Source\PSoC4/Stone_PWM.c ****         Stone_PWM_initVar = 1u;
+  62:.\Generated_Source\PSoC4/Stone_PWM.c ****     }
+  63:.\Generated_Source\PSoC4/Stone_PWM.c ****     Stone_PWM_Enable();
+  64:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+  65:.\Generated_Source\PSoC4/Stone_PWM.c **** }
+  66:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+  67:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+  68:.\Generated_Source\PSoC4/Stone_PWM.c **** /*******************************************************************************
+  69:.\Generated_Source\PSoC4/Stone_PWM.c **** * Function Name: Stone_PWM_Init
+  70:.\Generated_Source\PSoC4/Stone_PWM.c **** ********************************************************************************
+  71:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+  72:.\Generated_Source\PSoC4/Stone_PWM.c **** * Summary:
+  73:.\Generated_Source\PSoC4/Stone_PWM.c **** *  Initialize component's parameters to the parameters set by user in the
+  74:.\Generated_Source\PSoC4/Stone_PWM.c **** *  customizer of the component placed onto schematic. Usually called in
+  75:.\Generated_Source\PSoC4/Stone_PWM.c **** *  Stone_PWM_Start().
+  76:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+  77:.\Generated_Source\PSoC4/Stone_PWM.c **** * Parameters:
+  78:.\Generated_Source\PSoC4/Stone_PWM.c **** *  None
+  79:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+  80:.\Generated_Source\PSoC4/Stone_PWM.c **** * Return:
+  81:.\Generated_Source\PSoC4/Stone_PWM.c **** *  None
+  82:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+  83:.\Generated_Source\PSoC4/Stone_PWM.c **** *******************************************************************************/
+  84:.\Generated_Source\PSoC4/Stone_PWM.c **** void Stone_PWM_Init(void) 
+  85:.\Generated_Source\PSoC4/Stone_PWM.c **** {
+  86:.\Generated_Source\PSoC4/Stone_PWM.c ****     #if (Stone_PWM_UsingFixedFunction || Stone_PWM_UseControl)
+  87:.\Generated_Source\PSoC4/Stone_PWM.c ****         uint8 ctrl;
+  88:.\Generated_Source\PSoC4/Stone_PWM.c ****     #endif /* (Stone_PWM_UsingFixedFunction || Stone_PWM_UseControl) */
+  89:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 3
+
+
+  90:.\Generated_Source\PSoC4/Stone_PWM.c ****     #if(!Stone_PWM_UsingFixedFunction)
+  91:.\Generated_Source\PSoC4/Stone_PWM.c ****         #if(Stone_PWM_UseStatus)
+  92:.\Generated_Source\PSoC4/Stone_PWM.c ****             /* Interrupt State Backup for Critical Region*/
+  93:.\Generated_Source\PSoC4/Stone_PWM.c ****             uint8 Stone_PWM_interruptState;
+  94:.\Generated_Source\PSoC4/Stone_PWM.c ****         #endif /* (Stone_PWM_UseStatus) */
+  95:.\Generated_Source\PSoC4/Stone_PWM.c ****     #endif /* (!Stone_PWM_UsingFixedFunction) */
+  96:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+  97:.\Generated_Source\PSoC4/Stone_PWM.c ****     #if (Stone_PWM_UsingFixedFunction)
+  98:.\Generated_Source\PSoC4/Stone_PWM.c ****         /* You are allowed to write the compare value (FF only) */
+  99:.\Generated_Source\PSoC4/Stone_PWM.c ****         Stone_PWM_CONTROL |= Stone_PWM_CFG0_MODE;
+ 100:.\Generated_Source\PSoC4/Stone_PWM.c ****         #if (Stone_PWM_DeadBand2_4)
+ 101:.\Generated_Source\PSoC4/Stone_PWM.c ****             Stone_PWM_CONTROL |= Stone_PWM_CFG0_DB;
+ 102:.\Generated_Source\PSoC4/Stone_PWM.c ****         #endif /* (Stone_PWM_DeadBand2_4) */
+ 103:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 104:.\Generated_Source\PSoC4/Stone_PWM.c ****         ctrl = Stone_PWM_CONTROL3 & ((uint8 )(~Stone_PWM_CTRL_CMPMODE1_MASK));
+ 105:.\Generated_Source\PSoC4/Stone_PWM.c ****         Stone_PWM_CONTROL3 = ctrl | Stone_PWM_DEFAULT_COMPARE1_MODE;
+ 106:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 107:.\Generated_Source\PSoC4/Stone_PWM.c ****          /* Clear and Set SYNCTC and SYNCCMP bits of RT1 register */
+ 108:.\Generated_Source\PSoC4/Stone_PWM.c ****         Stone_PWM_RT1 &= ((uint8)(~Stone_PWM_RT1_MASK));
+ 109:.\Generated_Source\PSoC4/Stone_PWM.c ****         Stone_PWM_RT1 |= Stone_PWM_SYNC;
+ 110:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 111:.\Generated_Source\PSoC4/Stone_PWM.c ****         /*Enable DSI Sync all all inputs of the PWM*/
+ 112:.\Generated_Source\PSoC4/Stone_PWM.c ****         Stone_PWM_RT1 &= ((uint8)(~Stone_PWM_SYNCDSI_MASK));
+ 113:.\Generated_Source\PSoC4/Stone_PWM.c ****         Stone_PWM_RT1 |= Stone_PWM_SYNCDSI_EN;
+ 114:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 115:.\Generated_Source\PSoC4/Stone_PWM.c ****     #elif (Stone_PWM_UseControl)
+ 116:.\Generated_Source\PSoC4/Stone_PWM.c ****         /* Set the default compare mode defined in the parameter */
+ 117:.\Generated_Source\PSoC4/Stone_PWM.c ****         ctrl = Stone_PWM_CONTROL & ((uint8)(~Stone_PWM_CTRL_CMPMODE2_MASK)) &
+ 118:.\Generated_Source\PSoC4/Stone_PWM.c ****                 ((uint8)(~Stone_PWM_CTRL_CMPMODE1_MASK));
+ 119:.\Generated_Source\PSoC4/Stone_PWM.c ****         Stone_PWM_CONTROL = ctrl | Stone_PWM_DEFAULT_COMPARE2_MODE |
+ 120:.\Generated_Source\PSoC4/Stone_PWM.c ****                                    Stone_PWM_DEFAULT_COMPARE1_MODE;
+ 121:.\Generated_Source\PSoC4/Stone_PWM.c ****     #endif /* (Stone_PWM_UsingFixedFunction) */
+ 122:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 123:.\Generated_Source\PSoC4/Stone_PWM.c ****     #if (!Stone_PWM_UsingFixedFunction)
+ 124:.\Generated_Source\PSoC4/Stone_PWM.c ****         #if (Stone_PWM_Resolution == 8)
+ 125:.\Generated_Source\PSoC4/Stone_PWM.c ****             /* Set FIFO 0 to 1 byte register for period*/
+ 126:.\Generated_Source\PSoC4/Stone_PWM.c ****             Stone_PWM_AUX_CONTROLDP0 |= (Stone_PWM_AUX_CTRL_FIFO0_CLR);
+ 127:.\Generated_Source\PSoC4/Stone_PWM.c ****         #else /* (Stone_PWM_Resolution == 16)*/
+ 128:.\Generated_Source\PSoC4/Stone_PWM.c ****             /* Set FIFO 0 to 1 byte register for period */
+ 129:.\Generated_Source\PSoC4/Stone_PWM.c ****             Stone_PWM_AUX_CONTROLDP0 |= (Stone_PWM_AUX_CTRL_FIFO0_CLR);
+ 130:.\Generated_Source\PSoC4/Stone_PWM.c ****             Stone_PWM_AUX_CONTROLDP1 |= (Stone_PWM_AUX_CTRL_FIFO0_CLR);
+ 131:.\Generated_Source\PSoC4/Stone_PWM.c ****         #endif /* (Stone_PWM_Resolution == 8) */
+ 132:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 133:.\Generated_Source\PSoC4/Stone_PWM.c ****         Stone_PWM_WriteCounter(Stone_PWM_INIT_PERIOD_VALUE);
+ 134:.\Generated_Source\PSoC4/Stone_PWM.c ****     #endif /* (!Stone_PWM_UsingFixedFunction) */
+ 135:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 136:.\Generated_Source\PSoC4/Stone_PWM.c ****     Stone_PWM_WritePeriod(Stone_PWM_INIT_PERIOD_VALUE);
+ 137:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 138:.\Generated_Source\PSoC4/Stone_PWM.c ****         #if (Stone_PWM_UseOneCompareMode)
+ 139:.\Generated_Source\PSoC4/Stone_PWM.c ****             Stone_PWM_WriteCompare(Stone_PWM_INIT_COMPARE_VALUE1);
+ 140:.\Generated_Source\PSoC4/Stone_PWM.c ****         #else
+ 141:.\Generated_Source\PSoC4/Stone_PWM.c ****             Stone_PWM_WriteCompare1(Stone_PWM_INIT_COMPARE_VALUE1);
+ 142:.\Generated_Source\PSoC4/Stone_PWM.c ****             Stone_PWM_WriteCompare2(Stone_PWM_INIT_COMPARE_VALUE2);
+ 143:.\Generated_Source\PSoC4/Stone_PWM.c ****         #endif /* (Stone_PWM_UseOneCompareMode) */
+ 144:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 145:.\Generated_Source\PSoC4/Stone_PWM.c ****         #if (Stone_PWM_KillModeMinTime)
+ 146:.\Generated_Source\PSoC4/Stone_PWM.c ****             Stone_PWM_WriteKillTime(Stone_PWM_MinimumKillTime);
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 4
+
+
+ 147:.\Generated_Source\PSoC4/Stone_PWM.c ****         #endif /* (Stone_PWM_KillModeMinTime) */
+ 148:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 149:.\Generated_Source\PSoC4/Stone_PWM.c ****         #if (Stone_PWM_DeadBandUsed)
+ 150:.\Generated_Source\PSoC4/Stone_PWM.c ****             Stone_PWM_WriteDeadTime(Stone_PWM_INIT_DEAD_TIME);
+ 151:.\Generated_Source\PSoC4/Stone_PWM.c ****         #endif /* (Stone_PWM_DeadBandUsed) */
+ 152:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 153:.\Generated_Source\PSoC4/Stone_PWM.c ****     #if (Stone_PWM_UseStatus || Stone_PWM_UsingFixedFunction)
+ 154:.\Generated_Source\PSoC4/Stone_PWM.c ****         Stone_PWM_SetInterruptMode(Stone_PWM_INIT_INTERRUPTS_MODE);
+ 155:.\Generated_Source\PSoC4/Stone_PWM.c ****     #endif /* (Stone_PWM_UseStatus || Stone_PWM_UsingFixedFunction) */
+ 156:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 157:.\Generated_Source\PSoC4/Stone_PWM.c ****     #if (Stone_PWM_UsingFixedFunction)
+ 158:.\Generated_Source\PSoC4/Stone_PWM.c ****         /* Globally Enable the Fixed Function Block chosen */
+ 159:.\Generated_Source\PSoC4/Stone_PWM.c ****         Stone_PWM_GLOBAL_ENABLE |= Stone_PWM_BLOCK_EN_MASK;
+ 160:.\Generated_Source\PSoC4/Stone_PWM.c ****         /* Set the Interrupt source to come from the status register */
+ 161:.\Generated_Source\PSoC4/Stone_PWM.c ****         Stone_PWM_CONTROL2 |= Stone_PWM_CTRL2_IRQ_SEL;
+ 162:.\Generated_Source\PSoC4/Stone_PWM.c ****     #else
+ 163:.\Generated_Source\PSoC4/Stone_PWM.c ****         #if(Stone_PWM_UseStatus)
+ 164:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 165:.\Generated_Source\PSoC4/Stone_PWM.c ****             /* CyEnterCriticalRegion and CyExitCriticalRegion are used to mark following region cri
+ 166:.\Generated_Source\PSoC4/Stone_PWM.c ****             /* Enter Critical Region*/
+ 167:.\Generated_Source\PSoC4/Stone_PWM.c ****             Stone_PWM_interruptState = CyEnterCriticalSection();
+ 168:.\Generated_Source\PSoC4/Stone_PWM.c ****             /* Use the interrupt output of the status register for IRQ output */
+ 169:.\Generated_Source\PSoC4/Stone_PWM.c ****             Stone_PWM_STATUS_AUX_CTRL |= Stone_PWM_STATUS_ACTL_INT_EN_MASK;
+ 170:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 171:.\Generated_Source\PSoC4/Stone_PWM.c ****              /* Exit Critical Region*/
+ 172:.\Generated_Source\PSoC4/Stone_PWM.c ****             CyExitCriticalSection(Stone_PWM_interruptState);
+ 173:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 174:.\Generated_Source\PSoC4/Stone_PWM.c ****             /* Clear the FIFO to enable the Stone_PWM_STATUS_FIFOFULL
+ 175:.\Generated_Source\PSoC4/Stone_PWM.c ****                    bit to be set on FIFO full. */
+ 176:.\Generated_Source\PSoC4/Stone_PWM.c ****             Stone_PWM_ClearFIFO();
+ 177:.\Generated_Source\PSoC4/Stone_PWM.c ****         #endif /* (Stone_PWM_UseStatus) */
+ 178:.\Generated_Source\PSoC4/Stone_PWM.c ****     #endif /* (Stone_PWM_UsingFixedFunction) */
+ 179:.\Generated_Source\PSoC4/Stone_PWM.c **** }
+ 180:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 181:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 182:.\Generated_Source\PSoC4/Stone_PWM.c **** /*******************************************************************************
+ 183:.\Generated_Source\PSoC4/Stone_PWM.c **** * Function Name: Stone_PWM_Enable
+ 184:.\Generated_Source\PSoC4/Stone_PWM.c **** ********************************************************************************
+ 185:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+ 186:.\Generated_Source\PSoC4/Stone_PWM.c **** * Summary:
+ 187:.\Generated_Source\PSoC4/Stone_PWM.c **** *  Enables the PWM block operation
+ 188:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+ 189:.\Generated_Source\PSoC4/Stone_PWM.c **** * Parameters:
+ 190:.\Generated_Source\PSoC4/Stone_PWM.c **** *  None
+ 191:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+ 192:.\Generated_Source\PSoC4/Stone_PWM.c **** * Return:
+ 193:.\Generated_Source\PSoC4/Stone_PWM.c **** *  None
+ 194:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+ 195:.\Generated_Source\PSoC4/Stone_PWM.c **** * Side Effects:
+ 196:.\Generated_Source\PSoC4/Stone_PWM.c **** *  This works only if software enable mode is chosen
+ 197:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+ 198:.\Generated_Source\PSoC4/Stone_PWM.c **** *******************************************************************************/
+ 199:.\Generated_Source\PSoC4/Stone_PWM.c **** void Stone_PWM_Enable(void) 
+ 200:.\Generated_Source\PSoC4/Stone_PWM.c **** {
+  26              		.loc 1 200 0
+  27              		.cfi_startproc
+ 201:.\Generated_Source\PSoC4/Stone_PWM.c ****     /* Globally Enable the Fixed Function Block chosen */
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 5
+
+
+ 202:.\Generated_Source\PSoC4/Stone_PWM.c ****     #if (Stone_PWM_UsingFixedFunction)
+ 203:.\Generated_Source\PSoC4/Stone_PWM.c ****         Stone_PWM_GLOBAL_ENABLE |= Stone_PWM_BLOCK_EN_MASK;
+ 204:.\Generated_Source\PSoC4/Stone_PWM.c ****         Stone_PWM_GLOBAL_STBY_ENABLE |= Stone_PWM_BLOCK_STBY_EN_MASK;
+ 205:.\Generated_Source\PSoC4/Stone_PWM.c ****     #endif /* (Stone_PWM_UsingFixedFunction) */
+ 206:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 207:.\Generated_Source\PSoC4/Stone_PWM.c ****     /* Enable the PWM from the control register  */
+ 208:.\Generated_Source\PSoC4/Stone_PWM.c ****     #if (Stone_PWM_UseControl || Stone_PWM_UsingFixedFunction)
+ 209:.\Generated_Source\PSoC4/Stone_PWM.c ****         Stone_PWM_CONTROL |= Stone_PWM_CTRL_ENABLE;
+  28              		.loc 1 209 0
+  29 0000 024A     		ldr	r2, .L2
+  30 0002 1178     		ldrb	r1, [r2]
+  31 0004 8023     		mov	r3, #128
+  32 0006 0B43     		orr	r3, r1
+  33 0008 1370     		strb	r3, [r2]
+ 210:.\Generated_Source\PSoC4/Stone_PWM.c ****     #endif /* (Stone_PWM_UseControl || Stone_PWM_UsingFixedFunction) */
+ 211:.\Generated_Source\PSoC4/Stone_PWM.c **** }
+  34              		.loc 1 211 0
+  35              		@ sp needed
+  36 000a 7047     		bx	lr
+  37              	.L3:
+  38              		.align	2
+  39              	.L2:
+  40 000c 71000F40 		.word	1074724977
+  41              		.cfi_endproc
+  42              	.LFE4:
+  43              		.size	Stone_PWM_Enable, .-Stone_PWM_Enable
+  44              		.section	.text.Stone_PWM_Stop,"ax",%progbits
+  45              		.align	2
+  46              		.global	Stone_PWM_Stop
+  47              		.code	16
+  48              		.thumb_func
+  49              		.type	Stone_PWM_Stop, %function
+  50              	Stone_PWM_Stop:
+  51              	.LFB5:
+ 212:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 213:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 214:.\Generated_Source\PSoC4/Stone_PWM.c **** /*******************************************************************************
+ 215:.\Generated_Source\PSoC4/Stone_PWM.c **** * Function Name: Stone_PWM_Stop
+ 216:.\Generated_Source\PSoC4/Stone_PWM.c **** ********************************************************************************
+ 217:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+ 218:.\Generated_Source\PSoC4/Stone_PWM.c **** * Summary:
+ 219:.\Generated_Source\PSoC4/Stone_PWM.c **** *  The stop function halts the PWM, but does not change any modes or disable
+ 220:.\Generated_Source\PSoC4/Stone_PWM.c **** *  interrupts.
+ 221:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+ 222:.\Generated_Source\PSoC4/Stone_PWM.c **** * Parameters:
+ 223:.\Generated_Source\PSoC4/Stone_PWM.c **** *  None
+ 224:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+ 225:.\Generated_Source\PSoC4/Stone_PWM.c **** * Return:
+ 226:.\Generated_Source\PSoC4/Stone_PWM.c **** *  None
+ 227:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+ 228:.\Generated_Source\PSoC4/Stone_PWM.c **** * Side Effects:
+ 229:.\Generated_Source\PSoC4/Stone_PWM.c **** *  If the Enable mode is set to Hardware only then this function
+ 230:.\Generated_Source\PSoC4/Stone_PWM.c **** *  has no effect on the operation of the PWM
+ 231:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+ 232:.\Generated_Source\PSoC4/Stone_PWM.c **** *******************************************************************************/
+ 233:.\Generated_Source\PSoC4/Stone_PWM.c **** void Stone_PWM_Stop(void) 
+ 234:.\Generated_Source\PSoC4/Stone_PWM.c **** {
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 6
+
+
+  52              		.loc 1 234 0
+  53              		.cfi_startproc
+ 235:.\Generated_Source\PSoC4/Stone_PWM.c ****     #if (Stone_PWM_UseControl || Stone_PWM_UsingFixedFunction)
+ 236:.\Generated_Source\PSoC4/Stone_PWM.c ****         Stone_PWM_CONTROL &= ((uint8)(~Stone_PWM_CTRL_ENABLE));
+  54              		.loc 1 236 0
+  55 0000 024A     		ldr	r2, .L5
+  56 0002 1178     		ldrb	r1, [r2]
+  57 0004 7F23     		mov	r3, #127
+  58 0006 0B40     		and	r3, r1
+  59 0008 1370     		strb	r3, [r2]
+ 237:.\Generated_Source\PSoC4/Stone_PWM.c ****     #endif /* (Stone_PWM_UseControl || Stone_PWM_UsingFixedFunction) */
+ 238:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 239:.\Generated_Source\PSoC4/Stone_PWM.c ****     /* Globally disable the Fixed Function Block chosen */
+ 240:.\Generated_Source\PSoC4/Stone_PWM.c ****     #if (Stone_PWM_UsingFixedFunction)
+ 241:.\Generated_Source\PSoC4/Stone_PWM.c ****         Stone_PWM_GLOBAL_ENABLE &= ((uint8)(~Stone_PWM_BLOCK_EN_MASK));
+ 242:.\Generated_Source\PSoC4/Stone_PWM.c ****         Stone_PWM_GLOBAL_STBY_ENABLE &= ((uint8)(~Stone_PWM_BLOCK_STBY_EN_MASK));
+ 243:.\Generated_Source\PSoC4/Stone_PWM.c ****     #endif /* (Stone_PWM_UsingFixedFunction) */
+ 244:.\Generated_Source\PSoC4/Stone_PWM.c **** }
+  60              		.loc 1 244 0
+  61              		@ sp needed
+  62 000a 7047     		bx	lr
+  63              	.L6:
+  64              		.align	2
+  65              	.L5:
+  66 000c 71000F40 		.word	1074724977
+  67              		.cfi_endproc
+  68              	.LFE5:
+  69              		.size	Stone_PWM_Stop, .-Stone_PWM_Stop
+  70              		.section	.text.Stone_PWM_WriteCounter,"ax",%progbits
+  71              		.align	2
+  72              		.global	Stone_PWM_WriteCounter
+  73              		.code	16
+  74              		.thumb_func
+  75              		.type	Stone_PWM_WriteCounter, %function
+  76              	Stone_PWM_WriteCounter:
+  77              	.LFB6:
+ 245:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 246:.\Generated_Source\PSoC4/Stone_PWM.c **** #if (Stone_PWM_UseOneCompareMode)
+ 247:.\Generated_Source\PSoC4/Stone_PWM.c ****     #if (Stone_PWM_CompareMode1SW)
+ 248:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 249:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 250:.\Generated_Source\PSoC4/Stone_PWM.c ****         /*******************************************************************************
+ 251:.\Generated_Source\PSoC4/Stone_PWM.c ****         * Function Name: Stone_PWM_SetCompareMode
+ 252:.\Generated_Source\PSoC4/Stone_PWM.c ****         ********************************************************************************
+ 253:.\Generated_Source\PSoC4/Stone_PWM.c ****         *
+ 254:.\Generated_Source\PSoC4/Stone_PWM.c ****         * Summary:
+ 255:.\Generated_Source\PSoC4/Stone_PWM.c ****         *  This function writes the Compare Mode for the pwm output when in Dither mode,
+ 256:.\Generated_Source\PSoC4/Stone_PWM.c ****         *  Center Align Mode or One Output Mode.
+ 257:.\Generated_Source\PSoC4/Stone_PWM.c ****         *
+ 258:.\Generated_Source\PSoC4/Stone_PWM.c ****         * Parameters:
+ 259:.\Generated_Source\PSoC4/Stone_PWM.c ****         *  comparemode:  The new compare mode for the PWM output. Use the compare types
+ 260:.\Generated_Source\PSoC4/Stone_PWM.c ****         *                defined in the H file as input arguments.
+ 261:.\Generated_Source\PSoC4/Stone_PWM.c ****         *
+ 262:.\Generated_Source\PSoC4/Stone_PWM.c ****         * Return:
+ 263:.\Generated_Source\PSoC4/Stone_PWM.c ****         *  None
+ 264:.\Generated_Source\PSoC4/Stone_PWM.c ****         *
+ 265:.\Generated_Source\PSoC4/Stone_PWM.c ****         *******************************************************************************/
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 7
+
+
+ 266:.\Generated_Source\PSoC4/Stone_PWM.c ****         void Stone_PWM_SetCompareMode(uint8 comparemode) 
+ 267:.\Generated_Source\PSoC4/Stone_PWM.c ****         {
+ 268:.\Generated_Source\PSoC4/Stone_PWM.c ****             #if(Stone_PWM_UsingFixedFunction)
+ 269:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 270:.\Generated_Source\PSoC4/Stone_PWM.c ****                 #if(0 != Stone_PWM_CTRL_CMPMODE1_SHIFT)
+ 271:.\Generated_Source\PSoC4/Stone_PWM.c ****                     uint8 comparemodemasked = ((uint8)((uint8)comparemode << Stone_PWM_CTRL_CMPMODE
+ 272:.\Generated_Source\PSoC4/Stone_PWM.c ****                 #else
+ 273:.\Generated_Source\PSoC4/Stone_PWM.c ****                     uint8 comparemodemasked = comparemode;
+ 274:.\Generated_Source\PSoC4/Stone_PWM.c ****                 #endif /* (0 != Stone_PWM_CTRL_CMPMODE1_SHIFT) */
+ 275:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 276:.\Generated_Source\PSoC4/Stone_PWM.c ****                 Stone_PWM_CONTROL3 &= ((uint8)(~Stone_PWM_CTRL_CMPMODE1_MASK)); /*Clear Existing Da
+ 277:.\Generated_Source\PSoC4/Stone_PWM.c ****                 Stone_PWM_CONTROL3 |= comparemodemasked;
+ 278:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 279:.\Generated_Source\PSoC4/Stone_PWM.c ****             #elif (Stone_PWM_UseControl)
+ 280:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 281:.\Generated_Source\PSoC4/Stone_PWM.c ****                 #if(0 != Stone_PWM_CTRL_CMPMODE1_SHIFT)
+ 282:.\Generated_Source\PSoC4/Stone_PWM.c ****                     uint8 comparemode1masked = ((uint8)((uint8)comparemode << Stone_PWM_CTRL_CMPMOD
+ 283:.\Generated_Source\PSoC4/Stone_PWM.c ****                                                 Stone_PWM_CTRL_CMPMODE1_MASK;
+ 284:.\Generated_Source\PSoC4/Stone_PWM.c ****                 #else
+ 285:.\Generated_Source\PSoC4/Stone_PWM.c ****                     uint8 comparemode1masked = comparemode & Stone_PWM_CTRL_CMPMODE1_MASK;
+ 286:.\Generated_Source\PSoC4/Stone_PWM.c ****                 #endif /* (0 != Stone_PWM_CTRL_CMPMODE1_SHIFT) */
+ 287:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 288:.\Generated_Source\PSoC4/Stone_PWM.c ****                 #if(0 != Stone_PWM_CTRL_CMPMODE2_SHIFT)
+ 289:.\Generated_Source\PSoC4/Stone_PWM.c ****                     uint8 comparemode2masked = ((uint8)((uint8)comparemode << Stone_PWM_CTRL_CMPMOD
+ 290:.\Generated_Source\PSoC4/Stone_PWM.c ****                                                Stone_PWM_CTRL_CMPMODE2_MASK;
+ 291:.\Generated_Source\PSoC4/Stone_PWM.c ****                 #else
+ 292:.\Generated_Source\PSoC4/Stone_PWM.c ****                     uint8 comparemode2masked = comparemode & Stone_PWM_CTRL_CMPMODE2_MASK;
+ 293:.\Generated_Source\PSoC4/Stone_PWM.c ****                 #endif /* (0 != Stone_PWM_CTRL_CMPMODE2_SHIFT) */
+ 294:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 295:.\Generated_Source\PSoC4/Stone_PWM.c ****                 /*Clear existing mode */
+ 296:.\Generated_Source\PSoC4/Stone_PWM.c ****                 Stone_PWM_CONTROL &= ((uint8)(~(Stone_PWM_CTRL_CMPMODE1_MASK |
+ 297:.\Generated_Source\PSoC4/Stone_PWM.c ****                                             Stone_PWM_CTRL_CMPMODE2_MASK)));
+ 298:.\Generated_Source\PSoC4/Stone_PWM.c ****                 Stone_PWM_CONTROL |= (comparemode1masked | comparemode2masked);
+ 299:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 300:.\Generated_Source\PSoC4/Stone_PWM.c ****             #else
+ 301:.\Generated_Source\PSoC4/Stone_PWM.c ****                 uint8 temp = comparemode;
+ 302:.\Generated_Source\PSoC4/Stone_PWM.c ****             #endif /* (Stone_PWM_UsingFixedFunction) */
+ 303:.\Generated_Source\PSoC4/Stone_PWM.c ****         }
+ 304:.\Generated_Source\PSoC4/Stone_PWM.c ****     #endif /* Stone_PWM_CompareMode1SW */
+ 305:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 306:.\Generated_Source\PSoC4/Stone_PWM.c **** #else /* UseOneCompareMode */
+ 307:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 308:.\Generated_Source\PSoC4/Stone_PWM.c ****     #if (Stone_PWM_CompareMode1SW)
+ 309:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 310:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 311:.\Generated_Source\PSoC4/Stone_PWM.c ****         /*******************************************************************************
+ 312:.\Generated_Source\PSoC4/Stone_PWM.c ****         * Function Name: Stone_PWM_SetCompareMode1
+ 313:.\Generated_Source\PSoC4/Stone_PWM.c ****         ********************************************************************************
+ 314:.\Generated_Source\PSoC4/Stone_PWM.c ****         *
+ 315:.\Generated_Source\PSoC4/Stone_PWM.c ****         * Summary:
+ 316:.\Generated_Source\PSoC4/Stone_PWM.c ****         *  This function writes the Compare Mode for the pwm or pwm1 output
+ 317:.\Generated_Source\PSoC4/Stone_PWM.c ****         *
+ 318:.\Generated_Source\PSoC4/Stone_PWM.c ****         * Parameters:
+ 319:.\Generated_Source\PSoC4/Stone_PWM.c ****         *  comparemode:  The new compare mode for the PWM output. Use the compare types
+ 320:.\Generated_Source\PSoC4/Stone_PWM.c ****         *                defined in the H file as input arguments.
+ 321:.\Generated_Source\PSoC4/Stone_PWM.c ****         *
+ 322:.\Generated_Source\PSoC4/Stone_PWM.c ****         * Return:
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 8
+
+
+ 323:.\Generated_Source\PSoC4/Stone_PWM.c ****         *  None
+ 324:.\Generated_Source\PSoC4/Stone_PWM.c ****         *
+ 325:.\Generated_Source\PSoC4/Stone_PWM.c ****         *******************************************************************************/
+ 326:.\Generated_Source\PSoC4/Stone_PWM.c ****         void Stone_PWM_SetCompareMode1(uint8 comparemode) 
+ 327:.\Generated_Source\PSoC4/Stone_PWM.c ****         {
+ 328:.\Generated_Source\PSoC4/Stone_PWM.c ****             #if(0 != Stone_PWM_CTRL_CMPMODE1_SHIFT)
+ 329:.\Generated_Source\PSoC4/Stone_PWM.c ****                 uint8 comparemodemasked = ((uint8)((uint8)comparemode << Stone_PWM_CTRL_CMPMODE1_SH
+ 330:.\Generated_Source\PSoC4/Stone_PWM.c ****                                            Stone_PWM_CTRL_CMPMODE1_MASK;
+ 331:.\Generated_Source\PSoC4/Stone_PWM.c ****             #else
+ 332:.\Generated_Source\PSoC4/Stone_PWM.c ****                 uint8 comparemodemasked = comparemode & Stone_PWM_CTRL_CMPMODE1_MASK;
+ 333:.\Generated_Source\PSoC4/Stone_PWM.c ****             #endif /* (0 != Stone_PWM_CTRL_CMPMODE1_SHIFT) */
+ 334:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 335:.\Generated_Source\PSoC4/Stone_PWM.c ****             #if (Stone_PWM_UseControl)
+ 336:.\Generated_Source\PSoC4/Stone_PWM.c ****                 Stone_PWM_CONTROL &= ((uint8)(~Stone_PWM_CTRL_CMPMODE1_MASK)); /*Clear existing mod
+ 337:.\Generated_Source\PSoC4/Stone_PWM.c ****                 Stone_PWM_CONTROL |= comparemodemasked;
+ 338:.\Generated_Source\PSoC4/Stone_PWM.c ****             #endif /* (Stone_PWM_UseControl) */
+ 339:.\Generated_Source\PSoC4/Stone_PWM.c ****         }
+ 340:.\Generated_Source\PSoC4/Stone_PWM.c ****     #endif /* Stone_PWM_CompareMode1SW */
+ 341:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 342:.\Generated_Source\PSoC4/Stone_PWM.c **** #if (Stone_PWM_CompareMode2SW)
+ 343:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 344:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 345:.\Generated_Source\PSoC4/Stone_PWM.c ****     /*******************************************************************************
+ 346:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Function Name: Stone_PWM_SetCompareMode2
+ 347:.\Generated_Source\PSoC4/Stone_PWM.c ****     ********************************************************************************
+ 348:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 349:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Summary:
+ 350:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  This function writes the Compare Mode for the pwm or pwm2 output
+ 351:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 352:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Parameters:
+ 353:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  comparemode:  The new compare mode for the PWM output. Use the compare types
+ 354:.\Generated_Source\PSoC4/Stone_PWM.c ****     *                defined in the H file as input arguments.
+ 355:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 356:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Return:
+ 357:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  None
+ 358:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 359:.\Generated_Source\PSoC4/Stone_PWM.c ****     *******************************************************************************/
+ 360:.\Generated_Source\PSoC4/Stone_PWM.c ****     void Stone_PWM_SetCompareMode2(uint8 comparemode) 
+ 361:.\Generated_Source\PSoC4/Stone_PWM.c ****     {
+ 362:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 363:.\Generated_Source\PSoC4/Stone_PWM.c ****         #if(0 != Stone_PWM_CTRL_CMPMODE2_SHIFT)
+ 364:.\Generated_Source\PSoC4/Stone_PWM.c ****             uint8 comparemodemasked = ((uint8)((uint8)comparemode << Stone_PWM_CTRL_CMPMODE2_SHIFT)
+ 365:.\Generated_Source\PSoC4/Stone_PWM.c ****                                                  Stone_PWM_CTRL_CMPMODE2_MASK;
+ 366:.\Generated_Source\PSoC4/Stone_PWM.c ****         #else
+ 367:.\Generated_Source\PSoC4/Stone_PWM.c ****             uint8 comparemodemasked = comparemode & Stone_PWM_CTRL_CMPMODE2_MASK;
+ 368:.\Generated_Source\PSoC4/Stone_PWM.c ****         #endif /* (0 != Stone_PWM_CTRL_CMPMODE2_SHIFT) */
+ 369:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 370:.\Generated_Source\PSoC4/Stone_PWM.c ****         #if (Stone_PWM_UseControl)
+ 371:.\Generated_Source\PSoC4/Stone_PWM.c ****             Stone_PWM_CONTROL &= ((uint8)(~Stone_PWM_CTRL_CMPMODE2_MASK)); /*Clear existing mode */
+ 372:.\Generated_Source\PSoC4/Stone_PWM.c ****             Stone_PWM_CONTROL |= comparemodemasked;
+ 373:.\Generated_Source\PSoC4/Stone_PWM.c ****         #endif /* (Stone_PWM_UseControl) */
+ 374:.\Generated_Source\PSoC4/Stone_PWM.c ****     }
+ 375:.\Generated_Source\PSoC4/Stone_PWM.c ****     #endif /*Stone_PWM_CompareMode2SW */
+ 376:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 377:.\Generated_Source\PSoC4/Stone_PWM.c **** #endif /* UseOneCompareMode */
+ 378:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 379:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 9
+
+
+ 380:.\Generated_Source\PSoC4/Stone_PWM.c **** #if (!Stone_PWM_UsingFixedFunction)
+ 381:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 382:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 383:.\Generated_Source\PSoC4/Stone_PWM.c ****     /*******************************************************************************
+ 384:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Function Name: Stone_PWM_WriteCounter
+ 385:.\Generated_Source\PSoC4/Stone_PWM.c ****     ********************************************************************************
+ 386:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 387:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Summary:
+ 388:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  Writes a new counter value directly to the counter register. This will be
+ 389:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  implemented for that currently running period and only that period. This API
+ 390:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  is valid only for UDB implementation and not available for fixed function
+ 391:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  PWM implementation.
+ 392:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 393:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Parameters:
+ 394:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  counter:  The period new period counter value.
+ 395:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 396:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Return:
+ 397:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  None
+ 398:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 399:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Side Effects:
+ 400:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  The PWM Period will be reloaded when a counter value will be a zero
+ 401:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 402:.\Generated_Source\PSoC4/Stone_PWM.c ****     *******************************************************************************/
+ 403:.\Generated_Source\PSoC4/Stone_PWM.c ****     void Stone_PWM_WriteCounter(uint16 counter) \
+ 404:.\Generated_Source\PSoC4/Stone_PWM.c ****                                        
+ 405:.\Generated_Source\PSoC4/Stone_PWM.c ****     {
+  78              		.loc 1 405 0
+  79              		.cfi_startproc
+  80              	.LVL0:
+ 406:.\Generated_Source\PSoC4/Stone_PWM.c ****         CY_SET_REG16(Stone_PWM_COUNTER_LSB_PTR, counter);
+  81              		.loc 1 406 0
+  82 0000 014B     		ldr	r3, .L8
+  83 0002 1880     		strh	r0, [r3]
+ 407:.\Generated_Source\PSoC4/Stone_PWM.c ****     }
+  84              		.loc 1 407 0
+  85              		@ sp needed
+  86 0004 7047     		bx	lr
+  87              	.L9:
+  88 0006 C046     		.align	2
+  89              	.L8:
+  90 0008 00100F40 		.word	1074728960
+  91              		.cfi_endproc
+  92              	.LFE6:
+  93              		.size	Stone_PWM_WriteCounter, .-Stone_PWM_WriteCounter
+  94              		.section	.text.Stone_PWM_ReadCounter,"ax",%progbits
+  95              		.align	2
+  96              		.global	Stone_PWM_ReadCounter
+  97              		.code	16
+  98              		.thumb_func
+  99              		.type	Stone_PWM_ReadCounter, %function
+ 100              	Stone_PWM_ReadCounter:
+ 101              	.LFB7:
+ 408:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 409:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 410:.\Generated_Source\PSoC4/Stone_PWM.c ****     /*******************************************************************************
+ 411:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Function Name: Stone_PWM_ReadCounter
+ 412:.\Generated_Source\PSoC4/Stone_PWM.c ****     ********************************************************************************
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 10
+
+
+ 413:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 414:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Summary:
+ 415:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  This function returns the current value of the counter.  It doesn't matter
+ 416:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  if the counter is enabled or running.
+ 417:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 418:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Parameters:
+ 419:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  None
+ 420:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 421:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Return:
+ 422:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  The current value of the counter.
+ 423:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 424:.\Generated_Source\PSoC4/Stone_PWM.c ****     *******************************************************************************/
+ 425:.\Generated_Source\PSoC4/Stone_PWM.c ****     uint16 Stone_PWM_ReadCounter(void) 
+ 426:.\Generated_Source\PSoC4/Stone_PWM.c ****     {
+ 102              		.loc 1 426 0
+ 103              		.cfi_startproc
+ 427:.\Generated_Source\PSoC4/Stone_PWM.c ****         /* Force capture by reading Accumulator */
+ 428:.\Generated_Source\PSoC4/Stone_PWM.c ****         /* Must first do a software capture to be able to read the counter */
+ 429:.\Generated_Source\PSoC4/Stone_PWM.c ****         /* It is up to the user code to make sure there isn't already captured data in the FIFO */
+ 430:.\Generated_Source\PSoC4/Stone_PWM.c ****           (void)CY_GET_REG8(Stone_PWM_COUNTERCAP_LSB_PTR_8BIT);
+ 104              		.loc 1 430 0
+ 105 0000 024B     		ldr	r3, .L11
+ 106 0002 1B78     		ldrb	r3, [r3]
+ 431:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 432:.\Generated_Source\PSoC4/Stone_PWM.c ****         /* Read the data from the FIFO */
+ 433:.\Generated_Source\PSoC4/Stone_PWM.c ****         return (CY_GET_REG16(Stone_PWM_CAPTURE_LSB_PTR));
+ 107              		.loc 1 433 0
+ 108 0004 024B     		ldr	r3, .L11+4
+ 109 0006 1888     		ldrh	r0, [r3]
+ 110 0008 80B2     		uxth	r0, r0
+ 434:.\Generated_Source\PSoC4/Stone_PWM.c ****     }
+ 111              		.loc 1 434 0
+ 112              		@ sp needed
+ 113 000a 7047     		bx	lr
+ 114              	.L12:
+ 115              		.align	2
+ 116              	.L11:
+ 117 000c 10000F40 		.word	1074724880
+ 118 0010 A0100F40 		.word	1074729120
+ 119              		.cfi_endproc
+ 120              	.LFE7:
+ 121              		.size	Stone_PWM_ReadCounter, .-Stone_PWM_ReadCounter
+ 122              		.section	.text.Stone_PWM_WritePeriod,"ax",%progbits
+ 123              		.align	2
+ 124              		.global	Stone_PWM_WritePeriod
+ 125              		.code	16
+ 126              		.thumb_func
+ 127              		.type	Stone_PWM_WritePeriod, %function
+ 128              	Stone_PWM_WritePeriod:
+ 129              	.LFB9:
+ 435:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 436:.\Generated_Source\PSoC4/Stone_PWM.c ****     #if (Stone_PWM_UseStatus)
+ 437:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 438:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 439:.\Generated_Source\PSoC4/Stone_PWM.c ****         /*******************************************************************************
+ 440:.\Generated_Source\PSoC4/Stone_PWM.c ****         * Function Name: Stone_PWM_ClearFIFO
+ 441:.\Generated_Source\PSoC4/Stone_PWM.c ****         ********************************************************************************
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 11
+
+
+ 442:.\Generated_Source\PSoC4/Stone_PWM.c ****         *
+ 443:.\Generated_Source\PSoC4/Stone_PWM.c ****         * Summary:
+ 444:.\Generated_Source\PSoC4/Stone_PWM.c ****         *  This function clears all capture data from the capture FIFO
+ 445:.\Generated_Source\PSoC4/Stone_PWM.c ****         *
+ 446:.\Generated_Source\PSoC4/Stone_PWM.c ****         * Parameters:
+ 447:.\Generated_Source\PSoC4/Stone_PWM.c ****         *  None
+ 448:.\Generated_Source\PSoC4/Stone_PWM.c ****         *
+ 449:.\Generated_Source\PSoC4/Stone_PWM.c ****         * Return:
+ 450:.\Generated_Source\PSoC4/Stone_PWM.c ****         *  None
+ 451:.\Generated_Source\PSoC4/Stone_PWM.c ****         *
+ 452:.\Generated_Source\PSoC4/Stone_PWM.c ****         *******************************************************************************/
+ 453:.\Generated_Source\PSoC4/Stone_PWM.c ****         void Stone_PWM_ClearFIFO(void) 
+ 454:.\Generated_Source\PSoC4/Stone_PWM.c ****         {
+ 455:.\Generated_Source\PSoC4/Stone_PWM.c ****             while(0u != (Stone_PWM_ReadStatusRegister() & Stone_PWM_STATUS_FIFONEMPTY))
+ 456:.\Generated_Source\PSoC4/Stone_PWM.c ****             {
+ 457:.\Generated_Source\PSoC4/Stone_PWM.c ****                 (void)Stone_PWM_ReadCapture();
+ 458:.\Generated_Source\PSoC4/Stone_PWM.c ****             }
+ 459:.\Generated_Source\PSoC4/Stone_PWM.c ****         }
+ 460:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 461:.\Generated_Source\PSoC4/Stone_PWM.c ****     #endif /* Stone_PWM_UseStatus */
+ 462:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 463:.\Generated_Source\PSoC4/Stone_PWM.c **** #endif /* !Stone_PWM_UsingFixedFunction */
+ 464:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 465:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 466:.\Generated_Source\PSoC4/Stone_PWM.c **** /*******************************************************************************
+ 467:.\Generated_Source\PSoC4/Stone_PWM.c **** * Function Name: Stone_PWM_WritePeriod
+ 468:.\Generated_Source\PSoC4/Stone_PWM.c **** ********************************************************************************
+ 469:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+ 470:.\Generated_Source\PSoC4/Stone_PWM.c **** * Summary:
+ 471:.\Generated_Source\PSoC4/Stone_PWM.c **** *  This function is used to change the period of the counter.  The new period
+ 472:.\Generated_Source\PSoC4/Stone_PWM.c **** *  will be loaded the next time terminal count is detected.
+ 473:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+ 474:.\Generated_Source\PSoC4/Stone_PWM.c **** * Parameters:
+ 475:.\Generated_Source\PSoC4/Stone_PWM.c **** *  period:  Period value. May be between 1 and (2^Resolution)-1.  A value of 0
+ 476:.\Generated_Source\PSoC4/Stone_PWM.c **** *           will result in the counter remaining at zero.
+ 477:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+ 478:.\Generated_Source\PSoC4/Stone_PWM.c **** * Return:
+ 479:.\Generated_Source\PSoC4/Stone_PWM.c **** *  None
+ 480:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+ 481:.\Generated_Source\PSoC4/Stone_PWM.c **** *******************************************************************************/
+ 482:.\Generated_Source\PSoC4/Stone_PWM.c **** void Stone_PWM_WritePeriod(uint16 period) 
+ 483:.\Generated_Source\PSoC4/Stone_PWM.c **** {
+ 130              		.loc 1 483 0
+ 131              		.cfi_startproc
+ 132              	.LVL1:
+ 484:.\Generated_Source\PSoC4/Stone_PWM.c ****     #if(Stone_PWM_UsingFixedFunction)
+ 485:.\Generated_Source\PSoC4/Stone_PWM.c ****         CY_SET_REG16(Stone_PWM_PERIOD_LSB_PTR, (uint16)period);
+ 486:.\Generated_Source\PSoC4/Stone_PWM.c ****     #else
+ 487:.\Generated_Source\PSoC4/Stone_PWM.c ****         CY_SET_REG16(Stone_PWM_PERIOD_LSB_PTR, period);
+ 133              		.loc 1 487 0
+ 134 0000 014B     		ldr	r3, .L14
+ 135 0002 1880     		strh	r0, [r3]
+ 488:.\Generated_Source\PSoC4/Stone_PWM.c ****     #endif /* (Stone_PWM_UsingFixedFunction) */
+ 489:.\Generated_Source\PSoC4/Stone_PWM.c **** }
+ 136              		.loc 1 489 0
+ 137              		@ sp needed
+ 138 0004 7047     		bx	lr
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 12
+
+
+ 139              	.L15:
+ 140 0006 C046     		.align	2
+ 141              	.L14:
+ 142 0008 80100F40 		.word	1074729088
+ 143              		.cfi_endproc
+ 144              	.LFE9:
+ 145              		.size	Stone_PWM_WritePeriod, .-Stone_PWM_WritePeriod
+ 146              		.section	.text.Stone_PWM_WriteCompare,"ax",%progbits
+ 147              		.align	2
+ 148              		.global	Stone_PWM_WriteCompare
+ 149              		.code	16
+ 150              		.thumb_func
+ 151              		.type	Stone_PWM_WriteCompare, %function
+ 152              	Stone_PWM_WriteCompare:
+ 153              	.LFB10:
+ 490:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 491:.\Generated_Source\PSoC4/Stone_PWM.c **** #if (Stone_PWM_UseOneCompareMode)
+ 492:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 493:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 494:.\Generated_Source\PSoC4/Stone_PWM.c ****     /*******************************************************************************
+ 495:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Function Name: Stone_PWM_WriteCompare
+ 496:.\Generated_Source\PSoC4/Stone_PWM.c ****     ********************************************************************************
+ 497:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 498:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Summary:
+ 499:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  This funtion is used to change the compare1 value when the PWM is in Dither
+ 500:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  mode. The compare output will reflect the new value on the next UDB clock.
+ 501:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  The compare output will be driven high when the present counter value is
+ 502:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  compared to the compare value based on the compare mode defined in
+ 503:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  Dither Mode.
+ 504:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 505:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Parameters:
+ 506:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  compare:  New compare value.
+ 507:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 508:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Return:
+ 509:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  None
+ 510:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 511:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Side Effects:
+ 512:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  This function is only available if the PWM mode parameter is set to
+ 513:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  Dither Mode, Center Aligned Mode or One Output Mode
+ 514:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 515:.\Generated_Source\PSoC4/Stone_PWM.c ****     *******************************************************************************/
+ 516:.\Generated_Source\PSoC4/Stone_PWM.c ****     void Stone_PWM_WriteCompare(uint16 compare) \
+ 517:.\Generated_Source\PSoC4/Stone_PWM.c ****                                        
+ 518:.\Generated_Source\PSoC4/Stone_PWM.c ****     {
+ 154              		.loc 1 518 0
+ 155              		.cfi_startproc
+ 156              	.LVL2:
+ 519:.\Generated_Source\PSoC4/Stone_PWM.c ****         #if(Stone_PWM_UsingFixedFunction)
+ 520:.\Generated_Source\PSoC4/Stone_PWM.c ****             CY_SET_REG16(Stone_PWM_COMPARE1_LSB_PTR, (uint16)compare);
+ 521:.\Generated_Source\PSoC4/Stone_PWM.c ****         #else
+ 522:.\Generated_Source\PSoC4/Stone_PWM.c ****             CY_SET_REG16(Stone_PWM_COMPARE1_LSB_PTR, compare);
+ 157              		.loc 1 522 0
+ 158 0000 014B     		ldr	r3, .L17
+ 159 0002 1880     		strh	r0, [r3]
+ 523:.\Generated_Source\PSoC4/Stone_PWM.c ****         #endif /* (Stone_PWM_UsingFixedFunction) */
+ 524:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 525:.\Generated_Source\PSoC4/Stone_PWM.c ****         #if (Stone_PWM_PWMMode == Stone_PWM__B_PWM__DITHER)
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 13
+
+
+ 526:.\Generated_Source\PSoC4/Stone_PWM.c ****             #if(Stone_PWM_UsingFixedFunction)
+ 527:.\Generated_Source\PSoC4/Stone_PWM.c ****                 CY_SET_REG16(Stone_PWM_COMPARE2_LSB_PTR, (uint16)(compare + 1u));
+ 528:.\Generated_Source\PSoC4/Stone_PWM.c ****             #else
+ 529:.\Generated_Source\PSoC4/Stone_PWM.c ****                 CY_SET_REG16(Stone_PWM_COMPARE2_LSB_PTR, (compare + 1u));
+ 530:.\Generated_Source\PSoC4/Stone_PWM.c ****             #endif /* (Stone_PWM_UsingFixedFunction) */
+ 531:.\Generated_Source\PSoC4/Stone_PWM.c ****         #endif /* (Stone_PWM_PWMMode == Stone_PWM__B_PWM__DITHER) */
+ 532:.\Generated_Source\PSoC4/Stone_PWM.c ****     }
+ 160              		.loc 1 532 0
+ 161              		@ sp needed
+ 162 0004 7047     		bx	lr
+ 163              	.L18:
+ 164 0006 C046     		.align	2
+ 165              	.L17:
+ 166 0008 40100F40 		.word	1074729024
+ 167              		.cfi_endproc
+ 168              	.LFE10:
+ 169              		.size	Stone_PWM_WriteCompare, .-Stone_PWM_WriteCompare
+ 170              		.section	.text.Stone_PWM_SetInterruptMode,"ax",%progbits
+ 171              		.align	2
+ 172              		.global	Stone_PWM_SetInterruptMode
+ 173              		.code	16
+ 174              		.thumb_func
+ 175              		.type	Stone_PWM_SetInterruptMode, %function
+ 176              	Stone_PWM_SetInterruptMode:
+ 177              	.LFB11:
+ 533:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 534:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 535:.\Generated_Source\PSoC4/Stone_PWM.c **** #else
+ 536:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 537:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 538:.\Generated_Source\PSoC4/Stone_PWM.c ****     /*******************************************************************************
+ 539:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Function Name: Stone_PWM_WriteCompare1
+ 540:.\Generated_Source\PSoC4/Stone_PWM.c ****     ********************************************************************************
+ 541:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 542:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Summary:
+ 543:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  This funtion is used to change the compare1 value.  The compare output will
+ 544:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  reflect the new value on the next UDB clock.  The compare output will be
+ 545:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  driven high when the present counter value is less than or less than or
+ 546:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  equal to the compare register, depending on the mode.
+ 547:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 548:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Parameters:
+ 549:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  compare:  New compare value.
+ 550:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 551:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Return:
+ 552:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  None
+ 553:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 554:.\Generated_Source\PSoC4/Stone_PWM.c ****     *******************************************************************************/
+ 555:.\Generated_Source\PSoC4/Stone_PWM.c ****     void Stone_PWM_WriteCompare1(uint16 compare) \
+ 556:.\Generated_Source\PSoC4/Stone_PWM.c ****                                         
+ 557:.\Generated_Source\PSoC4/Stone_PWM.c ****     {
+ 558:.\Generated_Source\PSoC4/Stone_PWM.c ****         #if(Stone_PWM_UsingFixedFunction)
+ 559:.\Generated_Source\PSoC4/Stone_PWM.c ****             CY_SET_REG16(Stone_PWM_COMPARE1_LSB_PTR, (uint16)compare);
+ 560:.\Generated_Source\PSoC4/Stone_PWM.c ****         #else
+ 561:.\Generated_Source\PSoC4/Stone_PWM.c ****             CY_SET_REG16(Stone_PWM_COMPARE1_LSB_PTR, compare);
+ 562:.\Generated_Source\PSoC4/Stone_PWM.c ****         #endif /* (Stone_PWM_UsingFixedFunction) */
+ 563:.\Generated_Source\PSoC4/Stone_PWM.c ****     }
+ 564:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 14
+
+
+ 565:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 566:.\Generated_Source\PSoC4/Stone_PWM.c ****     /*******************************************************************************
+ 567:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Function Name: Stone_PWM_WriteCompare2
+ 568:.\Generated_Source\PSoC4/Stone_PWM.c ****     ********************************************************************************
+ 569:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 570:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Summary:
+ 571:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  This funtion is used to change the compare value, for compare1 output.
+ 572:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  The compare output will reflect the new value on the next UDB clock.
+ 573:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  The compare output will be driven high when the present counter value is
+ 574:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  less than or less than or equal to the compare register, depending on the
+ 575:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  mode.
+ 576:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 577:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Parameters:
+ 578:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  compare:  New compare value.
+ 579:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 580:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Return:
+ 581:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  None
+ 582:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 583:.\Generated_Source\PSoC4/Stone_PWM.c ****     *******************************************************************************/
+ 584:.\Generated_Source\PSoC4/Stone_PWM.c ****     void Stone_PWM_WriteCompare2(uint16 compare) \
+ 585:.\Generated_Source\PSoC4/Stone_PWM.c ****                                         
+ 586:.\Generated_Source\PSoC4/Stone_PWM.c ****     {
+ 587:.\Generated_Source\PSoC4/Stone_PWM.c ****         #if(Stone_PWM_UsingFixedFunction)
+ 588:.\Generated_Source\PSoC4/Stone_PWM.c ****             CY_SET_REG16(Stone_PWM_COMPARE2_LSB_PTR, compare);
+ 589:.\Generated_Source\PSoC4/Stone_PWM.c ****         #else
+ 590:.\Generated_Source\PSoC4/Stone_PWM.c ****             CY_SET_REG16(Stone_PWM_COMPARE2_LSB_PTR, compare);
+ 591:.\Generated_Source\PSoC4/Stone_PWM.c ****         #endif /* (Stone_PWM_UsingFixedFunction) */
+ 592:.\Generated_Source\PSoC4/Stone_PWM.c ****     }
+ 593:.\Generated_Source\PSoC4/Stone_PWM.c **** #endif /* UseOneCompareMode */
+ 594:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 595:.\Generated_Source\PSoC4/Stone_PWM.c **** #if (Stone_PWM_DeadBandUsed)
+ 596:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 597:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 598:.\Generated_Source\PSoC4/Stone_PWM.c ****     /*******************************************************************************
+ 599:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Function Name: Stone_PWM_WriteDeadTime
+ 600:.\Generated_Source\PSoC4/Stone_PWM.c ****     ********************************************************************************
+ 601:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 602:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Summary:
+ 603:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  This function writes the dead-band counts to the corresponding register
+ 604:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 605:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Parameters:
+ 606:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  deadtime:  Number of counts for dead time
+ 607:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 608:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Return:
+ 609:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  None
+ 610:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 611:.\Generated_Source\PSoC4/Stone_PWM.c ****     *******************************************************************************/
+ 612:.\Generated_Source\PSoC4/Stone_PWM.c ****     void Stone_PWM_WriteDeadTime(uint8 deadtime) 
+ 613:.\Generated_Source\PSoC4/Stone_PWM.c ****     {
+ 614:.\Generated_Source\PSoC4/Stone_PWM.c ****         /* If using the Dead Band 1-255 mode then just write the register */
+ 615:.\Generated_Source\PSoC4/Stone_PWM.c ****         #if(!Stone_PWM_DeadBand2_4)
+ 616:.\Generated_Source\PSoC4/Stone_PWM.c ****             CY_SET_REG8(Stone_PWM_DEADBAND_COUNT_PTR, deadtime);
+ 617:.\Generated_Source\PSoC4/Stone_PWM.c ****         #else
+ 618:.\Generated_Source\PSoC4/Stone_PWM.c ****             /* Otherwise the data has to be masked and offset */
+ 619:.\Generated_Source\PSoC4/Stone_PWM.c ****             /* Clear existing data */
+ 620:.\Generated_Source\PSoC4/Stone_PWM.c ****             Stone_PWM_DEADBAND_COUNT &= ((uint8)(~Stone_PWM_DEADBAND_COUNT_MASK));
+ 621:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 15
+
+
+ 622:.\Generated_Source\PSoC4/Stone_PWM.c ****             /* Set new dead time */
+ 623:.\Generated_Source\PSoC4/Stone_PWM.c ****             #if(Stone_PWM_DEADBAND_COUNT_SHIFT)
+ 624:.\Generated_Source\PSoC4/Stone_PWM.c ****                 Stone_PWM_DEADBAND_COUNT |= ((uint8)((uint8)deadtime << Stone_PWM_DEADBAND_COUNT_SH
+ 625:.\Generated_Source\PSoC4/Stone_PWM.c ****                                                     Stone_PWM_DEADBAND_COUNT_MASK;
+ 626:.\Generated_Source\PSoC4/Stone_PWM.c ****             #else
+ 627:.\Generated_Source\PSoC4/Stone_PWM.c ****                 Stone_PWM_DEADBAND_COUNT |= deadtime & Stone_PWM_DEADBAND_COUNT_MASK;
+ 628:.\Generated_Source\PSoC4/Stone_PWM.c ****             #endif /* (Stone_PWM_DEADBAND_COUNT_SHIFT) */
+ 629:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 630:.\Generated_Source\PSoC4/Stone_PWM.c ****         #endif /* (!Stone_PWM_DeadBand2_4) */
+ 631:.\Generated_Source\PSoC4/Stone_PWM.c ****     }
+ 632:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 633:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 634:.\Generated_Source\PSoC4/Stone_PWM.c ****     /*******************************************************************************
+ 635:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Function Name: Stone_PWM_ReadDeadTime
+ 636:.\Generated_Source\PSoC4/Stone_PWM.c ****     ********************************************************************************
+ 637:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 638:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Summary:
+ 639:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  This function reads the dead-band counts from the corresponding register
+ 640:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 641:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Parameters:
+ 642:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  None
+ 643:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 644:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Return:
+ 645:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  Dead Band Counts
+ 646:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 647:.\Generated_Source\PSoC4/Stone_PWM.c ****     *******************************************************************************/
+ 648:.\Generated_Source\PSoC4/Stone_PWM.c ****     uint8 Stone_PWM_ReadDeadTime(void) 
+ 649:.\Generated_Source\PSoC4/Stone_PWM.c ****     {
+ 650:.\Generated_Source\PSoC4/Stone_PWM.c ****         /* If using the Dead Band 1-255 mode then just read the register */
+ 651:.\Generated_Source\PSoC4/Stone_PWM.c ****         #if(!Stone_PWM_DeadBand2_4)
+ 652:.\Generated_Source\PSoC4/Stone_PWM.c ****             return (CY_GET_REG8(Stone_PWM_DEADBAND_COUNT_PTR));
+ 653:.\Generated_Source\PSoC4/Stone_PWM.c ****         #else
+ 654:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 655:.\Generated_Source\PSoC4/Stone_PWM.c ****             /* Otherwise the data has to be masked and offset */
+ 656:.\Generated_Source\PSoC4/Stone_PWM.c ****             #if(Stone_PWM_DEADBAND_COUNT_SHIFT)
+ 657:.\Generated_Source\PSoC4/Stone_PWM.c ****                 return ((uint8)(((uint8)(Stone_PWM_DEADBAND_COUNT & Stone_PWM_DEADBAND_COUNT_MASK))
+ 658:.\Generated_Source\PSoC4/Stone_PWM.c ****                                                                            Stone_PWM_DEADBAND_COUNT
+ 659:.\Generated_Source\PSoC4/Stone_PWM.c ****             #else
+ 660:.\Generated_Source\PSoC4/Stone_PWM.c ****                 return (Stone_PWM_DEADBAND_COUNT & Stone_PWM_DEADBAND_COUNT_MASK);
+ 661:.\Generated_Source\PSoC4/Stone_PWM.c ****             #endif /* (Stone_PWM_DEADBAND_COUNT_SHIFT) */
+ 662:.\Generated_Source\PSoC4/Stone_PWM.c ****         #endif /* (!Stone_PWM_DeadBand2_4) */
+ 663:.\Generated_Source\PSoC4/Stone_PWM.c ****     }
+ 664:.\Generated_Source\PSoC4/Stone_PWM.c **** #endif /* DeadBandUsed */
+ 665:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 666:.\Generated_Source\PSoC4/Stone_PWM.c **** #if (Stone_PWM_UseStatus || Stone_PWM_UsingFixedFunction)
+ 667:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 668:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 669:.\Generated_Source\PSoC4/Stone_PWM.c ****     /*******************************************************************************
+ 670:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Function Name: Stone_PWM_SetInterruptMode
+ 671:.\Generated_Source\PSoC4/Stone_PWM.c ****     ********************************************************************************
+ 672:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 673:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Summary:
+ 674:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  This function configures the interrupts mask control of theinterrupt
+ 675:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  source status register.
+ 676:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 677:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Parameters:
+ 678:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  uint8 interruptMode: Bit field containing the interrupt sources enabled
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 16
+
+
+ 679:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 680:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Return:
+ 681:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  None
+ 682:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 683:.\Generated_Source\PSoC4/Stone_PWM.c ****     *******************************************************************************/
+ 684:.\Generated_Source\PSoC4/Stone_PWM.c ****     void Stone_PWM_SetInterruptMode(uint8 interruptMode) 
+ 685:.\Generated_Source\PSoC4/Stone_PWM.c ****     {
+ 178              		.loc 1 685 0
+ 179              		.cfi_startproc
+ 180              	.LVL3:
+ 686:.\Generated_Source\PSoC4/Stone_PWM.c ****         CY_SET_REG8(Stone_PWM_STATUS_MASK_PTR, interruptMode);
+ 181              		.loc 1 686 0
+ 182 0000 014B     		ldr	r3, .L20
+ 183 0002 1870     		strb	r0, [r3]
+ 687:.\Generated_Source\PSoC4/Stone_PWM.c ****     }
+ 184              		.loc 1 687 0
+ 185              		@ sp needed
+ 186 0004 7047     		bx	lr
+ 187              	.L21:
+ 188 0006 C046     		.align	2
+ 189              	.L20:
+ 190 0008 81000F40 		.word	1074724993
+ 191              		.cfi_endproc
+ 192              	.LFE11:
+ 193              		.size	Stone_PWM_SetInterruptMode, .-Stone_PWM_SetInterruptMode
+ 194              		.section	.text.Stone_PWM_ReadStatusRegister,"ax",%progbits
+ 195              		.align	2
+ 196              		.global	Stone_PWM_ReadStatusRegister
+ 197              		.code	16
+ 198              		.thumb_func
+ 199              		.type	Stone_PWM_ReadStatusRegister, %function
+ 200              	Stone_PWM_ReadStatusRegister:
+ 201              	.LFB12:
+ 688:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 689:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 690:.\Generated_Source\PSoC4/Stone_PWM.c ****     /*******************************************************************************
+ 691:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Function Name: Stone_PWM_ReadStatusRegister
+ 692:.\Generated_Source\PSoC4/Stone_PWM.c ****     ********************************************************************************
+ 693:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 694:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Summary:
+ 695:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  This function returns the current state of the status register.
+ 696:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 697:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Parameters:
+ 698:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  None
+ 699:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 700:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Return:
+ 701:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  uint8 : Current status register value. The status register bits are:
+ 702:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  [7:6] : Unused(0)
+ 703:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  [5]   : Kill event output
+ 704:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  [4]   : FIFO not empty
+ 705:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  [3]   : FIFO full
+ 706:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  [2]   : Terminal count
+ 707:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  [1]   : Compare output 2
+ 708:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  [0]   : Compare output 1
+ 709:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 710:.\Generated_Source\PSoC4/Stone_PWM.c ****     *******************************************************************************/
+ 711:.\Generated_Source\PSoC4/Stone_PWM.c ****     uint8 Stone_PWM_ReadStatusRegister(void) 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 17
+
+
+ 712:.\Generated_Source\PSoC4/Stone_PWM.c ****     {
+ 202              		.loc 1 712 0
+ 203              		.cfi_startproc
+ 713:.\Generated_Source\PSoC4/Stone_PWM.c ****         return (CY_GET_REG8(Stone_PWM_STATUS_PTR));
+ 204              		.loc 1 713 0
+ 205 0000 014B     		ldr	r3, .L23
+ 206 0002 1878     		ldrb	r0, [r3]
+ 207 0004 C0B2     		uxtb	r0, r0
+ 714:.\Generated_Source\PSoC4/Stone_PWM.c ****     }
+ 208              		.loc 1 714 0
+ 209              		@ sp needed
+ 210 0006 7047     		bx	lr
+ 211              	.L24:
+ 212              		.align	2
+ 213              	.L23:
+ 214 0008 61000F40 		.word	1074724961
+ 215              		.cfi_endproc
+ 216              	.LFE12:
+ 217              		.size	Stone_PWM_ReadStatusRegister, .-Stone_PWM_ReadStatusRegister
+ 218              		.section	.text.Stone_PWM_ReadControlRegister,"ax",%progbits
+ 219              		.align	2
+ 220              		.global	Stone_PWM_ReadControlRegister
+ 221              		.code	16
+ 222              		.thumb_func
+ 223              		.type	Stone_PWM_ReadControlRegister, %function
+ 224              	Stone_PWM_ReadControlRegister:
+ 225              	.LFB13:
+ 715:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 716:.\Generated_Source\PSoC4/Stone_PWM.c **** #endif /* (Stone_PWM_UseStatus || Stone_PWM_UsingFixedFunction) */
+ 717:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 718:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 719:.\Generated_Source\PSoC4/Stone_PWM.c **** #if (Stone_PWM_UseControl)
+ 720:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 721:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 722:.\Generated_Source\PSoC4/Stone_PWM.c ****     /*******************************************************************************
+ 723:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Function Name: Stone_PWM_ReadControlRegister
+ 724:.\Generated_Source\PSoC4/Stone_PWM.c ****     ********************************************************************************
+ 725:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 726:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Summary:
+ 727:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  Returns the current state of the control register. This API is available
+ 728:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  only if the control register is not removed.
+ 729:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 730:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Parameters:
+ 731:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  None
+ 732:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 733:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Return:
+ 734:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  uint8 : Current control register value
+ 735:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 736:.\Generated_Source\PSoC4/Stone_PWM.c ****     *******************************************************************************/
+ 737:.\Generated_Source\PSoC4/Stone_PWM.c ****     uint8 Stone_PWM_ReadControlRegister(void) 
+ 738:.\Generated_Source\PSoC4/Stone_PWM.c ****     {
+ 226              		.loc 1 738 0
+ 227              		.cfi_startproc
+ 739:.\Generated_Source\PSoC4/Stone_PWM.c ****         uint8 result;
+ 740:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 741:.\Generated_Source\PSoC4/Stone_PWM.c ****         result = CY_GET_REG8(Stone_PWM_CONTROL_PTR);
+ 228              		.loc 1 741 0
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 18
+
+
+ 229 0000 014B     		ldr	r3, .L26
+ 230 0002 1878     		ldrb	r0, [r3]
+ 231 0004 C0B2     		uxtb	r0, r0
+ 232              	.LVL4:
+ 742:.\Generated_Source\PSoC4/Stone_PWM.c ****         return (result);
+ 743:.\Generated_Source\PSoC4/Stone_PWM.c ****     }
+ 233              		.loc 1 743 0
+ 234              		@ sp needed
+ 235 0006 7047     		bx	lr
+ 236              	.L27:
+ 237              		.align	2
+ 238              	.L26:
+ 239 0008 71000F40 		.word	1074724977
+ 240              		.cfi_endproc
+ 241              	.LFE13:
+ 242              		.size	Stone_PWM_ReadControlRegister, .-Stone_PWM_ReadControlRegister
+ 243              		.section	.text.Stone_PWM_WriteControlRegister,"ax",%progbits
+ 244              		.align	2
+ 245              		.global	Stone_PWM_WriteControlRegister
+ 246              		.code	16
+ 247              		.thumb_func
+ 248              		.type	Stone_PWM_WriteControlRegister, %function
+ 249              	Stone_PWM_WriteControlRegister:
+ 250              	.LFB14:
+ 744:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 745:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 746:.\Generated_Source\PSoC4/Stone_PWM.c ****     /*******************************************************************************
+ 747:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Function Name: Stone_PWM_WriteControlRegister
+ 748:.\Generated_Source\PSoC4/Stone_PWM.c ****     ********************************************************************************
+ 749:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 750:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Summary:
+ 751:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  Sets the bit field of the control register. This API is available only if
+ 752:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  the control register is not removed.
+ 753:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 754:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Parameters:
+ 755:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  uint8 control: Control register bit field, The status register bits are:
+ 756:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  [7]   : PWM Enable
+ 757:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  [6]   : Reset
+ 758:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  [5:3] : Compare Mode2
+ 759:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  [2:0] : Compare Mode2
+ 760:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 761:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Return:
+ 762:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  None
+ 763:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 764:.\Generated_Source\PSoC4/Stone_PWM.c ****     *******************************************************************************/
+ 765:.\Generated_Source\PSoC4/Stone_PWM.c ****     void Stone_PWM_WriteControlRegister(uint8 control) 
+ 766:.\Generated_Source\PSoC4/Stone_PWM.c ****     {
+ 251              		.loc 1 766 0
+ 252              		.cfi_startproc
+ 253              	.LVL5:
+ 767:.\Generated_Source\PSoC4/Stone_PWM.c ****         CY_SET_REG8(Stone_PWM_CONTROL_PTR, control);
+ 254              		.loc 1 767 0
+ 255 0000 014B     		ldr	r3, .L29
+ 256 0002 1870     		strb	r0, [r3]
+ 768:.\Generated_Source\PSoC4/Stone_PWM.c ****     }
+ 257              		.loc 1 768 0
+ 258              		@ sp needed
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 19
+
+
+ 259 0004 7047     		bx	lr
+ 260              	.L30:
+ 261 0006 C046     		.align	2
+ 262              	.L29:
+ 263 0008 71000F40 		.word	1074724977
+ 264              		.cfi_endproc
+ 265              	.LFE14:
+ 266              		.size	Stone_PWM_WriteControlRegister, .-Stone_PWM_WriteControlRegister
+ 267              		.section	.text.Stone_PWM_ReadCapture,"ax",%progbits
+ 268              		.align	2
+ 269              		.global	Stone_PWM_ReadCapture
+ 270              		.code	16
+ 271              		.thumb_func
+ 272              		.type	Stone_PWM_ReadCapture, %function
+ 273              	Stone_PWM_ReadCapture:
+ 274              	.LFB15:
+ 769:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 770:.\Generated_Source\PSoC4/Stone_PWM.c **** #endif /* (Stone_PWM_UseControl) */
+ 771:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 772:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 773:.\Generated_Source\PSoC4/Stone_PWM.c **** #if (!Stone_PWM_UsingFixedFunction)
+ 774:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 775:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 776:.\Generated_Source\PSoC4/Stone_PWM.c ****     /*******************************************************************************
+ 777:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Function Name: Stone_PWM_ReadCapture
+ 778:.\Generated_Source\PSoC4/Stone_PWM.c ****     ********************************************************************************
+ 779:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 780:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Summary:
+ 781:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  Reads the capture value from the capture FIFO.
+ 782:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 783:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Parameters:
+ 784:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  None
+ 785:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 786:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Return:
+ 787:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  uint8/uint16: The current capture value
+ 788:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 789:.\Generated_Source\PSoC4/Stone_PWM.c ****     *******************************************************************************/
+ 790:.\Generated_Source\PSoC4/Stone_PWM.c ****     uint16 Stone_PWM_ReadCapture(void) 
+ 791:.\Generated_Source\PSoC4/Stone_PWM.c ****     {
+ 275              		.loc 1 791 0
+ 276              		.cfi_startproc
+ 792:.\Generated_Source\PSoC4/Stone_PWM.c ****         return (CY_GET_REG16(Stone_PWM_CAPTURE_LSB_PTR));
+ 277              		.loc 1 792 0
+ 278 0000 014B     		ldr	r3, .L32
+ 279 0002 1888     		ldrh	r0, [r3]
+ 280 0004 80B2     		uxth	r0, r0
+ 793:.\Generated_Source\PSoC4/Stone_PWM.c ****     }
+ 281              		.loc 1 793 0
+ 282              		@ sp needed
+ 283 0006 7047     		bx	lr
+ 284              	.L33:
+ 285              		.align	2
+ 286              	.L32:
+ 287 0008 A0100F40 		.word	1074729120
+ 288              		.cfi_endproc
+ 289              	.LFE15:
+ 290              		.size	Stone_PWM_ReadCapture, .-Stone_PWM_ReadCapture
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 20
+
+
+ 291              		.section	.text.Stone_PWM_ClearFIFO,"ax",%progbits
+ 292              		.align	2
+ 293              		.global	Stone_PWM_ClearFIFO
+ 294              		.code	16
+ 295              		.thumb_func
+ 296              		.type	Stone_PWM_ClearFIFO, %function
+ 297              	Stone_PWM_ClearFIFO:
+ 298              	.LFB8:
+ 454:.\Generated_Source\PSoC4/Stone_PWM.c ****             while(0u != (Stone_PWM_ReadStatusRegister() & Stone_PWM_STATUS_FIFONEMPTY))
+ 299              		.loc 1 454 0
+ 300              		.cfi_startproc
+ 301 0000 08B5     		push	{r3, lr}
+ 302              		.cfi_def_cfa_offset 8
+ 303              		.cfi_offset 3, -8
+ 304              		.cfi_offset 14, -4
+ 455:.\Generated_Source\PSoC4/Stone_PWM.c ****             {
+ 305              		.loc 1 455 0
+ 306 0002 01E0     		b	.L35
+ 307              	.L36:
+ 457:.\Generated_Source\PSoC4/Stone_PWM.c ****             }
+ 308              		.loc 1 457 0
+ 309 0004 FFF7FEFF 		bl	Stone_PWM_ReadCapture
+ 310              	.LVL6:
+ 311              	.L35:
+ 455:.\Generated_Source\PSoC4/Stone_PWM.c ****             {
+ 312              		.loc 1 455 0
+ 313 0008 FFF7FEFF 		bl	Stone_PWM_ReadStatusRegister
+ 314              	.LVL7:
+ 315 000c C306     		lsl	r3, r0, #27
+ 316 000e F9D4     		bmi	.L36
+ 459:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 317              		.loc 1 459 0
+ 318              		@ sp needed
+ 319 0010 08BD     		pop	{r3, pc}
+ 320              		.cfi_endproc
+ 321              	.LFE8:
+ 322              		.size	Stone_PWM_ClearFIFO, .-Stone_PWM_ClearFIFO
+ 323 0012 C046     		.section	.text.Stone_PWM_Init,"ax",%progbits
+ 324              		.align	2
+ 325              		.global	Stone_PWM_Init
+ 326              		.code	16
+ 327              		.thumb_func
+ 328              		.type	Stone_PWM_Init, %function
+ 329              	Stone_PWM_Init:
+ 330              	.LFB3:
+  85:.\Generated_Source\PSoC4/Stone_PWM.c ****     #if (Stone_PWM_UsingFixedFunction || Stone_PWM_UseControl)
+ 331              		.loc 1 85 0
+ 332              		.cfi_startproc
+ 333 0000 10B5     		push	{r4, lr}
+ 334              		.cfi_def_cfa_offset 8
+ 335              		.cfi_offset 4, -8
+ 336              		.cfi_offset 14, -4
+ 117:.\Generated_Source\PSoC4/Stone_PWM.c ****                 ((uint8)(~Stone_PWM_CTRL_CMPMODE1_MASK));
+ 337              		.loc 1 117 0
+ 338 0002 1449     		ldr	r1, .L38
+ 339 0004 0B78     		ldrb	r3, [r1]
+ 340 0006 3F22     		mov	r2, #63
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 21
+
+
+ 341 0008 9343     		bic	r3, r2
+ 342              	.LVL8:
+ 119:.\Generated_Source\PSoC4/Stone_PWM.c ****                                    Stone_PWM_DEFAULT_COMPARE1_MODE;
+ 343              		.loc 1 119 0
+ 344 000a 363A     		sub	r2, r2, #54
+ 345 000c 1343     		orr	r3, r2
+ 346              	.LVL9:
+ 347 000e 0B70     		strb	r3, [r1]
+ 129:.\Generated_Source\PSoC4/Stone_PWM.c ****             Stone_PWM_AUX_CONTROLDP1 |= (Stone_PWM_AUX_CTRL_FIFO0_CLR);
+ 348              		.loc 1 129 0
+ 349 0010 1149     		ldr	r1, .L38+4
+ 350 0012 0A78     		ldrb	r2, [r1]
+ 351 0014 0123     		mov	r3, #1
+ 352 0016 1A43     		orr	r2, r3
+ 353 0018 D2B2     		uxtb	r2, r2
+ 354 001a 0A70     		strb	r2, [r1]
+ 130:.\Generated_Source\PSoC4/Stone_PWM.c ****         #endif /* (Stone_PWM_Resolution == 8) */
+ 355              		.loc 1 130 0
+ 356 001c 0F4C     		ldr	r4, .L38+8
+ 357 001e 2278     		ldrb	r2, [r4]
+ 358 0020 1343     		orr	r3, r2
+ 359 0022 DBB2     		uxtb	r3, r3
+ 360 0024 2370     		strb	r3, [r4]
+ 133:.\Generated_Source\PSoC4/Stone_PWM.c ****     #endif /* (!Stone_PWM_UsingFixedFunction) */
+ 361              		.loc 1 133 0
+ 362 0026 6420     		mov	r0, #100
+ 363 0028 FFF7FEFF 		bl	Stone_PWM_WriteCounter
+ 364              	.LVL10:
+ 136:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 365              		.loc 1 136 0
+ 366 002c 6420     		mov	r0, #100
+ 367 002e FFF7FEFF 		bl	Stone_PWM_WritePeriod
+ 368              	.LVL11:
+ 139:.\Generated_Source\PSoC4/Stone_PWM.c ****         #else
+ 369              		.loc 1 139 0
+ 370 0032 3C20     		mov	r0, #60
+ 371 0034 FFF7FEFF 		bl	Stone_PWM_WriteCompare
+ 372              	.LVL12:
+ 154:.\Generated_Source\PSoC4/Stone_PWM.c ****     #endif /* (Stone_PWM_UseStatus || Stone_PWM_UsingFixedFunction) */
+ 373              		.loc 1 154 0
+ 374 0038 0020     		mov	r0, #0
+ 375 003a FFF7FEFF 		bl	Stone_PWM_SetInterruptMode
+ 376              	.LVL13:
+ 167:.\Generated_Source\PSoC4/Stone_PWM.c ****             /* Use the interrupt output of the status register for IRQ output */
+ 377              		.loc 1 167 0
+ 378 003e FFF7FEFF 		bl	CyEnterCriticalSection
+ 379              	.LVL14:
+ 169:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 380              		.loc 1 169 0
+ 381 0042 2278     		ldrb	r2, [r4]
+ 382 0044 1023     		mov	r3, #16
+ 383 0046 1343     		orr	r3, r2
+ 384 0048 2370     		strb	r3, [r4]
+ 172:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 385              		.loc 1 172 0
+ 386 004a FFF7FEFF 		bl	CyExitCriticalSection
+ 387              	.LVL15:
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 22
+
+
+ 176:.\Generated_Source\PSoC4/Stone_PWM.c ****         #endif /* (Stone_PWM_UseStatus) */
+ 388              		.loc 1 176 0
+ 389 004e FFF7FEFF 		bl	Stone_PWM_ClearFIFO
+ 390              	.LVL16:
+ 179:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 391              		.loc 1 179 0
+ 392              		@ sp needed
+ 393 0052 10BD     		pop	{r4, pc}
+ 394              	.L39:
+ 395              		.align	2
+ 396              	.L38:
+ 397 0054 71000F40 		.word	1074724977
+ 398 0058 90000F40 		.word	1074725008
+ 399 005c 91000F40 		.word	1074725009
+ 400              		.cfi_endproc
+ 401              	.LFE3:
+ 402              		.size	Stone_PWM_Init, .-Stone_PWM_Init
+ 403              		.section	.text.Stone_PWM_Start,"ax",%progbits
+ 404              		.align	2
+ 405              		.global	Stone_PWM_Start
+ 406              		.code	16
+ 407              		.thumb_func
+ 408              		.type	Stone_PWM_Start, %function
+ 409              	Stone_PWM_Start:
+ 410              	.LFB2:
+  56:.\Generated_Source\PSoC4/Stone_PWM.c ****     /* If not Initialized then initialize all required hardware and software */
+ 411              		.loc 1 56 0
+ 412              		.cfi_startproc
+ 413 0000 08B5     		push	{r3, lr}
+ 414              		.cfi_def_cfa_offset 8
+ 415              		.cfi_offset 3, -8
+ 416              		.cfi_offset 14, -4
+  58:.\Generated_Source\PSoC4/Stone_PWM.c ****     {
+ 417              		.loc 1 58 0
+ 418 0002 064B     		ldr	r3, .L42
+ 419 0004 1B78     		ldrb	r3, [r3]
+ 420 0006 002B     		cmp	r3, #0
+ 421 0008 04D1     		bne	.L41
+  60:.\Generated_Source\PSoC4/Stone_PWM.c ****         Stone_PWM_initVar = 1u;
+ 422              		.loc 1 60 0
+ 423 000a FFF7FEFF 		bl	Stone_PWM_Init
+ 424              	.LVL17:
+  61:.\Generated_Source\PSoC4/Stone_PWM.c ****     }
+ 425              		.loc 1 61 0
+ 426 000e 0122     		mov	r2, #1
+ 427 0010 024B     		ldr	r3, .L42
+ 428 0012 1A70     		strb	r2, [r3]
+ 429              	.L41:
+  63:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 430              		.loc 1 63 0
+ 431 0014 FFF7FEFF 		bl	Stone_PWM_Enable
+ 432              	.LVL18:
+  65:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 433              		.loc 1 65 0
+ 434              		@ sp needed
+ 435 0018 08BD     		pop	{r3, pc}
+ 436              	.L43:
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 23
+
+
+ 437 001a C046     		.align	2
+ 438              	.L42:
+ 439 001c 00000000 		.word	.LANCHOR0
+ 440              		.cfi_endproc
+ 441              	.LFE2:
+ 442              		.size	Stone_PWM_Start, .-Stone_PWM_Start
+ 443              		.section	.text.Stone_PWM_ReadCompare,"ax",%progbits
+ 444              		.align	2
+ 445              		.global	Stone_PWM_ReadCompare
+ 446              		.code	16
+ 447              		.thumb_func
+ 448              		.type	Stone_PWM_ReadCompare, %function
+ 449              	Stone_PWM_ReadCompare:
+ 450              	.LFB16:
+ 794:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 795:.\Generated_Source\PSoC4/Stone_PWM.c **** #endif /* (!Stone_PWM_UsingFixedFunction) */
+ 796:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 797:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 798:.\Generated_Source\PSoC4/Stone_PWM.c **** #if (Stone_PWM_UseOneCompareMode)
+ 799:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 800:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 801:.\Generated_Source\PSoC4/Stone_PWM.c ****     /*******************************************************************************
+ 802:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Function Name: Stone_PWM_ReadCompare
+ 803:.\Generated_Source\PSoC4/Stone_PWM.c ****     ********************************************************************************
+ 804:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 805:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Summary:
+ 806:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  Reads the compare value for the compare output when the PWM Mode parameter is
+ 807:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  set to Dither mode, Center Aligned mode, or One Output mode.
+ 808:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 809:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Parameters:
+ 810:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  None
+ 811:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 812:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Return:
+ 813:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  uint8/uint16: Current compare value
+ 814:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 815:.\Generated_Source\PSoC4/Stone_PWM.c ****     *******************************************************************************/
+ 816:.\Generated_Source\PSoC4/Stone_PWM.c ****     uint16 Stone_PWM_ReadCompare(void) 
+ 817:.\Generated_Source\PSoC4/Stone_PWM.c ****     {
+ 451              		.loc 1 817 0
+ 452              		.cfi_startproc
+ 818:.\Generated_Source\PSoC4/Stone_PWM.c ****         #if(Stone_PWM_UsingFixedFunction)
+ 819:.\Generated_Source\PSoC4/Stone_PWM.c ****             return ((uint16)CY_GET_REG16(Stone_PWM_COMPARE1_LSB_PTR));
+ 820:.\Generated_Source\PSoC4/Stone_PWM.c ****         #else
+ 821:.\Generated_Source\PSoC4/Stone_PWM.c ****             return (CY_GET_REG16(Stone_PWM_COMPARE1_LSB_PTR));
+ 453              		.loc 1 821 0
+ 454 0000 014B     		ldr	r3, .L45
+ 455 0002 1888     		ldrh	r0, [r3]
+ 456 0004 80B2     		uxth	r0, r0
+ 822:.\Generated_Source\PSoC4/Stone_PWM.c ****         #endif /* (Stone_PWM_UsingFixedFunction) */
+ 823:.\Generated_Source\PSoC4/Stone_PWM.c ****     }
+ 457              		.loc 1 823 0
+ 458              		@ sp needed
+ 459 0006 7047     		bx	lr
+ 460              	.L46:
+ 461              		.align	2
+ 462              	.L45:
+ 463 0008 40100F40 		.word	1074729024
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 24
+
+
+ 464              		.cfi_endproc
+ 465              	.LFE16:
+ 466              		.size	Stone_PWM_ReadCompare, .-Stone_PWM_ReadCompare
+ 467              		.section	.text.Stone_PWM_ReadPeriod,"ax",%progbits
+ 468              		.align	2
+ 469              		.global	Stone_PWM_ReadPeriod
+ 470              		.code	16
+ 471              		.thumb_func
+ 472              		.type	Stone_PWM_ReadPeriod, %function
+ 473              	Stone_PWM_ReadPeriod:
+ 474              	.LFB17:
+ 824:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 825:.\Generated_Source\PSoC4/Stone_PWM.c **** #else
+ 826:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 827:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 828:.\Generated_Source\PSoC4/Stone_PWM.c ****     /*******************************************************************************
+ 829:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Function Name: Stone_PWM_ReadCompare1
+ 830:.\Generated_Source\PSoC4/Stone_PWM.c ****     ********************************************************************************
+ 831:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 832:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Summary:
+ 833:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  Reads the compare value for the compare1 output.
+ 834:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 835:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Parameters:
+ 836:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  None
+ 837:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 838:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Return:
+ 839:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  uint8/uint16: Current compare value.
+ 840:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 841:.\Generated_Source\PSoC4/Stone_PWM.c ****     *******************************************************************************/
+ 842:.\Generated_Source\PSoC4/Stone_PWM.c ****     uint16 Stone_PWM_ReadCompare1(void) 
+ 843:.\Generated_Source\PSoC4/Stone_PWM.c ****     {
+ 844:.\Generated_Source\PSoC4/Stone_PWM.c ****         return (CY_GET_REG16(Stone_PWM_COMPARE1_LSB_PTR));
+ 845:.\Generated_Source\PSoC4/Stone_PWM.c ****     }
+ 846:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 847:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 848:.\Generated_Source\PSoC4/Stone_PWM.c ****     /*******************************************************************************
+ 849:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Function Name: Stone_PWM_ReadCompare2
+ 850:.\Generated_Source\PSoC4/Stone_PWM.c ****     ********************************************************************************
+ 851:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 852:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Summary:
+ 853:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  Reads the compare value for the compare2 output.
+ 854:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 855:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Parameters:
+ 856:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  None
+ 857:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 858:.\Generated_Source\PSoC4/Stone_PWM.c ****     * Return:
+ 859:.\Generated_Source\PSoC4/Stone_PWM.c ****     *  uint8/uint16: Current compare value.
+ 860:.\Generated_Source\PSoC4/Stone_PWM.c ****     *
+ 861:.\Generated_Source\PSoC4/Stone_PWM.c ****     *******************************************************************************/
+ 862:.\Generated_Source\PSoC4/Stone_PWM.c ****     uint16 Stone_PWM_ReadCompare2(void) 
+ 863:.\Generated_Source\PSoC4/Stone_PWM.c ****     {
+ 864:.\Generated_Source\PSoC4/Stone_PWM.c ****         return (CY_GET_REG16(Stone_PWM_COMPARE2_LSB_PTR));
+ 865:.\Generated_Source\PSoC4/Stone_PWM.c ****     }
+ 866:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 867:.\Generated_Source\PSoC4/Stone_PWM.c **** #endif /* (Stone_PWM_UseOneCompareMode) */
+ 868:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ 869:.\Generated_Source\PSoC4/Stone_PWM.c **** 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 25
+
+
+ 870:.\Generated_Source\PSoC4/Stone_PWM.c **** /*******************************************************************************
+ 871:.\Generated_Source\PSoC4/Stone_PWM.c **** * Function Name: Stone_PWM_ReadPeriod
+ 872:.\Generated_Source\PSoC4/Stone_PWM.c **** ********************************************************************************
+ 873:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+ 874:.\Generated_Source\PSoC4/Stone_PWM.c **** * Summary:
+ 875:.\Generated_Source\PSoC4/Stone_PWM.c **** *  Reads the period value used by the PWM hardware.
+ 876:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+ 877:.\Generated_Source\PSoC4/Stone_PWM.c **** * Parameters:
+ 878:.\Generated_Source\PSoC4/Stone_PWM.c **** *  None
+ 879:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+ 880:.\Generated_Source\PSoC4/Stone_PWM.c **** * Return:
+ 881:.\Generated_Source\PSoC4/Stone_PWM.c **** *  uint8/16: Period value
+ 882:.\Generated_Source\PSoC4/Stone_PWM.c **** *
+ 883:.\Generated_Source\PSoC4/Stone_PWM.c **** *******************************************************************************/
+ 884:.\Generated_Source\PSoC4/Stone_PWM.c **** uint16 Stone_PWM_ReadPeriod(void) 
+ 885:.\Generated_Source\PSoC4/Stone_PWM.c **** {
+ 475              		.loc 1 885 0
+ 476              		.cfi_startproc
+ 886:.\Generated_Source\PSoC4/Stone_PWM.c ****     #if(Stone_PWM_UsingFixedFunction)
+ 887:.\Generated_Source\PSoC4/Stone_PWM.c ****         return ((uint16)CY_GET_REG16(Stone_PWM_PERIOD_LSB_PTR));
+ 888:.\Generated_Source\PSoC4/Stone_PWM.c ****     #else
+ 889:.\Generated_Source\PSoC4/Stone_PWM.c ****         return (CY_GET_REG16(Stone_PWM_PERIOD_LSB_PTR));
+ 477              		.loc 1 889 0
+ 478 0000 014B     		ldr	r3, .L48
+ 479 0002 1888     		ldrh	r0, [r3]
+ 480 0004 80B2     		uxth	r0, r0
+ 890:.\Generated_Source\PSoC4/Stone_PWM.c ****     #endif /* (Stone_PWM_UsingFixedFunction) */
+ 891:.\Generated_Source\PSoC4/Stone_PWM.c **** }
+ 481              		.loc 1 891 0
+ 482              		@ sp needed
+ 483 0006 7047     		bx	lr
+ 484              	.L49:
+ 485              		.align	2
+ 486              	.L48:
+ 487 0008 80100F40 		.word	1074729088
+ 488              		.cfi_endproc
+ 489              	.LFE17:
+ 490              		.size	Stone_PWM_ReadPeriod, .-Stone_PWM_ReadPeriod
+ 491              		.global	Stone_PWM_initVar
+ 492              		.bss
+ 493              		.set	.LANCHOR0,. + 0
+ 494              		.type	Stone_PWM_initVar, %object
+ 495              		.size	Stone_PWM_initVar, 1
+ 496              	Stone_PWM_initVar:
+ 497 0000 00       		.space	1
+ 498              		.text
+ 499              	.Letext0:
+ 500              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
+ 501              		.file 3 ".\\Generated_Source\\PSoC4\\CyLib.h"
+ 502              		.section	.debug_info,"",%progbits
+ 503              	.Ldebug_info0:
+ 504 0000 48030000 		.4byte	0x348
+ 505 0004 0400     		.2byte	0x4
+ 506 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 507 000a 04       		.byte	0x4
+ 508 000b 01       		.uleb128 0x1
+ 509 000c 76020000 		.4byte	.LASF40
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 26
+
+
+ 510 0010 01       		.byte	0x1
+ 511 0011 6F010000 		.4byte	.LASF41
+ 512 0015 4D030000 		.4byte	.LASF42
+ 513 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 514 001d 00000000 		.4byte	0
+ 515 0021 00000000 		.4byte	.Ldebug_line0
+ 516 0025 02       		.uleb128 0x2
+ 517 0026 01       		.byte	0x1
+ 518 0027 06       		.byte	0x6
+ 519 0028 39030000 		.4byte	.LASF0
+ 520 002c 02       		.uleb128 0x2
+ 521 002d 01       		.byte	0x1
+ 522 002e 08       		.byte	0x8
+ 523 002f 0A010000 		.4byte	.LASF1
+ 524 0033 02       		.uleb128 0x2
+ 525 0034 02       		.byte	0x2
+ 526 0035 05       		.byte	0x5
+ 527 0036 94010000 		.4byte	.LASF2
+ 528 003a 02       		.uleb128 0x2
+ 529 003b 02       		.byte	0x2
+ 530 003c 07       		.byte	0x7
+ 531 003d 60000000 		.4byte	.LASF3
+ 532 0041 02       		.uleb128 0x2
+ 533 0042 04       		.byte	0x4
+ 534 0043 05       		.byte	0x5
+ 535 0044 14030000 		.4byte	.LASF4
+ 536 0048 02       		.uleb128 0x2
+ 537 0049 04       		.byte	0x4
+ 538 004a 07       		.byte	0x7
+ 539 004b 1D010000 		.4byte	.LASF5
+ 540 004f 02       		.uleb128 0x2
+ 541 0050 08       		.byte	0x8
+ 542 0051 05       		.byte	0x5
+ 543 0052 30020000 		.4byte	.LASF6
+ 544 0056 02       		.uleb128 0x2
+ 545 0057 08       		.byte	0x8
+ 546 0058 07       		.byte	0x7
+ 547 0059 F3000000 		.4byte	.LASF7
+ 548 005d 03       		.uleb128 0x3
+ 549 005e 04       		.byte	0x4
+ 550 005f 05       		.byte	0x5
+ 551 0060 696E7400 		.ascii	"int\000"
+ 552 0064 02       		.uleb128 0x2
+ 553 0065 04       		.byte	0x4
+ 554 0066 07       		.byte	0x7
+ 555 0067 BC010000 		.4byte	.LASF8
+ 556 006b 04       		.uleb128 0x4
+ 557 006c 2F010000 		.4byte	.LASF9
+ 558 0070 02       		.byte	0x2
+ 559 0071 9801     		.2byte	0x198
+ 560 0073 2C000000 		.4byte	0x2c
+ 561 0077 04       		.uleb128 0x4
+ 562 0078 9E010000 		.4byte	.LASF10
+ 563 007c 02       		.byte	0x2
+ 564 007d 9901     		.2byte	0x199
+ 565 007f 3A000000 		.4byte	0x3a
+ 566 0083 02       		.uleb128 0x2
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 27
+
+
+ 567 0084 04       		.byte	0x4
+ 568 0085 04       		.byte	0x4
+ 569 0086 3A000000 		.4byte	.LASF11
+ 570 008a 02       		.uleb128 0x2
+ 571 008b 08       		.byte	0x8
+ 572 008c 04       		.byte	0x4
+ 573 008d 68010000 		.4byte	.LASF12
+ 574 0091 02       		.uleb128 0x2
+ 575 0092 01       		.byte	0x1
+ 576 0093 08       		.byte	0x8
+ 577 0094 1D030000 		.4byte	.LASF13
+ 578 0098 04       		.uleb128 0x4
+ 579 0099 18010000 		.4byte	.LASF14
+ 580 009d 02       		.byte	0x2
+ 581 009e 4202     		.2byte	0x242
+ 582 00a0 A4000000 		.4byte	0xa4
+ 583 00a4 05       		.uleb128 0x5
+ 584 00a5 6B000000 		.4byte	0x6b
+ 585 00a9 04       		.uleb128 0x4
+ 586 00aa 00000000 		.4byte	.LASF15
+ 587 00ae 02       		.byte	0x2
+ 588 00af 4302     		.2byte	0x243
+ 589 00b1 B5000000 		.4byte	0xb5
+ 590 00b5 05       		.uleb128 0x5
+ 591 00b6 77000000 		.4byte	0x77
+ 592 00ba 02       		.uleb128 0x2
+ 593 00bb 04       		.byte	0x4
+ 594 00bc 07       		.byte	0x7
+ 595 00bd 27020000 		.4byte	.LASF16
+ 596 00c1 06       		.uleb128 0x6
+ 597 00c2 80030000 		.4byte	.LASF17
+ 598 00c6 01       		.byte	0x1
+ 599 00c7 C7       		.byte	0xc7
+ 600 00c8 00000000 		.4byte	.LFB4
+ 601 00cc 10000000 		.4byte	.LFE4-.LFB4
+ 602 00d0 01       		.uleb128 0x1
+ 603 00d1 9C       		.byte	0x9c
+ 604 00d2 06       		.uleb128 0x6
+ 605 00d3 DF010000 		.4byte	.LASF18
+ 606 00d7 01       		.byte	0x1
+ 607 00d8 E9       		.byte	0xe9
+ 608 00d9 00000000 		.4byte	.LFB5
+ 609 00dd 10000000 		.4byte	.LFE5-.LFB5
+ 610 00e1 01       		.uleb128 0x1
+ 611 00e2 9C       		.byte	0x9c
+ 612 00e3 07       		.uleb128 0x7
+ 613 00e4 C5000000 		.4byte	.LASF19
+ 614 00e8 01       		.byte	0x1
+ 615 00e9 9301     		.2byte	0x193
+ 616 00eb 00000000 		.4byte	.LFB6
+ 617 00ef 0C000000 		.4byte	.LFE6-.LFB6
+ 618 00f3 01       		.uleb128 0x1
+ 619 00f4 9C       		.byte	0x9c
+ 620 00f5 08010000 		.4byte	0x108
+ 621 00f9 08       		.uleb128 0x8
+ 622 00fa EB000000 		.4byte	.LASF21
+ 623 00fe 01       		.byte	0x1
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 28
+
+
+ 624 00ff 9301     		.2byte	0x193
+ 625 0101 77000000 		.4byte	0x77
+ 626 0105 01       		.uleb128 0x1
+ 627 0106 50       		.byte	0x50
+ 628 0107 00       		.byte	0
+ 629 0108 09       		.uleb128 0x9
+ 630 0109 3D010000 		.4byte	.LASF27
+ 631 010d 01       		.byte	0x1
+ 632 010e A901     		.2byte	0x1a9
+ 633 0110 77000000 		.4byte	0x77
+ 634 0114 00000000 		.4byte	.LFB7
+ 635 0118 14000000 		.4byte	.LFE7-.LFB7
+ 636 011c 01       		.uleb128 0x1
+ 637 011d 9C       		.byte	0x9c
+ 638 011e 07       		.uleb128 0x7
+ 639 011f 3E020000 		.4byte	.LASF20
+ 640 0123 01       		.byte	0x1
+ 641 0124 E201     		.2byte	0x1e2
+ 642 0126 00000000 		.4byte	.LFB9
+ 643 012a 0C000000 		.4byte	.LFE9-.LFB9
+ 644 012e 01       		.uleb128 0x1
+ 645 012f 9C       		.byte	0x9c
+ 646 0130 43010000 		.4byte	0x143
+ 647 0134 08       		.uleb128 0x8
+ 648 0135 59000000 		.4byte	.LASF22
+ 649 0139 01       		.byte	0x1
+ 650 013a E201     		.2byte	0x1e2
+ 651 013c 77000000 		.4byte	0x77
+ 652 0140 01       		.uleb128 0x1
+ 653 0141 50       		.byte	0x50
+ 654 0142 00       		.byte	0
+ 655 0143 07       		.uleb128 0x7
+ 656 0144 22030000 		.4byte	.LASF23
+ 657 0148 01       		.byte	0x1
+ 658 0149 0402     		.2byte	0x204
+ 659 014b 00000000 		.4byte	.LFB10
+ 660 014f 0C000000 		.4byte	.LFE10-.LFB10
+ 661 0153 01       		.uleb128 0x1
+ 662 0154 9C       		.byte	0x9c
+ 663 0155 68010000 		.4byte	0x168
+ 664 0159 08       		.uleb128 0x8
+ 665 015a 45030000 		.4byte	.LASF24
+ 666 015e 01       		.byte	0x1
+ 667 015f 0402     		.2byte	0x204
+ 668 0161 77000000 		.4byte	0x77
+ 669 0165 01       		.uleb128 0x1
+ 670 0166 50       		.byte	0x50
+ 671 0167 00       		.byte	0
+ 672 0168 07       		.uleb128 0x7
+ 673 0169 07020000 		.4byte	.LASF25
+ 674 016d 01       		.byte	0x1
+ 675 016e AC02     		.2byte	0x2ac
+ 676 0170 00000000 		.4byte	.LFB11
+ 677 0174 0C000000 		.4byte	.LFE11-.LFB11
+ 678 0178 01       		.uleb128 0x1
+ 679 0179 9C       		.byte	0x9c
+ 680 017a 8D010000 		.4byte	0x18d
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 29
+
+
+ 681 017e 08       		.uleb128 0x8
+ 682 017f 54020000 		.4byte	.LASF26
+ 683 0183 01       		.byte	0x1
+ 684 0184 AC02     		.2byte	0x2ac
+ 685 0186 6B000000 		.4byte	0x6b
+ 686 018a 01       		.uleb128 0x1
+ 687 018b 50       		.byte	0x50
+ 688 018c 00       		.byte	0
+ 689 018d 09       		.uleb128 0x9
+ 690 018e 73000000 		.4byte	.LASF28
+ 691 0192 01       		.byte	0x1
+ 692 0193 C702     		.2byte	0x2c7
+ 693 0195 6B000000 		.4byte	0x6b
+ 694 0199 00000000 		.4byte	.LFB12
+ 695 019d 0C000000 		.4byte	.LFE12-.LFB12
+ 696 01a1 01       		.uleb128 0x1
+ 697 01a2 9C       		.byte	0x9c
+ 698 01a3 0A       		.uleb128 0xa
+ 699 01a4 1C000000 		.4byte	.LASF43
+ 700 01a8 01       		.byte	0x1
+ 701 01a9 E102     		.2byte	0x2e1
+ 702 01ab 6B000000 		.4byte	0x6b
+ 703 01af 00000000 		.4byte	.LFB13
+ 704 01b3 0C000000 		.4byte	.LFE13-.LFB13
+ 705 01b7 01       		.uleb128 0x1
+ 706 01b8 9C       		.byte	0x9c
+ 707 01b9 CC010000 		.4byte	0x1cc
+ 708 01bd 0B       		.uleb128 0xb
+ 709 01be EE010000 		.4byte	.LASF34
+ 710 01c2 01       		.byte	0x1
+ 711 01c3 E302     		.2byte	0x2e3
+ 712 01c5 6B000000 		.4byte	0x6b
+ 713 01c9 01       		.uleb128 0x1
+ 714 01ca 50       		.byte	0x50
+ 715 01cb 00       		.byte	0
+ 716 01cc 07       		.uleb128 0x7
+ 717 01cd A6000000 		.4byte	.LASF29
+ 718 01d1 01       		.byte	0x1
+ 719 01d2 FD02     		.2byte	0x2fd
+ 720 01d4 00000000 		.4byte	.LFB14
+ 721 01d8 0C000000 		.4byte	.LFE14-.LFB14
+ 722 01dc 01       		.uleb128 0x1
+ 723 01dd 9C       		.byte	0x9c
+ 724 01de F1010000 		.4byte	0x1f1
+ 725 01e2 08       		.uleb128 0x8
+ 726 01e3 35010000 		.4byte	.LASF30
+ 727 01e7 01       		.byte	0x1
+ 728 01e8 FD02     		.2byte	0x2fd
+ 729 01ea 6B000000 		.4byte	0x6b
+ 730 01ee 01       		.uleb128 0x1
+ 731 01ef 50       		.byte	0x50
+ 732 01f0 00       		.byte	0
+ 733 01f1 09       		.uleb128 0x9
+ 734 01f2 90000000 		.4byte	.LASF31
+ 735 01f6 01       		.byte	0x1
+ 736 01f7 1603     		.2byte	0x316
+ 737 01f9 77000000 		.4byte	0x77
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 30
+
+
+ 738 01fd 00000000 		.4byte	.LFB15
+ 739 0201 0C000000 		.4byte	.LFE15-.LFB15
+ 740 0205 01       		.uleb128 0x1
+ 741 0206 9C       		.byte	0x9c
+ 742 0207 07       		.uleb128 0x7
+ 743 0208 62020000 		.4byte	.LASF32
+ 744 020c 01       		.byte	0x1
+ 745 020d C501     		.2byte	0x1c5
+ 746 020f 00000000 		.4byte	.LFB8
+ 747 0213 12000000 		.4byte	.LFE8-.LFB8
+ 748 0217 01       		.uleb128 0x1
+ 749 0218 9C       		.byte	0x9c
+ 750 0219 30020000 		.4byte	0x230
+ 751 021d 0C       		.uleb128 0xc
+ 752 021e 08000000 		.4byte	.LVL6
+ 753 0222 F1010000 		.4byte	0x1f1
+ 754 0226 0C       		.uleb128 0xc
+ 755 0227 0C000000 		.4byte	.LVL7
+ 756 022b 8D010000 		.4byte	0x18d
+ 757 022f 00       		.byte	0
+ 758 0230 0D       		.uleb128 0xd
+ 759 0231 DC000000 		.4byte	.LASF33
+ 760 0235 01       		.byte	0x1
+ 761 0236 54       		.byte	0x54
+ 762 0237 00000000 		.4byte	.LFB3
+ 763 023b 60000000 		.4byte	.LFE3-.LFB3
+ 764 023f 01       		.uleb128 0x1
+ 765 0240 9C       		.byte	0x9c
+ 766 0241 CE020000 		.4byte	0x2ce
+ 767 0245 0E       		.uleb128 0xe
+ 768 0246 22020000 		.4byte	.LASF35
+ 769 024a 01       		.byte	0x1
+ 770 024b 57       		.byte	0x57
+ 771 024c 6B000000 		.4byte	0x6b
+ 772 0250 00000000 		.4byte	.LLST0
+ 773 0254 0E       		.uleb128 0xe
+ 774 0255 40000000 		.4byte	.LASF36
+ 775 0259 01       		.byte	0x1
+ 776 025a 5D       		.byte	0x5d
+ 777 025b 6B000000 		.4byte	0x6b
+ 778 025f 13000000 		.4byte	.LLST1
+ 779 0263 0F       		.uleb128 0xf
+ 780 0264 2C000000 		.4byte	.LVL10
+ 781 0268 E3000000 		.4byte	0xe3
+ 782 026c 77020000 		.4byte	0x277
+ 783 0270 10       		.uleb128 0x10
+ 784 0271 01       		.uleb128 0x1
+ 785 0272 50       		.byte	0x50
+ 786 0273 02       		.uleb128 0x2
+ 787 0274 08       		.byte	0x8
+ 788 0275 64       		.byte	0x64
+ 789 0276 00       		.byte	0
+ 790 0277 0F       		.uleb128 0xf
+ 791 0278 32000000 		.4byte	.LVL11
+ 792 027c 1E010000 		.4byte	0x11e
+ 793 0280 8B020000 		.4byte	0x28b
+ 794 0284 10       		.uleb128 0x10
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 31
+
+
+ 795 0285 01       		.uleb128 0x1
+ 796 0286 50       		.byte	0x50
+ 797 0287 02       		.uleb128 0x2
+ 798 0288 08       		.byte	0x8
+ 799 0289 64       		.byte	0x64
+ 800 028a 00       		.byte	0
+ 801 028b 0F       		.uleb128 0xf
+ 802 028c 38000000 		.4byte	.LVL12
+ 803 0290 43010000 		.4byte	0x143
+ 804 0294 9F020000 		.4byte	0x29f
+ 805 0298 10       		.uleb128 0x10
+ 806 0299 01       		.uleb128 0x1
+ 807 029a 50       		.byte	0x50
+ 808 029b 02       		.uleb128 0x2
+ 809 029c 08       		.byte	0x8
+ 810 029d 3C       		.byte	0x3c
+ 811 029e 00       		.byte	0
+ 812 029f 0F       		.uleb128 0xf
+ 813 02a0 3E000000 		.4byte	.LVL13
+ 814 02a4 68010000 		.4byte	0x168
+ 815 02a8 B2020000 		.4byte	0x2b2
+ 816 02ac 10       		.uleb128 0x10
+ 817 02ad 01       		.uleb128 0x1
+ 818 02ae 50       		.byte	0x50
+ 819 02af 01       		.uleb128 0x1
+ 820 02b0 30       		.byte	0x30
+ 821 02b1 00       		.byte	0
+ 822 02b2 0C       		.uleb128 0xc
+ 823 02b3 42000000 		.4byte	.LVL14
+ 824 02b7 33030000 		.4byte	0x333
+ 825 02bb 0C       		.uleb128 0xc
+ 826 02bc 4E000000 		.4byte	.LVL15
+ 827 02c0 3E030000 		.4byte	0x33e
+ 828 02c4 0C       		.uleb128 0xc
+ 829 02c5 52000000 		.4byte	.LVL16
+ 830 02c9 07020000 		.4byte	0x207
+ 831 02cd 00       		.byte	0
+ 832 02ce 0D       		.uleb128 0xd
+ 833 02cf 04030000 		.4byte	.LASF37
+ 834 02d3 01       		.byte	0x1
+ 835 02d4 37       		.byte	0x37
+ 836 02d5 00000000 		.4byte	.LFB2
+ 837 02d9 20000000 		.4byte	.LFE2-.LFB2
+ 838 02dd 01       		.uleb128 0x1
+ 839 02de 9C       		.byte	0x9c
+ 840 02df F6020000 		.4byte	0x2f6
+ 841 02e3 0C       		.uleb128 0xc
+ 842 02e4 0E000000 		.4byte	.LVL17
+ 843 02e8 30020000 		.4byte	0x230
+ 844 02ec 0C       		.uleb128 0xc
+ 845 02ed 18000000 		.4byte	.LVL18
+ 846 02f1 C1000000 		.4byte	0xc1
+ 847 02f5 00       		.byte	0
+ 848 02f6 09       		.uleb128 0x9
+ 849 02f7 06000000 		.4byte	.LASF38
+ 850 02fb 01       		.byte	0x1
+ 851 02fc 3003     		.2byte	0x330
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 32
+
+
+ 852 02fe 77000000 		.4byte	0x77
+ 853 0302 00000000 		.4byte	.LFB16
+ 854 0306 0C000000 		.4byte	.LFE16-.LFB16
+ 855 030a 01       		.uleb128 0x1
+ 856 030b 9C       		.byte	0x9c
+ 857 030c 09       		.uleb128 0x9
+ 858 030d 53010000 		.4byte	.LASF39
+ 859 0311 01       		.byte	0x1
+ 860 0312 7403     		.2byte	0x374
+ 861 0314 77000000 		.4byte	0x77
+ 862 0318 00000000 		.4byte	.LFB17
+ 863 031c 0C000000 		.4byte	.LFE17-.LFB17
+ 864 0320 01       		.uleb128 0x1
+ 865 0321 9C       		.byte	0x9c
+ 866 0322 11       		.uleb128 0x11
+ 867 0323 F5010000 		.4byte	.LASF44
+ 868 0327 01       		.byte	0x1
+ 869 0328 20       		.byte	0x20
+ 870 0329 6B000000 		.4byte	0x6b
+ 871 032d 05       		.uleb128 0x5
+ 872 032e 03       		.byte	0x3
+ 873 032f 00000000 		.4byte	Stone_PWM_initVar
+ 874 0333 12       		.uleb128 0x12
+ 875 0334 A5010000 		.4byte	.LASF45
+ 876 0338 03       		.byte	0x3
+ 877 0339 E3       		.byte	0xe3
+ 878 033a 6B000000 		.4byte	0x6b
+ 879 033e 13       		.uleb128 0x13
+ 880 033f C9010000 		.4byte	.LASF46
+ 881 0343 03       		.byte	0x3
+ 882 0344 E4       		.byte	0xe4
+ 883 0345 14       		.uleb128 0x14
+ 884 0346 6B000000 		.4byte	0x6b
+ 885 034a 00       		.byte	0
+ 886 034b 00       		.byte	0
+ 887              		.section	.debug_abbrev,"",%progbits
+ 888              	.Ldebug_abbrev0:
+ 889 0000 01       		.uleb128 0x1
+ 890 0001 11       		.uleb128 0x11
+ 891 0002 01       		.byte	0x1
+ 892 0003 25       		.uleb128 0x25
+ 893 0004 0E       		.uleb128 0xe
+ 894 0005 13       		.uleb128 0x13
+ 895 0006 0B       		.uleb128 0xb
+ 896 0007 03       		.uleb128 0x3
+ 897 0008 0E       		.uleb128 0xe
+ 898 0009 1B       		.uleb128 0x1b
+ 899 000a 0E       		.uleb128 0xe
+ 900 000b 55       		.uleb128 0x55
+ 901 000c 17       		.uleb128 0x17
+ 902 000d 11       		.uleb128 0x11
+ 903 000e 01       		.uleb128 0x1
+ 904 000f 10       		.uleb128 0x10
+ 905 0010 17       		.uleb128 0x17
+ 906 0011 00       		.byte	0
+ 907 0012 00       		.byte	0
+ 908 0013 02       		.uleb128 0x2
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 33
+
+
+ 909 0014 24       		.uleb128 0x24
+ 910 0015 00       		.byte	0
+ 911 0016 0B       		.uleb128 0xb
+ 912 0017 0B       		.uleb128 0xb
+ 913 0018 3E       		.uleb128 0x3e
+ 914 0019 0B       		.uleb128 0xb
+ 915 001a 03       		.uleb128 0x3
+ 916 001b 0E       		.uleb128 0xe
+ 917 001c 00       		.byte	0
+ 918 001d 00       		.byte	0
+ 919 001e 03       		.uleb128 0x3
+ 920 001f 24       		.uleb128 0x24
+ 921 0020 00       		.byte	0
+ 922 0021 0B       		.uleb128 0xb
+ 923 0022 0B       		.uleb128 0xb
+ 924 0023 3E       		.uleb128 0x3e
+ 925 0024 0B       		.uleb128 0xb
+ 926 0025 03       		.uleb128 0x3
+ 927 0026 08       		.uleb128 0x8
+ 928 0027 00       		.byte	0
+ 929 0028 00       		.byte	0
+ 930 0029 04       		.uleb128 0x4
+ 931 002a 16       		.uleb128 0x16
+ 932 002b 00       		.byte	0
+ 933 002c 03       		.uleb128 0x3
+ 934 002d 0E       		.uleb128 0xe
+ 935 002e 3A       		.uleb128 0x3a
+ 936 002f 0B       		.uleb128 0xb
+ 937 0030 3B       		.uleb128 0x3b
+ 938 0031 05       		.uleb128 0x5
+ 939 0032 49       		.uleb128 0x49
+ 940 0033 13       		.uleb128 0x13
+ 941 0034 00       		.byte	0
+ 942 0035 00       		.byte	0
+ 943 0036 05       		.uleb128 0x5
+ 944 0037 35       		.uleb128 0x35
+ 945 0038 00       		.byte	0
+ 946 0039 49       		.uleb128 0x49
+ 947 003a 13       		.uleb128 0x13
+ 948 003b 00       		.byte	0
+ 949 003c 00       		.byte	0
+ 950 003d 06       		.uleb128 0x6
+ 951 003e 2E       		.uleb128 0x2e
+ 952 003f 00       		.byte	0
+ 953 0040 3F       		.uleb128 0x3f
+ 954 0041 19       		.uleb128 0x19
+ 955 0042 03       		.uleb128 0x3
+ 956 0043 0E       		.uleb128 0xe
+ 957 0044 3A       		.uleb128 0x3a
+ 958 0045 0B       		.uleb128 0xb
+ 959 0046 3B       		.uleb128 0x3b
+ 960 0047 0B       		.uleb128 0xb
+ 961 0048 27       		.uleb128 0x27
+ 962 0049 19       		.uleb128 0x19
+ 963 004a 11       		.uleb128 0x11
+ 964 004b 01       		.uleb128 0x1
+ 965 004c 12       		.uleb128 0x12
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 34
+
+
+ 966 004d 06       		.uleb128 0x6
+ 967 004e 40       		.uleb128 0x40
+ 968 004f 18       		.uleb128 0x18
+ 969 0050 9742     		.uleb128 0x2117
+ 970 0052 19       		.uleb128 0x19
+ 971 0053 00       		.byte	0
+ 972 0054 00       		.byte	0
+ 973 0055 07       		.uleb128 0x7
+ 974 0056 2E       		.uleb128 0x2e
+ 975 0057 01       		.byte	0x1
+ 976 0058 3F       		.uleb128 0x3f
+ 977 0059 19       		.uleb128 0x19
+ 978 005a 03       		.uleb128 0x3
+ 979 005b 0E       		.uleb128 0xe
+ 980 005c 3A       		.uleb128 0x3a
+ 981 005d 0B       		.uleb128 0xb
+ 982 005e 3B       		.uleb128 0x3b
+ 983 005f 05       		.uleb128 0x5
+ 984 0060 27       		.uleb128 0x27
+ 985 0061 19       		.uleb128 0x19
+ 986 0062 11       		.uleb128 0x11
+ 987 0063 01       		.uleb128 0x1
+ 988 0064 12       		.uleb128 0x12
+ 989 0065 06       		.uleb128 0x6
+ 990 0066 40       		.uleb128 0x40
+ 991 0067 18       		.uleb128 0x18
+ 992 0068 9742     		.uleb128 0x2117
+ 993 006a 19       		.uleb128 0x19
+ 994 006b 01       		.uleb128 0x1
+ 995 006c 13       		.uleb128 0x13
+ 996 006d 00       		.byte	0
+ 997 006e 00       		.byte	0
+ 998 006f 08       		.uleb128 0x8
+ 999 0070 05       		.uleb128 0x5
+ 1000 0071 00       		.byte	0
+ 1001 0072 03       		.uleb128 0x3
+ 1002 0073 0E       		.uleb128 0xe
+ 1003 0074 3A       		.uleb128 0x3a
+ 1004 0075 0B       		.uleb128 0xb
+ 1005 0076 3B       		.uleb128 0x3b
+ 1006 0077 05       		.uleb128 0x5
+ 1007 0078 49       		.uleb128 0x49
+ 1008 0079 13       		.uleb128 0x13
+ 1009 007a 02       		.uleb128 0x2
+ 1010 007b 18       		.uleb128 0x18
+ 1011 007c 00       		.byte	0
+ 1012 007d 00       		.byte	0
+ 1013 007e 09       		.uleb128 0x9
+ 1014 007f 2E       		.uleb128 0x2e
+ 1015 0080 00       		.byte	0
+ 1016 0081 3F       		.uleb128 0x3f
+ 1017 0082 19       		.uleb128 0x19
+ 1018 0083 03       		.uleb128 0x3
+ 1019 0084 0E       		.uleb128 0xe
+ 1020 0085 3A       		.uleb128 0x3a
+ 1021 0086 0B       		.uleb128 0xb
+ 1022 0087 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 35
+
+
+ 1023 0088 05       		.uleb128 0x5
+ 1024 0089 27       		.uleb128 0x27
+ 1025 008a 19       		.uleb128 0x19
+ 1026 008b 49       		.uleb128 0x49
+ 1027 008c 13       		.uleb128 0x13
+ 1028 008d 11       		.uleb128 0x11
+ 1029 008e 01       		.uleb128 0x1
+ 1030 008f 12       		.uleb128 0x12
+ 1031 0090 06       		.uleb128 0x6
+ 1032 0091 40       		.uleb128 0x40
+ 1033 0092 18       		.uleb128 0x18
+ 1034 0093 9742     		.uleb128 0x2117
+ 1035 0095 19       		.uleb128 0x19
+ 1036 0096 00       		.byte	0
+ 1037 0097 00       		.byte	0
+ 1038 0098 0A       		.uleb128 0xa
+ 1039 0099 2E       		.uleb128 0x2e
+ 1040 009a 01       		.byte	0x1
+ 1041 009b 3F       		.uleb128 0x3f
+ 1042 009c 19       		.uleb128 0x19
+ 1043 009d 03       		.uleb128 0x3
+ 1044 009e 0E       		.uleb128 0xe
+ 1045 009f 3A       		.uleb128 0x3a
+ 1046 00a0 0B       		.uleb128 0xb
+ 1047 00a1 3B       		.uleb128 0x3b
+ 1048 00a2 05       		.uleb128 0x5
+ 1049 00a3 27       		.uleb128 0x27
+ 1050 00a4 19       		.uleb128 0x19
+ 1051 00a5 49       		.uleb128 0x49
+ 1052 00a6 13       		.uleb128 0x13
+ 1053 00a7 11       		.uleb128 0x11
+ 1054 00a8 01       		.uleb128 0x1
+ 1055 00a9 12       		.uleb128 0x12
+ 1056 00aa 06       		.uleb128 0x6
+ 1057 00ab 40       		.uleb128 0x40
+ 1058 00ac 18       		.uleb128 0x18
+ 1059 00ad 9742     		.uleb128 0x2117
+ 1060 00af 19       		.uleb128 0x19
+ 1061 00b0 01       		.uleb128 0x1
+ 1062 00b1 13       		.uleb128 0x13
+ 1063 00b2 00       		.byte	0
+ 1064 00b3 00       		.byte	0
+ 1065 00b4 0B       		.uleb128 0xb
+ 1066 00b5 34       		.uleb128 0x34
+ 1067 00b6 00       		.byte	0
+ 1068 00b7 03       		.uleb128 0x3
+ 1069 00b8 0E       		.uleb128 0xe
+ 1070 00b9 3A       		.uleb128 0x3a
+ 1071 00ba 0B       		.uleb128 0xb
+ 1072 00bb 3B       		.uleb128 0x3b
+ 1073 00bc 05       		.uleb128 0x5
+ 1074 00bd 49       		.uleb128 0x49
+ 1075 00be 13       		.uleb128 0x13
+ 1076 00bf 02       		.uleb128 0x2
+ 1077 00c0 18       		.uleb128 0x18
+ 1078 00c1 00       		.byte	0
+ 1079 00c2 00       		.byte	0
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 36
+
+
+ 1080 00c3 0C       		.uleb128 0xc
+ 1081 00c4 898201   		.uleb128 0x4109
+ 1082 00c7 00       		.byte	0
+ 1083 00c8 11       		.uleb128 0x11
+ 1084 00c9 01       		.uleb128 0x1
+ 1085 00ca 31       		.uleb128 0x31
+ 1086 00cb 13       		.uleb128 0x13
+ 1087 00cc 00       		.byte	0
+ 1088 00cd 00       		.byte	0
+ 1089 00ce 0D       		.uleb128 0xd
+ 1090 00cf 2E       		.uleb128 0x2e
+ 1091 00d0 01       		.byte	0x1
+ 1092 00d1 3F       		.uleb128 0x3f
+ 1093 00d2 19       		.uleb128 0x19
+ 1094 00d3 03       		.uleb128 0x3
+ 1095 00d4 0E       		.uleb128 0xe
+ 1096 00d5 3A       		.uleb128 0x3a
+ 1097 00d6 0B       		.uleb128 0xb
+ 1098 00d7 3B       		.uleb128 0x3b
+ 1099 00d8 0B       		.uleb128 0xb
+ 1100 00d9 27       		.uleb128 0x27
+ 1101 00da 19       		.uleb128 0x19
+ 1102 00db 11       		.uleb128 0x11
+ 1103 00dc 01       		.uleb128 0x1
+ 1104 00dd 12       		.uleb128 0x12
+ 1105 00de 06       		.uleb128 0x6
+ 1106 00df 40       		.uleb128 0x40
+ 1107 00e0 18       		.uleb128 0x18
+ 1108 00e1 9742     		.uleb128 0x2117
+ 1109 00e3 19       		.uleb128 0x19
+ 1110 00e4 01       		.uleb128 0x1
+ 1111 00e5 13       		.uleb128 0x13
+ 1112 00e6 00       		.byte	0
+ 1113 00e7 00       		.byte	0
+ 1114 00e8 0E       		.uleb128 0xe
+ 1115 00e9 34       		.uleb128 0x34
+ 1116 00ea 00       		.byte	0
+ 1117 00eb 03       		.uleb128 0x3
+ 1118 00ec 0E       		.uleb128 0xe
+ 1119 00ed 3A       		.uleb128 0x3a
+ 1120 00ee 0B       		.uleb128 0xb
+ 1121 00ef 3B       		.uleb128 0x3b
+ 1122 00f0 0B       		.uleb128 0xb
+ 1123 00f1 49       		.uleb128 0x49
+ 1124 00f2 13       		.uleb128 0x13
+ 1125 00f3 02       		.uleb128 0x2
+ 1126 00f4 17       		.uleb128 0x17
+ 1127 00f5 00       		.byte	0
+ 1128 00f6 00       		.byte	0
+ 1129 00f7 0F       		.uleb128 0xf
+ 1130 00f8 898201   		.uleb128 0x4109
+ 1131 00fb 01       		.byte	0x1
+ 1132 00fc 11       		.uleb128 0x11
+ 1133 00fd 01       		.uleb128 0x1
+ 1134 00fe 31       		.uleb128 0x31
+ 1135 00ff 13       		.uleb128 0x13
+ 1136 0100 01       		.uleb128 0x1
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 37
+
+
+ 1137 0101 13       		.uleb128 0x13
+ 1138 0102 00       		.byte	0
+ 1139 0103 00       		.byte	0
+ 1140 0104 10       		.uleb128 0x10
+ 1141 0105 8A8201   		.uleb128 0x410a
+ 1142 0108 00       		.byte	0
+ 1143 0109 02       		.uleb128 0x2
+ 1144 010a 18       		.uleb128 0x18
+ 1145 010b 9142     		.uleb128 0x2111
+ 1146 010d 18       		.uleb128 0x18
+ 1147 010e 00       		.byte	0
+ 1148 010f 00       		.byte	0
+ 1149 0110 11       		.uleb128 0x11
+ 1150 0111 34       		.uleb128 0x34
+ 1151 0112 00       		.byte	0
+ 1152 0113 03       		.uleb128 0x3
+ 1153 0114 0E       		.uleb128 0xe
+ 1154 0115 3A       		.uleb128 0x3a
+ 1155 0116 0B       		.uleb128 0xb
+ 1156 0117 3B       		.uleb128 0x3b
+ 1157 0118 0B       		.uleb128 0xb
+ 1158 0119 49       		.uleb128 0x49
+ 1159 011a 13       		.uleb128 0x13
+ 1160 011b 3F       		.uleb128 0x3f
+ 1161 011c 19       		.uleb128 0x19
+ 1162 011d 02       		.uleb128 0x2
+ 1163 011e 18       		.uleb128 0x18
+ 1164 011f 00       		.byte	0
+ 1165 0120 00       		.byte	0
+ 1166 0121 12       		.uleb128 0x12
+ 1167 0122 2E       		.uleb128 0x2e
+ 1168 0123 00       		.byte	0
+ 1169 0124 3F       		.uleb128 0x3f
+ 1170 0125 19       		.uleb128 0x19
+ 1171 0126 03       		.uleb128 0x3
+ 1172 0127 0E       		.uleb128 0xe
+ 1173 0128 3A       		.uleb128 0x3a
+ 1174 0129 0B       		.uleb128 0xb
+ 1175 012a 3B       		.uleb128 0x3b
+ 1176 012b 0B       		.uleb128 0xb
+ 1177 012c 27       		.uleb128 0x27
+ 1178 012d 19       		.uleb128 0x19
+ 1179 012e 49       		.uleb128 0x49
+ 1180 012f 13       		.uleb128 0x13
+ 1181 0130 3C       		.uleb128 0x3c
+ 1182 0131 19       		.uleb128 0x19
+ 1183 0132 00       		.byte	0
+ 1184 0133 00       		.byte	0
+ 1185 0134 13       		.uleb128 0x13
+ 1186 0135 2E       		.uleb128 0x2e
+ 1187 0136 01       		.byte	0x1
+ 1188 0137 3F       		.uleb128 0x3f
+ 1189 0138 19       		.uleb128 0x19
+ 1190 0139 03       		.uleb128 0x3
+ 1191 013a 0E       		.uleb128 0xe
+ 1192 013b 3A       		.uleb128 0x3a
+ 1193 013c 0B       		.uleb128 0xb
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 38
+
+
+ 1194 013d 3B       		.uleb128 0x3b
+ 1195 013e 0B       		.uleb128 0xb
+ 1196 013f 27       		.uleb128 0x27
+ 1197 0140 19       		.uleb128 0x19
+ 1198 0141 3C       		.uleb128 0x3c
+ 1199 0142 19       		.uleb128 0x19
+ 1200 0143 00       		.byte	0
+ 1201 0144 00       		.byte	0
+ 1202 0145 14       		.uleb128 0x14
+ 1203 0146 05       		.uleb128 0x5
+ 1204 0147 00       		.byte	0
+ 1205 0148 49       		.uleb128 0x49
+ 1206 0149 13       		.uleb128 0x13
+ 1207 014a 00       		.byte	0
+ 1208 014b 00       		.byte	0
+ 1209 014c 00       		.byte	0
+ 1210              		.section	.debug_loc,"",%progbits
+ 1211              	.Ldebug_loc0:
+ 1212              	.LLST0:
+ 1213 0000 0A000000 		.4byte	.LVL8
+ 1214 0004 0E000000 		.4byte	.LVL9
+ 1215 0008 0100     		.2byte	0x1
+ 1216 000a 53       		.byte	0x53
+ 1217 000b 00000000 		.4byte	0
+ 1218 000f 00000000 		.4byte	0
+ 1219              	.LLST1:
+ 1220 0013 42000000 		.4byte	.LVL14
+ 1221 0017 4D000000 		.4byte	.LVL15-1
+ 1222 001b 0100     		.2byte	0x1
+ 1223 001d 50       		.byte	0x50
+ 1224 001e 00000000 		.4byte	0
+ 1225 0022 00000000 		.4byte	0
+ 1226              		.section	.debug_aranges,"",%progbits
+ 1227 0000 94000000 		.4byte	0x94
+ 1228 0004 0200     		.2byte	0x2
+ 1229 0006 00000000 		.4byte	.Ldebug_info0
+ 1230 000a 04       		.byte	0x4
+ 1231 000b 00       		.byte	0
+ 1232 000c 0000     		.2byte	0
+ 1233 000e 0000     		.2byte	0
+ 1234 0010 00000000 		.4byte	.LFB4
+ 1235 0014 10000000 		.4byte	.LFE4-.LFB4
+ 1236 0018 00000000 		.4byte	.LFB5
+ 1237 001c 10000000 		.4byte	.LFE5-.LFB5
+ 1238 0020 00000000 		.4byte	.LFB6
+ 1239 0024 0C000000 		.4byte	.LFE6-.LFB6
+ 1240 0028 00000000 		.4byte	.LFB7
+ 1241 002c 14000000 		.4byte	.LFE7-.LFB7
+ 1242 0030 00000000 		.4byte	.LFB9
+ 1243 0034 0C000000 		.4byte	.LFE9-.LFB9
+ 1244 0038 00000000 		.4byte	.LFB10
+ 1245 003c 0C000000 		.4byte	.LFE10-.LFB10
+ 1246 0040 00000000 		.4byte	.LFB11
+ 1247 0044 0C000000 		.4byte	.LFE11-.LFB11
+ 1248 0048 00000000 		.4byte	.LFB12
+ 1249 004c 0C000000 		.4byte	.LFE12-.LFB12
+ 1250 0050 00000000 		.4byte	.LFB13
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 39
+
+
+ 1251 0054 0C000000 		.4byte	.LFE13-.LFB13
+ 1252 0058 00000000 		.4byte	.LFB14
+ 1253 005c 0C000000 		.4byte	.LFE14-.LFB14
+ 1254 0060 00000000 		.4byte	.LFB15
+ 1255 0064 0C000000 		.4byte	.LFE15-.LFB15
+ 1256 0068 00000000 		.4byte	.LFB8
+ 1257 006c 12000000 		.4byte	.LFE8-.LFB8
+ 1258 0070 00000000 		.4byte	.LFB3
+ 1259 0074 60000000 		.4byte	.LFE3-.LFB3
+ 1260 0078 00000000 		.4byte	.LFB2
+ 1261 007c 20000000 		.4byte	.LFE2-.LFB2
+ 1262 0080 00000000 		.4byte	.LFB16
+ 1263 0084 0C000000 		.4byte	.LFE16-.LFB16
+ 1264 0088 00000000 		.4byte	.LFB17
+ 1265 008c 0C000000 		.4byte	.LFE17-.LFB17
+ 1266 0090 00000000 		.4byte	0
+ 1267 0094 00000000 		.4byte	0
+ 1268              		.section	.debug_ranges,"",%progbits
+ 1269              	.Ldebug_ranges0:
+ 1270 0000 00000000 		.4byte	.LFB4
+ 1271 0004 10000000 		.4byte	.LFE4
+ 1272 0008 00000000 		.4byte	.LFB5
+ 1273 000c 10000000 		.4byte	.LFE5
+ 1274 0010 00000000 		.4byte	.LFB6
+ 1275 0014 0C000000 		.4byte	.LFE6
+ 1276 0018 00000000 		.4byte	.LFB7
+ 1277 001c 14000000 		.4byte	.LFE7
+ 1278 0020 00000000 		.4byte	.LFB9
+ 1279 0024 0C000000 		.4byte	.LFE9
+ 1280 0028 00000000 		.4byte	.LFB10
+ 1281 002c 0C000000 		.4byte	.LFE10
+ 1282 0030 00000000 		.4byte	.LFB11
+ 1283 0034 0C000000 		.4byte	.LFE11
+ 1284 0038 00000000 		.4byte	.LFB12
+ 1285 003c 0C000000 		.4byte	.LFE12
+ 1286 0040 00000000 		.4byte	.LFB13
+ 1287 0044 0C000000 		.4byte	.LFE13
+ 1288 0048 00000000 		.4byte	.LFB14
+ 1289 004c 0C000000 		.4byte	.LFE14
+ 1290 0050 00000000 		.4byte	.LFB15
+ 1291 0054 0C000000 		.4byte	.LFE15
+ 1292 0058 00000000 		.4byte	.LFB8
+ 1293 005c 12000000 		.4byte	.LFE8
+ 1294 0060 00000000 		.4byte	.LFB3
+ 1295 0064 60000000 		.4byte	.LFE3
+ 1296 0068 00000000 		.4byte	.LFB2
+ 1297 006c 20000000 		.4byte	.LFE2
+ 1298 0070 00000000 		.4byte	.LFB16
+ 1299 0074 0C000000 		.4byte	.LFE16
+ 1300 0078 00000000 		.4byte	.LFB17
+ 1301 007c 0C000000 		.4byte	.LFE17
+ 1302 0080 00000000 		.4byte	0
+ 1303 0084 00000000 		.4byte	0
+ 1304              		.section	.debug_line,"",%progbits
+ 1305              	.Ldebug_line0:
+ 1306 0000 95010000 		.section	.debug_str,"MS",%progbits,1
+ 1306      02005300 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 40
+
+
+ 1306      00000201 
+ 1306      FB0E0D00 
+ 1306      01010101 
+ 1307              	.LASF15:
+ 1308 0000 72656731 		.ascii	"reg16\000"
+ 1308      3600
+ 1309              	.LASF38:
+ 1310 0006 53746F6E 		.ascii	"Stone_PWM_ReadCompare\000"
+ 1310      655F5057 
+ 1310      4D5F5265 
+ 1310      6164436F 
+ 1310      6D706172 
+ 1311              	.LASF43:
+ 1312 001c 53746F6E 		.ascii	"Stone_PWM_ReadControlRegister\000"
+ 1312      655F5057 
+ 1312      4D5F5265 
+ 1312      6164436F 
+ 1312      6E74726F 
+ 1313              	.LASF11:
+ 1314 003a 666C6F61 		.ascii	"float\000"
+ 1314      7400
+ 1315              	.LASF36:
+ 1316 0040 53746F6E 		.ascii	"Stone_PWM_interruptState\000"
+ 1316      655F5057 
+ 1316      4D5F696E 
+ 1316      74657272 
+ 1316      75707453 
+ 1317              	.LASF22:
+ 1318 0059 70657269 		.ascii	"period\000"
+ 1318      6F6400
+ 1319              	.LASF3:
+ 1320 0060 73686F72 		.ascii	"short unsigned int\000"
+ 1320      7420756E 
+ 1320      7369676E 
+ 1320      65642069 
+ 1320      6E7400
+ 1321              	.LASF28:
+ 1322 0073 53746F6E 		.ascii	"Stone_PWM_ReadStatusRegister\000"
+ 1322      655F5057 
+ 1322      4D5F5265 
+ 1322      61645374 
+ 1322      61747573 
+ 1323              	.LASF31:
+ 1324 0090 53746F6E 		.ascii	"Stone_PWM_ReadCapture\000"
+ 1324      655F5057 
+ 1324      4D5F5265 
+ 1324      61644361 
+ 1324      70747572 
+ 1325              	.LASF29:
+ 1326 00a6 53746F6E 		.ascii	"Stone_PWM_WriteControlRegister\000"
+ 1326      655F5057 
+ 1326      4D5F5772 
+ 1326      69746543 
+ 1326      6F6E7472 
+ 1327              	.LASF19:
+ 1328 00c5 53746F6E 		.ascii	"Stone_PWM_WriteCounter\000"
+ 1328      655F5057 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 41
+
+
+ 1328      4D5F5772 
+ 1328      69746543 
+ 1328      6F756E74 
+ 1329              	.LASF33:
+ 1330 00dc 53746F6E 		.ascii	"Stone_PWM_Init\000"
+ 1330      655F5057 
+ 1330      4D5F496E 
+ 1330      697400
+ 1331              	.LASF21:
+ 1332 00eb 636F756E 		.ascii	"counter\000"
+ 1332      74657200 
+ 1333              	.LASF7:
+ 1334 00f3 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1334      206C6F6E 
+ 1334      6720756E 
+ 1334      7369676E 
+ 1334      65642069 
+ 1335              	.LASF1:
+ 1336 010a 756E7369 		.ascii	"unsigned char\000"
+ 1336      676E6564 
+ 1336      20636861 
+ 1336      7200
+ 1337              	.LASF14:
+ 1338 0118 72656738 		.ascii	"reg8\000"
+ 1338      00
+ 1339              	.LASF5:
+ 1340 011d 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1340      20756E73 
+ 1340      69676E65 
+ 1340      6420696E 
+ 1340      7400
+ 1341              	.LASF9:
+ 1342 012f 75696E74 		.ascii	"uint8\000"
+ 1342      3800
+ 1343              	.LASF30:
+ 1344 0135 636F6E74 		.ascii	"control\000"
+ 1344      726F6C00 
+ 1345              	.LASF27:
+ 1346 013d 53746F6E 		.ascii	"Stone_PWM_ReadCounter\000"
+ 1346      655F5057 
+ 1346      4D5F5265 
+ 1346      6164436F 
+ 1346      756E7465 
+ 1347              	.LASF39:
+ 1348 0153 53746F6E 		.ascii	"Stone_PWM_ReadPeriod\000"
+ 1348      655F5057 
+ 1348      4D5F5265 
+ 1348      61645065 
+ 1348      72696F64 
+ 1349              	.LASF12:
+ 1350 0168 646F7562 		.ascii	"double\000"
+ 1350      6C6500
+ 1351              	.LASF41:
+ 1352 016f 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\Stone_PWM.c\000"
+ 1352      6E657261 
+ 1352      7465645F 
+ 1352      536F7572 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 42
+
+
+ 1352      63655C50 
+ 1353              	.LASF2:
+ 1354 0194 73686F72 		.ascii	"short int\000"
+ 1354      7420696E 
+ 1354      7400
+ 1355              	.LASF10:
+ 1356 019e 75696E74 		.ascii	"uint16\000"
+ 1356      313600
+ 1357              	.LASF45:
+ 1358 01a5 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1358      74657243 
+ 1358      72697469 
+ 1358      63616C53 
+ 1358      65637469 
+ 1359              	.LASF8:
+ 1360 01bc 756E7369 		.ascii	"unsigned int\000"
+ 1360      676E6564 
+ 1360      20696E74 
+ 1360      00
+ 1361              	.LASF46:
+ 1362 01c9 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1362      69744372 
+ 1362      69746963 
+ 1362      616C5365 
+ 1362      6374696F 
+ 1363              	.LASF18:
+ 1364 01df 53746F6E 		.ascii	"Stone_PWM_Stop\000"
+ 1364      655F5057 
+ 1364      4D5F5374 
+ 1364      6F7000
+ 1365              	.LASF34:
+ 1366 01ee 72657375 		.ascii	"result\000"
+ 1366      6C7400
+ 1367              	.LASF44:
+ 1368 01f5 53746F6E 		.ascii	"Stone_PWM_initVar\000"
+ 1368      655F5057 
+ 1368      4D5F696E 
+ 1368      69745661 
+ 1368      7200
+ 1369              	.LASF25:
+ 1370 0207 53746F6E 		.ascii	"Stone_PWM_SetInterruptMode\000"
+ 1370      655F5057 
+ 1370      4D5F5365 
+ 1370      74496E74 
+ 1370      65727275 
+ 1371              	.LASF35:
+ 1372 0222 6374726C 		.ascii	"ctrl\000"
+ 1372      00
+ 1373              	.LASF16:
+ 1374 0227 73697A65 		.ascii	"sizetype\000"
+ 1374      74797065 
+ 1374      00
+ 1375              	.LASF6:
+ 1376 0230 6C6F6E67 		.ascii	"long long int\000"
+ 1376      206C6F6E 
+ 1376      6720696E 
+ 1376      7400
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 43
+
+
+ 1377              	.LASF20:
+ 1378 023e 53746F6E 		.ascii	"Stone_PWM_WritePeriod\000"
+ 1378      655F5057 
+ 1378      4D5F5772 
+ 1378      69746550 
+ 1378      6572696F 
+ 1379              	.LASF26:
+ 1380 0254 696E7465 		.ascii	"interruptMode\000"
+ 1380      72727570 
+ 1380      744D6F64 
+ 1380      6500
+ 1381              	.LASF32:
+ 1382 0262 53746F6E 		.ascii	"Stone_PWM_ClearFIFO\000"
+ 1382      655F5057 
+ 1382      4D5F436C 
+ 1382      65617246 
+ 1382      49464F00 
+ 1383              	.LASF40:
+ 1384 0276 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1384      4320342E 
+ 1384      392E3320 
+ 1384      32303135 
+ 1384      30333033 
+ 1385 02a9 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 1385      20726576 
+ 1385      6973696F 
+ 1385      6E203232 
+ 1385      31323230 
+ 1386 02dc 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1386      66756E63 
+ 1386      74696F6E 
+ 1386      2D736563 
+ 1386      74696F6E 
+ 1387              	.LASF37:
+ 1388 0304 53746F6E 		.ascii	"Stone_PWM_Start\000"
+ 1388      655F5057 
+ 1388      4D5F5374 
+ 1388      61727400 
+ 1389              	.LASF4:
+ 1390 0314 6C6F6E67 		.ascii	"long int\000"
+ 1390      20696E74 
+ 1390      00
+ 1391              	.LASF13:
+ 1392 031d 63686172 		.ascii	"char\000"
+ 1392      00
+ 1393              	.LASF23:
+ 1394 0322 53746F6E 		.ascii	"Stone_PWM_WriteCompare\000"
+ 1394      655F5057 
+ 1394      4D5F5772 
+ 1394      69746543 
+ 1394      6F6D7061 
+ 1395              	.LASF0:
+ 1396 0339 7369676E 		.ascii	"signed char\000"
+ 1396      65642063 
+ 1396      68617200 
+ 1397              	.LASF24:
+ 1398 0345 636F6D70 		.ascii	"compare\000"
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccgABOdC.s 			page 44
+
+
+ 1398      61726500 
+ 1399              	.LASF42:
+ 1400 034d 453A5C53 		.ascii	"E:\\Stone_Project\\fw-BLE-Motor\\fw-stone\\Stone.cy"
+ 1400      746F6E65 
+ 1400      5F50726F 
+ 1400      6A656374 
+ 1400      5C66772D 
+ 1401 037c 64736E00 		.ascii	"dsn\000"
+ 1402              	.LASF17:
+ 1403 0380 53746F6E 		.ascii	"Stone_PWM_Enable\000"
+ 1403      655F5057 
+ 1403      4D5F456E 
+ 1403      61626C65 
+ 1403      00
+ 1404              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

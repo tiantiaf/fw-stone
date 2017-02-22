@@ -1,0 +1,5 @@
+E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cyprj|0d4ec219-d5fd-42fc-8ffd-c6011c58b283
+D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|f59e20da-8537-41fd-ad18-2d5b81633435
+D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|13ddec19-edcf-457f-8388-ba6282bff30d
+D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|c700ff02-e1e3-47d2-ab83-d5fd6fd84f6b
+D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|82fc2aca-192a-499e-abf8-608b30cadf46

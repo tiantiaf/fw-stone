@@ -1,0 +1,99 @@
+--------------- Rebuild Started: 02/21/2017 00:15:37 Project: Stone, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\main.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Stone_BLEApplications.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Stone_Init.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Stone_LED.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Stone_Motor.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\cyfitter_cfg.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\cymetadata.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Cm0Start.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\CyBootAsmGnu.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\CyFlash.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\CyLib.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\cyPm.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\cyutils.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\CyLFClk.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\LED.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\BLE_STONE.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\BLE_STONE_gatt.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\BLE_STONE_eventHandler.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\BLE_STONE_HAL_INT.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\BLE_STONE_HAL_PVT.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\BLE_STONE_custom.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\BLE_STONE_bless_isr.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Stone_PWM.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Stone_PWM_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Motor_Clock.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Stone_Timer.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Stone_Timer_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\ms_isr.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\tc_isr.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\trigger_isr.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Stone.hex"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Stone.map"
+Deleting file ".\Stone.cycdx"
+Deleting file ".\Stone.svd"
+Deleting file ".\Stone.rpt"
+Deleting file ".\Stone_timing.html"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\.deps\C_FILE.P"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\.deps\ARM_C_FILE.P"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\.deps\GNU_ARM_ASM_FILE.P"
+cydsfit.exe -.appdatapath "C:\Users\tiantiaf\AppData\Local\Cypress Semiconductor\PSoC Creator\3.3" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cyprj -d CY8C4247LQQ-BL483 -s E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+Elaborating Design...
+HDL Generation ...
+Synthesis ...
+Place and Route ...
+Tech mapping ...
+ADD: pft.M0040: information: The following 1 pin(s) will be assigned a location by the fitter: Stone_Motor(0)
+Analog Placement ...
+Analog Routing ...
+Analog Code Generation ...
+Digital Placement ...
+Digital Routing ...
+Bitstream Generation ...
+Static timing analysis ...
+Warning: sta.M0019: Stone_timing.html: Warning-1366: Setup time violation found in a path from clock ( CyHFCLK ) to clock ( CyHFCLK ). (File=E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone_timing.html)
+API Generation ...
+Dependency Generation ...
+Clean Temporary Files ...
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\main.c -o .\CortexM0\ARM_GCC_493\Debug\main.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/Stone_BLEApplications.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Stone_BLEApplications.c -o .\CortexM0\ARM_GCC_493\Debug\Stone_BLEApplications.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/Stone_Init.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Stone_Init.c -o .\CortexM0\ARM_GCC_493\Debug\Stone_Init.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/Stone_LED.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Stone_LED.c -o .\CortexM0\ARM_GCC_493\Debug\Stone_LED.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/Stone_Motor.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Stone_Motor.c -o .\CortexM0\ARM_GCC_493\Debug\Stone_Motor.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/cyfitter_cfg.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\cyfitter_cfg.c -o .\CortexM0\ARM_GCC_493\Debug\cyfitter_cfg.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/cymetadata.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\cymetadata.c -o .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/Cm0Start.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\Cm0Start.c -o .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+arm-none-eabi-as.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -alh=.\CortexM0\ARM_GCC_493\Debug/CyBootAsmGnu.lst -g -W -o .\CortexM0\ARM_GCC_493\Debug\CyBootAsmGnu.o .\Generated_Source\PSoC4\CyBootAsmGnu.s
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/CyFlash.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\CyFlash.c -o .\CortexM0\ARM_GCC_493\Debug\CyFlash.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/CyLib.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\CyLib.c -o .\CortexM0\ARM_GCC_493\Debug\CyLib.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/cyPm.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\cyPm.c -o .\CortexM0\ARM_GCC_493\Debug\cyPm.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/cyutils.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\cyutils.c -o .\CortexM0\ARM_GCC_493\Debug\cyutils.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/CyLFClk.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\CyLFClk.c -o .\CortexM0\ARM_GCC_493\Debug\CyLFClk.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/LED.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\LED.c -o .\CortexM0\ARM_GCC_493\Debug\LED.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/LED_PM.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\LED_PM.c -o .\CortexM0\ARM_GCC_493\Debug\LED_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/BLE_STONE.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\BLE_STONE.c -o .\CortexM0\ARM_GCC_493\Debug\BLE_STONE.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/BLE_STONE_gatt.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\BLE_STONE_gatt.c -o .\CortexM0\ARM_GCC_493\Debug\BLE_STONE_gatt.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/BLE_STONE_eventHandler.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\BLE_STONE_eventHandler.c -o .\CortexM0\ARM_GCC_493\Debug\BLE_STONE_eventHandler.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/BLE_STONE_HAL_INT.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\BLE_STONE_HAL_INT.c -o .\CortexM0\ARM_GCC_493\Debug\BLE_STONE_HAL_INT.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/BLE_STONE_HAL_PVT.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\BLE_STONE_HAL_PVT.c -o .\CortexM0\ARM_GCC_493\Debug\BLE_STONE_HAL_PVT.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/BLE_STONE_custom.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\BLE_STONE_custom.c -o .\CortexM0\ARM_GCC_493\Debug\BLE_STONE_custom.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/BLE_STONE_bless_isr.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\BLE_STONE_bless_isr.c -o .\CortexM0\ARM_GCC_493\Debug\BLE_STONE_bless_isr.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/Stone_PWM.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\Stone_PWM.c -o .\CortexM0\ARM_GCC_493\Debug\Stone_PWM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/Stone_PWM_PM.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\Stone_PWM_PM.c -o .\CortexM0\ARM_GCC_493\Debug\Stone_PWM_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/Motor_Clock.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\Motor_Clock.c -o .\CortexM0\ARM_GCC_493\Debug\Motor_Clock.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/Stone_Timer.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\Stone_Timer.c -o .\CortexM0\ARM_GCC_493\Debug\Stone_Timer.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/Stone_Timer_PM.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\Stone_Timer_PM.c -o .\CortexM0\ARM_GCC_493\Debug\Stone_Timer_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/ms_isr.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\ms_isr.c -o .\CortexM0\ARM_GCC_493\Debug\ms_isr.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/Stone_Motor.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\Stone_Motor.c -o .\CortexM0\ARM_GCC_493\Debug\Stone_Motor.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/Stone_Motor_PM.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\Stone_Motor_PM.c -o .\CortexM0\ARM_GCC_493\Debug\Stone_Motor_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/tc_isr.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\tc_isr.c -o .\CortexM0\ARM_GCC_493\Debug\tc_isr.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/trigger_isr.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\trigger_isr.c -o .\CortexM0\ARM_GCC_493\Debug\trigger_isr.o
+arm-none-eabi-ar.exe -rs .\CortexM0\ARM_GCC_493\Debug\Stone.a .\CortexM0\ARM_GCC_493\Debug\cyfitter_cfg.o .\CortexM0\ARM_GCC_493\Debug\CyBootAsmGnu.o .\CortexM0\ARM_GCC_493\Debug\CyFlash.o .\CortexM0\ARM_GCC_493\Debug\CyLib.o .\CortexM0\ARM_GCC_493\Debug\cyPm.o .\CortexM0\ARM_GCC_493\Debug\cyutils.o .\CortexM0\ARM_GCC_493\Debug\CyLFClk.o .\CortexM0\ARM_GCC_493\Debug\LED.o .\CortexM0\ARM_GCC_493\Debug\LED_PM.o .\CortexM0\ARM_GCC_493\Debug\BLE_STONE.o .\CortexM0\ARM_GCC_493\Debug\BLE_STONE_gatt.o .\CortexM0\ARM_GCC_493\Debug\BLE_STONE_eventHandler.o .\CortexM0\ARM_GCC_493\Debug\BLE_STONE_HAL_INT.o .\CortexM0\ARM_GCC_493\Debug\BLE_STONE_HAL_PVT.o .\CortexM0\ARM_GCC_493\Debug\BLE_STONE_custom.o .\CortexM0\ARM_GCC_493\Debug\BLE_STONE_bless_isr.o .\CortexM0\ARM_GCC_493\Debug\Stone_PWM.o .\CortexM0\ARM_GCC_493\Debug\Stone_PWM_PM.o .\CortexM0\ARM_GCC_493\Debug\Motor_Clock.o .\CortexM0\ARM_GCC_493\Debug\Stone_Timer.o .\CortexM0\ARM_GCC_493\Debug\Stone_Timer_PM.o .\CortexM0\ARM_GCC_493\Debug\ms_isr.o .\CortexM0\ARM_GCC_493\Debug\Stone_Motor.o .\CortexM0\ARM_GCC_493\Debug\Stone_Motor_PM.o .\CortexM0\ARM_GCC_493\Debug\tc_isr.o .\CortexM0\ARM_GCC_493\Debug\trigger_isr.o
+arm-none-eabi-ar.exe: creating .\CortexM0\ARM_GCC_493\Debug\Stone.a
+arm-none-eabi-gcc.exe -Wl,--start-group -o .\CortexM0\ARM_GCC_493\Debug\Stone.elf .\CortexM0\ARM_GCC_493\Debug\main.o .\CortexM0\ARM_GCC_493\Debug\Stone_BLEApplications.o .\CortexM0\ARM_GCC_493\Debug\Stone_Init.o .\CortexM0\ARM_GCC_493\Debug\Stone_LED.o .\CortexM0\ARM_GCC_493\Debug\Stone_Motor.o .\CortexM0\ARM_GCC_493\Debug\cymetadata.o .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o .\CortexM0\ARM_GCC_493\Debug\Stone.a "D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v3_10\Library\gccCyBLEStack_BLE_SOC_PERIPHERAL.a" "D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM0\ARM_GCC_493\Debug\CyComponentLibrary.a" -mcpu=cortex-m0 -mthumb -g -ffunction-sections -Og -ffat-lto-objects -L Generated_Source\PSoC4 -Wl,-Map,.\CortexM0\ARM_GCC_493\Debug/Stone.map -T Generated_Source\PSoC4\cm0gcc.ld -specs=nano.specs -Wl,--gc-sections -Wl,--end-group
+.\CortexM0\ARM_GCC_493\Debug\main.o: In function `main':
+E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn/.\main.c:52: undefined reference to `UpdateMotor'
+collect2.exe: error: ld returned 1 exit status
+The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
+--------------- Rebuild Failed: 02/21/2017 00:16:00 ---------------
