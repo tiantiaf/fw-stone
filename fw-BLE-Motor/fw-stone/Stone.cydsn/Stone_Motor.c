@@ -35,11 +35,11 @@ void StoneUpdateMotor()
         /* If Motor is set to be on, we decide which mode we want to be */
         switch(Stone_Motor_Mode)
         {
-            case MODE0:
+            case MODE1:
                 Motor_Write(MOTOR_ON);
                 break;
             
-            case MODE1:
+            case MODE2:
                 InitStoneInterrupt();
                 break;    
                 

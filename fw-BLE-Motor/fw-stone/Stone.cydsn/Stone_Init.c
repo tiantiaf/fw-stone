@@ -45,7 +45,11 @@ void InitStoneInterrupt()
 {
     /* Init Timer and PWM */
     Stone_PWM_Init();
-    Stone_Timer_Start(); // Configure and enable ms timer
+    Stone_Timer_Init();
+    
+    /* Start Timer and PWM */
+    Stone_Timer_Start();
+    Stone_PWM_Start();
     
     ms_isr_StartEx(MS_ISR);
     trigger_isr_StartEx(TRIGGER_ISR);

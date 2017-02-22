@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
   30:.\Stone_BLEApplications.c **** 
   31:.\Stone_BLEApplications.c **** uint8 stoneMotorUpdateEnable    = FALSE;
   32:.\Stone_BLEApplications.c **** 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 2
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 2
 
 
   33:.\Stone_BLEApplications.c **** static uint8 isConnectionUpdateRequested = TRUE;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
   87:.\Stone_BLEApplications.c ****             
   88:.\Stone_BLEApplications.c ****         /**********************************************************
   89:.\Stone_BLEApplications.c **** 		*                       GATT Events
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 3
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 3
 
 
   90:.\Stone_BLEApplications.c **** 		***********************************************************/
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  144:.\Stone_BLEApplications.c ****                 UpdateMotorCharacteristic(abc, 4);
  145:.\Stone_BLEApplications.c ****         		
  146:.\Stone_BLEApplications.c ****             }
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 4
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 4
 
 
  147:.\Stone_BLEApplications.c ****             
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  174:.\Stone_BLEApplications.c **** }
   53              		.loc 1 174 0
   54              		@ sp needed
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 5
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 5
 
 
   55 0022 08BD     		pop	{r3, pc}
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  184:.\Stone_BLEApplications.c ****     
  185:.\Stone_BLEApplications.c **** }
  100              		.loc 1 185 0
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 6
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 6
 
 
  101              		@ sp needed
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  153 0032 64E0     		b	.L8
  154              	.L19:
  155 0034 4E28     		cmp	r0, #78
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 7
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 7
 
 
  156 0036 40D0     		beq	.L22
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  201 006e 46E0     		b	.L8
  202              	.LVL15:
  203              	.L17:
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 8
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 8
 
 
   84:.\Stone_BLEApplications.c ****     		restartAdvertisement = TRUE;
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  247              		.loc 1 103 0
  248 00a2 0132     		add	r2, r2, #1
  249 00a4 194B     		ldr	r3, .L27+8
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 9
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 9
 
 
  250 00a6 1A70     		strb	r2, [r3]
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  295 00dc 8370     		strb	r3, [r0, #2]
  296 00de C370     		strb	r3, [r0, #3]
  140:.\Stone_BLEApplications.c ****         		abc[MOTOR_MODE_INDEX] = Stone_Motor[MOTOR_MODE_INDEX];
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 10
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 10
 
 
  297              		.loc 1 140 0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  345              		.type	UpdateLEDCharacteristic, %function
  346              	UpdateLEDCharacteristic:
  347              	.LFB40:
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 11
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 11
 
 
  186:.\Stone_BLEApplications.c **** 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  390              		.global	charNotificationEnabled
  391              		.global	ledUpdateEnabled
  392              		.global	deviceConnected
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 12
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 12
 
 
  393              		.comm	I2cHandle,12,4
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  447              		.file 6 "Generated_Source\\PSoC4/BLE_STONE_StackGattServer.h"
  448              		.file 7 "Generated_Source\\PSoC4/BLE_STONE_eventHandler.h"
  449              		.file 8 ".\\Stone_Motor.h"
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 13
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 13
 
 
  450              		.file 9 "Generated_Source\\PSoC4/BLE_STONE_StackL2cap.h"
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  504 0065 04       		.byte	0x4
  505 0066 07       		.byte	0x7
  506 0067 97120000 		.4byte	.LASF8
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 14
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 14
 
 
  507 006b 04       		.uleb128 0x4
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  561 00d8 04       		.sleb128 4
  562 00d9 08       		.uleb128 0x8
  563 00da 23000000 		.4byte	.LASF21
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 15
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 15
 
 
  564 00de 05       		.sleb128 5
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  618 014a 30       		.sleb128 48
  619 014b 08       		.uleb128 0x8
  620 014c 84160000 		.4byte	.LASF40
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 16
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 16
 
 
  621 0150 31       		.sleb128 49
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  675 01cb CF00     		.sleb128 79
  676 01cd 08       		.uleb128 0x8
  677 01ce 3B020000 		.4byte	.LASF59
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 17
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 17
 
 
  678 01d2 D000     		.sleb128 80
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  732 0250 F900     		.sleb128 121
  733 0252 08       		.uleb128 0x8
  734 0253 8C070000 		.4byte	.LASF78
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 18
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 18
 
 
  735 0257 FA00     		.sleb128 122
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  789 02c5 0C       		.sleb128 12
  790 02c6 08       		.uleb128 0x8
  791 02c7 FB020000 		.4byte	.LASF95
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 19
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 19
 
 
  792 02cb 0D       		.sleb128 13
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  846 033c 8302     		.sleb128 259
  847 033e 00       		.byte	0
  848 033f 04       		.uleb128 0x4
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 20
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 20
 
 
  849 0340 060E0000 		.4byte	.LASF114
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  903 03b0 6A070000 		.4byte	.LASF122
  904 03b4 02       		.sleb128 2
  905 03b5 08       		.uleb128 0x8
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 21
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 21
 
 
  906 03b6 F0060000 		.4byte	.LASF123
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  960 0425 2B0B0000 		.4byte	.LASF141
  961 0429 8001     		.sleb128 128
  962 042b 08       		.uleb128 0x8
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 22
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 22
 
 
  963 042c 9E080000 		.4byte	.LASF142
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  1017 04a9 A8160000 		.4byte	.LASF159
  1018 04ad 05       		.byte	0x5
  1019 04ae 9201     		.2byte	0x192
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 23
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 23
 
 
  1020 04b0 77000000 		.4byte	0x77
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  1074 0522 0C       		.byte	0xc
  1075 0523 05       		.byte	0x5
  1076 0524 D901     		.2byte	0x1d9
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 24
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 24
 
 
  1077 0526 45050000 		.4byte	0x545
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  1131 0599 06       		.byte	0x6
  1132 059a 8D       		.byte	0x8d
  1133 059b D8040000 		.4byte	0x4d8
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 25
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 25
 
 
  1134 059f 00       		.byte	0
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  1188 060d 05       		.uleb128 0x5
  1189 060e 03       		.byte	0x3
  1190 060f 04000000 		.4byte	.LANCHOR1+4
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 26
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 26
 
 
  1191 0613 00       		.byte	0
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  1245 067c 11       		.uleb128 0x11
  1246 067d 9D0D0000 		.4byte	.LASF182
  1247 0681 01       		.byte	0x1
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 27
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 27
 
 
  1248 0682 2C       		.byte	0x2c
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  1302 06f4 27090000 		.4byte	0x927
  1303 06f8 02070000 		.4byte	0x702
  1304 06fc 13       		.uleb128 0x13
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 28
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 28
 
 
  1305 06fd 01       		.uleb128 0x1
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  1359 0760 00       		.byte	0
  1360 0761 09       		.uleb128 0x9
  1361 0762 04       		.byte	0x4
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 29
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 29
 
 
  1362 0763 AD050000 		.4byte	0x5ad
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  1416 07cf 00000000 		.4byte	setHandle
  1417 07d3 00       		.byte	0
  1418 07d4 17       		.uleb128 0x17
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 30
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 30
 
 
  1419 07d5 1C000000 		.4byte	.LVL35
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  1473 084c 7D0B0000 		.4byte	.LASF195
  1474 0850 08       		.byte	0x8
  1475 0851 1E       		.byte	0x1e
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 31
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 31
 
 
  1476 0852 67070000 		.4byte	0x767
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  1530 08c7 05       		.uleb128 0x5
  1531 08c8 03       		.byte	0x3
  1532 08c9 00000000 		.4byte	busyStatus
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 32
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 32
 
 
  1533 08cd 21       		.uleb128 0x21
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  1587 094f 22       		.uleb128 0x22
  1588 0950 5A090000 		.4byte	0x95a
  1589 0954 22       		.uleb128 0x22
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 33
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 33
 
 
  1590 0955 A9000000 		.4byte	0xa9
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  1644 0025 03       		.uleb128 0x3
  1645 0026 08       		.uleb128 0x8
  1646 0027 00       		.byte	0
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 34
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 34
 
 
  1647 0028 00       		.byte	0
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  1701 005e 0B       		.uleb128 0xb
  1702 005f 49       		.uleb128 0x49
  1703 0060 13       		.uleb128 0x13
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 35
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 35
 
 
  1704 0061 00       		.byte	0
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  1758 0097 38       		.uleb128 0x38
  1759 0098 0B       		.uleb128 0xb
  1760 0099 00       		.byte	0
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 36
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 36
 
 
  1761 009a 00       		.byte	0
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  1815 00d0 19       		.uleb128 0x19
  1816 00d1 11       		.uleb128 0x11
  1817 00d2 01       		.uleb128 0x1
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 37
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 37
 
 
  1818 00d3 12       		.uleb128 0x12
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  1872 010f 02       		.uleb128 0x2
  1873 0110 17       		.uleb128 0x17
  1874 0111 00       		.byte	0
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 38
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 38
 
 
  1875 0112 00       		.byte	0
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  1929 014c 3B       		.uleb128 0x3b
  1930 014d 0B       		.uleb128 0xb
  1931 014e 49       		.uleb128 0x49
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 39
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 39
 
 
  1932 014f 13       		.uleb128 0x13
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  1986 0185 00       		.byte	0
  1987 0186 1F       		.uleb128 0x1f
  1988 0187 34       		.uleb128 0x34
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 40
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 40
 
 
  1989 0188 00       		.byte	0
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  2043 01be 05       		.uleb128 0x5
  2044 01bf 00       		.byte	0
  2045 01c0 49       		.uleb128 0x49
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 41
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 41
 
 
  2046 01c1 13       		.uleb128 0x13
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  2100 01f7 05       		.uleb128 0x5
  2101 01f8 27       		.uleb128 0x27
  2102 01f9 19       		.uleb128 0x19
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 42
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 42
 
 
  2103 01fa 49       		.uleb128 0x49
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  2157 006a 4C000000 		.4byte	.LVL9
  2158 006e 54000000 		.4byte	.LVL10
  2159 0072 0100     		.2byte	0x1
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 43
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 43
 
 
  2160 0074 50       		.byte	0x50
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  2214 00ef 0100     		.2byte	0x1
  2215 00f1 50       		.byte	0x50
  2216 00f2 DC000000 		.4byte	.LVL27
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 44
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 44
 
 
  2217 00f6 F8000000 		.4byte	.LVL29
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  2271 0170 75000000 		.4byte	.LVL17-1
  2272 0174 0100     		.2byte	0x1
  2273 0176 51       		.byte	0x51
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 45
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 45
 
 
  2274 0177 75000000 		.4byte	.LVL17-1
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  2328 01f1 AA000000 		.4byte	.LVL22
  2329 01f5 B7000000 		.4byte	.LVL24-1
  2330 01f9 0100     		.2byte	0x1
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 46
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 46
 
 
  2331 01fb 51       		.byte	0x51
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  2385              		.section	.debug_aranges,"",%progbits
  2386 0000 34000000 		.4byte	0x34
  2387 0004 0200     		.2byte	0x2
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 47
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 47
 
 
  2388 0006 00000000 		.4byte	.Ldebug_info0
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  2425      455F4741 
  2425      5454535F 
  2425      4552525F 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 48
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 48
 
 
  2425      4850535F 
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  2445 0180 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DISCONN_CNF\000"
  2445      455F4556 
  2445      545F4C32 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 49
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 49
 
 
  2445      4341505F 
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  2464              	.LASF18:
  2465 02c3 4359424C 		.ascii	"CYBLE_EVT_TIMEOUT\000"
  2465      455F4556 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 50
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 50
 
 
  2465      545F5449 
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  2483      43525950 
  2484              	.LASF36:
  2485 03c1 4359424C 		.ascii	"CYBLE_EVT_GAP_NUMERIC_COMPARISON_REQUEST\000"
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 51
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 51
 
 
  2485      455F4556 
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  2503      45564943 
  2504              	.LASF130:
  2505 04d6 4359424C 		.ascii	"CYBLE_GATT_ERR_ATTRIBUTE_NOT_FOUND\000"
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 52
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 52
 
 
  2505      455F4741 
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  2523      44564552 
  2524              	.LASF100:
  2525 05d7 4359424C 		.ascii	"CYBLE_ERROR_L2CAP_PSM_NOT_IN_RANGE\000"
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 53
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 53
 
 
  2525      455F4552 
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  2546      65644D74 
  2546      7500
  2547              	.LASF123:
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 54
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 54
 
 
  2548 06f0 4359424C 		.ascii	"CYBLE_GATT_ERR_WRITE_NOT_PERMITTED\000"
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  2567              	.LASF7:
  2568 07e8 6C6F6E67 		.ascii	"long long unsigned int\000"
  2568      206C6F6E 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 55
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 55
 
 
  2568      6720756E 
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  2587              	.LASF119:
  2588 0907 4359424C 		.ascii	"CYBLE_GAP_CONN_UPDATE_PARAM_T\000"
  2588      455F4741 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 56
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 56
 
 
  2588      505F434F 
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  2608 0a1a 4359424C 		.ascii	"CYBLE_ERROR_INVALID_OPERATION\000"
  2608      455F4552 
  2608      524F525F 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 57
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 57
 
 
  2608      494E5641 
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  2626      52525F48 
  2626      54535F4F 
  2627              	.LASF190:
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 58
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 58
 
 
  2628 0b4b 6379426C 		.ascii	"cyBle_state\000"
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  2649      65456E61 
  2649      626C6564 
  2649      00
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 59
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 59
 
 
  2650              	.LASF187:
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  2670              	.LASF56:
  2671 0d41 4359424C 		.ascii	"CYBLE_EVT_GATTC_WRITE_RSP\000"
  2671      455F4556 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 60
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 60
 
 
  2671      545F4741 
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  2689      494E445F 
  2689      44495341 
  2690              	.LASF167:
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 61
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 61
 
 
  2691 0e53 4359424C 		.ascii	"CYBLE_GATT_HANDLE_VALUE_PAIR_T\000"
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  2711      455F4741 
  2711      54545F45 
  2711      52525F4F 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 62
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 62
 
 
  2711      55545F4F 
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  2729      00
  2730              	.LASF2:
  2731 10a5 73686F72 		.ascii	"short int\000"
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 63
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 63
 
 
  2731      7420696E 
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  2750              	.LASF155:
  2751 11c9 4359424C 		.ascii	"CYBLE_GATT_ERR_CCCD_IMPROPERLY_CONFIGURED\000"
  2751      455F4741 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 64
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 64
 
 
  2751      54545F45 
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  2771              	.LASF77:
  2772 12fc 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_TX_CREDIT_IND\000"
  2772      455F4556 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 65
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 65
 
 
  2772      545F4C32 
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  2790      6C506169 
  2790      7200
  2791              	.LASF181:
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 66
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 66
 
 
  2792 1433 6D6F746F 		.ascii	"motorData\000"
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  2812      74697365 
  2812      6D656E74 
  2813              	.LASF53:
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 67
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 67
 
 
  2814 1531 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BLOB_RSP\000"
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 1
  2832 1637 62644861 		.ascii	"bdHandle\000"
  2832      6E646C65 
  2832      00
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\cczF1Kuu.s 			page 68
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccoH1qwk.s 			page 68
 
 
  2833              	.LASF79:

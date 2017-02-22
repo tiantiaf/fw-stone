@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
   26              		.loc 1 29 0
   27              		.cfi_startproc
   28 0000 08B5     		push	{r3, lr}
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 2
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 2
 
 
   29              		.cfi_def_cfa_offset 8
@@ -84,14 +84,14 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
   42              		.loc 1 36 0
   43 0012 1B78     		ldrb	r3, [r3]
   44 0014 DBB2     		uxtb	r3, r3
-  45 0016 002B     		cmp	r3, #0
+  45 0016 012B     		cmp	r3, #1
   46 0018 02D0     		beq	.L4
-  47 001a 012B     		cmp	r3, #1
+  47 001a 022B     		cmp	r3, #2
   48 001c 04D0     		beq	.L5
   49 001e 0EE0     		b	.L1
   50              	.L4:
   37:.\Stone_Motor.c ****         {
-  38:.\Stone_Motor.c ****             case MODE0:
+  38:.\Stone_Motor.c ****             case MODE1:
   39:.\Stone_Motor.c ****                 Motor_Write(MOTOR_ON);
   51              		.loc 1 39 0
   52 0020 0120     		mov	r0, #1
@@ -102,7 +102,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
   56 0026 0AE0     		b	.L1
   57              	.L5:
   41:.\Stone_Motor.c ****             
-  42:.\Stone_Motor.c ****             case MODE1:
+  42:.\Stone_Motor.c ****             case MODE2:
   43:.\Stone_Motor.c ****                 InitStoneInterrupt();
   58              		.loc 1 43 0
   59 0028 FFF7FEFF 		bl	InitStoneInterrupt
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
   49:.\Stone_Motor.c ****         }
   50:.\Stone_Motor.c ****         
   51:.\Stone_Motor.c ****     } else {
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 3
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 3
 
 
   52:.\Stone_Motor.c ****         Motor_Write(MOTOR_OFF);
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
  108              		.cfi_endproc
  109              	.LFE38:
  110              		.size	TRIGGER_ISR, .-TRIGGER_ISR
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 4
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 4
 
 
  111 000a C046     		.section	.text.TC_ISR,"ax",%progbits
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
  146 0000 08B5     		push	{r3, lr}
  147              		.cfi_def_cfa_offset 8
  148              		.cfi_offset 3, -8
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 5
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 5
 
 
  149              		.cfi_offset 14, -4
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
  196 0018 2388     		ldrh	r3, [r4]
  197 001a 013B     		sub	r3, r3, #1
  198 001c 2380     		strh	r3, [r4]
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 6
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 6
 
 
   77:.\Stone_Motor.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
  252 0020 1C       		.byte	28
  253 0021 19       		.byte	25
  254 0022 19       		.byte	25
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 7
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 7
 
 
  255 0023 14       		.byte	20
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
  309 000a 04       		.byte	0x4
  310 000b 01       		.uleb128 0x1
  311 000c F5030000 		.4byte	.LASF93
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 8
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 8
 
 
  312 0010 01       		.byte	0x1
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
  366 007d 9901     		.2byte	0x199
  367 007f 3A000000 		.4byte	0x3a
  368 0083 02       		.uleb128 0x2
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 9
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 9
 
 
  369 0084 04       		.byte	0x4
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
  423 00ee 23       		.sleb128 35
  424 00ef 07       		.uleb128 0x7
  425 00f0 A8050000 		.4byte	.LASF26
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 10
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 10
 
 
  426 00f4 24       		.sleb128 36
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
  480 0162 C200     		.sleb128 66
  481 0164 07       		.uleb128 0x7
  482 0165 6C010000 		.4byte	.LASF45
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 11
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 11
 
 
  483 0169 C300     		.sleb128 67
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
  537 01e7 D500     		.sleb128 85
  538 01e9 07       		.uleb128 0x7
  539 01ea 86090000 		.4byte	.LASF64
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 12
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 12
 
 
  540 01ee D600     		.sleb128 86
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
  594 0268 00000000 		.4byte	.LFB37
  595 026c 48000000 		.4byte	.LFE37-.LFB37
  596 0270 01       		.uleb128 0x1
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 13
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 13
 
 
  597 0271 9C       		.byte	0x9c
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
  651 02e3 01       		.uleb128 0x1
  652 02e4 9C       		.byte	0x9c
  653 02e5 F9020000 		.4byte	0x2f9
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 14
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 14
 
 
  654 02e9 0C       		.uleb128 0xc
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
  708 0361 05       		.uleb128 0x5
  709 0362 03       		.byte	0x3
  710 0363 00000000 		.4byte	Stone_Motor
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 15
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 15
 
 
  711 0367 0E       		.uleb128 0xe
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
  765 03d9 AC030000 		.4byte	.LASF92
  766 03dd 04       		.byte	0x4
  767 03de 14       		.byte	0x14
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 16
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 16
 
 
  768 03df 15       		.uleb128 0x15
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
  822 002c 03       		.uleb128 0x3
  823 002d 0E       		.uleb128 0xe
  824 002e 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 17
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 17
 
 
  825 002f 0B       		.uleb128 0xb
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
  879 0065 18       		.uleb128 0x18
  880 0066 9742     		.uleb128 0x2117
  881 0068 19       		.uleb128 0x19
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 18
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 18
 
 
  882 0069 01       		.uleb128 0x1
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
  936 00a8 17       		.uleb128 0x17
  937 00a9 00       		.byte	0
  938 00aa 00       		.byte	0
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 19
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 19
 
 
  939 00ab 0E       		.uleb128 0xe
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
  993 00e1 19       		.uleb128 0x19
  994 00e2 3C       		.uleb128 0x3c
  995 00e3 19       		.uleb128 0x19
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 20
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 20
 
 
  996 00e4 01       		.uleb128 0x1
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
  1050 000f 10000000 		.4byte	.LFE41
  1051 0013 0400     		.2byte	0x4
  1052 0015 F3       		.byte	0xf3
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 21
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 21
 
 
  1053 0016 01       		.uleb128 0x1
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
  1098      455F4556 
  1098      545F4741 
  1098      5454435F 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 22
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 22
 
 
  1098      57524954 
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
  1120 0110 496E6974 		.ascii	"InitStoneInterrupt\000"
  1120      53746F6E 
  1120      65496E74 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 23
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 23
 
 
  1120      65727275 
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
  1141      545F4741 
  1141      5454535F 
  1141      48414E44 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 24
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 24
 
 
  1142              	.LASF15:
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
  1162              	.LASF90:
  1163 0312 53746F6E 		.ascii	"Stone_Motor_Mode\000"
  1163      655F4D6F 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 25
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 25
 
 
  1163      746F725F 
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
  1180      31323230 
  1181 045b 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  1181      66756E63 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 26
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 26
 
 
  1181      74696F6E 
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
  1201      545F4741 
  1201      5454535F 
  1201      57524954 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 27
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 27
 
 
  1202              	.LASF50:
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
  1221      7369676E 
  1221      65642069 
  1221      6E7400
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 28
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 28
 
 
  1222              	.LASF88:
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
  1243      545F4741 
  1243      50435F53 
  1243      43414E5F 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 29
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 29
 
 
  1244              	.LASF78:
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
  1263      545F4741 
  1263      5454435F 
  1263      52454144 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 30
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 30
 
 
  1264              	.LASF56:
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 1
  1283      20696E74 
  1283      00
  1284              	.LASF58:
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccCTF0bu.s 			page 31
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 31
 
 
  1285 09b5 4359424C 		.ascii	"CYBLE_EVT_GATTS_EXEC_WRITE_REQ\000"

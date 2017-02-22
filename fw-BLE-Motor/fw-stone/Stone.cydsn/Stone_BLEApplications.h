@@ -25,6 +25,7 @@
 #define MODE1						    (1)
 #define MODE2						    (2)
 #define MODE3					        (3)
+#define MODE4					        (4)
     
 /**************************Function Declarations*****************************/
 void CustomEventHandler(uint32 event, void * eventParam);
