@@ -1,5 +1,0 @@
-E:\Psoc\BLE_LED_DEMO\Workspace01\BLE_Led_Demo.cydsn\BLE_Led_Demo.cyprj|7e3472fd-516e-4c84-91cb-228c44ef19c6
-D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|d6dc0cde-b6cd-4414-b08e-fff33d8417d9
-D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|cd3eede7-f65f-492e-bbfe-6c67bf29a16e
-D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|6908b9a9-f4c2-4397-9fb4-3d05b5457e24
-D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|df0bb0cb-db9a-46b9-bd61-956745c5e71f
