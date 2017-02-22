@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 1
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccTnT2jJ.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 1
   30:.\Stone_Init.c **** void InitializeSystem(void)
   31:.\Stone_Init.c **** {
   26              		.loc 1 31 0
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 2
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccTnT2jJ.s 			page 2
 
 
   27              		.cfi_startproc
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 1
   67              		.loc 1 45 0
   68              		.cfi_startproc
   69 0000 08B5     		push	{r3, lr}
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 3
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccTnT2jJ.s 			page 3
 
 
   70              		.cfi_def_cfa_offset 8
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 1
  113 0000 08B5     		push	{r3, lr}
  114              		.cfi_def_cfa_offset 8
  115              		.cfi_offset 3, -8
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 4
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccTnT2jJ.s 			page 4
 
 
  116              		.cfi_offset 14, -4
@@ -230,24 +230,24 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 1
  154 0006 00000000 		.4byte	.Ldebug_abbrev0
  155 000a 04       		.byte	0x4
  156 000b 01       		.uleb128 0x1
- 157 000c A5020000 		.4byte	.LASF65
+ 157 000c E8020000 		.4byte	.LASF65
  158 0010 01       		.byte	0x1
- 159 0011 E9050000 		.4byte	.LASF66
- 160 0015 0A060000 		.4byte	.LASF67
+ 159 0011 32060000 		.4byte	.LASF66
+ 160 0015 B6010000 		.4byte	.LASF67
  161 0019 00000000 		.4byte	.Ldebug_ranges0+0
  162 001d 00000000 		.4byte	0
  163 0021 00000000 		.4byte	.Ldebug_line0
  164 0025 02       		.uleb128 0x2
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 5
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccTnT2jJ.s 			page 5
 
 
  165 0026 01       		.byte	0x1
  166 0027 06       		.byte	0x6
- 167 0028 87030000 		.4byte	.LASF0
+ 167 0028 D0030000 		.4byte	.LASF0
  168 002c 02       		.uleb128 0x2
  169 002d 01       		.byte	0x1
  170 002e 08       		.byte	0x8
- 171 002f 61030000 		.4byte	.LASF1
+ 171 002f AA030000 		.4byte	.LASF1
  172 0033 02       		.uleb128 0x2
  173 0034 02       		.byte	0x2
  174 0035 05       		.byte	0x5
@@ -255,23 +255,23 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 1
  176 003a 02       		.uleb128 0x2
  177 003b 02       		.byte	0x2
  178 003c 07       		.byte	0x7
- 179 003d 3F040000 		.4byte	.LASF3
+ 179 003d 88040000 		.4byte	.LASF3
  180 0041 02       		.uleb128 0x2
  181 0042 04       		.byte	0x4
  182 0043 05       		.byte	0x5
- 183 0044 5C020000 		.4byte	.LASF4
+ 183 0044 9F020000 		.4byte	.LASF4
  184 0048 02       		.uleb128 0x2
  185 0049 04       		.byte	0x4
  186 004a 07       		.byte	0x7
- 187 004b FE040000 		.4byte	.LASF5
+ 187 004b 47050000 		.4byte	.LASF5
  188 004f 02       		.uleb128 0x2
  189 0050 08       		.byte	0x8
  190 0051 05       		.byte	0x5
- 191 0052 21020000 		.4byte	.LASF6
+ 191 0052 64020000 		.4byte	.LASF6
  192 0056 02       		.uleb128 0x2
  193 0057 08       		.byte	0x8
  194 0058 07       		.byte	0x7
- 195 0059 93030000 		.4byte	.LASF7
+ 195 0059 DC030000 		.4byte	.LASF7
  196 005d 03       		.uleb128 0x3
  197 005e 04       		.byte	0x4
  198 005f 05       		.byte	0x5
@@ -279,34 +279,34 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 1
  200 0064 02       		.uleb128 0x2
  201 0065 04       		.byte	0x4
  202 0066 07       		.byte	0x7
- 203 0067 D6030000 		.4byte	.LASF8
+ 203 0067 1F040000 		.4byte	.LASF8
  204 006b 04       		.uleb128 0x4
- 205 006c B6010000 		.4byte	.LASF9
+ 205 006c 87030000 		.4byte	.LASF9
  206 0070 02       		.byte	0x2
  207 0071 9801     		.2byte	0x198
  208 0073 2C000000 		.4byte	0x2c
  209 0077 04       		.uleb128 0x4
- 210 0078 E8040000 		.4byte	.LASF10
+ 210 0078 31050000 		.4byte	.LASF10
  211 007c 02       		.byte	0x2
  212 007d 9A01     		.2byte	0x19a
  213 007f 48000000 		.4byte	0x48
  214 0083 02       		.uleb128 0x2
  215 0084 04       		.byte	0x4
  216 0085 04       		.byte	0x4
- 217 0086 1B020000 		.4byte	.LASF11
+ 217 0086 5E020000 		.4byte	.LASF11
  218 008a 02       		.uleb128 0x2
  219 008b 08       		.byte	0x8
  220 008c 04       		.byte	0x4
- 221 008d 10050000 		.4byte	.LASF12
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 6
+ 221 008d 59050000 		.4byte	.LASF12
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccTnT2jJ.s 			page 6
 
 
  222 0091 02       		.uleb128 0x2
  223 0092 01       		.byte	0x1
  224 0093 08       		.byte	0x8
- 225 0094 63040000 		.4byte	.LASF13
+ 225 0094 AC040000 		.4byte	.LASF13
  226 0098 04       		.uleb128 0x4
- 227 0099 2F020000 		.4byte	.LASF14
+ 227 0099 72020000 		.4byte	.LASF14
  228 009d 02       		.byte	0x2
  229 009e 5402     		.2byte	0x254
  230 00a0 A4000000 		.4byte	0xa4
@@ -335,40 +335,40 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 1
  253 00ca 98010000 		.4byte	.LASF18
  254 00ce 02       		.sleb128 2
  255 00cf 09       		.uleb128 0x9
- 256 00d0 84040000 		.4byte	.LASF19
+ 256 00d0 CD040000 		.4byte	.LASF19
  257 00d4 03       		.sleb128 3
  258 00d5 09       		.uleb128 0x9
- 259 00d6 F8010000 		.4byte	.LASF20
+ 259 00d6 3B020000 		.4byte	.LASF20
  260 00da 04       		.sleb128 4
  261 00db 09       		.uleb128 0x9
  262 00dc 5F010000 		.4byte	.LASF21
  263 00e0 05       		.sleb128 5
  264 00e1 09       		.uleb128 0x9
- 265 00e2 DE010000 		.4byte	.LASF22
+ 265 00e2 21020000 		.4byte	.LASF22
  266 00e6 06       		.sleb128 6
  267 00e7 09       		.uleb128 0x9
- 268 00e8 44030000 		.4byte	.LASF23
+ 268 00e8 8D030000 		.4byte	.LASF23
  269 00ec 07       		.sleb128 7
  270 00ed 09       		.uleb128 0x9
- 271 00ee 65020000 		.4byte	.LASF24
+ 271 00ee A8020000 		.4byte	.LASF24
  272 00f2 08       		.sleb128 8
  273 00f3 09       		.uleb128 0x9
- 274 00f4 C1030000 		.4byte	.LASF25
+ 274 00f4 0A040000 		.4byte	.LASF25
  275 00f8 09       		.sleb128 9
  276 00f9 09       		.uleb128 0x9
  277 00fa 5F000000 		.4byte	.LASF26
  278 00fe 0A       		.sleb128 10
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 7
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccTnT2jJ.s 			page 7
 
 
  279 00ff 09       		.uleb128 0x9
- 280 0100 3C020000 		.4byte	.LASF27
+ 280 0100 7F020000 		.4byte	.LASF27
  281 0104 0B       		.sleb128 11
  282 0105 09       		.uleb128 0x9
- 283 0106 AA030000 		.4byte	.LASF28
+ 283 0106 F3030000 		.4byte	.LASF28
  284 010a 0C       		.sleb128 12
  285 010b 09       		.uleb128 0x9
- 286 010c E3030000 		.4byte	.LASF29
+ 286 010c 2C040000 		.4byte	.LASF29
  287 0110 0D       		.sleb128 13
  288 0111 09       		.uleb128 0x9
  289 0112 25000000 		.4byte	.LASF30
@@ -377,19 +377,19 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 1
  292 0118 00000000 		.4byte	.LASF31
  293 011c 0F       		.sleb128 15
  294 011d 09       		.uleb128 0x9
- 295 011e 3D060000 		.4byte	.LASF32
+ 295 011e 53060000 		.4byte	.LASF32
  296 0122 10       		.sleb128 16
  297 0123 09       		.uleb128 0x9
  298 0124 79000000 		.4byte	.LASF33
  299 0128 11       		.sleb128 17
  300 0129 09       		.uleb128 0x9
- 301 012a 4B050000 		.4byte	.LASF34
+ 301 012a 94050000 		.4byte	.LASF34
  302 012e 12       		.sleb128 18
  303 012f 09       		.uleb128 0x9
- 304 0130 17050000 		.4byte	.LASF35
+ 304 0130 60050000 		.4byte	.LASF35
  305 0134 13       		.sleb128 19
  306 0135 09       		.uleb128 0x9
- 307 0136 9D050000 		.4byte	.LASF36
+ 307 0136 E6050000 		.4byte	.LASF36
  308 013a 27       		.sleb128 39
  309 013b 09       		.uleb128 0x9
  310 013c E3000000 		.4byte	.LASF37
@@ -401,35 +401,35 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 1
  316 0148 08010000 		.4byte	.LASF39
  317 014c 2A       		.sleb128 42
  318 014d 09       		.uleb128 0x9
- 319 014e A9040000 		.4byte	.LASF40
+ 319 014e F2040000 		.4byte	.LASF40
  320 0152 2B       		.sleb128 43
  321 0153 09       		.uleb128 0x9
- 322 0154 6F030000 		.4byte	.LASF41
+ 322 0154 B8030000 		.4byte	.LASF41
  323 0158 2C       		.sleb128 44
  324 0159 09       		.uleb128 0x9
- 325 015a 68040000 		.4byte	.LASF42
+ 325 015a B1040000 		.4byte	.LASF42
  326 015e FE01     		.sleb128 254
  327 0160 09       		.uleb128 0x9
- 328 0161 BF050000 		.4byte	.LASF43
+ 328 0161 08060000 		.4byte	.LASF43
  329 0165 FF01     		.sleb128 255
  330 0167 09       		.uleb128 0x9
- 331 0168 78050000 		.4byte	.LASF44
+ 331 0168 C1050000 		.4byte	.LASF44
  332 016c 8002     		.sleb128 256
  333 016e 09       		.uleb128 0x9
- 334 016f 6B060000 		.4byte	.LASF45
+ 334 016f 81060000 		.4byte	.LASF45
  335 0173 8102     		.sleb128 257
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 8
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccTnT2jJ.s 			page 8
 
 
  336 0175 09       		.uleb128 0x9
- 337 0176 1C040000 		.4byte	.LASF46
+ 337 0176 65040000 		.4byte	.LASF46
  338 017a 8202     		.sleb128 258
  339 017c 09       		.uleb128 0x9
- 340 017d CF050000 		.4byte	.LASF47
+ 340 017d 18060000 		.4byte	.LASF47
  341 0181 8302     		.sleb128 259
  342 0183 00       		.byte	0
  343 0184 04       		.uleb128 0x4
- 344 0185 BC010000 		.4byte	.LASF48
+ 344 0185 FF010000 		.4byte	.LASF48
  345 0189 03       		.byte	0x3
  346 018a 6B03     		.2byte	0x36b
  347 018c B4000000 		.4byte	0xb4
@@ -449,7 +449,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 1
  361 01ad B2000000 		.4byte	0xb2
  362 01b1 00       		.byte	0
  363 01b2 0C       		.uleb128 0xc
- 364 01b3 52040000 		.4byte	.LASF50
+ 364 01b3 9B040000 		.4byte	.LASF50
  365 01b7 01       		.byte	0x1
  366 01b8 1E       		.byte	0x1e
  367 01b9 00000000 		.4byte	.LFB37
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 1
  390 01ee 50       		.byte	0x50
  391 01ef 01       		.uleb128 0x1
  392 01f0 30       		.byte	0x30
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 9
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccTnT2jJ.s 			page 9
 
 
  393 01f1 00       		.byte	0
@@ -509,7 +509,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 1
  418 0231 E1020000 		.4byte	0x2e1
  419 0235 00       		.byte	0
  420 0236 0C       		.uleb128 0xc
- 421 0237 83020000 		.4byte	.LASF52
+ 421 0237 C6020000 		.4byte	.LASF52
  422 023b 01       		.byte	0x1
  423 023c 37       		.byte	0x37
  424 023d 00000000 		.4byte	.LFB39
@@ -534,11 +534,11 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 1
  443 0274 0E030000 		.4byte	0x30e
  444 0278 00       		.byte	0
  445 0279 11       		.uleb128 0x11
- 446 027a DC040000 		.4byte	.LASF68
+ 446 027a 25050000 		.4byte	.LASF68
  447 027e 04       		.byte	0x4
  448 027f 5402     		.2byte	0x254
  449 0281 84010000 		.4byte	0x184
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 10
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccTnT2jJ.s 			page 10
 
 
  450 0285 8F020000 		.4byte	0x28f
@@ -546,7 +546,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 1
  452 028a 90010000 		.4byte	0x190
  453 028e 00       		.byte	0
  454 028f 12       		.uleb128 0x12
- 455 0290 6E050000 		.4byte	.LASF53
+ 455 0290 B7050000 		.4byte	.LASF53
  456 0294 05       		.byte	0x5
  457 0295 33       		.byte	0x33
  458 0296 A0020000 		.4byte	0x2a0
@@ -554,7 +554,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 1
  460 029b 6B000000 		.4byte	0x6b
  461 029f 00       		.byte	0
  462 02a0 12       		.uleb128 0x12
- 463 02a1 91050000 		.4byte	.LASF54
+ 463 02a1 DA050000 		.4byte	.LASF54
  464 02a5 06       		.byte	0x6
  465 02a6 33       		.byte	0x33
  466 02a7 B1020000 		.4byte	0x2b1
@@ -562,11 +562,11 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 1
  468 02ac 6B000000 		.4byte	0x6b
  469 02b0 00       		.byte	0
  470 02b1 13       		.uleb128 0x13
- 471 02b2 CF010000 		.4byte	.LASF55
+ 471 02b2 12020000 		.4byte	.LASF55
  472 02b6 07       		.byte	0x7
  473 02b7 DA       		.byte	0xda
  474 02b8 13       		.uleb128 0x13
- 475 02b9 F8050000 		.4byte	.LASF56
+ 475 02b9 41060000 		.4byte	.LASF56
  476 02bd 08       		.byte	0x8
  477 02be 5A       		.byte	0x5a
  478 02bf 12       		.uleb128 0x12
@@ -578,7 +578,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 1
  484 02cb 98000000 		.4byte	0x98
  485 02cf 00       		.byte	0
  486 02d0 12       		.uleb128 0x12
- 487 02d1 08040000 		.4byte	.LASF58
+ 487 02d1 51040000 		.4byte	.LASF58
  488 02d5 0A       		.byte	0xa
  489 02d6 18       		.byte	0x18
  490 02d7 E1020000 		.4byte	0x2e1
@@ -586,7 +586,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 1
  492 02dc 98000000 		.4byte	0x98
  493 02e0 00       		.byte	0
  494 02e1 12       		.uleb128 0x12
- 495 02e2 96020000 		.4byte	.LASF59
+ 495 02e2 D9020000 		.4byte	.LASF59
  496 02e6 0B       		.byte	0xb
  497 02e7 18       		.byte	0x18
  498 02e8 F2020000 		.4byte	0x2f2
@@ -598,18 +598,18 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 1
  504 02f7 09       		.byte	0x9
  505 02f8 19       		.byte	0x19
  506 02f9 13       		.uleb128 0x13
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 11
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccTnT2jJ.s 			page 11
 
 
- 507 02fa 33030000 		.4byte	.LASF61
+ 507 02fa 76030000 		.4byte	.LASF61
  508 02fe 0A       		.byte	0xa
  509 02ff 19       		.byte	0x19
  510 0300 13       		.uleb128 0x13
- 511 0301 3F050000 		.4byte	.LASF62
+ 511 0301 88050000 		.4byte	.LASF62
  512 0305 0B       		.byte	0xb
  513 0306 19       		.byte	0x19
  514 0307 13       		.uleb128 0x13
- 515 0308 EF040000 		.4byte	.LASF63
+ 515 0308 38050000 		.4byte	.LASF63
  516 030c 07       		.byte	0x7
  517 030d 93       		.byte	0x93
  518 030e 13       		.uleb128 0x13
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 1
  561 0024 0B       		.uleb128 0xb
  562 0025 03       		.uleb128 0x3
  563 0026 08       		.uleb128 0x8
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 12
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccTnT2jJ.s 			page 12
 
 
  564 0027 00       		.byte	0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 1
  618 005d 03       		.uleb128 0x3
  619 005e 0E       		.uleb128 0xe
  620 005f 1C       		.uleb128 0x1c
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 13
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccTnT2jJ.s 			page 13
 
 
  621 0060 0D       		.uleb128 0xd
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 1
  675 0099 898201   		.uleb128 0x4109
  676 009c 01       		.byte	0x1
  677 009d 11       		.uleb128 0x11
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 14
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccTnT2jJ.s 			page 14
 
 
  678 009e 01       		.uleb128 0x1
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 1
  732 00d9 0B       		.uleb128 0xb
  733 00da 3B       		.uleb128 0x3b
  734 00db 0B       		.uleb128 0xb
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 15
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccTnT2jJ.s 			page 15
 
 
  735 00dc 27       		.uleb128 0x27
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 1
  789 0000 0E010000 		.section	.debug_str,"MS",%progbits,1
  789      0200CA00 
  789      00000201 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 16
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccTnT2jJ.s 			page 16
 
 
  789      FB0E0D00 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 1
  809      65496E74 
  809      65727275 
  809      707400
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 17
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccTnT2jJ.s 			page 17
 
 
  810              	.LASF37:
@@ -1006,298 +1006,302 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 1
  825      524F525F 
  825      494E5641 
  825      4C49445F 
- 826              	.LASF9:
- 827 01b6 75696E74 		.ascii	"uint8\000"
- 827      3800
- 828              	.LASF48:
- 829 01bc 4359424C 		.ascii	"CYBLE_API_RESULT_T\000"
- 829      455F4150 
- 829      495F5245 
- 829      53554C54 
- 829      5F5400
- 830              	.LASF55:
- 831 01cf 53746F6E 		.ascii	"Stone_PWM_Init\000"
- 831      655F5057 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 18
+ 826              	.LASF67:
+ 827 01b6 473A5C47 		.ascii	"G:\\GitHub_Code\\firmware_stone\\fw-stone\\fw-BLE-M"
+ 827      69744875 
+ 827      625F436F 
+ 827      64655C66 
+ 827      69726D77 
+ 828 01e5 6F746F72 		.ascii	"otor\\fw-stone\\Stone.cydsn\000"
+ 828      5C66772D 
+ 828      73746F6E 
+ 828      655C5374 
+ 828      6F6E652E 
+ 829              	.LASF48:
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccTnT2jJ.s 			page 18
 
 
- 831      4D5F496E 
- 831      697400
- 832              	.LASF22:
- 833 01de 4359424C 		.ascii	"CYBLE_ERROR_NO_CONNECTION\000"
- 833      455F4552 
- 833      524F525F 
- 833      4E4F5F43 
- 833      4F4E4E45 
- 834              	.LASF20:
- 835 01f8 4359424C 		.ascii	"CYBLE_ERROR_INSUFFICIENT_RESOURCES\000"
- 835      455F4552 
- 835      524F525F 
- 835      494E5355 
- 835      46464943 
- 836              	.LASF11:
- 837 021b 666C6F61 		.ascii	"float\000"
- 837      7400
- 838              	.LASF6:
- 839 0221 6C6F6E67 		.ascii	"long long int\000"
- 839      206C6F6E 
- 839      6720696E 
- 839      7400
- 840              	.LASF14:
- 841 022f 63796973 		.ascii	"cyisraddress\000"
- 841      72616464 
- 841      72657373 
- 841      00
- 842              	.LASF27:
- 843 023c 4359424C 		.ascii	"CYBLE_ERROR_BT_ON_NOT_COMPLETED\000"
- 843      455F4552 
- 843      524F525F 
- 843      42545F4F 
- 843      4E5F4E4F 
- 844              	.LASF4:
- 845 025c 6C6F6E67 		.ascii	"long int\000"
- 845      20696E74 
- 845      00
- 846              	.LASF24:
- 847 0265 4359424C 		.ascii	"CYBLE_ERROR_REPEATED_ATTEMPTS\000"
- 847      455F4552 
- 847      524F525F 
- 847      52455045 
- 847      41544544 
- 848              	.LASF52:
- 849 0283 53746F70 		.ascii	"StopStoneInterrupt\000"
- 849      53746F6E 
- 849      65496E74 
- 849      65727275 
- 849      707400
- 850              	.LASF59:
- 851 0296 74635F69 		.ascii	"tc_isr_StartEx\000"
- 851      73725F53 
- 851      74617274 
- 851      457800
- 852              	.LASF65:
- 853 02a5 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 853      4320342E 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 19
+ 830 01ff 4359424C 		.ascii	"CYBLE_API_RESULT_T\000"
+ 830      455F4150 
+ 830      495F5245 
+ 830      53554C54 
+ 830      5F5400
+ 831              	.LASF55:
+ 832 0212 53746F6E 		.ascii	"Stone_PWM_Init\000"
+ 832      655F5057 
+ 832      4D5F496E 
+ 832      697400
+ 833              	.LASF22:
+ 834 0221 4359424C 		.ascii	"CYBLE_ERROR_NO_CONNECTION\000"
+ 834      455F4552 
+ 834      524F525F 
+ 834      4E4F5F43 
+ 834      4F4E4E45 
+ 835              	.LASF20:
+ 836 023b 4359424C 		.ascii	"CYBLE_ERROR_INSUFFICIENT_RESOURCES\000"
+ 836      455F4552 
+ 836      524F525F 
+ 836      494E5355 
+ 836      46464943 
+ 837              	.LASF11:
+ 838 025e 666C6F61 		.ascii	"float\000"
+ 838      7400
+ 839              	.LASF6:
+ 840 0264 6C6F6E67 		.ascii	"long long int\000"
+ 840      206C6F6E 
+ 840      6720696E 
+ 840      7400
+ 841              	.LASF14:
+ 842 0272 63796973 		.ascii	"cyisraddress\000"
+ 842      72616464 
+ 842      72657373 
+ 842      00
+ 843              	.LASF27:
+ 844 027f 4359424C 		.ascii	"CYBLE_ERROR_BT_ON_NOT_COMPLETED\000"
+ 844      455F4552 
+ 844      524F525F 
+ 844      42545F4F 
+ 844      4E5F4E4F 
+ 845              	.LASF4:
+ 846 029f 6C6F6E67 		.ascii	"long int\000"
+ 846      20696E74 
+ 846      00
+ 847              	.LASF24:
+ 848 02a8 4359424C 		.ascii	"CYBLE_ERROR_REPEATED_ATTEMPTS\000"
+ 848      455F4552 
+ 848      524F525F 
+ 848      52455045 
+ 848      41544544 
+ 849              	.LASF52:
+ 850 02c6 53746F70 		.ascii	"StopStoneInterrupt\000"
+ 850      53746F6E 
+ 850      65496E74 
+ 850      65727275 
+ 850      707400
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccTnT2jJ.s 			page 19
 
 
- 853      392E3320 
- 853      32303135 
- 853      30333033 
- 854 02d8 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 854      20726576 
- 854      6973696F 
- 854      6E203232 
- 854      31323230 
- 855 030b 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 855      66756E63 
- 855      74696F6E 
- 855      2D736563 
- 855      74696F6E 
- 856              	.LASF61:
- 857 0333 74726967 		.ascii	"trigger_isr_Stop\000"
- 857      6765725F 
- 857      6973725F 
- 857      53746F70 
- 857      00
- 858              	.LASF23:
- 859 0344 4359424C 		.ascii	"CYBLE_ERROR_NO_DEVICE_ENTITY\000"
- 859      455F4552 
- 859      524F525F 
- 859      4E4F5F44 
- 859      45564943 
- 860              	.LASF1:
- 861 0361 756E7369 		.ascii	"unsigned char\000"
- 861      676E6564 
- 861      20636861 
- 861      7200
- 862              	.LASF41:
- 863 036f 4359424C 		.ascii	"CYBLE_ERROR_FLASH_WRITE\000"
- 863      455F4552 
- 863      524F525F 
- 863      464C4153 
- 863      485F5752 
- 864              	.LASF0:
- 865 0387 7369676E 		.ascii	"signed char\000"
- 865      65642063 
- 865      68617200 
- 866              	.LASF7:
- 867 0393 6C6F6E67 		.ascii	"long long unsigned int\000"
- 867      206C6F6E 
- 867      6720756E 
- 867      7369676E 
- 867      65642069 
- 868              	.LASF28:
- 869 03aa 4359424C 		.ascii	"CYBLE_ERROR_SEC_FAILED\000"
- 869      455F4552 
- 869      524F525F 
- 869      5345435F 
- 869      4641494C 
- 870              	.LASF25:
- 871 03c1 4359424C 		.ascii	"CYBLE_ERROR_GAP_ROLE\000"
- 871      455F4552 
- 871      524F525F 
- 871      4741505F 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 20
+ 851              	.LASF59:
+ 852 02d9 74635F69 		.ascii	"tc_isr_StartEx\000"
+ 852      73725F53 
+ 852      74617274 
+ 852      457800
+ 853              	.LASF65:
+ 854 02e8 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 854      4320342E 
+ 854      392E3320 
+ 854      32303135 
+ 854      30333033 
+ 855 031b 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 855      20726576 
+ 855      6973696F 
+ 855      6E203232 
+ 855      31323230 
+ 856 034e 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 856      66756E63 
+ 856      74696F6E 
+ 856      2D736563 
+ 856      74696F6E 
+ 857              	.LASF61:
+ 858 0376 74726967 		.ascii	"trigger_isr_Stop\000"
+ 858      6765725F 
+ 858      6973725F 
+ 858      53746F70 
+ 858      00
+ 859              	.LASF9:
+ 860 0387 75696E74 		.ascii	"uint8\000"
+ 860      3800
+ 861              	.LASF23:
+ 862 038d 4359424C 		.ascii	"CYBLE_ERROR_NO_DEVICE_ENTITY\000"
+ 862      455F4552 
+ 862      524F525F 
+ 862      4E4F5F44 
+ 862      45564943 
+ 863              	.LASF1:
+ 864 03aa 756E7369 		.ascii	"unsigned char\000"
+ 864      676E6564 
+ 864      20636861 
+ 864      7200
+ 865              	.LASF41:
+ 866 03b8 4359424C 		.ascii	"CYBLE_ERROR_FLASH_WRITE\000"
+ 866      455F4552 
+ 866      524F525F 
+ 866      464C4153 
+ 866      485F5752 
+ 867              	.LASF0:
+ 868 03d0 7369676E 		.ascii	"signed char\000"
+ 868      65642063 
+ 868      68617200 
+ 869              	.LASF7:
+ 870 03dc 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 870      206C6F6E 
+ 870      6720756E 
+ 870      7369676E 
+ 870      65642069 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccTnT2jJ.s 			page 20
 
 
- 871      524F4C45 
- 872              	.LASF8:
- 873 03d6 756E7369 		.ascii	"unsigned int\000"
- 873      676E6564 
- 873      20696E74 
- 873      00
- 874              	.LASF29:
- 875 03e3 4359424C 		.ascii	"CYBLE_ERROR_L2CAP_PSM_WRONG_ENCODING\000"
- 875      455F4552 
- 875      524F525F 
- 875      4C324341 
- 875      505F5053 
- 876              	.LASF58:
- 877 0408 74726967 		.ascii	"trigger_isr_StartEx\000"
- 877      6765725F 
- 877      6973725F 
- 877      53746172 
- 877      74457800 
- 878              	.LASF46:
- 879 041c 4359424C 		.ascii	"CYBLE_ERROR_CHAR_IS_NOT_DISCOVERED\000"
- 879      455F4552 
- 879      524F525F 
- 879      43484152 
- 879      5F49535F 
- 880              	.LASF3:
- 881 043f 73686F72 		.ascii	"short unsigned int\000"
- 881      7420756E 
- 881      7369676E 
- 881      65642069 
- 881      6E7400
- 882              	.LASF50:
- 883 0452 496E6974 		.ascii	"InitializeSystem\000"
- 883      69616C69 
- 883      7A655379 
- 883      7374656D 
- 883      00
- 884              	.LASF13:
- 885 0463 63686172 		.ascii	"char\000"
- 885      00
- 886              	.LASF42:
- 887 0468 4359424C 		.ascii	"CYBLE_ERROR_CONTROLLER_BUSY\000"
- 887      455F4552 
- 887      524F525F 
- 887      434F4E54 
- 887      524F4C4C 
- 888              	.LASF19:
- 889 0484 4359424C 		.ascii	"CYBLE_ERROR_MEMORY_ALLOCATION_FAILED\000"
- 889      455F4552 
- 889      524F525F 
- 889      4D454D4F 
- 889      52595F41 
- 890              	.LASF40:
- 891 04a9 4359424C 		.ascii	"CYBLE_ERROR_UNSUPPORTED_FEATURE_OR_PARAMETER_VALUE\000"
- 891      455F4552 
- 891      524F525F 
- 891      554E5355 
- 891      50504F52 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 21
+ 871              	.LASF28:
+ 872 03f3 4359424C 		.ascii	"CYBLE_ERROR_SEC_FAILED\000"
+ 872      455F4552 
+ 872      524F525F 
+ 872      5345435F 
+ 872      4641494C 
+ 873              	.LASF25:
+ 874 040a 4359424C 		.ascii	"CYBLE_ERROR_GAP_ROLE\000"
+ 874      455F4552 
+ 874      524F525F 
+ 874      4741505F 
+ 874      524F4C45 
+ 875              	.LASF8:
+ 876 041f 756E7369 		.ascii	"unsigned int\000"
+ 876      676E6564 
+ 876      20696E74 
+ 876      00
+ 877              	.LASF29:
+ 878 042c 4359424C 		.ascii	"CYBLE_ERROR_L2CAP_PSM_WRONG_ENCODING\000"
+ 878      455F4552 
+ 878      524F525F 
+ 878      4C324341 
+ 878      505F5053 
+ 879              	.LASF58:
+ 880 0451 74726967 		.ascii	"trigger_isr_StartEx\000"
+ 880      6765725F 
+ 880      6973725F 
+ 880      53746172 
+ 880      74457800 
+ 881              	.LASF46:
+ 882 0465 4359424C 		.ascii	"CYBLE_ERROR_CHAR_IS_NOT_DISCOVERED\000"
+ 882      455F4552 
+ 882      524F525F 
+ 882      43484152 
+ 882      5F49535F 
+ 883              	.LASF3:
+ 884 0488 73686F72 		.ascii	"short unsigned int\000"
+ 884      7420756E 
+ 884      7369676E 
+ 884      65642069 
+ 884      6E7400
+ 885              	.LASF50:
+ 886 049b 496E6974 		.ascii	"InitializeSystem\000"
+ 886      69616C69 
+ 886      7A655379 
+ 886      7374656D 
+ 886      00
+ 887              	.LASF13:
+ 888 04ac 63686172 		.ascii	"char\000"
+ 888      00
+ 889              	.LASF42:
+ 890 04b1 4359424C 		.ascii	"CYBLE_ERROR_CONTROLLER_BUSY\000"
+ 890      455F4552 
+ 890      524F525F 
+ 890      434F4E54 
+ 890      524F4C4C 
+ 891              	.LASF19:
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccTnT2jJ.s 			page 21
 
 
- 892              	.LASF68:
- 893 04dc 4379426C 		.ascii	"CyBle_Start\000"
- 893      655F5374 
- 893      61727400 
- 894              	.LASF10:
- 895 04e8 75696E74 		.ascii	"uint32\000"
- 895      333200
- 896              	.LASF63:
- 897 04ef 53746F6E 		.ascii	"Stone_PWM_Stop\000"
- 897      655F5057 
- 897      4D5F5374 
- 897      6F7000
- 898              	.LASF5:
- 899 04fe 6C6F6E67 		.ascii	"long unsigned int\000"
- 899      20756E73 
- 899      69676E65 
- 899      6420696E 
- 899      7400
- 900              	.LASF12:
- 901 0510 646F7562 		.ascii	"double\000"
- 901      6C6500
- 902              	.LASF35:
- 903 0517 4359424C 		.ascii	"CYBLE_ERROR_GATT_DB_INVALID_ATTR_HANDLE\000"
- 903      455F4552 
- 903      524F525F 
- 903      47415454 
- 903      5F44425F 
- 904              	.LASF62:
- 905 053f 74635F69 		.ascii	"tc_isr_Stop\000"
- 905      73725F53 
- 905      746F7000 
- 906              	.LASF34:
- 907 054b 4359424C 		.ascii	"CYBLE_ERROR_L2CAP_PSM_NOT_IN_RANGE\000"
- 907      455F4552 
- 907      524F525F 
- 907      4C324341 
- 907      505F5053 
- 908              	.LASF53:
- 909 056e 4C45445F 		.ascii	"LED_Write\000"
- 909      57726974 
- 909      6500
- 910              	.LASF44:
- 911 0578 4359424C 		.ascii	"CYBLE_ERROR_NTF_DISABLED\000"
- 911      455F4552 
- 911      524F525F 
- 911      4E54465F 
- 911      44495341 
- 912              	.LASF54:
- 913 0591 4D6F746F 		.ascii	"Motor_Write\000"
- 913      725F5772 
- 913      69746500 
- 914              	.LASF36:
- 915 059d 4359424C 		.ascii	"CYBLE_ERROR_DEVICE_ALREADY_EXISTS\000"
- 915      455F4552 
- 915      524F525F 
- 915      44455649 
- 915      43455F41 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccOKXgBa.s 			page 22
+ 892 04cd 4359424C 		.ascii	"CYBLE_ERROR_MEMORY_ALLOCATION_FAILED\000"
+ 892      455F4552 
+ 892      524F525F 
+ 892      4D454D4F 
+ 892      52595F41 
+ 893              	.LASF40:
+ 894 04f2 4359424C 		.ascii	"CYBLE_ERROR_UNSUPPORTED_FEATURE_OR_PARAMETER_VALUE\000"
+ 894      455F4552 
+ 894      524F525F 
+ 894      554E5355 
+ 894      50504F52 
+ 895              	.LASF68:
+ 896 0525 4379426C 		.ascii	"CyBle_Start\000"
+ 896      655F5374 
+ 896      61727400 
+ 897              	.LASF10:
+ 898 0531 75696E74 		.ascii	"uint32\000"
+ 898      333200
+ 899              	.LASF63:
+ 900 0538 53746F6E 		.ascii	"Stone_PWM_Stop\000"
+ 900      655F5057 
+ 900      4D5F5374 
+ 900      6F7000
+ 901              	.LASF5:
+ 902 0547 6C6F6E67 		.ascii	"long unsigned int\000"
+ 902      20756E73 
+ 902      69676E65 
+ 902      6420696E 
+ 902      7400
+ 903              	.LASF12:
+ 904 0559 646F7562 		.ascii	"double\000"
+ 904      6C6500
+ 905              	.LASF35:
+ 906 0560 4359424C 		.ascii	"CYBLE_ERROR_GATT_DB_INVALID_ATTR_HANDLE\000"
+ 906      455F4552 
+ 906      524F525F 
+ 906      47415454 
+ 906      5F44425F 
+ 907              	.LASF62:
+ 908 0588 74635F69 		.ascii	"tc_isr_Stop\000"
+ 908      73725F53 
+ 908      746F7000 
+ 909              	.LASF34:
+ 910 0594 4359424C 		.ascii	"CYBLE_ERROR_L2CAP_PSM_NOT_IN_RANGE\000"
+ 910      455F4552 
+ 910      524F525F 
+ 910      4C324341 
+ 910      505F5053 
+ 911              	.LASF53:
+ 912 05b7 4C45445F 		.ascii	"LED_Write\000"
+ 912      57726974 
+ 912      6500
+ 913              	.LASF44:
+ 914 05c1 4359424C 		.ascii	"CYBLE_ERROR_NTF_DISABLED\000"
+ 914      455F4552 
+ 914      524F525F 
+ 914      4E54465F 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccTnT2jJ.s 			page 22
 
 
- 916              	.LASF43:
- 917 05bf 4359424C 		.ascii	"CYBLE_ERROR_MAX\000"
- 917      455F4552 
- 917      524F525F 
- 917      4D415800 
- 918              	.LASF47:
- 919 05cf 4359424C 		.ascii	"CYBLE_ERROR_INVALID_STATE\000"
- 919      455F4552 
- 919      524F525F 
- 919      494E5641 
- 919      4C49445F 
- 920              	.LASF66:
- 921 05e9 2E5C5374 		.ascii	".\\Stone_Init.c\000"
- 921      6F6E655F 
- 921      496E6974 
- 921      2E6300
- 922              	.LASF56:
- 923 05f8 53746F6E 		.ascii	"Stone_Timer_Start\000"
- 923      655F5469 
- 923      6D65725F 
- 923      53746172 
- 923      7400
- 924              	.LASF67:
- 925 060a 453A5C53 		.ascii	"E:\\Stone_Project\\fw-BLE-Motor\\fw-stone\\Stone.cy"
- 925      746F6E65 
- 925      5F50726F 
- 925      6A656374 
- 925      5C66772D 
- 926 0639 64736E00 		.ascii	"dsn\000"
+ 914      44495341 
+ 915              	.LASF54:
+ 916 05da 4D6F746F 		.ascii	"Motor_Write\000"
+ 916      725F5772 
+ 916      69746500 
+ 917              	.LASF36:
+ 918 05e6 4359424C 		.ascii	"CYBLE_ERROR_DEVICE_ALREADY_EXISTS\000"
+ 918      455F4552 
+ 918      524F525F 
+ 918      44455649 
+ 918      43455F41 
+ 919              	.LASF43:
+ 920 0608 4359424C 		.ascii	"CYBLE_ERROR_MAX\000"
+ 920      455F4552 
+ 920      524F525F 
+ 920      4D415800 
+ 921              	.LASF47:
+ 922 0618 4359424C 		.ascii	"CYBLE_ERROR_INVALID_STATE\000"
+ 922      455F4552 
+ 922      524F525F 
+ 922      494E5641 
+ 922      4C49445F 
+ 923              	.LASF66:
+ 924 0632 2E5C5374 		.ascii	".\\Stone_Init.c\000"
+ 924      6F6E655F 
+ 924      496E6974 
+ 924      2E6300
+ 925              	.LASF56:
+ 926 0641 53746F6E 		.ascii	"Stone_Timer_Start\000"
+ 926      655F5469 
+ 926      6D65725F 
+ 926      53746172 
+ 926      7400
  927              	.LASF32:
- 928 063d 4359424C 		.ascii	"CYBLE_ERROR_L2CAP_CONNECTION_ENTITY_NOT_FOUND\000"
+ 928 0653 4359424C 		.ascii	"CYBLE_ERROR_L2CAP_CONNECTION_ENTITY_NOT_FOUND\000"
  928      455F4552 
  928      524F525F 
  928      4C324341 
  928      505F434F 
  929              	.LASF45:
- 930 066b 4359424C 		.ascii	"CYBLE_ERROR_IND_DISABLED\000"
+ 930 0681 4359424C 		.ascii	"CYBLE_ERROR_IND_DISABLED\000"
  930      455F4552 
  930      524F525F 
  930      494E445F 

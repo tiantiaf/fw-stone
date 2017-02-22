@@ -1,98 +1,98 @@
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/CortexM0/ARM_GCC_493/Debug/Stone_Motor.o : E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_HAL_PVT.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_STACK_PVT.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_Stack.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGap.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGatt.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGattClient.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGattDb.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGattServer.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackHostMain.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackL2cap.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_bless_isr.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_custom.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_eventHandler.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_gatt.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/CyFlash.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/CyLFClk.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/CyLib.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/LED.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/LED_aliases.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/Motor.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/Motor_Clock.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/Motor_aliases.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/Stone_PWM.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/Stone_Timer.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cmsis_armcc.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cmsis_gcc.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/core_cm0.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/core_cmFunc.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/core_cmInstr.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cyPm.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cydisabledsheets.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cyfitter.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cypins.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cytypes.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/ms_isr.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/project.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/tc_isr.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/trigger_isr.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Stone_BLEApplications.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Stone_Init.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Stone_Motor.c E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Stone_Motor.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Stone_Motor_Sequence.h E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/main.h 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/CortexM0/ARM_GCC_493/Debug/Stone_Motor.o : G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_HAL_PVT.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_STACK_PVT.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_Stack.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGap.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGatt.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGattClient.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGattDb.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGattServer.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackHostMain.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackL2cap.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_bless_isr.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_custom.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_eventHandler.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_gatt.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/CyFlash.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/CyLFClk.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/CyLib.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/LED.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/LED_aliases.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/Motor.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/Motor_Clock.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/Motor_aliases.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/Stone_PWM.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/Stone_Timer.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cmsis_armcc.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cmsis_gcc.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/core_cm0.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/core_cmFunc.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/core_cmInstr.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cyPm.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cydevice_trm.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cydisabledsheets.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cyfitter.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cypins.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cytypes.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/ms_isr.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/project.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/tc_isr.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/trigger_isr.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Stone_BLEApplications.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Stone_Init.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Stone_Motor.c G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Stone_Motor.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Stone_Motor_Sequence.h G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/main.h 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_HAL_PVT.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_HAL_PVT.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_STACK_PVT.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_STACK_PVT.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_Stack.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_Stack.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGap.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGap.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGatt.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGatt.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGattClient.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGattClient.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGattDb.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGattDb.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGattServer.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackGattServer.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackHostMain.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackHostMain.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackL2cap.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_StackL2cap.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_bless_isr.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_bless_isr.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_custom.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_custom.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_eventHandler.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_eventHandler.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_gatt.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/BLE_STONE_gatt.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/CyFlash.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/CyFlash.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/CyLFClk.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/CyLFClk.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/CyLib.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/CyLib.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/LED.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/LED.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/LED_aliases.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/LED_aliases.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/Motor.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/Motor.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/Motor_Clock.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/Motor_Clock.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/Motor_aliases.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/Motor_aliases.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/Stone_PWM.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/Stone_PWM.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/Stone_Timer.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/Stone_Timer.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cmsis_armcc.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cmsis_armcc.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cmsis_gcc.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cmsis_gcc.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/core_cm0.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/core_cm0.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/core_cmFunc.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/core_cmFunc.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/core_cmInstr.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/core_cmInstr.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cyPm.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cyPm.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cydevice_trm.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cydevice_trm.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cydisabledsheets.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cydisabledsheets.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cyfitter.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cyfitter.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cypins.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cypins.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cytypes.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cytypes.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/ms_isr.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/ms_isr.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/project.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/project.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/tc_isr.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/tc_isr.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/trigger_isr.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/trigger_isr.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Stone_BLEApplications.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Stone_BLEApplications.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Stone_Init.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Stone_Init.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Stone_Motor.c : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Stone_Motor.c : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Stone_Motor.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Stone_Motor.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Stone_Motor_Sequence.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Stone_Motor_Sequence.h : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/main.h : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/main.h : 
 

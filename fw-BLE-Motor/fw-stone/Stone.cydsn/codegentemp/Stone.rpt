@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.853ms
+Loading plugins phase: Elapsed time ==> 0s.497ms
 Initializing data phase: Elapsed time ==> 0s.000ms
 <CYPRESSTAG name="CyDsfit arguments...">
-cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cyprj -d CYBLE-014008-00 -s E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE</CYPRESSTAG>
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p G:\GitHub_Code\firmware_stone\fw-stone\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cyprj -d CYBLE-014008-00 -s G:\GitHub_Code\firmware_stone\fw-stone\fw-BLE-Motor\fw-stone\Stone.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE</CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 3s.391ms
+Elaboration phase: Elapsed time ==> 4s.827ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.085ms
+HDL generation phase: Elapsed time ==> 0s.070ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -25,23 +25,23 @@ HDL generation phase: Elapsed time ==> 0s.085ms
 ======================================================================
 Compiling:  Stone.v
 Program  :   D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\bin/warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cyprj -dcpsoc3 Stone.v -verilog
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=G:\GitHub_Code\firmware_stone\fw-stone\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cyprj -dcpsoc3 Stone.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  Stone.v
 Program  :   D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\bin/warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cyprj -dcpsoc3 Stone.v -verilog
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=G:\GitHub_Code\firmware_stone\fw-stone\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cyprj -dcpsoc3 Stone.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  Stone.v
 Program  :   vlogfe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cyprj -dcpsoc3 -verilog Stone.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=G:\GitHub_Code\firmware_stone\fw-stone\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cyprj -dcpsoc3 -verilog Stone.v
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Wed Feb 22 10:13:52 2017
+Wed Feb 22 10:54:36 2017
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 Stone.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Wed Feb 22 10:13:52 2017
+Wed Feb 22 10:54:36 2017
 
 Flattening file 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.v'
 Flattening file 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'
@@ -91,11 +91,11 @@ vlogfe:  No errors.
 ======================================================================
 Compiling:  Stone.v
 Program  :   tovif
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cyprj -dcpsoc3 -verilog Stone.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=G:\GitHub_Code\firmware_stone\fw-stone\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cyprj -dcpsoc3 -verilog Stone.v
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Wed Feb 22 10:13:52 2017
+Wed Feb 22 10:54:37 2017
 
 Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -106,9 +106,9 @@ Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\c
 Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\codegentemp\Stone.ctl'.
+Linking 'G:\GitHub_Code\firmware_stone\fw-stone\fw-BLE-Motor\fw-stone\Stone.cydsn\codegentemp\Stone.ctl'.
 Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.v'.
-Linking 'E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\codegentemp\Stone.v'.
+Linking 'G:\GitHub_Code\firmware_stone\fw-stone\fw-BLE-Motor\fw-stone\Stone.cydsn\codegentemp\Stone.v'.
 Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'.
 Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_PWM_v3_30\B_PWM_v3_30.v'.
 Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.v'.
@@ -126,11 +126,11 @@ tovif:  No errors.
 ======================================================================
 Compiling:  Stone.v
 Program  :   topld
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cyprj -dcpsoc3 -verilog Stone.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=G:\GitHub_Code\firmware_stone\fw-stone\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cyprj -dcpsoc3 -verilog Stone.v
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Wed Feb 22 10:13:53 2017
+Wed Feb 22 10:54:38 2017
 
 Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -141,9 +141,9 @@ Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\c
 Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\codegentemp\Stone.ctl'.
+Linking 'G:\GitHub_Code\firmware_stone\fw-stone\fw-BLE-Motor\fw-stone\Stone.cydsn\codegentemp\Stone.ctl'.
 Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.v'.
-Linking 'E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\codegentemp\Stone.v'.
+Linking 'G:\GitHub_Code\firmware_stone\fw-stone\fw-BLE-Motor\fw-stone\Stone.cydsn\codegentemp\Stone.v'.
 Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'.
 Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_PWM_v3_30\B_PWM_v3_30.v'.
 Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.v'.
@@ -694,16 +694,16 @@ topld:  No errors.
 
 CYPRESS_DIR    : D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp
 Warp Program   : D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\bin/warp.exe
-Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cyprj -dcpsoc3 Stone.v -verilog
+Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=G:\GitHub_Code\firmware_stone\fw-stone\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cyprj -dcpsoc3 Stone.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 3s.521ms
+Warp synthesis phase: Elapsed time ==> 1s.998ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V3.3.0.9604, Family: PSoC3, Started at: Wednesday, 22 February 2017 10:13:54
-Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cyprj -d CYBLE-014008-00 Stone.v -verilog
+cyp3fit: V3.3.0.9604, Family: PSoC3, Started at: Wednesday, 22 February 2017 10:54:38
+Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=G:\GitHub_Code\firmware_stone\fw-stone\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cyprj -d CYBLE-014008-00 Stone.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.018ms
+Design parsing phase: Elapsed time ==> 0s.033ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -1283,20 +1283,20 @@ DAC                           :      :      :      :
   7-bit IDAC                  :    0 :    1 :    1 :  0.00 %
   8-bit IDAC                  :    0 :    1 :    1 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.067ms
-Tech mapping phase: Elapsed time ==> 0s.125ms
+Technology Mapping: Elapsed time ==> 0s.064ms
+Tech mapping phase: Elapsed time ==> 0s.129ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 <CYPRESSTAG name="Analog Placement">
-Elapsed time ==> 0.1928755s
+Elapsed time ==> 0.1299034s
 </CYPRESSTAG>
-Analog Placement phase: Elapsed time ==> 0s.574ms
+Analog Placement phase: Elapsed time ==> 0s.395ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 <CYPRESSTAG name="Analog Routing">
-Route success=True, Iterations=1 Elapsed=0.0019688 secs
+Route success=True, Iterations=1 Elapsed=0.0015423 secs
 </CYPRESSTAG>
-Analog Routing phase: Elapsed time ==> 0s.003ms
+Analog Routing phase: Elapsed time ==> 0s.002ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -1307,11 +1307,11 @@ Map of item to net {
 }
 Mux Info {
 }
-Analog Code Generation phase: Elapsed time ==> 0s.039ms
+Analog Code Generation phase: Elapsed time ==> 0s.031ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
-I2076: Total run-time: 0.5 sec.
+I2076: Total run-time: 0.4 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -1335,7 +1335,7 @@ PLD Packing Summary
 <CYPRESSTAG name="Packed PLD Contents">
 Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
 </CYPRESSTAG>
-PLD Packing: Elapsed time ==> 0s.002ms
+PLD Packing: Elapsed time ==> 0s.001ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Partitioning">
 <CYPRESSTAG name="Initial Partitioning Summary">
@@ -1345,7 +1345,7 @@ Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 Partitioning: Elapsed time ==> 0s.021ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Simulated Annealing">
-Annealing: Elapsed time ==> 0s.002ms
+Annealing: Elapsed time ==> 0s.005ms
 <CYPRESSTAG name="Simulated Annealing Results">
 The seed used for moves was 114161200.
 Inital cost was 69, final cost is 69 (0.00% improvement).</CYPRESSTAG>
@@ -1942,32 +1942,32 @@ Port | Pin | Fixed |      Type |       Drive Mode |     Name | Connections
 </CYPRESSTAG>
 </CYPRESSTAG>
 Digital component placer commit/Report: Elapsed time ==> 0s.002ms
-Digital Placement phase: Elapsed time ==> 3s.201ms
+Digital Placement phase: Elapsed time ==> 1s.597ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 Routing successful.
-Digital Routing phase: Elapsed time ==> 3s.377ms
+Digital Routing phase: Elapsed time ==> 1s.214ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream and API generation">
-Bitstream and API generation phase: Elapsed time ==> 0s.484ms
+Bitstream and API generation phase: Elapsed time ==> 0s.356ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream verification">
-Bitstream verification phase: Elapsed time ==> 0s.034ms
+Bitstream verification phase: Elapsed time ==> 0s.027ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
-Warning: sta.M0019: Stone_timing.html: Warning-1366: Setup time violation found in a path from clock ( CyHFCLK ) to clock ( CyHFCLK ). (File=E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone_timing.html)
+Warning: sta.M0019: Stone_timing.html: Warning-1366: Setup time violation found in a path from clock ( CyHFCLK ) to clock ( CyHFCLK ). (File=G:\GitHub_Code\firmware_stone\fw-stone\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone_timing.html)
 Timing report is in Stone_timing.html.
-Static timing analysis phase: Elapsed time ==> 1s.982ms
+Static timing analysis phase: Elapsed time ==> 0s.546ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.237ms
+Design database save phase: Elapsed time ==> 0s.218ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 10s.101ms
+cydsfit: Elapsed time ==> 4s.578ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 10s.179ms
-API generation phase: Elapsed time ==> 4s.485ms
-Dependency generation phase: Elapsed time ==> 0s.020ms
+Fitter phase: Elapsed time ==> 4s.655ms
+API generation phase: Elapsed time ==> 2s.215ms
+Dependency generation phase: Elapsed time ==> 0s.050ms
 Cleanup phase: Elapsed time ==> 0s.001ms

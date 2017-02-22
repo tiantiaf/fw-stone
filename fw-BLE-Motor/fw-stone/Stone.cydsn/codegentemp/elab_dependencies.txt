@@ -1,4 +1,4 @@
-E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\TopDesign\TopDesign.cysch
+G:\GitHub_Code\firmware_stone\fw-stone\fw-BLE-Motor\fw-stone\Stone.cydsn\TopDesign\TopDesign.cysch
 D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v3_10\BLE_v3_10.cysym
 D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v3_10\BLE_v3_10.chm
 D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v3_10\BLE_v3_10.dll
@@ -313,7 +313,7 @@ D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprim
 D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\Custom\custom.cs
 D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\PSoC4\API\intc.c
 D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\PSoC4\API\intc.h
-E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cydwr
+G:\GitHub_Code\firmware_stone\fw-stone\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cydwr
 D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_40\PSoC4\API\cm0gcc.ld
 D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_40\PSoC4\API\Cm0RealView.scat
 D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_40\PSoC4\API\Cm0Start.c

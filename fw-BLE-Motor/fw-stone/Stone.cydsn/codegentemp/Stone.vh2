@@ -2,7 +2,7 @@
 --	Conversion of Stone.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Wed Feb 22 10:13:54 2017
+--	Wed Feb 22 10:54:38 2017
 --
 
 USE cypress.cypress.all;

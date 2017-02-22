@@ -128,20 +128,18 @@ void CustomEventHandler(uint32 event, void * eventParam)
             
             if (CYBLE_STONE_BLE_CTR_MOTOR_CHAR_HANDLE == wrReqParam->handleValPair.attrHandle)
             {
-                Stone_Motor_Mode[MODE0] = wrReqParam->handleValPair.value.val[MODE0];
-                Stone_Motor_Mode[MODE1] = wrReqParam->handleValPair.value.val[MODE1];
-                Stone_Motor_Mode[MODE2] = wrReqParam->handleValPair.value.val[MODE2];
-                Stone_Motor_Mode[MODE3] = wrReqParam->handleValPair.value.val[MODE3];
+                Stone_Motor[MOTOR_ON_INDEX] = wrReqParam->handleValPair.value.val[MOTOR_ON_INDEX];
+                Stone_Motor[MOTOR_MODE_INDEX] = wrReqParam->handleValPair.value.val[MOTOR_MODE_INDEX];
+                
                 stoneMotorUpdateEnable = TRUE;
             }
            
             if (CyBle_GattGetBusStatus() == CYBLE_STACK_STATE_FREE)
             {
                 uint8 abc[4] = { 0,0,0,0 };
-        		abc[0] = Stone_Motor_Mode[MODE0];
-        		abc[1] = Stone_Motor_Mode[MODE1];
-        		abc[2] = Stone_Motor_Mode[MODE2];
-        		abc[3] = Stone_Motor_Mode[MODE3];
+        		abc[MOTOR_ON_INDEX] = Stone_Motor[MOTOR_ON_INDEX];
+        		abc[MOTOR_MODE_INDEX] = Stone_Motor[MOTOR_MODE_INDEX];
+        		
                 
                 UpdateMotorCharacteristic(abc, 4);
         		

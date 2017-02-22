@@ -14,7 +14,7 @@
 
 #include <main.h>
     
-#define MOTOR_MODE_LENGTH     4 
+#define MOTOR_LENGTH     4 
     
 #define MOTOR_ON		0x01
 #define MOTOR_OFF       0x00
@@ -22,8 +22,12 @@
 #define MOTOR_INACTIVE      0x00    
 #define MOTOR_ACTIVE        0x01
 #define MOTOR_DEFAULT       0x02
+    
+/* Define Location of Motor Register */
+#define MOTOR_ON_INDEX      0x00
+#define MOTOR_MODE_INDEX    0x01
 
-extern uint8 Stone_Motor_Mode[MOTOR_MODE_LENGTH];
+extern uint8 Stone_Motor[MOTOR_LENGTH];
 
 void StoneUpdateMotor(void);
 

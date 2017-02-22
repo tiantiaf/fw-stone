@@ -1,5 +1,5 @@
-E:\Stone_Project\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cyprj|0d4ec219-d5fd-42fc-8ffd-c6011c58b283
-D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|f59e20da-8537-41fd-ad18-2d5b81633435
-D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|13ddec19-edcf-457f-8388-ba6282bff30d
-D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|c700ff02-e1e3-47d2-ab83-d5fd6fd84f6b
-D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|82fc2aca-192a-499e-abf8-608b30cadf46
+G:\GitHub_Code\firmware_stone\fw-stone\fw-BLE-Motor\fw-stone\Stone.cydsn\Stone.cyprj|3344c25f-8ea9-45c6-943e-52d864906030
+D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|31333e34-5f94-4edf-be91-25c4249f2351
+D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|b4498c8e-ce77-4f13-8193-5b6299f80af0
+D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|7eda08c9-db6e-4985-8555-1164b7512fa9
+D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|dac865ef-2424-41e0-a21a-fe96c67681c8

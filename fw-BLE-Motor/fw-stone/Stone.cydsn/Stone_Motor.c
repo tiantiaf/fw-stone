@@ -19,14 +19,16 @@
 uint8 status = MOTOR_INACTIVE;
 uint16 ms_count = PERIOD_PER_CYCLE_RUN - 1;
 
-uint8 Stone_Motor_Mode[MOTOR_MODE_LENGTH];
+uint8 Stone_Motor[MOTOR_LENGTH];
+
+uint8 Stone_Motor_Mode;
 
 void UpdateMotorPWM(uint8 index);
 
 void StoneUpdateMotor()
 {
     /* Mode 0, just on and off */
-    if (Stone_Motor_Mode[MODE0] == MOTOR_ON)
+    if (Stone_Motor[MOTOR_ON_INDEX] == MOTOR_ON)
     {
         Motor_Write(MOTOR_ON);
         //InitStoneInterrupt();
@@ -35,6 +37,11 @@ void StoneUpdateMotor()
         Motor_Write(MOTOR_OFF);
         //StopStoneInterrupt();
     }
+    /*
+    switch()
+    {
+        case MODE0
+    }*/
 }
 
 CY_ISR(TRIGGER_ISR) {
