@@ -21,7 +21,7 @@ uint16 ms_count = PERIOD_PER_CYCLE_RUN - 1;
 
 uint8 Stone_Motor[MOTOR_LENGTH];
 
-uint8 Stone_Motor_Mode;
+volatile uint8 Stone_Motor_Mode;
 
 void UpdateMotorPWM(uint8 index);
 
@@ -30,18 +30,30 @@ void StoneUpdateMotor()
     /* Mode 0, just on and off */
     if (Stone_Motor[MOTOR_ON_INDEX] == MOTOR_ON)
     {
-        Motor_Write(MOTOR_ON);
-        //InitStoneInterrupt();
+        Stone_Motor_Mode = Stone_Motor[MOTOR_MODE_INDEX];
+        
+        /* If Motor is set to be on, we decide which mode we want to be */
+        switch(Stone_Motor_Mode)
+        {
+            case MODE0:
+                Motor_Write(MOTOR_ON);
+                break;
+            
+            case MODE1:
+                InitStoneInterrupt();
+                break;    
+                
+            default:
+                break;
+                
+        }
         
     } else {
         Motor_Write(MOTOR_OFF);
-        //StopStoneInterrupt();
+        Stone_Motor_Mode = 0;
+        StopStoneInterrupt();
     }
-    /*
-    switch()
-    {
-        case MODE0
-    }*/
+    
 }
 
 CY_ISR(TRIGGER_ISR) {
@@ -54,26 +66,14 @@ CY_ISR(TC_ISR) {
 
 CY_ISR(MS_ISR) {
     
-    switch(status)
+    if(ms_count == 0)
     {
-        case MOTOR_ACTIVE:
-            
-            if(ms_count == 0)
-            {
-               status = MOTOR_ACTIVE;
-               ms_count = PERIOD_PER_CYCLE_RUN - 1;
-            }
-            
-            UpdateMotorPWM(ms_count);
-            ms_count--;
-        	
-            break;
-        
-        case MOTOR_DEFAULT:
-            break;
-    
+       ms_count = PERIOD_PER_CYCLE_RUN - 1;
     }
-      
+    
+    UpdateMotorPWM(ms_count);
+    ms_count--;
+     
 }
 
 void UpdateMotorPWM(uint8 index)
