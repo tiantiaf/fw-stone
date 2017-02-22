@@ -125,27 +125,6 @@ void CustomEventHandler(uint32 event, void * eventParam)
             
             wrReqParam = (CYBLE_GATTS_WRITE_REQ_PARAM_T *)eventParam;
             
-            if (CYBLE_STONE_BLE_CTR_LED_CHAR_HANDLE == wrReqParam->handleValPair.attrHandle)
-    		{
-    			LED_Mode[MODE0] = wrReqParam->handleValPair.value.val[MODE0];
-                LED_Mode[MODE1] = wrReqParam->handleValPair.value.val[MODE1];
-                LED_Mode[MODE2] = wrReqParam->handleValPair.value.val[MODE2];
-                LED_Mode[MODE3] = wrReqParam->handleValPair.value.val[MODE3];
-                
-                ledUpdateEnabled = TRUE;
-    		}
-            
-            if (CyBle_GattGetBusStatus() == CYBLE_STACK_STATE_FREE)
-            {
-                uint8 abc[4] = { 0,0,0,0 };
-        		abc[0] = LED_Mode[MODE0];
-        		abc[1] = LED_Mode[MODE1];
-        		abc[2] = LED_Mode[MODE2];
-        		abc[3] = LED_Mode[MODE3];
-                
-                UpdateLEDCharacteristic(abc, 4);
-        		
-            }
             
             if (CYBLE_STONE_BLE_CTR_MOTOR_CHAR_HANDLE == wrReqParam->handleValPair.attrHandle)
             {
@@ -217,7 +196,6 @@ void UpdateLEDCharacteristic(uint8* ledData, uint8 len)
 	CyBle_GattsWriteAttributeValue(&setHandle, FALSE, &connectionHandle, FALSE);
 	CyBle_ProcessEvents();
     
-    //CyBle_GattsWriteRsp(connectionHandle);
 }
 
 

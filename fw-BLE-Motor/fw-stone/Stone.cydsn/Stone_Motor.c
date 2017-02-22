@@ -25,7 +25,6 @@ void UpdateMotorPWM(uint8 index);
 
 void StoneUpdateMotor()
 {
-    Motor_Write(MOTOR_ON);
     /* Mode 0, just on and off */
     if (Stone_Motor_Mode[MODE0] == MOTOR_ON)
     {
