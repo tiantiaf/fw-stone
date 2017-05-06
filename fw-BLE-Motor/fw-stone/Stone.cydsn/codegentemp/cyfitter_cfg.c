@@ -537,8 +537,11 @@ void cyfitter_cfg(void)
 		/* UDB_PA_0 Starting address: CYDEV_UDB_PA0_BASE */
 		CY_SET_XTND_REG32((void CYFAR *)(CYDEV_UDB_PA0_BASE), 0x00990000u);
 
-		/* UDB_PA_1 Starting address: CYDEV_UDB_PA1_BASE */
-		CY_SET_XTND_REG32((void CYFAR *)(CYDEV_UDB_PA1_BASE), 0x00990000u);
+		/* UDB_PA_2 Starting address: CYDEV_UDB_PA2_BASE */
+		CY_SET_XTND_REG32((void CYFAR *)(CYDEV_UDB_PA2_BASE), 0x00990000u);
+
+		/* UDB_PA_3 Starting address: CYDEV_UDB_PA3_BASE */
+		CY_SET_XTND_REG32((void CYFAR *)(CYDEV_UDB_PA3_BASE), 0x00990000u);
 
 		/* INT_SELECT Starting address: CYDEV_CPUSS_INT_SEL */
 		CY_SET_XTND_REG32((void CYFAR *)(CYREG_CPUSS_INT_SEL), 0x0000000Eu);
@@ -558,8 +561,11 @@ void cyfitter_cfg(void)
 	/* IOPINS0_0 Starting address: CYDEV_GPIO_PRT0_BASE */
 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_GPIO_PRT0_PC), 0x00D80000u);
 
-	/* IOPINS0_1 Starting address: CYDEV_GPIO_PRT1_BASE */
-	CY_SET_XTND_REG32((void CYFAR *)(CYREG_GPIO_PRT1_PC), 0x00000D80u);
+	/* IOPINS0_2 Starting address: CYDEV_GPIO_PRT2_BASE */
+	CY_SET_XTND_REG32((void CYFAR *)(CYREG_GPIO_PRT2_PC), 0x00180000u);
+
+	/* IOPINS0_3 Starting address: CYDEV_GPIO_PRT3_BASE */
+	CY_SET_XTND_REG32((void CYFAR *)(CYREG_GPIO_PRT3_PC), 0x00C00000u);
 
 
 	/* Setup clocks based on selections from Clock DWR */

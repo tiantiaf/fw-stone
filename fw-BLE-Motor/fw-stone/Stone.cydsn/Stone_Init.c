@@ -12,6 +12,7 @@
 
 #include "Stone_Init.h"
 #include "Stone_Motor.h"
+#include "Stone_Motor_Sequence.h"
 
 
 /*******************************************************************************
@@ -39,13 +40,23 @@ void InitializeSystem(void)
     LED_Write(LED_ON);
     
     Motor_Write(MOTOR_OFF);
+    
+    Stone_Motor[2] = 4;
+    Stone_Motor[3] = 50;
 }
 
 void InitStoneInterrupt()
 {
+    uint16 timer_Period;
+    
     /* Init Timer and PWM */
     Stone_PWM_Init();
     Stone_Timer_Init();
+    
+    timer_Period = Stone_Motor[2] * 1024;
+    Stone_Timer_WritePeriod(timer_Period);
+    
+    Stone_Sequence_Init();
     
     /* Start Timer and PWM */
     Stone_Timer_Start();
@@ -53,7 +64,9 @@ void InitStoneInterrupt()
     
     ms_isr_StartEx(MS_ISR);
     trigger_isr_StartEx(TRIGGER_ISR);
-	tc_isr_StartEx(TC_ISR);   
+	tc_isr_StartEx(TC_ISR); 
+    
+    
 }
 
 void StopStoneInterrupt(void)
@@ -65,6 +78,37 @@ void StopStoneInterrupt(void)
     /* Stop Timer and PWM */
     Stone_PWM_Stop();
     Stone_Timer_Stop(); // Configure and enable ms timer
+}
+
+void Stone_Sequence_Init(void)
+{
+    uint8 offset = Stone_Motor[3] - 50;
+    uint8 i = 0;
+    
+    for( i = 0; i < PERIOD_PER_CYCLE_RUN; i++)
+    {
+        switch((Test[i] - 1) / 5)
+        {
+            case 5:
+            case 6:
+               Motor_Running_Sequence[i] = Test[i] + (offset / 3);
+               break;
+            
+            case 7:
+            case 8:
+               Motor_Running_Sequence[i] = Test[i] + (offset * 2) / 3;
+               break;
+            
+            case 9:
+               Motor_Running_Sequence[i] = Test[i] + offset;
+               break;
+            
+            default:
+               Motor_Running_Sequence[i] = Test[i];
+               break;
+        }
+    } 
+    
 }
 
 /* [] END OF FILE */

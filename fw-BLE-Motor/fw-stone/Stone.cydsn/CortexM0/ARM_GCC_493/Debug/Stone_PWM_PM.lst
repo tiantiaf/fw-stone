@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 1
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAlwvI4.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 1
   30:.\Generated_Source\PSoC4/Stone_PWM_PM.c **** * Parameters:
   31:.\Generated_Source\PSoC4/Stone_PWM_PM.c **** *  None
   32:.\Generated_Source\PSoC4/Stone_PWM_PM.c **** *
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 2
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAlwvI4.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/Stone_PWM_PM.c **** * Return:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 1
   48 001a E071     		strb	r0, [r4, #7]
   65:.\Generated_Source\PSoC4/Stone_PWM_PM.c ****         #endif /* (Stone_PWM_UseControl) */
   66:.\Generated_Source\PSoC4/Stone_PWM_PM.c ****     #endif  /* (!Stone_PWM_UsingFixedFunction) */
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 3
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAlwvI4.s 			page 3
 
 
   67:.\Generated_Source\PSoC4/Stone_PWM_PM.c **** }
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 1
   77 0006 FFF7FEFF 		bl	Stone_PWM_WritePeriod
   78              	.LVL3:
   93:.\Generated_Source\PSoC4/Stone_PWM_PM.c ****             #endif /* (!Stone_PWM_PWMModeIsCenterAligned) */
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 4
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAlwvI4.s 			page 4
 
 
   94:.\Generated_Source\PSoC4/Stone_PWM_PM.c **** 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 1
  117:.\Generated_Source\PSoC4/Stone_PWM_PM.c **** /*******************************************************************************
  118:.\Generated_Source\PSoC4/Stone_PWM_PM.c **** * Function Name: Stone_PWM_Sleep
  119:.\Generated_Source\PSoC4/Stone_PWM_PM.c **** ********************************************************************************
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 5
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAlwvI4.s 			page 5
 
 
  120:.\Generated_Source\PSoC4/Stone_PWM_PM.c **** *
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 1
  151:.\Generated_Source\PSoC4/Stone_PWM_PM.c ****     /* Stop component */
  152:.\Generated_Source\PSoC4/Stone_PWM_PM.c ****     Stone_PWM_Stop();
  133              		.loc 1 152 0
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 6
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAlwvI4.s 			page 6
 
 
  134 001a FFF7FEFF 		bl	Stone_PWM_Stop
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 1
  161              		.cfi_def_cfa_offset 8
  162              		.cfi_offset 3, -8
  163              		.cfi_offset 14, -4
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 7
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAlwvI4.s 			page 7
 
 
  180:.\Generated_Source\PSoC4/Stone_PWM_PM.c ****      /* Restore registers values */
@@ -412,28 +412,28 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 1
  201 0006 00000000 		.4byte	.Ldebug_abbrev0
  202 000a 04       		.byte	0x4
  203 000b 01       		.uleb128 0x1
- 204 000c E0010000 		.4byte	.LASF34
+ 204 000c 29020000 		.4byte	.LASF34
  205 0010 01       		.byte	0x1
- 206 0011 BF000000 		.4byte	.LASF35
- 207 0015 B4020000 		.4byte	.LASF36
+ 206 0011 08010000 		.4byte	.LASF35
+ 207 0015 52000000 		.4byte	.LASF36
  208 0019 00000000 		.4byte	.Ldebug_ranges0+0
  209 001d 00000000 		.4byte	0
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 8
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAlwvI4.s 			page 8
 
 
  210 0021 00000000 		.4byte	.Ldebug_line0
  211 0025 02       		.uleb128 0x2
  212 0026 01       		.byte	0x1
  213 0027 06       		.byte	0x6
- 214 0028 A8020000 		.4byte	.LASF0
+ 214 0028 F1020000 		.4byte	.LASF0
  215 002c 02       		.uleb128 0x2
  216 002d 01       		.byte	0x1
  217 002e 08       		.byte	0x8
- 218 002f 8E000000 		.4byte	.LASF1
+ 218 002f D7000000 		.4byte	.LASF1
  219 0033 02       		.uleb128 0x2
  220 0034 02       		.byte	0x2
  221 0035 05       		.byte	0x5
- 222 0036 6E020000 		.4byte	.LASF2
+ 222 0036 B7020000 		.4byte	.LASF2
  223 003a 02       		.uleb128 0x2
  224 003b 02       		.byte	0x2
  225 003c 07       		.byte	0x7
@@ -441,19 +441,19 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 1
  227 0041 02       		.uleb128 0x2
  228 0042 04       		.byte	0x4
  229 0043 05       		.byte	0x5
- 230 0044 9F020000 		.4byte	.LASF4
+ 230 0044 E8020000 		.4byte	.LASF4
  231 0048 02       		.uleb128 0x2
  232 0049 04       		.byte	0x4
  233 004a 07       		.byte	0x7
- 234 004b AD000000 		.4byte	.LASF5
+ 234 004b F6000000 		.4byte	.LASF5
  235 004f 02       		.uleb128 0x2
  236 0050 08       		.byte	0x8
  237 0051 05       		.byte	0x5
- 238 0052 B7010000 		.4byte	.LASF6
+ 238 0052 00020000 		.4byte	.LASF6
  239 0056 02       		.uleb128 0x2
  240 0057 08       		.byte	0x8
  241 0058 07       		.byte	0x7
- 242 0059 6C010000 		.4byte	.LASF7
+ 242 0059 B5010000 		.4byte	.LASF7
  243 005d 03       		.uleb128 0x3
  244 005e 04       		.byte	0x4
  245 005f 05       		.byte	0x5
@@ -461,34 +461,34 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 1
  247 0064 02       		.uleb128 0x2
  248 0065 04       		.byte	0x4
  249 0066 07       		.byte	0x7
- 250 0067 5F010000 		.4byte	.LASF8
+ 250 0067 A8010000 		.4byte	.LASF8
  251 006b 04       		.uleb128 0x4
- 252 006c E7000000 		.4byte	.LASF9
+ 252 006c 30010000 		.4byte	.LASF9
  253 0070 02       		.byte	0x2
  254 0071 9801     		.2byte	0x198
  255 0073 2C000000 		.4byte	0x2c
  256 0077 04       		.uleb128 0x4
- 257 0078 47010000 		.4byte	.LASF10
+ 257 0078 90010000 		.4byte	.LASF10
  258 007c 02       		.byte	0x2
  259 007d 9901     		.2byte	0x199
  260 007f 3A000000 		.4byte	0x3a
  261 0083 02       		.uleb128 0x2
  262 0084 04       		.byte	0x4
  263 0085 04       		.byte	0x4
- 264 0086 88000000 		.4byte	.LASF11
+ 264 0086 D1000000 		.4byte	.LASF11
  265 008a 02       		.uleb128 0x2
  266 008b 08       		.byte	0x8
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 9
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAlwvI4.s 			page 9
 
 
  267 008c 04       		.byte	0x4
- 268 008d 40010000 		.4byte	.LASF12
+ 268 008d 89010000 		.4byte	.LASF12
  269 0091 02       		.uleb128 0x2
  270 0092 01       		.byte	0x1
  271 0093 08       		.byte	0x8
- 272 0094 DB010000 		.4byte	.LASF13
+ 272 0094 24020000 		.4byte	.LASF13
  273 0098 04       		.uleb128 0x4
- 274 0099 92010000 		.4byte	.LASF14
+ 274 0099 DB010000 		.4byte	.LASF14
  275 009d 02       		.byte	0x2
  276 009e 4202     		.2byte	0x242
  277 00a0 A4000000 		.4byte	0xa4
@@ -497,14 +497,14 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 1
  280 00a9 02       		.uleb128 0x2
  281 00aa 04       		.byte	0x4
  282 00ab 07       		.byte	0x7
- 283 00ac AE010000 		.4byte	.LASF15
+ 283 00ac F7010000 		.4byte	.LASF15
  284 00b0 06       		.uleb128 0x6
  285 00b1 08       		.byte	0x8
  286 00b2 03       		.byte	0x3
  287 00b3 6B       		.byte	0x6b
  288 00b4 F5000000 		.4byte	0xf5
  289 00b8 07       		.uleb128 0x7
- 290 00b9 90020000 		.4byte	.LASF16
+ 290 00b9 D9020000 		.4byte	.LASF16
  291 00bd 03       		.byte	0x3
  292 00be 6E       		.byte	0x6e
  293 00bf 6B000000 		.4byte	0x6b
@@ -522,28 +522,28 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 1
  305 00d7 77000000 		.4byte	0x77
  306 00db 04       		.byte	0x4
  307 00dc 07       		.uleb128 0x7
- 308 00dd E7020000 		.4byte	.LASF19
+ 308 00dd FD020000 		.4byte	.LASF19
  309 00e1 03       		.byte	0x3
  310 00e2 76       		.byte	0x76
  311 00e3 6B000000 		.4byte	0x6b
  312 00e7 06       		.byte	0x6
  313 00e8 07       		.uleb128 0x7
- 314 00e9 18010000 		.4byte	.LASF20
+ 314 00e9 61010000 		.4byte	.LASF20
  315 00ed 03       		.byte	0x3
  316 00ee 86       		.byte	0x86
  317 00ef 6B000000 		.4byte	0x6b
  318 00f3 07       		.byte	0x7
  319 00f4 00       		.byte	0
  320 00f5 08       		.uleb128 0x8
- 321 00f6 97010000 		.4byte	.LASF21
+ 321 00f6 E0010000 		.4byte	.LASF21
  322 00fa 03       		.byte	0x3
  323 00fb 8B       		.byte	0x8b
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 10
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAlwvI4.s 			page 10
 
 
  324 00fc B0000000 		.4byte	0xb0
  325 0100 09       		.uleb128 0x9
- 326 0101 ED000000 		.4byte	.LASF22
+ 326 0101 36010000 		.4byte	.LASF22
  327 0105 01       		.byte	0x1
  328 0106 2A       		.byte	0x2a
  329 0107 00000000 		.4byte	.LFB2
@@ -562,7 +562,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 1
  342 012c D9010000 		.4byte	0x1d9
  343 0130 00       		.byte	0
  344 0131 09       		.uleb128 0x9
- 345 0132 78020000 		.4byte	.LASF23
+ 345 0132 C1020000 		.4byte	.LASF23
  346 0136 01       		.byte	0x1
  347 0137 58       		.byte	0x58
  348 0138 00000000 		.4byte	.LFB3
@@ -597,8 +597,8 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 1
  377 0185 00010000 		.4byte	0x100
  378 0189 00       		.byte	0
  379 018a 09       		.uleb128 0x9
- 380 018b 4E010000 		.4byte	.LASF25
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 11
+ 380 018b 97010000 		.4byte	.LASF25
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAlwvI4.s 			page 11
 
 
  381 018f 01       		.byte	0x1
@@ -616,7 +616,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 1
  393 01ad 1E020000 		.4byte	0x21e
  394 01b1 00       		.byte	0
  395 01b2 0B       		.uleb128 0xb
- 396 01b3 9C000000 		.4byte	.LASF37
+ 396 01b3 E5000000 		.4byte	.LASF37
  397 01b7 01       		.byte	0x1
  398 01b8 14       		.byte	0x14
  399 01b9 F5000000 		.4byte	0xf5
@@ -624,12 +624,12 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 1
  401 01be 03       		.byte	0x3
  402 01bf 00000000 		.4byte	Stone_PWM_backup
  403 01c3 0C       		.uleb128 0xc
- 404 01c4 2B010000 		.4byte	.LASF26
+ 404 01c4 74010000 		.4byte	.LASF26
  405 01c8 03       		.byte	0x3
  406 01c9 C0       		.byte	0xc0
  407 01ca 77000000 		.4byte	0x77
  408 01ce 0C       		.uleb128 0xc
- 409 01cf 02010000 		.4byte	.LASF27
+ 409 01cf 4B010000 		.4byte	.LASF27
  410 01d3 03       		.byte	0x3
  411 01d4 B3       		.byte	0xb3
  412 01d5 77000000 		.4byte	0x77
@@ -639,7 +639,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 1
  416 01df 9D       		.byte	0x9d
  417 01e0 6B000000 		.4byte	0x6b
  418 01e4 0D       		.uleb128 0xd
- 419 01e5 C5010000 		.4byte	.LASF29
+ 419 01e5 0E020000 		.4byte	.LASF29
  420 01e9 03       		.byte	0x3
  421 01ea BE       		.byte	0xbe
  422 01eb F5010000 		.4byte	0x1f5
@@ -647,7 +647,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 1
  424 01f0 77000000 		.4byte	0x77
  425 01f4 00       		.byte	0
  426 01f5 0D       		.uleb128 0xd
- 427 01f6 71000000 		.4byte	.LASF30
+ 427 01f6 BA000000 		.4byte	.LASF30
  428 01fa 03       		.byte	0x3
  429 01fb BA       		.byte	0xba
  430 01fc 06020000 		.4byte	0x206
@@ -655,10 +655,10 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 1
  432 0201 77000000 		.4byte	0x77
  433 0205 00       		.byte	0
  434 0206 0D       		.uleb128 0xd
- 435 0207 52000000 		.4byte	.LASF31
+ 435 0207 9B000000 		.4byte	.LASF31
  436 020b 03       		.byte	0x3
  437 020c 9E       		.byte	0x9e
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 12
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAlwvI4.s 			page 12
 
 
  438 020d 17020000 		.4byte	0x217
@@ -666,11 +666,11 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 1
  440 0212 6B000000 		.4byte	0x6b
  441 0216 00       		.byte	0
  442 0217 0F       		.uleb128 0xf
- 443 0218 83010000 		.4byte	.LASF32
+ 443 0218 CC010000 		.4byte	.LASF32
  444 021c 03       		.byte	0x3
  445 021d 93       		.byte	0x93
  446 021e 0F       		.uleb128 0xf
- 447 021f FA020000 		.4byte	.LASF33
+ 447 021f 10030000 		.4byte	.LASF33
  448 0223 03       		.byte	0x3
  449 0224 DB       		.byte	0xdb
  450 0225 00       		.byte	0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 1
  492 0027 00       		.byte	0
  493 0028 00       		.byte	0
  494 0029 04       		.uleb128 0x4
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 13
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAlwvI4.s 			page 13
 
 
  495 002a 16       		.uleb128 0x16
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 1
  549 0060 3B       		.uleb128 0x3b
  550 0061 0B       		.uleb128 0xb
  551 0062 49       		.uleb128 0x49
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 14
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAlwvI4.s 			page 14
 
 
  552 0063 13       		.uleb128 0x13
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 1
  606 009c 00       		.byte	0
  607 009d 3F       		.uleb128 0x3f
  608 009e 19       		.uleb128 0x19
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 15
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAlwvI4.s 			page 15
 
 
  609 009f 03       		.uleb128 0x3
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 1
  663 00d5 19       		.uleb128 0x19
  664 00d6 00       		.byte	0
  665 00d7 00       		.byte	0
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 16
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAlwvI4.s 			page 16
 
 
  666 00d8 00       		.byte	0
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 1
  707      4D5F536C 
  707      65657000 
  708              	.LASF3:
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 17
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAlwvI4.s 			page 17
 
 
  709 003f 73686F72 		.ascii	"short unsigned int\000"
@@ -966,189 +966,193 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 1
  709      7369676E 
  709      65642069 
  709      6E7400
- 710              	.LASF31:
- 711 0052 53746F6E 		.ascii	"Stone_PWM_WriteControlRegister\000"
- 711      655F5057 
- 711      4D5F5772 
- 711      69746543 
- 711      6F6E7472 
- 712              	.LASF30:
- 713 0071 53746F6E 		.ascii	"Stone_PWM_WriteCounter\000"
- 713      655F5057 
- 713      4D5F5772 
- 713      69746543 
- 713      6F756E74 
- 714              	.LASF11:
- 715 0088 666C6F61 		.ascii	"float\000"
- 715      7400
- 716              	.LASF1:
- 717 008e 756E7369 		.ascii	"unsigned char\000"
- 717      676E6564 
- 717      20636861 
- 717      7200
- 718              	.LASF37:
- 719 009c 53746F6E 		.ascii	"Stone_PWM_backup\000"
- 719      655F5057 
- 719      4D5F6261 
- 719      636B7570 
- 719      00
- 720              	.LASF5:
- 721 00ad 6C6F6E67 		.ascii	"long unsigned int\000"
- 721      20756E73 
- 721      69676E65 
- 721      6420696E 
- 721      7400
- 722              	.LASF35:
- 723 00bf 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\Stone_PWM_PM.c\000"
- 723      6E657261 
- 723      7465645F 
- 723      536F7572 
- 723      63655C50 
- 724              	.LASF9:
- 725 00e7 75696E74 		.ascii	"uint8\000"
- 725      3800
- 726              	.LASF22:
- 727 00ed 53746F6E 		.ascii	"Stone_PWM_SaveConfig\000"
- 727      655F5057 
- 727      4D5F5361 
- 727      7665436F 
- 727      6E666967 
- 728              	.LASF27:
- 729 0102 53746F6E 		.ascii	"Stone_PWM_ReadCounter\000"
- 729      655F5057 
- 729      4D5F5265 
- 729      6164436F 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 18
+ 710              	.LASF36:
+ 711 0052 473A5C47 		.ascii	"G:\\GitHub_Code\\firmware_stone\\fw-stone\\fw-BLE-M"
+ 711      69744875 
+ 711      625F436F 
+ 711      64655C66 
+ 711      69726D77 
+ 712 0081 6F746F72 		.ascii	"otor\\fw-stone\\Stone.cydsn\000"
+ 712      5C66772D 
+ 712      73746F6E 
+ 712      655C5374 
+ 712      6F6E652E 
+ 713              	.LASF31:
+ 714 009b 53746F6E 		.ascii	"Stone_PWM_WriteControlRegister\000"
+ 714      655F5057 
+ 714      4D5F5772 
+ 714      69746543 
+ 714      6F6E7472 
+ 715              	.LASF30:
+ 716 00ba 53746F6E 		.ascii	"Stone_PWM_WriteCounter\000"
+ 716      655F5057 
+ 716      4D5F5772 
+ 716      69746543 
+ 716      6F756E74 
+ 717              	.LASF11:
+ 718 00d1 666C6F61 		.ascii	"float\000"
+ 718      7400
+ 719              	.LASF1:
+ 720 00d7 756E7369 		.ascii	"unsigned char\000"
+ 720      676E6564 
+ 720      20636861 
+ 720      7200
+ 721              	.LASF37:
+ 722 00e5 53746F6E 		.ascii	"Stone_PWM_backup\000"
+ 722      655F5057 
+ 722      4D5F6261 
+ 722      636B7570 
+ 722      00
+ 723              	.LASF5:
+ 724 00f6 6C6F6E67 		.ascii	"long unsigned int\000"
+ 724      20756E73 
+ 724      69676E65 
+ 724      6420696E 
+ 724      7400
+ 725              	.LASF35:
+ 726 0108 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\Stone_PWM_PM.c\000"
+ 726      6E657261 
+ 726      7465645F 
+ 726      536F7572 
+ 726      63655C50 
+ 727              	.LASF9:
+ 728 0130 75696E74 		.ascii	"uint8\000"
+ 728      3800
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAlwvI4.s 			page 18
 
 
- 729      756E7465 
- 730              	.LASF20:
- 731 0118 50574D43 		.ascii	"PWMControlRegister\000"
- 731      6F6E7472 
- 731      6F6C5265 
- 731      67697374 
- 731      657200
- 732              	.LASF26:
- 733 012b 53746F6E 		.ascii	"Stone_PWM_ReadPeriod\000"
- 733      655F5057 
- 733      4D5F5265 
- 733      61645065 
- 733      72696F64 
- 734              	.LASF12:
- 735 0140 646F7562 		.ascii	"double\000"
- 735      6C6500
- 736              	.LASF10:
- 737 0147 75696E74 		.ascii	"uint16\000"
- 737      313600
- 738              	.LASF25:
- 739 014e 53746F6E 		.ascii	"Stone_PWM_Wakeup\000"
- 739      655F5057 
- 739      4D5F5761 
- 739      6B657570 
- 739      00
- 740              	.LASF8:
- 741 015f 756E7369 		.ascii	"unsigned int\000"
- 741      676E6564 
- 741      20696E74 
- 741      00
- 742              	.LASF7:
- 743 016c 6C6F6E67 		.ascii	"long long unsigned int\000"
- 743      206C6F6E 
- 743      6720756E 
- 743      7369676E 
- 743      65642069 
- 744              	.LASF32:
- 745 0183 53746F6E 		.ascii	"Stone_PWM_Stop\000"
- 745      655F5057 
- 745      4D5F5374 
- 745      6F7000
- 746              	.LASF14:
- 747 0192 72656738 		.ascii	"reg8\000"
- 747      00
- 748              	.LASF21:
- 749 0197 53746F6E 		.ascii	"Stone_PWM_backupStruct\000"
- 749      655F5057 
- 749      4D5F6261 
- 749      636B7570 
- 749      53747275 
- 750              	.LASF15:
- 751 01ae 73697A65 		.ascii	"sizetype\000"
- 751      74797065 
- 751      00
- 752              	.LASF6:
- 753 01b7 6C6F6E67 		.ascii	"long long int\000"
- 753      206C6F6E 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 19
+ 729              	.LASF22:
+ 730 0136 53746F6E 		.ascii	"Stone_PWM_SaveConfig\000"
+ 730      655F5057 
+ 730      4D5F5361 
+ 730      7665436F 
+ 730      6E666967 
+ 731              	.LASF27:
+ 732 014b 53746F6E 		.ascii	"Stone_PWM_ReadCounter\000"
+ 732      655F5057 
+ 732      4D5F5265 
+ 732      6164436F 
+ 732      756E7465 
+ 733              	.LASF20:
+ 734 0161 50574D43 		.ascii	"PWMControlRegister\000"
+ 734      6F6E7472 
+ 734      6F6C5265 
+ 734      67697374 
+ 734      657200
+ 735              	.LASF26:
+ 736 0174 53746F6E 		.ascii	"Stone_PWM_ReadPeriod\000"
+ 736      655F5057 
+ 736      4D5F5265 
+ 736      61645065 
+ 736      72696F64 
+ 737              	.LASF12:
+ 738 0189 646F7562 		.ascii	"double\000"
+ 738      6C6500
+ 739              	.LASF10:
+ 740 0190 75696E74 		.ascii	"uint16\000"
+ 740      313600
+ 741              	.LASF25:
+ 742 0197 53746F6E 		.ascii	"Stone_PWM_Wakeup\000"
+ 742      655F5057 
+ 742      4D5F5761 
+ 742      6B657570 
+ 742      00
+ 743              	.LASF8:
+ 744 01a8 756E7369 		.ascii	"unsigned int\000"
+ 744      676E6564 
+ 744      20696E74 
+ 744      00
+ 745              	.LASF7:
+ 746 01b5 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 746      206C6F6E 
+ 746      6720756E 
+ 746      7369676E 
+ 746      65642069 
+ 747              	.LASF32:
+ 748 01cc 53746F6E 		.ascii	"Stone_PWM_Stop\000"
+ 748      655F5057 
+ 748      4D5F5374 
+ 748      6F7000
+ 749              	.LASF14:
+ 750 01db 72656738 		.ascii	"reg8\000"
+ 750      00
+ 751              	.LASF21:
+ 752 01e0 53746F6E 		.ascii	"Stone_PWM_backupStruct\000"
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAlwvI4.s 			page 19
 
 
- 753      6720696E 
- 753      7400
- 754              	.LASF29:
- 755 01c5 53746F6E 		.ascii	"Stone_PWM_WritePeriod\000"
- 755      655F5057 
- 755      4D5F5772 
- 755      69746550 
- 755      6572696F 
- 756              	.LASF13:
- 757 01db 63686172 		.ascii	"char\000"
- 757      00
- 758              	.LASF34:
- 759 01e0 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 759      4320342E 
- 759      392E3320 
- 759      32303135 
- 759      30333033 
- 760 0213 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 760      20726576 
- 760      6973696F 
- 760      6E203232 
- 760      31323230 
- 761 0246 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 761      66756E63 
- 761      74696F6E 
- 761      2D736563 
- 761      74696F6E 
- 762              	.LASF2:
- 763 026e 73686F72 		.ascii	"short int\000"
- 763      7420696E 
- 763      7400
- 764              	.LASF23:
- 765 0278 53746F6E 		.ascii	"Stone_PWM_RestoreConfig\000"
- 765      655F5057 
- 765      4D5F5265 
- 765      73746F72 
- 765      65436F6E 
- 766              	.LASF16:
- 767 0290 50574D45 		.ascii	"PWMEnableState\000"
- 767      6E61626C 
- 767      65537461 
- 767      746500
- 768              	.LASF4:
- 769 029f 6C6F6E67 		.ascii	"long int\000"
- 769      20696E74 
- 769      00
- 770              	.LASF0:
- 771 02a8 7369676E 		.ascii	"signed char\000"
- 771      65642063 
- 771      68617200 
- 772              	.LASF36:
- 773 02b4 453A5C53 		.ascii	"E:\\Stone_Project\\fw-BLE-Motor\\fw-stone\\Stone.cy"
- 773      746F6E65 
- 773      5F50726F 
- 773      6A656374 
- 773      5C66772D 
- 774 02e3 64736E00 		.ascii	"dsn\000"
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccODgs9P.s 			page 20
+ 752      655F5057 
+ 752      4D5F6261 
+ 752      636B7570 
+ 752      53747275 
+ 753              	.LASF15:
+ 754 01f7 73697A65 		.ascii	"sizetype\000"
+ 754      74797065 
+ 754      00
+ 755              	.LASF6:
+ 756 0200 6C6F6E67 		.ascii	"long long int\000"
+ 756      206C6F6E 
+ 756      6720696E 
+ 756      7400
+ 757              	.LASF29:
+ 758 020e 53746F6E 		.ascii	"Stone_PWM_WritePeriod\000"
+ 758      655F5057 
+ 758      4D5F5772 
+ 758      69746550 
+ 758      6572696F 
+ 759              	.LASF13:
+ 760 0224 63686172 		.ascii	"char\000"
+ 760      00
+ 761              	.LASF34:
+ 762 0229 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 762      4320342E 
+ 762      392E3320 
+ 762      32303135 
+ 762      30333033 
+ 763 025c 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 763      20726576 
+ 763      6973696F 
+ 763      6E203232 
+ 763      31323230 
+ 764 028f 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 764      66756E63 
+ 764      74696F6E 
+ 764      2D736563 
+ 764      74696F6E 
+ 765              	.LASF2:
+ 766 02b7 73686F72 		.ascii	"short int\000"
+ 766      7420696E 
+ 766      7400
+ 767              	.LASF23:
+ 768 02c1 53746F6E 		.ascii	"Stone_PWM_RestoreConfig\000"
+ 768      655F5057 
+ 768      4D5F5265 
+ 768      73746F72 
+ 768      65436F6E 
+ 769              	.LASF16:
+ 770 02d9 50574D45 		.ascii	"PWMEnableState\000"
+ 770      6E61626C 
+ 770      65537461 
+ 770      746500
+ 771              	.LASF4:
+ 772 02e8 6C6F6E67 		.ascii	"long int\000"
+ 772      20696E74 
+ 772      00
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAlwvI4.s 			page 20
 
 
+ 773              	.LASF0:
+ 774 02f1 7369676E 		.ascii	"signed char\000"
+ 774      65642063 
+ 774      68617200 
  775              	.LASF19:
- 776 02e7 496E7465 		.ascii	"InterruptMaskValue\000"
+ 776 02fd 496E7465 		.ascii	"InterruptMaskValue\000"
  776      72727570 
  776      744D6173 
  776      6B56616C 
  776      756500
  777              	.LASF33:
- 778 02fa 53746F6E 		.ascii	"Stone_PWM_Enable\000"
+ 778 0310 53746F6E 		.ascii	"Stone_PWM_Enable\000"
  778      655F5057 
  778      4D5F456E 
  778      61626C65 

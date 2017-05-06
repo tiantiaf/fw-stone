@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Stone-000\Stone\Source Files\Stone_Init.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Stone-000\Stone\TopDesign">
 <ExpandedNodeIds>
 <v>Stone-000</v>
 <v>Stone-000\Stone</v>
@@ -232,8 +232,6 @@
 <v>Stone-000\Stone\CortexM0\ARM_GCC_493\Debug\Listing Files\Motor.lst</v>
 <v>Stone-000\Stone\CortexM0\ARM_GCC_493\Debug\Listing Files\Motor_Clock.lst</v>
 <v>Stone-000\Stone\CortexM0\ARM_GCC_493\Debug\Listing Files\Motor_PM.lst</v>
-<v>Stone-000\Stone\CortexM0\ARM_GCC_493\Debug\Listing Files\ms_isr.lst</v>
-<v>Stone-000\Stone\CortexM0\ARM_GCC_493\Debug\Listing Files\Stone_BLEApplications.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -294,18 +292,14 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\main.c" />
-<name v=".\main.h" />
-<name v=".\Stone_Init.c" />
-<name v=".\Stone_Init.h" />
+<name v=".\Stone_Motor_Sequence.h" />
 <name v=".\TopDesign\TopDesign.cysch" />
-<name v=".\Stone_Motor.h" />
-<name v=".\Stone_Motor.c" />
 <name v=".\Stone.cydwr" />
 <name v=".\Stone_BLEApplications.c" />
-<name v=".\Stone_BLEApplications.h" />
-<name v=".\Stone_LED.h" />
-<name v=".\Stone_LED.c" />
-<name v=".\Generated_Source\PSoC4\BLE_STONE_custom.h" />
+<name v=".\Stone_Motor.c" />
+<name v=".\Stone_Init.c" />
+<name v=".\Stone_Motor.h" />
+<name v=".\Stone_Init.h" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />

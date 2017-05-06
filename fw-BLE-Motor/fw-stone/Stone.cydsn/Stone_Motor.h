@@ -13,6 +13,7 @@
 #define Stone_Motor_H
 
 #include <main.h>
+#include "Stone_Motor_Sequence.h"
     
 #define MOTOR_LENGTH     4 
     
@@ -26,8 +27,11 @@
 /* Define Location of Motor Register */
 #define MOTOR_ON_INDEX      0x00
 #define MOTOR_MODE_INDEX    0x01
+#define MOTOR_TIME_INDEX    0x02
+#define MOTOR_PWM_INDEX     0x03
 
-extern uint8 Stone_Motor[MOTOR_LENGTH];
+extern volatile uint8 Stone_Motor[MOTOR_LENGTH];
+extern const uint8 Test[PERIOD_PER_CYCLE_RUN];
 
 void StoneUpdateMotor(void);
 

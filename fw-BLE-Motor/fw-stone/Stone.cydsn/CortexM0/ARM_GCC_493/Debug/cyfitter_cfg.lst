@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 1
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 1
   31:.\Generated_Source\PSoC4/cyfitter_cfg.c ****     #define CY_CFG_UNUSED __attribute__ ((unused))
   32:.\Generated_Source\PSoC4/cyfitter_cfg.c ****     #ifndef CY_CFG_SECTION
   33:.\Generated_Source\PSoC4/cyfitter_cfg.c ****         #define CY_CFG_SECTION __attribute__ ((section(".psocinit")))
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 2
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 2
 
 
   34:.\Generated_Source\PSoC4/cyfitter_cfg.c ****     #endif
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 1
   88:.\Generated_Source\PSoC4/cyfitter_cfg.c **** #ifdef CY_NEED_CYCLOCKSTARTUPERROR
   89:.\Generated_Source\PSoC4/cyfitter_cfg.c **** /*******************************************************************************
   90:.\Generated_Source\PSoC4/cyfitter_cfg.c **** * Function Name: CyClockStartupError
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 3
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 3
 
 
   91:.\Generated_Source\PSoC4/cyfitter_cfg.c **** ********************************************************************************
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 1
  145:.\Generated_Source\PSoC4/cyfitter_cfg.c **** * Return:
  146:.\Generated_Source\PSoC4/cyfitter_cfg.c **** *   void
  147:.\Generated_Source\PSoC4/cyfitter_cfg.c **** *
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 4
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 4
 
 
  148:.\Generated_Source\PSoC4/cyfitter_cfg.c **** *******************************************************************************/
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 1
  162:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			j++;
   65              		.loc 1 162 0
   66 0020 0135     		add	r5, r5, #1
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 5
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 5
 
 
   67              	.LVL6:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 1
  181:.\Generated_Source\PSoC4/cyfitter_cfg.c **** * Return:
  182:.\Generated_Source\PSoC4/cyfitter_cfg.c **** *   void
  183:.\Generated_Source\PSoC4/cyfitter_cfg.c **** *
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 6
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 6
 
 
  184:.\Generated_Source\PSoC4/cyfitter_cfg.c **** *******************************************************************************/
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 1
  238:.\Generated_Source\PSoC4/cyfitter_cfg.c **** /*******************************************************************************
  239:.\Generated_Source\PSoC4/cyfitter_cfg.c **** * Function Name: AnalogSetDefault
  240:.\Generated_Source\PSoC4/cyfitter_cfg.c **** ********************************************************************************
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 7
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 7
 
 
  241:.\Generated_Source\PSoC4/cyfitter_cfg.c **** *
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 1
  134              	.LVL12:
  135 0000 08B5     		push	{r3, lr}
  136              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 8
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 8
 
 
  137              		.cfi_offset 3, -8
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 1
  183 001a FFF7FEFF 		bl	CySysClkWriteImoFreq
  184              	.LVL18:
  201:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 9
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 9
 
 
  185              		.loc 1 201 0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 1
  230 0064 164B     		ldr	r3, .L11+56
  231 0066 1A60     		str	r2, [r3]
  224:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 10
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 10
 
 
  232              		.loc 1 224 0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 1
  281              		.code	16
  282              		.thumb_func
  283              		.type	cyfitter_cfg, %function
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 11
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 11
 
 
  284              	cyfitter_cfg:
@@ -643,14 +643,14 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 1
  296              		.loc 1 286 0
  297              		.code	16
  298 00d4 0022     		mov	r2, #0
- 299 00d6 294B     		ldr	r3, .L16
+ 299 00d6 2C4B     		ldr	r3, .L16
  300 00d8 1A60     		str	r2, [r3]
  287:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
  288:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Enable the clock in the interrupt controller for the routed interrupts */
  289:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG8((void *)CYREG_UDB_UDBIF_INT_CLK_CTL, 0x01u);
  301              		.loc 1 289 0
  302 00da 0132     		add	r2, r2, #1
- 303 00dc 284B     		ldr	r3, .L16+4
+ 303 00dc 2B4B     		ldr	r3, .L16+4
  304 00de 1A70     		strb	r2, [r3]
  305              	.LVL23:
  306              	.LBB3:
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 1
  291:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		static const uint32 CYCODE cy_cfg_addr_table[] = {
  292:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F0002u, /* Base address: 0x400F0000 Count: 2 */
  293:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F3043u, /* Base address: 0x400F3000 Count: 67 */
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 12
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 12
 
 
  294:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F3121u, /* Base address: 0x400F3100 Count: 33 */
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 1
  348:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC8u, 0x2Au},
  349:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC9u, 0xFFu},
  350:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCAu, 0xFFu},
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 13
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 13
 
 
  351:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCBu, 0xFFu},
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 1
  405:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x40u, 0x45u},
  406:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x49u, 0xFFu},
  407:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Au, 0xFFu},
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 14
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 14
 
 
  408:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Bu, 0xFFu},
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 1
  462:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x43u, 0x40u},
  463:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x46u, 0x80u},
  464:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x49u, 0x05u},
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 15
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 15
 
 
  465:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Eu, 0x02u},
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 1
  519:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		uint8 CYDATA i;
  520:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
  521:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* Zero out critical memory blocks before beginning configuration */
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 16
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 16
 
 
  522:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		for (i = 0u; i < (sizeof(cfg_memset_list)/sizeof(cfg_memset_list[0])); i++)
@@ -912,7 +912,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 1
  524:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			const cfg_memset_t CYCODE * CYDATA ms = &cfg_memset_list[i];
  525:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			CYMEMZERO(ms->address, (size_t)(uint32)(ms->size));
  313              		.loc 1 525 0 discriminator 3
- 314 00e4 2748     		ldr	r0, .L16+8
+ 314 00e4 2A48     		ldr	r0, .L16+8
  315 00e6 6300     		lsl	r3, r4, #1
  316 00e8 1A19     		add	r2, r3, r4
  317 00ea 5200     		lsl	r2, r2, #1
@@ -943,7 +943,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 1
  527:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
  528:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		cfg_write_bytes32(cy_cfg_addr_table, cy_cfg_data_table);
  339              		.loc 1 528 0 is_stmt 1
- 340 010a 1E49     		ldr	r1, .L16+8
+ 340 010a 2149     		ldr	r1, .L16+8
  341 010c 081C     		mov	r0, r1
  342 010e 0C30     		add	r0, r0, #12
  343 0110 2C31     		add	r1, r1, #44
@@ -955,15 +955,15 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 1
  346              		.loc 1 531 0
  347 0116 8022     		mov	r2, #128
  348 0118 5200     		lsl	r2, r2, #1
- 349 011a 1B4B     		ldr	r3, .L16+12
+ 349 011a 1E4B     		ldr	r3, .L16+12
  350 011c 1A80     		strh	r2, [r3]
  532:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_XTND_REG8((void CYFAR *)(CYREG_UDB_BCTL0_DRV + 0x2u), 0x01u);
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 17
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 17
 
 
  351              		.loc 1 532 0
  352 011e FF3A     		sub	r2, r2, #255
- 353 0120 1A4B     		ldr	r3, .L16+16
+ 353 0120 1D4B     		ldr	r3, .L16+16
  354 0122 1A70     		strb	r2, [r3]
  533:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
  534:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* HSIOM Starting address: CYDEV_HSIOM_BASE */
@@ -971,7 +971,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 1
  355              		.loc 1 535 0
  356 0124 EE22     		mov	r2, #238
  357 0126 1206     		lsl	r2, r2, #24
- 358 0128 194B     		ldr	r3, .L16+20
+ 358 0128 1C4B     		ldr	r3, .L16+20
  359 012a 1A60     		str	r2, [r3]
  536:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
  537:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* UDB_PA_0 Starting address: CYDEV_UDB_PA0_BASE */
@@ -979,2107 +979,2127 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 1
  360              		.loc 1 538 0
  361 012c 9923     		mov	r3, #153
  362 012e 1B04     		lsl	r3, r3, #16
- 363 0130 184A     		ldr	r2, .L16+24
+ 363 0130 1B4A     		ldr	r2, .L16+24
  364 0132 1360     		str	r3, [r2]
  539:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 540:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* UDB_PA_1 Starting address: CYDEV_UDB_PA1_BASE */
- 541:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_XTND_REG32((void CYFAR *)(CYDEV_UDB_PA1_BASE), 0x00990000u);
+ 540:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* UDB_PA_2 Starting address: CYDEV_UDB_PA2_BASE */
+ 541:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_XTND_REG32((void CYFAR *)(CYDEV_UDB_PA2_BASE), 0x00990000u);
  365              		.loc 1 541 0
- 366 0134 184A     		ldr	r2, .L16+28
+ 366 0134 1B4A     		ldr	r2, .L16+28
  367 0136 1360     		str	r3, [r2]
  542:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 543:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* INT_SELECT Starting address: CYDEV_CPUSS_INT_SEL */
- 544:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_XTND_REG32((void CYFAR *)(CYREG_CPUSS_INT_SEL), 0x0000000Eu);
+ 543:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* UDB_PA_3 Starting address: CYDEV_UDB_PA3_BASE */
+ 544:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_XTND_REG32((void CYFAR *)(CYDEV_UDB_PA3_BASE), 0x00990000u);
  368              		.loc 1 544 0
- 369 0138 0E23     		mov	r3, #14
- 370 013a 184A     		ldr	r2, .L16+32
- 371 013c 1360     		str	r3, [r2]
+ 369 0138 1B4A     		ldr	r2, .L16+32
+ 370 013a 1360     		str	r3, [r2]
  545:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 546:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* INT_CONFIG Starting address: CYDEV_UDB_INT_CFG */
- 547:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_XTND_REG32((void CYFAR *)(CYREG_UDB_INT_CFG), 0x0000000Eu);
- 372              		.loc 1 547 0
- 373 013e 184A     		ldr	r2, .L16+36
+ 546:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* INT_SELECT Starting address: CYDEV_CPUSS_INT_SEL */
+ 547:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_XTND_REG32((void CYFAR *)(CYREG_CPUSS_INT_SEL), 0x0000000Eu);
+ 371              		.loc 1 547 0
+ 372 013c 0E23     		mov	r3, #14
+ 373 013e 1B4A     		ldr	r2, .L16+36
  374 0140 1360     		str	r3, [r2]
  548:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 549:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* Enable digital routing */
- 550:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_XTND_REG8((void *)CYREG_UDB_UDBIF_BANK_CTL, CY_GET_XTND_REG8((void *)CYREG_UDB_UDBIF_BANK_
+ 549:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* INT_CONFIG Starting address: CYDEV_UDB_INT_CFG */
+ 550:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_XTND_REG32((void CYFAR *)(CYREG_UDB_INT_CFG), 0x0000000Eu);
  375              		.loc 1 550 0
- 376 0142 184B     		ldr	r3, .L16+40
- 377 0144 1978     		ldrb	r1, [r3]
- 378 0146 0222     		mov	r2, #2
- 379 0148 0A43     		orr	r2, r1
- 380 014a 1A70     		strb	r2, [r3]
+ 376 0142 1B4A     		ldr	r2, .L16+40
+ 377 0144 1360     		str	r3, [r2]
  551:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 552:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* Enable UDB array */
- 553:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_XTND_REG8((void *)CYREG_UDB_UDBIF_WAIT_CFG, (uint8)((CY_GET_XTND_REG8((void *)CYREG_UDB_UD
- 381              		.loc 1 553 0
- 382 014c 1648     		ldr	r0, .L16+44
- 383 014e 0278     		ldrb	r2, [r0]
- 384 0150 3C21     		mov	r1, #60
- 385 0152 8A43     		bic	r2, r1
- 386 0154 2839     		sub	r1, r1, #40
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 18
+ 552:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* Enable digital routing */
+ 553:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_XTND_REG8((void *)CYREG_UDB_UDBIF_BANK_CTL, CY_GET_XTND_REG8((void *)CYREG_UDB_UDBIF_BANK_
+ 378              		.loc 1 553 0
+ 379 0146 1B4B     		ldr	r3, .L16+44
+ 380 0148 1978     		ldrb	r1, [r3]
+ 381 014a 0222     		mov	r2, #2
+ 382 014c 0A43     		orr	r2, r1
+ 383 014e 1A70     		strb	r2, [r3]
+ 554:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 555:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* Enable UDB array */
+ 556:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_XTND_REG8((void *)CYREG_UDB_UDBIF_WAIT_CFG, (uint8)((CY_GET_XTND_REG8((void *)CYREG_UDB_UD
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 18
 
 
- 387 0156 0A43     		orr	r2, r1
- 388 0158 0270     		strb	r2, [r0]
- 554:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_XTND_REG8((void *)CYREG_UDB_UDBIF_BANK_CTL, (uint8)(CY_GET_XTND_REG8((void *)CYREG_UDB_UDB
- 389              		.loc 1 554 0
- 390 015a 1978     		ldrb	r1, [r3]
- 391 015c 1622     		mov	r2, #22
- 392 015e 0A43     		orr	r2, r1
- 393 0160 1A70     		strb	r2, [r3]
- 394              	.LBE3:
- 555:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	}
- 556:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 557:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Perform second pass device configuration. These items must be configured in specific order afte
- 558:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_0 Starting address: CYDEV_GPIO_PRT0_BASE */
- 559:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_GPIO_PRT0_PC), 0x00D80000u);
- 395              		.loc 1 559 0
- 396 0162 D822     		mov	r2, #216
- 397 0164 1204     		lsl	r2, r2, #16
- 398 0166 114B     		ldr	r3, .L16+48
- 399 0168 1A60     		str	r2, [r3]
- 560:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 561:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_1 Starting address: CYDEV_GPIO_PRT1_BASE */
- 562:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_GPIO_PRT1_PC), 0x00000D80u);
- 400              		.loc 1 562 0
- 401 016a D822     		mov	r2, #216
- 402 016c 1201     		lsl	r2, r2, #4
- 403 016e 104B     		ldr	r3, .L16+52
- 404 0170 1A60     		str	r2, [r3]
+ 384              		.loc 1 556 0
+ 385 0150 1948     		ldr	r0, .L16+48
+ 386 0152 0278     		ldrb	r2, [r0]
+ 387 0154 3C21     		mov	r1, #60
+ 388 0156 8A43     		bic	r2, r1
+ 389 0158 2839     		sub	r1, r1, #40
+ 390 015a 0A43     		orr	r2, r1
+ 391 015c 0270     		strb	r2, [r0]
+ 557:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_XTND_REG8((void *)CYREG_UDB_UDBIF_BANK_CTL, (uint8)(CY_GET_XTND_REG8((void *)CYREG_UDB_UDB
+ 392              		.loc 1 557 0
+ 393 015e 1978     		ldrb	r1, [r3]
+ 394 0160 1622     		mov	r2, #22
+ 395 0162 0A43     		orr	r2, r1
+ 396 0164 1A70     		strb	r2, [r3]
+ 397              	.LBE3:
+ 558:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	}
+ 559:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 560:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Perform second pass device configuration. These items must be configured in specific order afte
+ 561:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_0 Starting address: CYDEV_GPIO_PRT0_BASE */
+ 562:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_GPIO_PRT0_PC), 0x00D80000u);
+ 398              		.loc 1 562 0
+ 399 0166 D822     		mov	r2, #216
+ 400 0168 1204     		lsl	r2, r2, #16
+ 401 016a 144B     		ldr	r3, .L16+52
+ 402 016c 1A60     		str	r2, [r3]
  563:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 564:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 565:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Setup clocks based on selections from Clock DWR */
- 566:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	ClockSetup();
- 405              		.loc 1 566 0
- 406 0172 FFF745FF 		bl	ClockSetup
- 407              	.LVL29:
- 567:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 568:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Perform basic analog initialization to defaults */
- 569:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	AnalogSetDefault();
- 408              		.loc 1 569 0
- 409 0176 FFF7FEFF 		bl	AnalogSetDefault
- 410              	.LVL30:
+ 564:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_2 Starting address: CYDEV_GPIO_PRT2_BASE */
+ 565:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_GPIO_PRT2_PC), 0x00180000u);
+ 403              		.loc 1 565 0
+ 404 016e C022     		mov	r2, #192
+ 405 0170 5203     		lsl	r2, r2, #13
+ 406 0172 134B     		ldr	r3, .L16+56
+ 407 0174 1A60     		str	r2, [r3]
+ 566:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 567:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_3 Starting address: CYDEV_GPIO_PRT3_BASE */
+ 568:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_GPIO_PRT3_PC), 0x00C00000u);
+ 408              		.loc 1 568 0
+ 409 0176 C022     		mov	r2, #192
+ 410 0178 1204     		lsl	r2, r2, #16
+ 411 017a 124B     		ldr	r3, .L16+60
+ 412 017c 1A60     		str	r2, [r3]
+ 569:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
  570:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 571:.\Generated_Source\PSoC4/cyfitter_cfg.c **** }
- 411              		.loc 1 571 0
- 412              		@ sp needed
- 413              	.LVL31:
- 414 017a 10BD     		pop	{r4, pc}
- 415              	.L17:
- 416              		.align	2
- 417              	.L16:
- 418 017c 6CF02E40 		.word	1076818028
- 419 0180 1C700F40 		.word	1074753564
- 420 0184 00000000 		.word	.LANCHOR0
- 421 0188 00600F40 		.word	1074749440
- 422 018c 02600F40 		.word	1074749442
- 423 0190 00000240 		.word	1073872896
- 424 0194 00500F40 		.word	1074745344
- 425 0198 10500F40 		.word	1074745360
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 19
+ 571:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Setup clocks based on selections from Clock DWR */
+ 572:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	ClockSetup();
+ 413              		.loc 1 572 0
+ 414 017e FFF73FFF 		bl	ClockSetup
+ 415              	.LVL29:
+ 573:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 574:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Perform basic analog initialization to defaults */
+ 575:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	AnalogSetDefault();
+ 416              		.loc 1 575 0
+ 417 0182 FFF7FEFF 		bl	AnalogSetDefault
+ 418              	.LVL30:
+ 576:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 577:.\Generated_Source\PSoC4/cyfitter_cfg.c **** }
+ 419              		.loc 1 577 0
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 19
 
 
- 426 019c 20001040 		.word	1074790432
- 427 01a0 00800F40 		.word	1074757632
- 428 01a4 00700F40 		.word	1074753536
- 429 01a8 01700F40 		.word	1074753537
- 430 01ac 08000440 		.word	1074003976
- 431 01b0 08010440 		.word	1074004232
- 432              		.cfi_endproc
- 433              	.LFE8:
- 434              		.size	cyfitter_cfg, .-cyfitter_cfg
- 435              		.section	.rodata
- 436              		.align	2
- 437              		.set	.LANCHOR0,. + 0
- 438              		.type	cfg_memset_list.4781, %object
- 439              		.size	cfg_memset_list.4781, 12
- 440              	cfg_memset_list.4781:
- 441 0000 00300F40 		.word	1074737152
- 442 0004 0004     		.short	1024
- 443 0006 00400F40 		.4byte	1074741248
- 444 000a 0004     		.short	1024
- 445              		.type	cy_cfg_addr_table.4775, %object
- 446              		.size	cy_cfg_addr_table.4775, 32
- 447              	cy_cfg_addr_table.4775:
- 448 000c 02000F40 		.word	1074724866
- 449 0010 43300F40 		.word	1074737219
- 450 0014 21310F40 		.word	1074737441
- 451 0018 34320F40 		.word	1074737716
- 452 001c 1C330F40 		.word	1074737948
- 453 0020 0D410F40 		.word	1074741517
- 454 0024 04420F40 		.word	1074741764
- 455 0028 02600F40 		.word	1074749442
- 456              		.type	cy_cfg_data_table.4776, %object
- 457              		.size	cy_cfg_data_table.4776, 402
- 458              	cy_cfg_data_table.4776:
- 459 002c 81       		.byte	-127
- 460 002d 0D       		.byte	13
- 461 002e 83       		.byte	-125
- 462 002f 0D       		.byte	13
- 463 0030 16       		.byte	22
- 464 0031 01       		.byte	1
- 465 0032 1A       		.byte	26
- 466 0033 01       		.byte	1
- 467 0034 30       		.byte	48
- 468 0035 01       		.byte	1
- 469 0036 40       		.byte	64
- 470 0037 30       		.byte	48
- 471 0038 41       		.byte	65
- 472 0039 02       		.byte	2
- 473 003a 49       		.byte	73
- 474 003b FF       		.byte	-1
- 475 003c 4A       		.byte	74
- 476 003d FF       		.byte	-1
- 477 003e 4B       		.byte	75
- 478 003f FF       		.byte	-1
- 479 0040 4D       		.byte	77
- 480 0041 A0       		.byte	-96
- 481 0042 4F       		.byte	79
- 482 0043 04       		.byte	4
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 20
+ 420              		@ sp needed
+ 421              	.LVL31:
+ 422 0186 10BD     		pop	{r4, pc}
+ 423              	.L17:
+ 424              		.align	2
+ 425              	.L16:
+ 426 0188 6CF02E40 		.word	1076818028
+ 427 018c 1C700F40 		.word	1074753564
+ 428 0190 00000000 		.word	.LANCHOR0
+ 429 0194 00600F40 		.word	1074749440
+ 430 0198 02600F40 		.word	1074749442
+ 431 019c 00000240 		.word	1073872896
+ 432 01a0 00500F40 		.word	1074745344
+ 433 01a4 20500F40 		.word	1074745376
+ 434 01a8 30500F40 		.word	1074745392
+ 435 01ac 20001040 		.word	1074790432
+ 436 01b0 00800F40 		.word	1074757632
+ 437 01b4 00700F40 		.word	1074753536
+ 438 01b8 01700F40 		.word	1074753537
+ 439 01bc 08000440 		.word	1074003976
+ 440 01c0 08020440 		.word	1074004488
+ 441 01c4 08030440 		.word	1074004744
+ 442              		.cfi_endproc
+ 443              	.LFE8:
+ 444              		.size	cyfitter_cfg, .-cyfitter_cfg
+ 445              		.section	.rodata
+ 446              		.align	2
+ 447              		.set	.LANCHOR0,. + 0
+ 448              		.type	cfg_memset_list.4781, %object
+ 449              		.size	cfg_memset_list.4781, 12
+ 450              	cfg_memset_list.4781:
+ 451 0000 00300F40 		.word	1074737152
+ 452 0004 0004     		.short	1024
+ 453 0006 00400F40 		.4byte	1074741248
+ 454 000a 0004     		.short	1024
+ 455              		.type	cy_cfg_addr_table.4775, %object
+ 456              		.size	cy_cfg_addr_table.4775, 32
+ 457              	cy_cfg_addr_table.4775:
+ 458 000c 02000F40 		.word	1074724866
+ 459 0010 43300F40 		.word	1074737219
+ 460 0014 21310F40 		.word	1074737441
+ 461 0018 34320F40 		.word	1074737716
+ 462 001c 1C330F40 		.word	1074737948
+ 463 0020 0D410F40 		.word	1074741517
+ 464 0024 04420F40 		.word	1074741764
+ 465 0028 02600F40 		.word	1074749442
+ 466              		.type	cy_cfg_data_table.4776, %object
+ 467              		.size	cy_cfg_data_table.4776, 402
+ 468              	cy_cfg_data_table.4776:
+ 469 002c 81       		.byte	-127
+ 470 002d 0D       		.byte	13
+ 471 002e 83       		.byte	-125
+ 472 002f 0D       		.byte	13
+ 473 0030 16       		.byte	22
+ 474 0031 01       		.byte	1
+ 475 0032 1A       		.byte	26
+ 476 0033 01       		.byte	1
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 20
 
 
- 483 0044 50       		.byte	80
- 484 0045 18       		.byte	24
- 485 0046 56       		.byte	86
- 486 0047 08       		.byte	8
- 487 0048 58       		.byte	88
- 488 0049 04       		.byte	4
- 489 004a 5A       		.byte	90
- 490 004b 04       		.byte	4
- 491 004c 5B       		.byte	91
- 492 004d 04       		.byte	4
- 493 004e 5D       		.byte	93
- 494 004f 90       		.byte	-112
- 495 0050 5F       		.byte	95
- 496 0051 01       		.byte	1
- 497 0052 60       		.byte	96
- 498 0053 40       		.byte	64
- 499 0054 62       		.byte	98
- 500 0055 C0       		.byte	-64
- 501 0056 64       		.byte	100
- 502 0057 40       		.byte	64
- 503 0058 65       		.byte	101
- 504 0059 40       		.byte	64
- 505 005a 66       		.byte	102
- 506 005b C0       		.byte	-64
- 507 005c 68       		.byte	104
- 508 005d C0       		.byte	-64
- 509 005e 6A       		.byte	106
- 510 005f C0       		.byte	-64
- 511 0060 6C       		.byte	108
- 512 0061 C0       		.byte	-64
- 513 0062 6E       		.byte	110
- 514 0063 C0       		.byte	-64
- 515 0064 82       		.byte	-126
- 516 0065 01       		.byte	1
- 517 0066 83       		.byte	-125
- 518 0067 03       		.byte	3
- 519 0068 8A       		.byte	-118
- 520 0069 06       		.byte	6
- 521 006a 91       		.byte	-111
- 522 006b 02       		.byte	2
- 523 006c 96       		.byte	-106
- 524 006d 02       		.byte	2
- 525 006e 9E       		.byte	-98
- 526 006f 04       		.byte	4
- 527 0070 B0       		.byte	-80
- 528 0071 04       		.byte	4
- 529 0072 B1       		.byte	-79
- 530 0073 02       		.byte	2
- 531 0074 B2       		.byte	-78
- 532 0075 01       		.byte	1
- 533 0076 B4       		.byte	-76
- 534 0077 02       		.byte	2
- 535 0078 B7       		.byte	-73
- 536 0079 01       		.byte	1
- 537 007a BE       		.byte	-66
- 538 007b 10       		.byte	16
- 539 007c C0       		.byte	-64
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 21
+ 477 0034 30       		.byte	48
+ 478 0035 01       		.byte	1
+ 479 0036 40       		.byte	64
+ 480 0037 30       		.byte	48
+ 481 0038 41       		.byte	65
+ 482 0039 02       		.byte	2
+ 483 003a 49       		.byte	73
+ 484 003b FF       		.byte	-1
+ 485 003c 4A       		.byte	74
+ 486 003d FF       		.byte	-1
+ 487 003e 4B       		.byte	75
+ 488 003f FF       		.byte	-1
+ 489 0040 4D       		.byte	77
+ 490 0041 A0       		.byte	-96
+ 491 0042 4F       		.byte	79
+ 492 0043 04       		.byte	4
+ 493 0044 50       		.byte	80
+ 494 0045 18       		.byte	24
+ 495 0046 56       		.byte	86
+ 496 0047 08       		.byte	8
+ 497 0048 58       		.byte	88
+ 498 0049 04       		.byte	4
+ 499 004a 5A       		.byte	90
+ 500 004b 04       		.byte	4
+ 501 004c 5B       		.byte	91
+ 502 004d 04       		.byte	4
+ 503 004e 5D       		.byte	93
+ 504 004f 90       		.byte	-112
+ 505 0050 5F       		.byte	95
+ 506 0051 01       		.byte	1
+ 507 0052 60       		.byte	96
+ 508 0053 40       		.byte	64
+ 509 0054 62       		.byte	98
+ 510 0055 C0       		.byte	-64
+ 511 0056 64       		.byte	100
+ 512 0057 40       		.byte	64
+ 513 0058 65       		.byte	101
+ 514 0059 40       		.byte	64
+ 515 005a 66       		.byte	102
+ 516 005b C0       		.byte	-64
+ 517 005c 68       		.byte	104
+ 518 005d C0       		.byte	-64
+ 519 005e 6A       		.byte	106
+ 520 005f C0       		.byte	-64
+ 521 0060 6C       		.byte	108
+ 522 0061 C0       		.byte	-64
+ 523 0062 6E       		.byte	110
+ 524 0063 C0       		.byte	-64
+ 525 0064 82       		.byte	-126
+ 526 0065 01       		.byte	1
+ 527 0066 83       		.byte	-125
+ 528 0067 03       		.byte	3
+ 529 0068 8A       		.byte	-118
+ 530 0069 06       		.byte	6
+ 531 006a 91       		.byte	-111
+ 532 006b 02       		.byte	2
+ 533 006c 96       		.byte	-106
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 21
 
 
- 540 007d 30       		.byte	48
- 541 007e C1       		.byte	-63
- 542 007f 02       		.byte	2
- 543 0080 C5       		.byte	-59
- 544 0081 D0       		.byte	-48
- 545 0082 C6       		.byte	-58
- 546 0083 20       		.byte	32
- 547 0084 C7       		.byte	-57
- 548 0085 10       		.byte	16
- 549 0086 C8       		.byte	-56
- 550 0087 2A       		.byte	42
- 551 0088 C9       		.byte	-55
- 552 0089 FF       		.byte	-1
- 553 008a CA       		.byte	-54
- 554 008b FF       		.byte	-1
- 555 008c CB       		.byte	-53
- 556 008d FF       		.byte	-1
- 557 008e CD       		.byte	-51
- 558 008f AF       		.byte	-81
- 559 0090 CE       		.byte	-50
- 560 0091 0F       		.byte	15
- 561 0092 CF       		.byte	-49
- 562 0093 04       		.byte	4
- 563 0094 D0       		.byte	-48
- 564 0095 18       		.byte	24
- 565 0096 D2       		.byte	-46
- 566 0097 80       		.byte	-128
- 567 0098 D4       		.byte	-44
- 568 0099 05       		.byte	5
- 569 009a D8       		.byte	-40
- 570 009b 04       		.byte	4
- 571 009c D9       		.byte	-39
- 572 009d 04       		.byte	4
- 573 009e DA       		.byte	-38
- 574 009f 04       		.byte	4
- 575 00a0 DB       		.byte	-37
- 576 00a1 04       		.byte	4
- 577 00a2 DF       		.byte	-33
- 578 00a3 01       		.byte	1
- 579 00a4 E0       		.byte	-32
- 580 00a5 40       		.byte	64
- 581 00a6 E2       		.byte	-30
- 582 00a7 C0       		.byte	-64
- 583 00a8 E4       		.byte	-28
- 584 00a9 40       		.byte	64
- 585 00aa E5       		.byte	-27
- 586 00ab 40       		.byte	64
- 587 00ac E6       		.byte	-26
- 588 00ad C0       		.byte	-64
- 589 00ae E8       		.byte	-24
- 590 00af C0       		.byte	-64
- 591 00b0 EA       		.byte	-22
- 592 00b1 C0       		.byte	-64
- 593 00b2 EC       		.byte	-20
- 594 00b3 C0       		.byte	-64
- 595 00b4 EE       		.byte	-18
- 596 00b5 C0       		.byte	-64
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 22
+ 534 006d 02       		.byte	2
+ 535 006e 9E       		.byte	-98
+ 536 006f 04       		.byte	4
+ 537 0070 B0       		.byte	-80
+ 538 0071 04       		.byte	4
+ 539 0072 B1       		.byte	-79
+ 540 0073 02       		.byte	2
+ 541 0074 B2       		.byte	-78
+ 542 0075 01       		.byte	1
+ 543 0076 B4       		.byte	-76
+ 544 0077 02       		.byte	2
+ 545 0078 B7       		.byte	-73
+ 546 0079 01       		.byte	1
+ 547 007a BE       		.byte	-66
+ 548 007b 10       		.byte	16
+ 549 007c C0       		.byte	-64
+ 550 007d 30       		.byte	48
+ 551 007e C1       		.byte	-63
+ 552 007f 02       		.byte	2
+ 553 0080 C5       		.byte	-59
+ 554 0081 D0       		.byte	-48
+ 555 0082 C6       		.byte	-58
+ 556 0083 20       		.byte	32
+ 557 0084 C7       		.byte	-57
+ 558 0085 10       		.byte	16
+ 559 0086 C8       		.byte	-56
+ 560 0087 2A       		.byte	42
+ 561 0088 C9       		.byte	-55
+ 562 0089 FF       		.byte	-1
+ 563 008a CA       		.byte	-54
+ 564 008b FF       		.byte	-1
+ 565 008c CB       		.byte	-53
+ 566 008d FF       		.byte	-1
+ 567 008e CD       		.byte	-51
+ 568 008f AF       		.byte	-81
+ 569 0090 CE       		.byte	-50
+ 570 0091 0F       		.byte	15
+ 571 0092 CF       		.byte	-49
+ 572 0093 04       		.byte	4
+ 573 0094 D0       		.byte	-48
+ 574 0095 18       		.byte	24
+ 575 0096 D2       		.byte	-46
+ 576 0097 80       		.byte	-128
+ 577 0098 D4       		.byte	-44
+ 578 0099 05       		.byte	5
+ 579 009a D8       		.byte	-40
+ 580 009b 04       		.byte	4
+ 581 009c D9       		.byte	-39
+ 582 009d 04       		.byte	4
+ 583 009e DA       		.byte	-38
+ 584 009f 04       		.byte	4
+ 585 00a0 DB       		.byte	-37
+ 586 00a1 04       		.byte	4
+ 587 00a2 DF       		.byte	-33
+ 588 00a3 01       		.byte	1
+ 589 00a4 E0       		.byte	-32
+ 590 00a5 40       		.byte	64
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 22
 
 
- 597 00b6 04       		.byte	4
- 598 00b7 10       		.byte	16
- 599 00b8 06       		.byte	6
- 600 00b9 80       		.byte	-128
- 601 00ba 09       		.byte	9
- 602 00bb 28       		.byte	40
- 603 00bc 0F       		.byte	15
- 604 00bd 22       		.byte	34
- 605 00be 1A       		.byte	26
- 606 00bf 80       		.byte	-128
- 607 00c0 1C       		.byte	28
- 608 00c1 10       		.byte	16
- 609 00c2 1D       		.byte	29
- 610 00c3 0A       		.byte	10
- 611 00c4 1E       		.byte	30
- 612 00c5 08       		.byte	8
- 613 00c6 24       		.byte	36
- 614 00c7 40       		.byte	64
- 615 00c8 27       		.byte	39
- 616 00c9 02       		.byte	2
- 617 00ca 37       		.byte	55
- 618 00cb 02       		.byte	2
- 619 00cc 3F       		.byte	63
- 620 00cd 02       		.byte	2
- 621 00ce 40       		.byte	64
- 622 00cf 10       		.byte	16
- 623 00d0 41       		.byte	65
- 624 00d1 20       		.byte	32
- 625 00d2 45       		.byte	69
- 626 00d3 28       		.byte	40
- 627 00d4 4D       		.byte	77
- 628 00d5 01       		.byte	1
- 629 00d6 55       		.byte	85
- 630 00d7 20       		.byte	32
- 631 00d8 57       		.byte	87
- 632 00d9 11       		.byte	17
- 633 00da 58       		.byte	88
- 634 00db A0       		.byte	-96
- 635 00dc 5C       		.byte	92
- 636 00dd 40       		.byte	64
- 637 00de 5D       		.byte	93
- 638 00df 01       		.byte	1
- 639 00e0 5E       		.byte	94
- 640 00e1 08       		.byte	8
- 641 00e2 60       		.byte	96
- 642 00e3 02       		.byte	2
- 643 00e4 62       		.byte	98
- 644 00e5 A0       		.byte	-96
- 645 00e6 76       		.byte	118
- 646 00e7 80       		.byte	-128
- 647 00e8 8C       		.byte	-116
- 648 00e9 A0       		.byte	-96
- 649 00ea C0       		.byte	-64
- 650 00eb 50       		.byte	80
- 651 00ec C2       		.byte	-62
- 652 00ed A6       		.byte	-90
- 653 00ee CC       		.byte	-52
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 23
+ 591 00a6 E2       		.byte	-30
+ 592 00a7 C0       		.byte	-64
+ 593 00a8 E4       		.byte	-28
+ 594 00a9 40       		.byte	64
+ 595 00aa E5       		.byte	-27
+ 596 00ab 40       		.byte	64
+ 597 00ac E6       		.byte	-26
+ 598 00ad C0       		.byte	-64
+ 599 00ae E8       		.byte	-24
+ 600 00af C0       		.byte	-64
+ 601 00b0 EA       		.byte	-22
+ 602 00b1 C0       		.byte	-64
+ 603 00b2 EC       		.byte	-20
+ 604 00b3 C0       		.byte	-64
+ 605 00b4 EE       		.byte	-18
+ 606 00b5 C0       		.byte	-64
+ 607 00b6 04       		.byte	4
+ 608 00b7 10       		.byte	16
+ 609 00b8 06       		.byte	6
+ 610 00b9 80       		.byte	-128
+ 611 00ba 09       		.byte	9
+ 612 00bb 28       		.byte	40
+ 613 00bc 0F       		.byte	15
+ 614 00bd 22       		.byte	34
+ 615 00be 1A       		.byte	26
+ 616 00bf 80       		.byte	-128
+ 617 00c0 1C       		.byte	28
+ 618 00c1 10       		.byte	16
+ 619 00c2 1D       		.byte	29
+ 620 00c3 0A       		.byte	10
+ 621 00c4 1E       		.byte	30
+ 622 00c5 08       		.byte	8
+ 623 00c6 24       		.byte	36
+ 624 00c7 40       		.byte	64
+ 625 00c8 27       		.byte	39
+ 626 00c9 02       		.byte	2
+ 627 00ca 37       		.byte	55
+ 628 00cb 02       		.byte	2
+ 629 00cc 3F       		.byte	63
+ 630 00cd 02       		.byte	2
+ 631 00ce 40       		.byte	64
+ 632 00cf 10       		.byte	16
+ 633 00d0 41       		.byte	65
+ 634 00d1 20       		.byte	32
+ 635 00d2 45       		.byte	69
+ 636 00d3 28       		.byte	40
+ 637 00d4 4D       		.byte	77
+ 638 00d5 01       		.byte	1
+ 639 00d6 55       		.byte	85
+ 640 00d7 20       		.byte	32
+ 641 00d8 57       		.byte	87
+ 642 00d9 11       		.byte	17
+ 643 00da 58       		.byte	88
+ 644 00db A0       		.byte	-96
+ 645 00dc 5C       		.byte	92
+ 646 00dd 40       		.byte	64
+ 647 00de 5D       		.byte	93
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 23
 
 
- 654 00ef 80       		.byte	-128
- 655 00f0 CE       		.byte	-50
- 656 00f1 80       		.byte	-128
- 657 00f2 D0       		.byte	-48
- 658 00f3 66       		.byte	102
- 659 00f4 D6       		.byte	-42
- 660 00f5 DC       		.byte	-36
- 661 00f6 D8       		.byte	-40
- 662 00f7 0C       		.byte	12
- 663 00f8 40       		.byte	64
- 664 00f9 45       		.byte	69
- 665 00fa 49       		.byte	73
- 666 00fb FF       		.byte	-1
- 667 00fc 4A       		.byte	74
- 668 00fd FF       		.byte	-1
- 669 00fe 4B       		.byte	75
- 670 00ff FF       		.byte	-1
- 671 0100 4F       		.byte	79
- 672 0101 01       		.byte	1
- 673 0102 50       		.byte	80
- 674 0103 18       		.byte	24
- 675 0104 52       		.byte	82
- 676 0105 80       		.byte	-128
- 677 0106 5A       		.byte	90
- 678 0107 0B       		.byte	11
- 679 0108 5B       		.byte	91
- 680 0109 0A       		.byte	10
- 681 010a 5D       		.byte	93
- 682 010b 99       		.byte	-103
- 683 010c 5F       		.byte	95
- 684 010d 01       		.byte	1
- 685 010e 60       		.byte	96
- 686 010f 40       		.byte	64
- 687 0110 62       		.byte	98
- 688 0111 40       		.byte	64
- 689 0112 64       		.byte	100
- 690 0113 40       		.byte	64
- 691 0114 65       		.byte	101
- 692 0115 40       		.byte	64
- 693 0116 66       		.byte	102
- 694 0117 80       		.byte	-128
- 695 0118 68       		.byte	104
- 696 0119 80       		.byte	-128
- 697 011a 6A       		.byte	106
- 698 011b 80       		.byte	-128
- 699 011c 6C       		.byte	108
- 700 011d 80       		.byte	-128
- 701 011e 6E       		.byte	110
- 702 011f 80       		.byte	-128
- 703 0120 83       		.byte	-125
- 704 0121 01       		.byte	1
- 705 0122 9F       		.byte	-97
- 706 0123 01       		.byte	1
- 707 0124 B1       		.byte	-79
- 708 0125 01       		.byte	1
- 709 0126 B7       		.byte	-73
- 710 0127 01       		.byte	1
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 24
+ 648 00df 01       		.byte	1
+ 649 00e0 5E       		.byte	94
+ 650 00e1 08       		.byte	8
+ 651 00e2 60       		.byte	96
+ 652 00e3 02       		.byte	2
+ 653 00e4 62       		.byte	98
+ 654 00e5 A0       		.byte	-96
+ 655 00e6 76       		.byte	118
+ 656 00e7 80       		.byte	-128
+ 657 00e8 8C       		.byte	-116
+ 658 00e9 A0       		.byte	-96
+ 659 00ea C0       		.byte	-64
+ 660 00eb 50       		.byte	80
+ 661 00ec C2       		.byte	-62
+ 662 00ed A6       		.byte	-90
+ 663 00ee CC       		.byte	-52
+ 664 00ef 80       		.byte	-128
+ 665 00f0 CE       		.byte	-50
+ 666 00f1 80       		.byte	-128
+ 667 00f2 D0       		.byte	-48
+ 668 00f3 66       		.byte	102
+ 669 00f4 D6       		.byte	-42
+ 670 00f5 DC       		.byte	-36
+ 671 00f6 D8       		.byte	-40
+ 672 00f7 0C       		.byte	12
+ 673 00f8 40       		.byte	64
+ 674 00f9 45       		.byte	69
+ 675 00fa 49       		.byte	73
+ 676 00fb FF       		.byte	-1
+ 677 00fc 4A       		.byte	74
+ 678 00fd FF       		.byte	-1
+ 679 00fe 4B       		.byte	75
+ 680 00ff FF       		.byte	-1
+ 681 0100 4F       		.byte	79
+ 682 0101 01       		.byte	1
+ 683 0102 50       		.byte	80
+ 684 0103 18       		.byte	24
+ 685 0104 52       		.byte	82
+ 686 0105 80       		.byte	-128
+ 687 0106 5A       		.byte	90
+ 688 0107 0B       		.byte	11
+ 689 0108 5B       		.byte	91
+ 690 0109 0A       		.byte	10
+ 691 010a 5D       		.byte	93
+ 692 010b 99       		.byte	-103
+ 693 010c 5F       		.byte	95
+ 694 010d 01       		.byte	1
+ 695 010e 60       		.byte	96
+ 696 010f 40       		.byte	64
+ 697 0110 62       		.byte	98
+ 698 0111 40       		.byte	64
+ 699 0112 64       		.byte	100
+ 700 0113 40       		.byte	64
+ 701 0114 65       		.byte	101
+ 702 0115 40       		.byte	64
+ 703 0116 66       		.byte	102
+ 704 0117 80       		.byte	-128
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 24
 
 
- 711 0128 BF       		.byte	-65
- 712 0129 40       		.byte	64
- 713 012a C0       		.byte	-64
- 714 012b 14       		.byte	20
- 715 012c C5       		.byte	-59
- 716 012d EC       		.byte	-20
- 717 012e C7       		.byte	-57
- 718 012f 20       		.byte	32
- 719 0130 C8       		.byte	-56
- 720 0131 23       		.byte	35
- 721 0132 C9       		.byte	-55
- 722 0133 FF       		.byte	-1
- 723 0134 CA       		.byte	-54
- 724 0135 FF       		.byte	-1
- 725 0136 CB       		.byte	-53
- 726 0137 FF       		.byte	-1
- 727 0138 CD       		.byte	-51
- 728 0139 83       		.byte	-125
- 729 013a CE       		.byte	-50
- 730 013b 03       		.byte	3
- 731 013c CF       		.byte	-49
- 732 013d 01       		.byte	1
- 733 013e D0       		.byte	-48
- 734 013f 18       		.byte	24
- 735 0140 D4       		.byte	-44
- 736 0141 01       		.byte	1
- 737 0142 D9       		.byte	-39
- 738 0143 0B       		.byte	11
- 739 0144 DA       		.byte	-38
- 740 0145 0B       		.byte	11
- 741 0146 DB       		.byte	-37
- 742 0147 0B       		.byte	11
- 743 0148 DC       		.byte	-36
- 744 0149 90       		.byte	-112
- 745 014a DD       		.byte	-35
- 746 014b 99       		.byte	-103
- 747 014c DF       		.byte	-33
- 748 014d 01       		.byte	1
- 749 014e E0       		.byte	-32
- 750 014f 40       		.byte	64
- 751 0150 E2       		.byte	-30
- 752 0151 40       		.byte	64
- 753 0152 E4       		.byte	-28
- 754 0153 40       		.byte	64
- 755 0154 E5       		.byte	-27
- 756 0155 40       		.byte	64
- 757 0156 E6       		.byte	-26
- 758 0157 80       		.byte	-128
- 759 0158 E8       		.byte	-24
- 760 0159 80       		.byte	-128
- 761 015a EA       		.byte	-22
- 762 015b 80       		.byte	-128
- 763 015c EC       		.byte	-20
- 764 015d 80       		.byte	-128
- 765 015e EE       		.byte	-18
- 766 015f 80       		.byte	-128
- 767 0160 21       		.byte	33
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 25
+ 705 0118 68       		.byte	104
+ 706 0119 80       		.byte	-128
+ 707 011a 6A       		.byte	106
+ 708 011b 80       		.byte	-128
+ 709 011c 6C       		.byte	108
+ 710 011d 80       		.byte	-128
+ 711 011e 6E       		.byte	110
+ 712 011f 80       		.byte	-128
+ 713 0120 83       		.byte	-125
+ 714 0121 01       		.byte	1
+ 715 0122 9F       		.byte	-97
+ 716 0123 01       		.byte	1
+ 717 0124 B1       		.byte	-79
+ 718 0125 01       		.byte	1
+ 719 0126 B7       		.byte	-73
+ 720 0127 01       		.byte	1
+ 721 0128 BF       		.byte	-65
+ 722 0129 40       		.byte	64
+ 723 012a C0       		.byte	-64
+ 724 012b 14       		.byte	20
+ 725 012c C5       		.byte	-59
+ 726 012d EC       		.byte	-20
+ 727 012e C7       		.byte	-57
+ 728 012f 20       		.byte	32
+ 729 0130 C8       		.byte	-56
+ 730 0131 23       		.byte	35
+ 731 0132 C9       		.byte	-55
+ 732 0133 FF       		.byte	-1
+ 733 0134 CA       		.byte	-54
+ 734 0135 FF       		.byte	-1
+ 735 0136 CB       		.byte	-53
+ 736 0137 FF       		.byte	-1
+ 737 0138 CD       		.byte	-51
+ 738 0139 83       		.byte	-125
+ 739 013a CE       		.byte	-50
+ 740 013b 03       		.byte	3
+ 741 013c CF       		.byte	-49
+ 742 013d 01       		.byte	1
+ 743 013e D0       		.byte	-48
+ 744 013f 18       		.byte	24
+ 745 0140 D4       		.byte	-44
+ 746 0141 01       		.byte	1
+ 747 0142 D9       		.byte	-39
+ 748 0143 0B       		.byte	11
+ 749 0144 DA       		.byte	-38
+ 750 0145 0B       		.byte	11
+ 751 0146 DB       		.byte	-37
+ 752 0147 0B       		.byte	11
+ 753 0148 DC       		.byte	-36
+ 754 0149 90       		.byte	-112
+ 755 014a DD       		.byte	-35
+ 756 014b 99       		.byte	-103
+ 757 014c DF       		.byte	-33
+ 758 014d 01       		.byte	1
+ 759 014e E0       		.byte	-32
+ 760 014f 40       		.byte	64
+ 761 0150 E2       		.byte	-30
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 25
 
 
- 768 0161 02       		.byte	2
- 769 0162 22       		.byte	34
- 770 0163 40       		.byte	64
- 771 0164 33       		.byte	51
- 772 0165 40       		.byte	64
- 773 0166 39       		.byte	57
- 774 0167 02       		.byte	2
- 775 0168 41       		.byte	65
- 776 0169 01       		.byte	1
- 777 016a 43       		.byte	67
- 778 016b 40       		.byte	64
- 779 016c 46       		.byte	70
- 780 016d 80       		.byte	-128
- 781 016e 49       		.byte	73
- 782 016f 05       		.byte	5
- 783 0170 4E       		.byte	78
- 784 0171 02       		.byte	2
- 785 0172 51       		.byte	81
- 786 0173 01       		.byte	1
- 787 0174 52       		.byte	82
- 788 0175 02       		.byte	2
- 789 0176 59       		.byte	89
- 790 0177 05       		.byte	5
- 791 0178 5A       		.byte	90
- 792 0179 80       		.byte	-128
- 793 017a 76       		.byte	118
- 794 017b 80       		.byte	-128
- 795 017c 77       		.byte	119
- 796 017d 40       		.byte	64
- 797 017e 78       		.byte	120
- 798 017f 02       		.byte	2
- 799 0180 7E       		.byte	126
- 800 0181 A0       		.byte	-96
- 801 0182 81       		.byte	-127
- 802 0183 02       		.byte	2
- 803 0184 98       		.byte	-104
- 804 0185 02       		.byte	2
- 805 0186 A2       		.byte	-94
- 806 0187 A0       		.byte	-96
- 807 0188 A9       		.byte	-87
- 808 0189 02       		.byte	2
- 809 018a AA       		.byte	-86
- 810 018b 40       		.byte	64
- 811 018c CC       		.byte	-52
- 812 018d 08       		.byte	8
- 813 018e CE       		.byte	-50
- 814 018f 01       		.byte	1
- 815 0190 D0       		.byte	-48
- 816 0191 89       		.byte	-119
- 817 0192 D2       		.byte	-46
- 818 0193 10       		.byte	16
- 819 0194 D6       		.byte	-42
- 820 0195 0B       		.byte	11
- 821 0196 DE       		.byte	-34
- 822 0197 C1       		.byte	-63
- 823 0198 6B       		.byte	107
- 824 0199 40       		.byte	64
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 26
+ 762 0151 40       		.byte	64
+ 763 0152 E4       		.byte	-28
+ 764 0153 40       		.byte	64
+ 765 0154 E5       		.byte	-27
+ 766 0155 40       		.byte	64
+ 767 0156 E6       		.byte	-26
+ 768 0157 80       		.byte	-128
+ 769 0158 E8       		.byte	-24
+ 770 0159 80       		.byte	-128
+ 771 015a EA       		.byte	-22
+ 772 015b 80       		.byte	-128
+ 773 015c EC       		.byte	-20
+ 774 015d 80       		.byte	-128
+ 775 015e EE       		.byte	-18
+ 776 015f 80       		.byte	-128
+ 777 0160 21       		.byte	33
+ 778 0161 02       		.byte	2
+ 779 0162 22       		.byte	34
+ 780 0163 40       		.byte	64
+ 781 0164 33       		.byte	51
+ 782 0165 40       		.byte	64
+ 783 0166 39       		.byte	57
+ 784 0167 02       		.byte	2
+ 785 0168 41       		.byte	65
+ 786 0169 01       		.byte	1
+ 787 016a 43       		.byte	67
+ 788 016b 40       		.byte	64
+ 789 016c 46       		.byte	70
+ 790 016d 80       		.byte	-128
+ 791 016e 49       		.byte	73
+ 792 016f 05       		.byte	5
+ 793 0170 4E       		.byte	78
+ 794 0171 02       		.byte	2
+ 795 0172 51       		.byte	81
+ 796 0173 01       		.byte	1
+ 797 0174 52       		.byte	82
+ 798 0175 02       		.byte	2
+ 799 0176 59       		.byte	89
+ 800 0177 05       		.byte	5
+ 801 0178 5A       		.byte	90
+ 802 0179 80       		.byte	-128
+ 803 017a 76       		.byte	118
+ 804 017b 80       		.byte	-128
+ 805 017c 77       		.byte	119
+ 806 017d 40       		.byte	64
+ 807 017e 78       		.byte	120
+ 808 017f 02       		.byte	2
+ 809 0180 7E       		.byte	126
+ 810 0181 A0       		.byte	-96
+ 811 0182 81       		.byte	-127
+ 812 0183 02       		.byte	2
+ 813 0184 98       		.byte	-104
+ 814 0185 02       		.byte	2
+ 815 0186 A2       		.byte	-94
+ 816 0187 A0       		.byte	-96
+ 817 0188 A9       		.byte	-87
+ 818 0189 02       		.byte	2
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 26
 
 
- 825 019a 6F       		.byte	111
- 826 019b 04       		.byte	4
- 827 019c 74       		.byte	116
- 828 019d 20       		.byte	32
- 829 019e 83       		.byte	-125
- 830 019f 04       		.byte	4
- 831 01a0 9B       		.byte	-101
- 832 01a1 40       		.byte	64
- 833 01a2 A0       		.byte	-96
- 834 01a3 20       		.byte	32
- 835 01a4 A8       		.byte	-88
- 836 01a5 20       		.byte	32
- 837 01a6 AB       		.byte	-85
- 838 01a7 40       		.byte	64
- 839 01a8 DA       		.byte	-38
- 840 01a9 80       		.byte	-128
- 841 01aa DC       		.byte	-36
- 842 01ab 60       		.byte	96
- 843 01ac E2       		.byte	-30
- 844 01ad 80       		.byte	-128
- 845 01ae EA       		.byte	-22
- 846 01af 80       		.byte	-128
- 847 01b0 EE       		.byte	-18
- 848 01b1 80       		.byte	-128
- 849 01b2 24       		.byte	36
- 850 01b3 50       		.byte	80
- 851 01b4 8C       		.byte	-116
- 852 01b5 50       		.byte	80
- 853 01b6 C8       		.byte	-56
- 854 01b7 01       		.byte	1
- 855 01b8 E2       		.byte	-30
- 856 01b9 0A       		.byte	10
- 857 01ba 10       		.byte	16
- 858 01bb 01       		.byte	1
- 859 01bc 11       		.byte	17
- 860 01bd 01       		.byte	1
- 861 01be 0000     		.text
- 862              	.Letext0:
- 863              		.file 2 "d:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
- 864              		.file 3 ".\\Generated_Source\\PSoC4\\cytypes.h"
- 865              		.file 4 ".\\Generated_Source\\PSoC4\\CyLib.h"
- 866              		.file 5 ".\\Generated_Source\\PSoC4\\CyLFClk.h"
- 867              		.section	.debug_info,"",%progbits
- 868              	.Ldebug_info0:
- 869 0000 A1040000 		.4byte	0x4a1
- 870 0004 0400     		.2byte	0x4
- 871 0006 00000000 		.4byte	.Ldebug_abbrev0
- 872 000a 04       		.byte	0x4
- 873 000b 01       		.uleb128 0x1
- 874 000c 1C020000 		.4byte	.LASF45
- 875 0010 01       		.byte	0x1
- 876 0011 C6010000 		.4byte	.LASF46
- 877 0015 F8020000 		.4byte	.LASF47
- 878 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 879 001d 00000000 		.4byte	0
- 880 0021 00000000 		.4byte	.Ldebug_line0
- 881 0025 02       		.uleb128 0x2
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 27
+ 819 018a AA       		.byte	-86
+ 820 018b 40       		.byte	64
+ 821 018c CC       		.byte	-52
+ 822 018d 08       		.byte	8
+ 823 018e CE       		.byte	-50
+ 824 018f 01       		.byte	1
+ 825 0190 D0       		.byte	-48
+ 826 0191 89       		.byte	-119
+ 827 0192 D2       		.byte	-46
+ 828 0193 10       		.byte	16
+ 829 0194 D6       		.byte	-42
+ 830 0195 0B       		.byte	11
+ 831 0196 DE       		.byte	-34
+ 832 0197 C1       		.byte	-63
+ 833 0198 6B       		.byte	107
+ 834 0199 40       		.byte	64
+ 835 019a 6F       		.byte	111
+ 836 019b 04       		.byte	4
+ 837 019c 74       		.byte	116
+ 838 019d 20       		.byte	32
+ 839 019e 83       		.byte	-125
+ 840 019f 04       		.byte	4
+ 841 01a0 9B       		.byte	-101
+ 842 01a1 40       		.byte	64
+ 843 01a2 A0       		.byte	-96
+ 844 01a3 20       		.byte	32
+ 845 01a4 A8       		.byte	-88
+ 846 01a5 20       		.byte	32
+ 847 01a6 AB       		.byte	-85
+ 848 01a7 40       		.byte	64
+ 849 01a8 DA       		.byte	-38
+ 850 01a9 80       		.byte	-128
+ 851 01aa DC       		.byte	-36
+ 852 01ab 60       		.byte	96
+ 853 01ac E2       		.byte	-30
+ 854 01ad 80       		.byte	-128
+ 855 01ae EA       		.byte	-22
+ 856 01af 80       		.byte	-128
+ 857 01b0 EE       		.byte	-18
+ 858 01b1 80       		.byte	-128
+ 859 01b2 24       		.byte	36
+ 860 01b3 50       		.byte	80
+ 861 01b4 8C       		.byte	-116
+ 862 01b5 50       		.byte	80
+ 863 01b6 C8       		.byte	-56
+ 864 01b7 01       		.byte	1
+ 865 01b8 E2       		.byte	-30
+ 866 01b9 0A       		.byte	10
+ 867 01ba 10       		.byte	16
+ 868 01bb 01       		.byte	1
+ 869 01bc 11       		.byte	17
+ 870 01bd 01       		.byte	1
+ 871 01be 0000     		.text
+ 872              	.Letext0:
+ 873              		.file 2 "d:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 874              		.file 3 ".\\Generated_Source\\PSoC4\\cytypes.h"
+ 875              		.file 4 ".\\Generated_Source\\PSoC4\\CyLib.h"
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 27
 
 
- 882 0026 04       		.byte	0x4
- 883 0027 05       		.byte	0x5
- 884 0028 696E7400 		.ascii	"int\000"
- 885 002c 03       		.uleb128 0x3
- 886 002d 1A000000 		.4byte	.LASF11
- 887 0031 02       		.byte	0x2
- 888 0032 D4       		.byte	0xd4
- 889 0033 37000000 		.4byte	0x37
- 890 0037 04       		.uleb128 0x4
- 891 0038 04       		.byte	0x4
- 892 0039 07       		.byte	0x7
- 893 003a 61010000 		.4byte	.LASF0
- 894 003e 04       		.uleb128 0x4
- 895 003f 01       		.byte	0x1
- 896 0040 06       		.byte	0x6
- 897 0041 D9020000 		.4byte	.LASF1
- 898 0045 04       		.uleb128 0x4
- 899 0046 01       		.byte	0x1
- 900 0047 08       		.byte	0x8
- 901 0048 FA000000 		.4byte	.LASF2
- 902 004c 04       		.uleb128 0x4
- 903 004d 02       		.byte	0x2
- 904 004e 05       		.byte	0x5
- 905 004f B1020000 		.4byte	.LASF3
- 906 0053 04       		.uleb128 0x4
- 907 0054 02       		.byte	0x2
- 908 0055 07       		.byte	0x7
- 909 0056 E5020000 		.4byte	.LASF4
- 910 005a 04       		.uleb128 0x4
- 911 005b 04       		.byte	0x4
- 912 005c 05       		.byte	0x5
- 913 005d D0020000 		.4byte	.LASF5
- 914 0061 04       		.uleb128 0x4
- 915 0062 04       		.byte	0x4
- 916 0063 07       		.byte	0x7
- 917 0064 C7000000 		.4byte	.LASF6
- 918 0068 04       		.uleb128 0x4
- 919 0069 08       		.byte	0x8
- 920 006a 05       		.byte	0x5
- 921 006b EE010000 		.4byte	.LASF7
- 922 006f 04       		.uleb128 0x4
- 923 0070 08       		.byte	0x8
- 924 0071 07       		.byte	0x7
- 925 0072 83010000 		.4byte	.LASF8
- 926 0076 04       		.uleb128 0x4
- 927 0077 04       		.byte	0x4
- 928 0078 07       		.byte	0x7
- 929 0079 BD010000 		.4byte	.LASF9
- 930 007d 05       		.uleb128 0x5
- 931 007e 04       		.byte	0x4
- 932 007f 06       		.uleb128 0x6
- 933 0080 04       		.byte	0x4
- 934 0081 85000000 		.4byte	0x85
- 935 0085 07       		.uleb128 0x7
- 936 0086 04       		.uleb128 0x4
- 937 0087 01       		.byte	0x1
- 938 0088 08       		.byte	0x8
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 28
+ 876              		.file 5 ".\\Generated_Source\\PSoC4\\CyLFClk.h"
+ 877              		.section	.debug_info,"",%progbits
+ 878              	.Ldebug_info0:
+ 879 0000 A1040000 		.4byte	0x4a1
+ 880 0004 0400     		.2byte	0x4
+ 881 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 882 000a 04       		.byte	0x4
+ 883 000b 01       		.uleb128 0x1
+ 884 000c 65020000 		.4byte	.LASF45
+ 885 0010 01       		.byte	0x1
+ 886 0011 0F020000 		.4byte	.LASF46
+ 887 0015 7C000000 		.4byte	.LASF47
+ 888 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 889 001d 00000000 		.4byte	0
+ 890 0021 00000000 		.4byte	.Ldebug_line0
+ 891 0025 02       		.uleb128 0x2
+ 892 0026 04       		.byte	0x4
+ 893 0027 05       		.byte	0x5
+ 894 0028 696E7400 		.ascii	"int\000"
+ 895 002c 03       		.uleb128 0x3
+ 896 002d 1A000000 		.4byte	.LASF11
+ 897 0031 02       		.byte	0x2
+ 898 0032 D4       		.byte	0xd4
+ 899 0033 37000000 		.4byte	0x37
+ 900 0037 04       		.uleb128 0x4
+ 901 0038 04       		.byte	0x4
+ 902 0039 07       		.byte	0x7
+ 903 003a AA010000 		.4byte	.LASF0
+ 904 003e 04       		.uleb128 0x4
+ 905 003f 01       		.byte	0x1
+ 906 0040 06       		.byte	0x6
+ 907 0041 22030000 		.4byte	.LASF1
+ 908 0045 04       		.uleb128 0x4
+ 909 0046 01       		.byte	0x1
+ 910 0047 08       		.byte	0x8
+ 911 0048 43010000 		.4byte	.LASF2
+ 912 004c 04       		.uleb128 0x4
+ 913 004d 02       		.byte	0x2
+ 914 004e 05       		.byte	0x5
+ 915 004f FA020000 		.4byte	.LASF3
+ 916 0053 04       		.uleb128 0x4
+ 917 0054 02       		.byte	0x2
+ 918 0055 07       		.byte	0x7
+ 919 0056 2E030000 		.4byte	.LASF4
+ 920 005a 04       		.uleb128 0x4
+ 921 005b 04       		.byte	0x4
+ 922 005c 05       		.byte	0x5
+ 923 005d 19030000 		.4byte	.LASF5
+ 924 0061 04       		.uleb128 0x4
+ 925 0062 04       		.byte	0x4
+ 926 0063 07       		.byte	0x7
+ 927 0064 10010000 		.4byte	.LASF6
+ 928 0068 04       		.uleb128 0x4
+ 929 0069 08       		.byte	0x8
+ 930 006a 05       		.byte	0x5
+ 931 006b 37020000 		.4byte	.LASF7
+ 932 006f 04       		.uleb128 0x4
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 28
 
 
- 939 0089 06020000 		.4byte	.LASF10
- 940 008d 08       		.uleb128 0x8
- 941 008e D9000000 		.4byte	.LASF12
- 942 0092 03       		.byte	0x3
- 943 0093 9801     		.2byte	0x198
- 944 0095 45000000 		.4byte	0x45
- 945 0099 08       		.uleb128 0x8
- 946 009a 3F010000 		.4byte	.LASF13
- 947 009e 03       		.byte	0x3
- 948 009f 9901     		.2byte	0x199
- 949 00a1 53000000 		.4byte	0x53
- 950 00a5 08       		.uleb128 0x8
- 951 00a6 5A010000 		.4byte	.LASF14
- 952 00aa 03       		.byte	0x3
- 953 00ab 9A01     		.2byte	0x19a
- 954 00ad 61000000 		.4byte	0x61
- 955 00b1 04       		.uleb128 0x4
- 956 00b2 04       		.byte	0x4
- 957 00b3 04       		.byte	0x4
- 958 00b4 8F000000 		.4byte	.LASF15
- 959 00b8 04       		.uleb128 0x4
- 960 00b9 08       		.byte	0x8
- 961 00ba 04       		.byte	0x4
- 962 00bb 0F010000 		.4byte	.LASF16
- 963 00bf 08       		.uleb128 0x8
- 964 00c0 51010000 		.4byte	.LASF17
- 965 00c4 03       		.byte	0x3
- 966 00c5 3A02     		.2byte	0x23a
- 967 00c7 61000000 		.4byte	0x61
- 968 00cb 08       		.uleb128 0x8
- 969 00cc C2000000 		.4byte	.LASF18
- 970 00d0 03       		.byte	0x3
- 971 00d1 4202     		.2byte	0x242
- 972 00d3 D7000000 		.4byte	0xd7
- 973 00d7 09       		.uleb128 0x9
- 974 00d8 8D000000 		.4byte	0x8d
- 975 00dc 08       		.uleb128 0x8
- 976 00dd 00000000 		.4byte	.LASF19
- 977 00e1 03       		.byte	0x3
- 978 00e2 4302     		.2byte	0x243
- 979 00e4 E8000000 		.4byte	0xe8
- 980 00e8 09       		.uleb128 0x9
- 981 00e9 99000000 		.4byte	0x99
- 982 00ed 08       		.uleb128 0x8
- 983 00ee 14000000 		.4byte	.LASF20
- 984 00f2 03       		.byte	0x3
- 985 00f3 4402     		.2byte	0x244
- 986 00f5 F9000000 		.4byte	0xf9
- 987 00f9 09       		.uleb128 0x9
- 988 00fa A5000000 		.4byte	0xa5
- 989 00fe 08       		.uleb128 0x8
- 990 00ff 9A010000 		.4byte	.LASF21
- 991 0103 03       		.byte	0x3
- 992 0104 5402     		.2byte	0x254
- 993 0106 7F000000 		.4byte	0x7f
- 994 010a 0A       		.uleb128 0xa
- 995 010b 02       		.byte	0x2
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 29
+ 933 0070 08       		.byte	0x8
+ 934 0071 07       		.byte	0x7
+ 935 0072 CC010000 		.4byte	.LASF8
+ 936 0076 04       		.uleb128 0x4
+ 937 0077 04       		.byte	0x4
+ 938 0078 07       		.byte	0x7
+ 939 0079 06020000 		.4byte	.LASF9
+ 940 007d 05       		.uleb128 0x5
+ 941 007e 04       		.byte	0x4
+ 942 007f 06       		.uleb128 0x6
+ 943 0080 04       		.byte	0x4
+ 944 0081 85000000 		.4byte	0x85
+ 945 0085 07       		.uleb128 0x7
+ 946 0086 04       		.uleb128 0x4
+ 947 0087 01       		.byte	0x1
+ 948 0088 08       		.byte	0x8
+ 949 0089 4F020000 		.4byte	.LASF10
+ 950 008d 08       		.uleb128 0x8
+ 951 008e 22010000 		.4byte	.LASF12
+ 952 0092 03       		.byte	0x3
+ 953 0093 9801     		.2byte	0x198
+ 954 0095 45000000 		.4byte	0x45
+ 955 0099 08       		.uleb128 0x8
+ 956 009a 88010000 		.4byte	.LASF13
+ 957 009e 03       		.byte	0x3
+ 958 009f 9901     		.2byte	0x199
+ 959 00a1 53000000 		.4byte	0x53
+ 960 00a5 08       		.uleb128 0x8
+ 961 00a6 A3010000 		.4byte	.LASF14
+ 962 00aa 03       		.byte	0x3
+ 963 00ab 9A01     		.2byte	0x19a
+ 964 00ad 61000000 		.4byte	0x61
+ 965 00b1 04       		.uleb128 0x4
+ 966 00b2 04       		.byte	0x4
+ 967 00b3 04       		.byte	0x4
+ 968 00b4 D8000000 		.4byte	.LASF15
+ 969 00b8 04       		.uleb128 0x4
+ 970 00b9 08       		.byte	0x8
+ 971 00ba 04       		.byte	0x4
+ 972 00bb 58010000 		.4byte	.LASF16
+ 973 00bf 08       		.uleb128 0x8
+ 974 00c0 9A010000 		.4byte	.LASF17
+ 975 00c4 03       		.byte	0x3
+ 976 00c5 3A02     		.2byte	0x23a
+ 977 00c7 61000000 		.4byte	0x61
+ 978 00cb 08       		.uleb128 0x8
+ 979 00cc 0B010000 		.4byte	.LASF18
+ 980 00d0 03       		.byte	0x3
+ 981 00d1 4202     		.2byte	0x242
+ 982 00d3 D7000000 		.4byte	0xd7
+ 983 00d7 09       		.uleb128 0x9
+ 984 00d8 8D000000 		.4byte	0x8d
+ 985 00dc 08       		.uleb128 0x8
+ 986 00dd 00000000 		.4byte	.LASF19
+ 987 00e1 03       		.byte	0x3
+ 988 00e2 4302     		.2byte	0x243
+ 989 00e4 E8000000 		.4byte	0xe8
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 29
 
 
- 996 010c 01       		.byte	0x1
- 997 010d 7F       		.byte	0x7f
- 998 010e 2B010000 		.4byte	0x12b
- 999 0112 0B       		.uleb128 0xb
- 1000 0113 AA020000 		.4byte	.LASF22
- 1001 0117 01       		.byte	0x1
- 1002 0118 81       		.byte	0x81
- 1003 0119 8D000000 		.4byte	0x8d
- 1004 011d 00       		.byte	0
- 1005 011e 0B       		.uleb128 0xb
- 1006 011f 41000000 		.4byte	.LASF23
- 1007 0123 01       		.byte	0x1
- 1008 0124 82       		.byte	0x82
- 1009 0125 8D000000 		.4byte	0x8d
- 1010 0129 01       		.byte	0x1
- 1011 012a 00       		.byte	0
- 1012 012b 03       		.uleb128 0x3
- 1013 012c 7C000000 		.4byte	.LASF24
- 1014 0130 01       		.byte	0x1
- 1015 0131 83       		.byte	0x83
- 1016 0132 0A010000 		.4byte	0x10a
- 1017 0136 0C       		.uleb128 0xc
- 1018 0137 16010000 		.4byte	.LASF29
- 1019 013b 01       		.byte	0x1
- 1020 013c 96       		.byte	0x96
- 1021 013d 00000000 		.4byte	.LFB5
- 1022 0141 32000000 		.4byte	.LFE5-.LFB5
- 1023 0145 01       		.uleb128 0x1
- 1024 0146 9C       		.byte	0x9c
- 1025 0147 A8010000 		.4byte	0x1a8
- 1026 014b 0D       		.uleb128 0xd
- 1027 014c 34010000 		.4byte	.LASF25
- 1028 0150 01       		.byte	0x1
- 1029 0151 96       		.byte	0x96
- 1030 0152 A8010000 		.4byte	0x1a8
- 1031 0156 01       		.uleb128 0x1
- 1032 0157 50       		.byte	0x50
- 1033 0158 0D       		.uleb128 0xd
- 1034 0159 46010000 		.4byte	.LASF26
- 1035 015d 01       		.byte	0x1
- 1036 015e 96       		.byte	0x96
- 1037 015f B3010000 		.4byte	0x1b3
- 1038 0163 01       		.uleb128 0x1
- 1039 0164 51       		.byte	0x51
- 1040 0165 0E       		.uleb128 0xe
- 1041 0166 6900     		.ascii	"i\000"
- 1042 0168 01       		.byte	0x1
- 1043 0169 99       		.byte	0x99
- 1044 016a A5000000 		.4byte	0xa5
- 1045 016e 00000000 		.4byte	.LLST0
- 1046 0172 0E       		.uleb128 0xe
- 1047 0173 6A00     		.ascii	"j\000"
- 1048 0175 01       		.byte	0x1
- 1049 0176 99       		.byte	0x99
- 1050 0177 A5000000 		.4byte	0xa5
- 1051 017b 1F000000 		.4byte	.LLST1
- 1052 017f 0F       		.uleb128 0xf
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 30
+ 990 00e8 09       		.uleb128 0x9
+ 991 00e9 99000000 		.4byte	0x99
+ 992 00ed 08       		.uleb128 0x8
+ 993 00ee 14000000 		.4byte	.LASF20
+ 994 00f2 03       		.byte	0x3
+ 995 00f3 4402     		.2byte	0x244
+ 996 00f5 F9000000 		.4byte	0xf9
+ 997 00f9 09       		.uleb128 0x9
+ 998 00fa A5000000 		.4byte	0xa5
+ 999 00fe 08       		.uleb128 0x8
+ 1000 00ff E3010000 		.4byte	.LASF21
+ 1001 0103 03       		.byte	0x3
+ 1002 0104 5402     		.2byte	0x254
+ 1003 0106 7F000000 		.4byte	0x7f
+ 1004 010a 0A       		.uleb128 0xa
+ 1005 010b 02       		.byte	0x2
+ 1006 010c 01       		.byte	0x1
+ 1007 010d 7F       		.byte	0x7f
+ 1008 010e 2B010000 		.4byte	0x12b
+ 1009 0112 0B       		.uleb128 0xb
+ 1010 0113 F3020000 		.4byte	.LASF22
+ 1011 0117 01       		.byte	0x1
+ 1012 0118 81       		.byte	0x81
+ 1013 0119 8D000000 		.4byte	0x8d
+ 1014 011d 00       		.byte	0
+ 1015 011e 0B       		.uleb128 0xb
+ 1016 011f 41000000 		.4byte	.LASF23
+ 1017 0123 01       		.byte	0x1
+ 1018 0124 82       		.byte	0x82
+ 1019 0125 8D000000 		.4byte	0x8d
+ 1020 0129 01       		.byte	0x1
+ 1021 012a 00       		.byte	0
+ 1022 012b 03       		.uleb128 0x3
+ 1023 012c C5000000 		.4byte	.LASF24
+ 1024 0130 01       		.byte	0x1
+ 1025 0131 83       		.byte	0x83
+ 1026 0132 0A010000 		.4byte	0x10a
+ 1027 0136 0C       		.uleb128 0xc
+ 1028 0137 5F010000 		.4byte	.LASF29
+ 1029 013b 01       		.byte	0x1
+ 1030 013c 96       		.byte	0x96
+ 1031 013d 00000000 		.4byte	.LFB5
+ 1032 0141 32000000 		.4byte	.LFE5-.LFB5
+ 1033 0145 01       		.uleb128 0x1
+ 1034 0146 9C       		.byte	0x9c
+ 1035 0147 A8010000 		.4byte	0x1a8
+ 1036 014b 0D       		.uleb128 0xd
+ 1037 014c 7D010000 		.4byte	.LASF25
+ 1038 0150 01       		.byte	0x1
+ 1039 0151 96       		.byte	0x96
+ 1040 0152 A8010000 		.4byte	0x1a8
+ 1041 0156 01       		.uleb128 0x1
+ 1042 0157 50       		.byte	0x50
+ 1043 0158 0D       		.uleb128 0xd
+ 1044 0159 8F010000 		.4byte	.LASF26
+ 1045 015d 01       		.byte	0x1
+ 1046 015e 96       		.byte	0x96
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 30
 
 
- 1053 0180 08000000 		.4byte	.LBB2
- 1054 0184 22000000 		.4byte	.LBE2-.LBB2
- 1055 0188 10       		.uleb128 0x10
- 1056 0189 B4010000 		.4byte	.LASF27
- 1057 018d 01       		.byte	0x1
- 1058 018e 9C       		.byte	0x9c
- 1059 018f A5000000 		.4byte	0xa5
- 1060 0193 3E000000 		.4byte	.LLST2
- 1061 0197 10       		.uleb128 0x10
- 1062 0198 47000000 		.4byte	.LASF28
- 1063 019c 01       		.byte	0x1
- 1064 019d 9D       		.byte	0x9d
- 1065 019e 8D000000 		.4byte	0x8d
- 1066 01a2 51000000 		.4byte	.LLST3
- 1067 01a6 00       		.byte	0
- 1068 01a7 00       		.byte	0
- 1069 01a8 06       		.uleb128 0x6
- 1070 01a9 04       		.byte	0x4
- 1071 01aa AE010000 		.4byte	0x1ae
- 1072 01ae 11       		.uleb128 0x11
- 1073 01af A5000000 		.4byte	0xa5
- 1074 01b3 06       		.uleb128 0x6
- 1075 01b4 04       		.byte	0x4
- 1076 01b5 B9010000 		.4byte	0x1b9
- 1077 01b9 11       		.uleb128 0x11
- 1078 01ba 2B010000 		.4byte	0x12b
- 1079 01be 12       		.uleb128 0x12
- 1080 01bf 21000000 		.4byte	.LASF48
- 1081 01c3 01       		.byte	0x1
- 1082 01c4 FE       		.byte	0xfe
- 1083 01c5 00000000 		.4byte	.LFB7
- 1084 01c9 20000000 		.4byte	.LFE7-.LFB7
- 1085 01cd 01       		.uleb128 0x1
- 1086 01ce 9C       		.byte	0x9c
- 1087 01cf 0C       		.uleb128 0xc
- 1088 01d0 F0000000 		.4byte	.LASF30
- 1089 01d4 01       		.byte	0x1
- 1090 01d5 3D       		.byte	0x3d
- 1091 01d6 00000000 		.4byte	.LFB2
- 1092 01da 0C000000 		.4byte	.LFE2-.LFB2
- 1093 01de 01       		.uleb128 0x1
- 1094 01df 9C       		.byte	0x9c
- 1095 01e0 1C020000 		.4byte	0x21c
- 1096 01e4 13       		.uleb128 0x13
- 1097 01e5 7300     		.ascii	"s\000"
- 1098 01e7 01       		.byte	0x1
- 1099 01e8 3D       		.byte	0x3d
- 1100 01e9 7D000000 		.4byte	0x7d
- 1101 01ed 6F000000 		.4byte	.LLST4
- 1102 01f1 13       		.uleb128 0x13
- 1103 01f2 6E00     		.ascii	"n\000"
- 1104 01f4 01       		.byte	0x1
- 1105 01f5 3D       		.byte	0x3d
- 1106 01f6 2C000000 		.4byte	0x2c
- 1107 01fa 90000000 		.4byte	.LLST5
- 1108 01fe 14       		.uleb128 0x14
- 1109 01ff 0A000000 		.4byte	.LVL14
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 31
+ 1047 015f B3010000 		.4byte	0x1b3
+ 1048 0163 01       		.uleb128 0x1
+ 1049 0164 51       		.byte	0x51
+ 1050 0165 0E       		.uleb128 0xe
+ 1051 0166 6900     		.ascii	"i\000"
+ 1052 0168 01       		.byte	0x1
+ 1053 0169 99       		.byte	0x99
+ 1054 016a A5000000 		.4byte	0xa5
+ 1055 016e 00000000 		.4byte	.LLST0
+ 1056 0172 0E       		.uleb128 0xe
+ 1057 0173 6A00     		.ascii	"j\000"
+ 1058 0175 01       		.byte	0x1
+ 1059 0176 99       		.byte	0x99
+ 1060 0177 A5000000 		.4byte	0xa5
+ 1061 017b 1F000000 		.4byte	.LLST1
+ 1062 017f 0F       		.uleb128 0xf
+ 1063 0180 08000000 		.4byte	.LBB2
+ 1064 0184 22000000 		.4byte	.LBE2-.LBB2
+ 1065 0188 10       		.uleb128 0x10
+ 1066 0189 FD010000 		.4byte	.LASF27
+ 1067 018d 01       		.byte	0x1
+ 1068 018e 9C       		.byte	0x9c
+ 1069 018f A5000000 		.4byte	0xa5
+ 1070 0193 3E000000 		.4byte	.LLST2
+ 1071 0197 10       		.uleb128 0x10
+ 1072 0198 47000000 		.4byte	.LASF28
+ 1073 019c 01       		.byte	0x1
+ 1074 019d 9D       		.byte	0x9d
+ 1075 019e 8D000000 		.4byte	0x8d
+ 1076 01a2 51000000 		.4byte	.LLST3
+ 1077 01a6 00       		.byte	0
+ 1078 01a7 00       		.byte	0
+ 1079 01a8 06       		.uleb128 0x6
+ 1080 01a9 04       		.byte	0x4
+ 1081 01aa AE010000 		.4byte	0x1ae
+ 1082 01ae 11       		.uleb128 0x11
+ 1083 01af A5000000 		.4byte	0xa5
+ 1084 01b3 06       		.uleb128 0x6
+ 1085 01b4 04       		.byte	0x4
+ 1086 01b5 B9010000 		.4byte	0x1b9
+ 1087 01b9 11       		.uleb128 0x11
+ 1088 01ba 2B010000 		.4byte	0x12b
+ 1089 01be 12       		.uleb128 0x12
+ 1090 01bf 21000000 		.4byte	.LASF48
+ 1091 01c3 01       		.byte	0x1
+ 1092 01c4 FE       		.byte	0xfe
+ 1093 01c5 00000000 		.4byte	.LFB7
+ 1094 01c9 20000000 		.4byte	.LFE7-.LFB7
+ 1095 01cd 01       		.uleb128 0x1
+ 1096 01ce 9C       		.byte	0x9c
+ 1097 01cf 0C       		.uleb128 0xc
+ 1098 01d0 39010000 		.4byte	.LASF30
+ 1099 01d4 01       		.byte	0x1
+ 1100 01d5 3D       		.byte	0x3d
+ 1101 01d6 00000000 		.4byte	.LFB2
+ 1102 01da 0C000000 		.4byte	.LFE2-.LFB2
+ 1103 01de 01       		.uleb128 0x1
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 31
 
 
- 1110 0203 FC030000 		.4byte	0x3fc
- 1111 0207 15       		.uleb128 0x15
- 1112 0208 01       		.uleb128 0x1
- 1113 0209 52       		.byte	0x52
- 1114 020a 03       		.uleb128 0x3
- 1115 020b F3       		.byte	0xf3
- 1116 020c 01       		.uleb128 0x1
- 1117 020d 51       		.byte	0x51
- 1118 020e 15       		.uleb128 0x15
- 1119 020f 01       		.uleb128 0x1
- 1120 0210 51       		.byte	0x51
- 1121 0211 01       		.uleb128 0x1
- 1122 0212 30       		.byte	0x30
- 1123 0213 15       		.uleb128 0x15
- 1124 0214 01       		.uleb128 0x1
- 1125 0215 50       		.byte	0x50
- 1126 0216 03       		.uleb128 0x3
- 1127 0217 F3       		.byte	0xf3
- 1128 0218 01       		.uleb128 0x1
- 1129 0219 50       		.byte	0x50
- 1130 021a 00       		.byte	0
- 1131 021b 00       		.byte	0
- 1132 021c 0C       		.uleb128 0xc
- 1133 021d 4D000000 		.4byte	.LASF31
- 1134 0221 01       		.byte	0x1
- 1135 0222 BB       		.byte	0xbb
- 1136 0223 00000000 		.4byte	.LFB6
- 1137 0227 D0000000 		.4byte	.LFE6-.LFB6
- 1138 022b 01       		.uleb128 0x1
- 1139 022c 9C       		.byte	0x9c
- 1140 022d C5020000 		.4byte	0x2c5
- 1141 0231 16       		.uleb128 0x16
- 1142 0232 0C000000 		.4byte	.LVL15
- 1143 0236 19040000 		.4byte	0x419
- 1144 023a 17       		.uleb128 0x17
- 1145 023b 12000000 		.4byte	.LVL16
- 1146 023f 20040000 		.4byte	0x420
- 1147 0243 51020000 		.4byte	0x251
- 1148 0247 15       		.uleb128 0x15
- 1149 0248 01       		.uleb128 0x1
- 1150 0249 50       		.byte	0x50
- 1151 024a 05       		.uleb128 0x5
- 1152 024b 0C       		.byte	0xc
- 1153 024c 001BB700 		.4byte	0xb71b00
- 1154 0250 00       		.byte	0
- 1155 0251 17       		.uleb128 0x17
- 1156 0252 18000000 		.4byte	.LVL17
- 1157 0256 31040000 		.4byte	0x431
- 1158 025a 64020000 		.4byte	0x264
- 1159 025e 15       		.uleb128 0x15
- 1160 025f 01       		.uleb128 0x1
- 1161 0260 50       		.byte	0x50
- 1162 0261 01       		.uleb128 0x1
- 1163 0262 31       		.byte	0x31
- 1164 0263 00       		.byte	0
- 1165 0264 17       		.uleb128 0x17
- 1166 0265 1E000000 		.4byte	.LVL18
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 32
+ 1104 01df 9C       		.byte	0x9c
+ 1105 01e0 1C020000 		.4byte	0x21c
+ 1106 01e4 13       		.uleb128 0x13
+ 1107 01e5 7300     		.ascii	"s\000"
+ 1108 01e7 01       		.byte	0x1
+ 1109 01e8 3D       		.byte	0x3d
+ 1110 01e9 7D000000 		.4byte	0x7d
+ 1111 01ed 6F000000 		.4byte	.LLST4
+ 1112 01f1 13       		.uleb128 0x13
+ 1113 01f2 6E00     		.ascii	"n\000"
+ 1114 01f4 01       		.byte	0x1
+ 1115 01f5 3D       		.byte	0x3d
+ 1116 01f6 2C000000 		.4byte	0x2c
+ 1117 01fa 90000000 		.4byte	.LLST5
+ 1118 01fe 14       		.uleb128 0x14
+ 1119 01ff 0A000000 		.4byte	.LVL14
+ 1120 0203 FC030000 		.4byte	0x3fc
+ 1121 0207 15       		.uleb128 0x15
+ 1122 0208 01       		.uleb128 0x1
+ 1123 0209 52       		.byte	0x52
+ 1124 020a 03       		.uleb128 0x3
+ 1125 020b F3       		.byte	0xf3
+ 1126 020c 01       		.uleb128 0x1
+ 1127 020d 51       		.byte	0x51
+ 1128 020e 15       		.uleb128 0x15
+ 1129 020f 01       		.uleb128 0x1
+ 1130 0210 51       		.byte	0x51
+ 1131 0211 01       		.uleb128 0x1
+ 1132 0212 30       		.byte	0x30
+ 1133 0213 15       		.uleb128 0x15
+ 1134 0214 01       		.uleb128 0x1
+ 1135 0215 50       		.byte	0x50
+ 1136 0216 03       		.uleb128 0x3
+ 1137 0217 F3       		.byte	0xf3
+ 1138 0218 01       		.uleb128 0x1
+ 1139 0219 50       		.byte	0x50
+ 1140 021a 00       		.byte	0
+ 1141 021b 00       		.byte	0
+ 1142 021c 0C       		.uleb128 0xc
+ 1143 021d 4D000000 		.4byte	.LASF31
+ 1144 0221 01       		.byte	0x1
+ 1145 0222 BB       		.byte	0xbb
+ 1146 0223 00000000 		.4byte	.LFB6
+ 1147 0227 D0000000 		.4byte	.LFE6-.LFB6
+ 1148 022b 01       		.uleb128 0x1
+ 1149 022c 9C       		.byte	0x9c
+ 1150 022d C5020000 		.4byte	0x2c5
+ 1151 0231 16       		.uleb128 0x16
+ 1152 0232 0C000000 		.4byte	.LVL15
+ 1153 0236 19040000 		.4byte	0x419
+ 1154 023a 17       		.uleb128 0x17
+ 1155 023b 12000000 		.4byte	.LVL16
+ 1156 023f 20040000 		.4byte	0x420
+ 1157 0243 51020000 		.4byte	0x251
+ 1158 0247 15       		.uleb128 0x15
+ 1159 0248 01       		.uleb128 0x1
+ 1160 0249 50       		.byte	0x50
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 32
 
 
- 1167 0269 46040000 		.4byte	0x446
- 1168 026d 78020000 		.4byte	0x278
- 1169 0271 15       		.uleb128 0x15
- 1170 0272 01       		.uleb128 0x1
- 1171 0273 50       		.byte	0x50
- 1172 0274 02       		.uleb128 0x2
- 1173 0275 08       		.byte	0x8
- 1174 0276 30       		.byte	0x30
- 1175 0277 00       		.byte	0
- 1176 0278 17       		.uleb128 0x17
- 1177 0279 4E000000 		.4byte	.LVL19
- 1178 027d 57040000 		.4byte	0x457
- 1179 0281 8D020000 		.4byte	0x28d
- 1180 0285 15       		.uleb128 0x15
- 1181 0286 01       		.uleb128 0x1
- 1182 0287 50       		.byte	0x50
- 1183 0288 03       		.uleb128 0x3
- 1184 0289 0A       		.byte	0xa
- 1185 028a D007     		.2byte	0x7d0
- 1186 028c 00       		.byte	0
- 1187 028d 17       		.uleb128 0x17
- 1188 028e 54000000 		.4byte	.LVL20
- 1189 0292 6C040000 		.4byte	0x46c
- 1190 0296 A2020000 		.4byte	0x2a2
- 1191 029a 15       		.uleb128 0x15
- 1192 029b 01       		.uleb128 0x1
- 1193 029c 50       		.byte	0x50
- 1194 029d 03       		.uleb128 0x3
- 1195 029e 0A       		.byte	0xa
- 1196 029f DC05     		.2byte	0x5dc
- 1197 02a1 00       		.byte	0
- 1198 02a2 17       		.uleb128 0x17
- 1199 02a3 7E000000 		.4byte	.LVL21
- 1200 02a7 7D040000 		.4byte	0x47d
- 1201 02ab B5020000 		.4byte	0x2b5
- 1202 02af 15       		.uleb128 0x15
- 1203 02b0 01       		.uleb128 0x1
- 1204 02b1 50       		.byte	0x50
- 1205 02b2 01       		.uleb128 0x1
- 1206 02b3 38       		.byte	0x38
- 1207 02b4 00       		.byte	0
- 1208 02b5 14       		.uleb128 0x14
- 1209 02b6 84000000 		.4byte	.LVL22
- 1210 02ba 97040000 		.4byte	0x497
- 1211 02be 15       		.uleb128 0x15
- 1212 02bf 01       		.uleb128 0x1
- 1213 02c0 50       		.byte	0x50
- 1214 02c1 01       		.uleb128 0x1
- 1215 02c2 38       		.byte	0x38
- 1216 02c3 00       		.byte	0
- 1217 02c4 00       		.byte	0
- 1218 02c5 18       		.uleb128 0x18
- 1219 02c6 6E010000 		.4byte	.LASF49
- 1220 02ca 01       		.byte	0x1
- 1221 02cb 1901     		.2byte	0x119
- 1222 02cd D0000000 		.4byte	.LFB8
- 1223 02d1 E4000000 		.4byte	.LFE8-.LFB8
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 33
+ 1161 024a 05       		.uleb128 0x5
+ 1162 024b 0C       		.byte	0xc
+ 1163 024c 001BB700 		.4byte	0xb71b00
+ 1164 0250 00       		.byte	0
+ 1165 0251 17       		.uleb128 0x17
+ 1166 0252 18000000 		.4byte	.LVL17
+ 1167 0256 31040000 		.4byte	0x431
+ 1168 025a 64020000 		.4byte	0x264
+ 1169 025e 15       		.uleb128 0x15
+ 1170 025f 01       		.uleb128 0x1
+ 1171 0260 50       		.byte	0x50
+ 1172 0261 01       		.uleb128 0x1
+ 1173 0262 31       		.byte	0x31
+ 1174 0263 00       		.byte	0
+ 1175 0264 17       		.uleb128 0x17
+ 1176 0265 1E000000 		.4byte	.LVL18
+ 1177 0269 46040000 		.4byte	0x446
+ 1178 026d 78020000 		.4byte	0x278
+ 1179 0271 15       		.uleb128 0x15
+ 1180 0272 01       		.uleb128 0x1
+ 1181 0273 50       		.byte	0x50
+ 1182 0274 02       		.uleb128 0x2
+ 1183 0275 08       		.byte	0x8
+ 1184 0276 30       		.byte	0x30
+ 1185 0277 00       		.byte	0
+ 1186 0278 17       		.uleb128 0x17
+ 1187 0279 4E000000 		.4byte	.LVL19
+ 1188 027d 57040000 		.4byte	0x457
+ 1189 0281 8D020000 		.4byte	0x28d
+ 1190 0285 15       		.uleb128 0x15
+ 1191 0286 01       		.uleb128 0x1
+ 1192 0287 50       		.byte	0x50
+ 1193 0288 03       		.uleb128 0x3
+ 1194 0289 0A       		.byte	0xa
+ 1195 028a D007     		.2byte	0x7d0
+ 1196 028c 00       		.byte	0
+ 1197 028d 17       		.uleb128 0x17
+ 1198 028e 54000000 		.4byte	.LVL20
+ 1199 0292 6C040000 		.4byte	0x46c
+ 1200 0296 A2020000 		.4byte	0x2a2
+ 1201 029a 15       		.uleb128 0x15
+ 1202 029b 01       		.uleb128 0x1
+ 1203 029c 50       		.byte	0x50
+ 1204 029d 03       		.uleb128 0x3
+ 1205 029e 0A       		.byte	0xa
+ 1206 029f DC05     		.2byte	0x5dc
+ 1207 02a1 00       		.byte	0
+ 1208 02a2 17       		.uleb128 0x17
+ 1209 02a3 7E000000 		.4byte	.LVL21
+ 1210 02a7 7D040000 		.4byte	0x47d
+ 1211 02ab B5020000 		.4byte	0x2b5
+ 1212 02af 15       		.uleb128 0x15
+ 1213 02b0 01       		.uleb128 0x1
+ 1214 02b1 50       		.byte	0x50
+ 1215 02b2 01       		.uleb128 0x1
+ 1216 02b3 38       		.byte	0x38
+ 1217 02b4 00       		.byte	0
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 33
 
 
- 1224 02d5 01       		.uleb128 0x1
- 1225 02d6 9C       		.byte	0x9c
- 1226 02d7 D2030000 		.4byte	0x3d2
- 1227 02db 19       		.uleb128 0x19
- 1228 02dc E0000000 		.4byte	.LBB3
- 1229 02e0 82000000 		.4byte	.LBE3-.LBB3
- 1230 02e4 BF030000 		.4byte	0x3bf
- 1231 02e8 1A       		.uleb128 0x1a
- 1232 02e9 58000000 		.4byte	.LASF32
- 1233 02ed 01       		.byte	0x1
- 1234 02ee 2301     		.2byte	0x123
- 1235 02f0 E2030000 		.4byte	0x3e2
- 1236 02f4 05       		.uleb128 0x5
- 1237 02f5 03       		.byte	0x3
- 1238 02f6 0C000000 		.4byte	cy_cfg_addr_table.4775
- 1239 02fa 1A       		.uleb128 0x1a
- 1240 02fb 6A000000 		.4byte	.LASF33
- 1241 02ff 01       		.byte	0x1
- 1242 0300 2E01     		.2byte	0x12e
- 1243 0302 F7030000 		.4byte	0x3f7
- 1244 0306 05       		.uleb128 0x5
- 1245 0307 03       		.byte	0x3
- 1246 0308 2C000000 		.4byte	cy_cfg_data_table.4776
- 1247 030c 1B       		.uleb128 0x1b
- 1248 030d 06       		.byte	0x6
- 1249 030e 01       		.byte	0x1
- 1250 030f FC01     		.2byte	0x1fc
- 1251 0311 30030000 		.4byte	0x330
- 1252 0315 1C       		.uleb128 0x1c
- 1253 0316 7B010000 		.4byte	.LASF34
- 1254 031a 01       		.byte	0x1
- 1255 031b FD01     		.2byte	0x1fd
- 1256 031d 7D000000 		.4byte	0x7d
- 1257 0321 00       		.byte	0
- 1258 0322 1C       		.uleb128 0x1c
- 1259 0323 A5000000 		.4byte	.LASF35
- 1260 0327 01       		.byte	0x1
- 1261 0328 FE01     		.2byte	0x1fe
- 1262 032a 99000000 		.4byte	0x99
- 1263 032e 04       		.byte	0x4
- 1264 032f 00       		.byte	0
- 1265 0330 08       		.uleb128 0x8
- 1266 0331 A7010000 		.4byte	.LASF36
- 1267 0335 01       		.byte	0x1
- 1268 0336 FF01     		.2byte	0x1ff
- 1269 0338 0C030000 		.4byte	0x30c
- 1270 033c 1D       		.uleb128 0x1d
- 1271 033d 30030000 		.4byte	0x330
- 1272 0341 4C030000 		.4byte	0x34c
- 1273 0345 1E       		.uleb128 0x1e
- 1274 0346 76000000 		.4byte	0x76
- 1275 034a 01       		.byte	0x1
- 1276 034b 00       		.byte	0
- 1277 034c 1A       		.uleb128 0x1a
- 1278 034d 95000000 		.4byte	.LASF37
- 1279 0351 01       		.byte	0x1
- 1280 0352 0102     		.2byte	0x201
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 34
+ 1218 02b5 14       		.uleb128 0x14
+ 1219 02b6 84000000 		.4byte	.LVL22
+ 1220 02ba 97040000 		.4byte	0x497
+ 1221 02be 15       		.uleb128 0x15
+ 1222 02bf 01       		.uleb128 0x1
+ 1223 02c0 50       		.byte	0x50
+ 1224 02c1 01       		.uleb128 0x1
+ 1225 02c2 38       		.byte	0x38
+ 1226 02c3 00       		.byte	0
+ 1227 02c4 00       		.byte	0
+ 1228 02c5 18       		.uleb128 0x18
+ 1229 02c6 B7010000 		.4byte	.LASF49
+ 1230 02ca 01       		.byte	0x1
+ 1231 02cb 1901     		.2byte	0x119
+ 1232 02cd D0000000 		.4byte	.LFB8
+ 1233 02d1 F8000000 		.4byte	.LFE8-.LFB8
+ 1234 02d5 01       		.uleb128 0x1
+ 1235 02d6 9C       		.byte	0x9c
+ 1236 02d7 D2030000 		.4byte	0x3d2
+ 1237 02db 19       		.uleb128 0x19
+ 1238 02dc E0000000 		.4byte	.LBB3
+ 1239 02e0 86000000 		.4byte	.LBE3-.LBB3
+ 1240 02e4 BF030000 		.4byte	0x3bf
+ 1241 02e8 1A       		.uleb128 0x1a
+ 1242 02e9 58000000 		.4byte	.LASF32
+ 1243 02ed 01       		.byte	0x1
+ 1244 02ee 2301     		.2byte	0x123
+ 1245 02f0 E2030000 		.4byte	0x3e2
+ 1246 02f4 05       		.uleb128 0x5
+ 1247 02f5 03       		.byte	0x3
+ 1248 02f6 0C000000 		.4byte	cy_cfg_addr_table.4775
+ 1249 02fa 1A       		.uleb128 0x1a
+ 1250 02fb 6A000000 		.4byte	.LASF33
+ 1251 02ff 01       		.byte	0x1
+ 1252 0300 2E01     		.2byte	0x12e
+ 1253 0302 F7030000 		.4byte	0x3f7
+ 1254 0306 05       		.uleb128 0x5
+ 1255 0307 03       		.byte	0x3
+ 1256 0308 2C000000 		.4byte	cy_cfg_data_table.4776
+ 1257 030c 1B       		.uleb128 0x1b
+ 1258 030d 06       		.byte	0x6
+ 1259 030e 01       		.byte	0x1
+ 1260 030f FC01     		.2byte	0x1fc
+ 1261 0311 30030000 		.4byte	0x330
+ 1262 0315 1C       		.uleb128 0x1c
+ 1263 0316 C4010000 		.4byte	.LASF34
+ 1264 031a 01       		.byte	0x1
+ 1265 031b FD01     		.2byte	0x1fd
+ 1266 031d 7D000000 		.4byte	0x7d
+ 1267 0321 00       		.byte	0
+ 1268 0322 1C       		.uleb128 0x1c
+ 1269 0323 EE000000 		.4byte	.LASF35
+ 1270 0327 01       		.byte	0x1
+ 1271 0328 FE01     		.2byte	0x1fe
+ 1272 032a 99000000 		.4byte	0x99
+ 1273 032e 04       		.byte	0x4
+ 1274 032f 00       		.byte	0
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 34
 
 
- 1281 0354 5E030000 		.4byte	0x35e
- 1282 0358 05       		.uleb128 0x5
- 1283 0359 03       		.byte	0x3
- 1284 035a 00000000 		.4byte	cfg_memset_list.4781
- 1285 035e 11       		.uleb128 0x11
- 1286 035f 3C030000 		.4byte	0x33c
- 1287 0363 1F       		.uleb128 0x1f
- 1288 0364 6900     		.ascii	"i\000"
- 1289 0366 01       		.byte	0x1
- 1290 0367 0702     		.2byte	0x207
- 1291 0369 8D000000 		.4byte	0x8d
- 1292 036d BC000000 		.4byte	.LLST6
- 1293 0371 19       		.uleb128 0x19
- 1294 0372 E4000000 		.4byte	.LBB4
- 1295 0376 1E000000 		.4byte	.LBE4-.LBB4
- 1296 037a A2030000 		.4byte	0x3a2
- 1297 037e 1F       		.uleb128 0x1f
- 1298 037f 6D7300   		.ascii	"ms\000"
- 1299 0382 01       		.byte	0x1
- 1300 0383 0C02     		.2byte	0x20c
- 1301 0385 8D030000 		.4byte	0x38d
- 1302 0389 E6000000 		.4byte	.LLST7
- 1303 038d 06       		.uleb128 0x6
- 1304 038e 04       		.byte	0x4
- 1305 038f 93030000 		.4byte	0x393
- 1306 0393 11       		.uleb128 0x11
- 1307 0394 30030000 		.4byte	0x330
- 1308 0398 16       		.uleb128 0x16
- 1309 0399 02010000 		.4byte	.LVL25
- 1310 039d CF010000 		.4byte	0x1cf
- 1311 03a1 00       		.byte	0
- 1312 03a2 14       		.uleb128 0x14
- 1313 03a3 16010000 		.4byte	.LVL28
- 1314 03a7 36010000 		.4byte	0x136
- 1315 03ab 15       		.uleb128 0x15
- 1316 03ac 01       		.uleb128 0x1
- 1317 03ad 51       		.byte	0x51
- 1318 03ae 05       		.uleb128 0x5
- 1319 03af 03       		.byte	0x3
- 1320 03b0 2C000000 		.4byte	.LANCHOR0+44
- 1321 03b4 15       		.uleb128 0x15
- 1322 03b5 01       		.uleb128 0x1
- 1323 03b6 50       		.byte	0x50
- 1324 03b7 05       		.uleb128 0x5
- 1325 03b8 03       		.byte	0x3
- 1326 03b9 0C000000 		.4byte	.LANCHOR0+12
- 1327 03bd 00       		.byte	0
- 1328 03be 00       		.byte	0
- 1329 03bf 16       		.uleb128 0x16
- 1330 03c0 76010000 		.4byte	.LVL29
- 1331 03c4 1C020000 		.4byte	0x21c
- 1332 03c8 16       		.uleb128 0x16
- 1333 03c9 7A010000 		.4byte	.LVL30
- 1334 03cd BE010000 		.4byte	0x1be
- 1335 03d1 00       		.byte	0
- 1336 03d2 1D       		.uleb128 0x1d
- 1337 03d3 A5000000 		.4byte	0xa5
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 35
+ 1275 0330 08       		.uleb128 0x8
+ 1276 0331 F0010000 		.4byte	.LASF36
+ 1277 0335 01       		.byte	0x1
+ 1278 0336 FF01     		.2byte	0x1ff
+ 1279 0338 0C030000 		.4byte	0x30c
+ 1280 033c 1D       		.uleb128 0x1d
+ 1281 033d 30030000 		.4byte	0x330
+ 1282 0341 4C030000 		.4byte	0x34c
+ 1283 0345 1E       		.uleb128 0x1e
+ 1284 0346 76000000 		.4byte	0x76
+ 1285 034a 01       		.byte	0x1
+ 1286 034b 00       		.byte	0
+ 1287 034c 1A       		.uleb128 0x1a
+ 1288 034d DE000000 		.4byte	.LASF37
+ 1289 0351 01       		.byte	0x1
+ 1290 0352 0102     		.2byte	0x201
+ 1291 0354 5E030000 		.4byte	0x35e
+ 1292 0358 05       		.uleb128 0x5
+ 1293 0359 03       		.byte	0x3
+ 1294 035a 00000000 		.4byte	cfg_memset_list.4781
+ 1295 035e 11       		.uleb128 0x11
+ 1296 035f 3C030000 		.4byte	0x33c
+ 1297 0363 1F       		.uleb128 0x1f
+ 1298 0364 6900     		.ascii	"i\000"
+ 1299 0366 01       		.byte	0x1
+ 1300 0367 0702     		.2byte	0x207
+ 1301 0369 8D000000 		.4byte	0x8d
+ 1302 036d BC000000 		.4byte	.LLST6
+ 1303 0371 19       		.uleb128 0x19
+ 1304 0372 E4000000 		.4byte	.LBB4
+ 1305 0376 1E000000 		.4byte	.LBE4-.LBB4
+ 1306 037a A2030000 		.4byte	0x3a2
+ 1307 037e 1F       		.uleb128 0x1f
+ 1308 037f 6D7300   		.ascii	"ms\000"
+ 1309 0382 01       		.byte	0x1
+ 1310 0383 0C02     		.2byte	0x20c
+ 1311 0385 8D030000 		.4byte	0x38d
+ 1312 0389 E6000000 		.4byte	.LLST7
+ 1313 038d 06       		.uleb128 0x6
+ 1314 038e 04       		.byte	0x4
+ 1315 038f 93030000 		.4byte	0x393
+ 1316 0393 11       		.uleb128 0x11
+ 1317 0394 30030000 		.4byte	0x330
+ 1318 0398 16       		.uleb128 0x16
+ 1319 0399 02010000 		.4byte	.LVL25
+ 1320 039d CF010000 		.4byte	0x1cf
+ 1321 03a1 00       		.byte	0
+ 1322 03a2 14       		.uleb128 0x14
+ 1323 03a3 16010000 		.4byte	.LVL28
+ 1324 03a7 36010000 		.4byte	0x136
+ 1325 03ab 15       		.uleb128 0x15
+ 1326 03ac 01       		.uleb128 0x1
+ 1327 03ad 51       		.byte	0x51
+ 1328 03ae 05       		.uleb128 0x5
+ 1329 03af 03       		.byte	0x3
+ 1330 03b0 2C000000 		.4byte	.LANCHOR0+44
+ 1331 03b4 15       		.uleb128 0x15
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 35
 
 
- 1338 03d7 E2030000 		.4byte	0x3e2
- 1339 03db 1E       		.uleb128 0x1e
- 1340 03dc 76000000 		.4byte	0x76
- 1341 03e0 07       		.byte	0x7
- 1342 03e1 00       		.byte	0
- 1343 03e2 11       		.uleb128 0x11
- 1344 03e3 D2030000 		.4byte	0x3d2
- 1345 03e7 1D       		.uleb128 0x1d
- 1346 03e8 2B010000 		.4byte	0x12b
- 1347 03ec F7030000 		.4byte	0x3f7
- 1348 03f0 1E       		.uleb128 0x1e
- 1349 03f1 76000000 		.4byte	0x76
- 1350 03f5 C8       		.byte	0xc8
- 1351 03f6 00       		.byte	0
- 1352 03f7 11       		.uleb128 0x11
- 1353 03f8 E7030000 		.4byte	0x3e7
- 1354 03fc 20       		.uleb128 0x20
- 1355 03fd 08010000 		.4byte	.LASF38
- 1356 0401 7D000000 		.4byte	0x7d
- 1357 0405 19040000 		.4byte	0x419
- 1358 0409 21       		.uleb128 0x21
- 1359 040a 7D000000 		.4byte	0x7d
- 1360 040e 21       		.uleb128 0x21
- 1361 040f 25000000 		.4byte	0x25
- 1362 0413 21       		.uleb128 0x21
- 1363 0414 76000000 		.4byte	0x76
- 1364 0418 00       		.byte	0
- 1365 0419 22       		.uleb128 0x22
- 1366 041a DF000000 		.4byte	.LASF50
- 1367 041e 05       		.byte	0x5
- 1368 041f 4F       		.byte	0x4f
- 1369 0420 23       		.uleb128 0x23
- 1370 0421 06000000 		.4byte	.LASF39
- 1371 0425 04       		.byte	0x4
- 1372 0426 DA       		.byte	0xda
- 1373 0427 31040000 		.4byte	0x431
- 1374 042b 21       		.uleb128 0x21
- 1375 042c A5000000 		.4byte	0xa5
- 1376 0430 00       		.byte	0
- 1377 0431 24       		.uleb128 0x24
- 1378 0432 AA000000 		.4byte	.LASF41
- 1379 0436 05       		.byte	0x5
- 1380 0437 51       		.byte	0x51
- 1381 0438 A5000000 		.4byte	0xa5
- 1382 043c 46040000 		.4byte	0x446
- 1383 0440 21       		.uleb128 0x21
- 1384 0441 A5000000 		.4byte	0xa5
- 1385 0445 00       		.byte	0
- 1386 0446 23       		.uleb128 0x23
- 1387 0447 BB020000 		.4byte	.LASF40
- 1388 044b 04       		.byte	0x4
- 1389 044c 6C       		.byte	0x6c
- 1390 044d 57040000 		.4byte	0x457
- 1391 0451 21       		.uleb128 0x21
- 1392 0452 A5000000 		.4byte	0xa5
- 1393 0456 00       		.byte	0
- 1394 0457 24       		.uleb128 0x24
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 36
+ 1332 03b5 01       		.uleb128 0x1
+ 1333 03b6 50       		.byte	0x50
+ 1334 03b7 05       		.uleb128 0x5
+ 1335 03b8 03       		.byte	0x3
+ 1336 03b9 0C000000 		.4byte	.LANCHOR0+12
+ 1337 03bd 00       		.byte	0
+ 1338 03be 00       		.byte	0
+ 1339 03bf 16       		.uleb128 0x16
+ 1340 03c0 82010000 		.4byte	.LVL29
+ 1341 03c4 1C020000 		.4byte	0x21c
+ 1342 03c8 16       		.uleb128 0x16
+ 1343 03c9 86010000 		.4byte	.LVL30
+ 1344 03cd BE010000 		.4byte	0x1be
+ 1345 03d1 00       		.byte	0
+ 1346 03d2 1D       		.uleb128 0x1d
+ 1347 03d3 A5000000 		.4byte	0xa5
+ 1348 03d7 E2030000 		.4byte	0x3e2
+ 1349 03db 1E       		.uleb128 0x1e
+ 1350 03dc 76000000 		.4byte	0x76
+ 1351 03e0 07       		.byte	0x7
+ 1352 03e1 00       		.byte	0
+ 1353 03e2 11       		.uleb128 0x11
+ 1354 03e3 D2030000 		.4byte	0x3d2
+ 1355 03e7 1D       		.uleb128 0x1d
+ 1356 03e8 2B010000 		.4byte	0x12b
+ 1357 03ec F7030000 		.4byte	0x3f7
+ 1358 03f0 1E       		.uleb128 0x1e
+ 1359 03f1 76000000 		.4byte	0x76
+ 1360 03f5 C8       		.byte	0xc8
+ 1361 03f6 00       		.byte	0
+ 1362 03f7 11       		.uleb128 0x11
+ 1363 03f8 E7030000 		.4byte	0x3e7
+ 1364 03fc 20       		.uleb128 0x20
+ 1365 03fd 51010000 		.4byte	.LASF38
+ 1366 0401 7D000000 		.4byte	0x7d
+ 1367 0405 19040000 		.4byte	0x419
+ 1368 0409 21       		.uleb128 0x21
+ 1369 040a 7D000000 		.4byte	0x7d
+ 1370 040e 21       		.uleb128 0x21
+ 1371 040f 25000000 		.4byte	0x25
+ 1372 0413 21       		.uleb128 0x21
+ 1373 0414 76000000 		.4byte	0x76
+ 1374 0418 00       		.byte	0
+ 1375 0419 22       		.uleb128 0x22
+ 1376 041a 28010000 		.4byte	.LASF50
+ 1377 041e 05       		.byte	0x5
+ 1378 041f 4F       		.byte	0x4f
+ 1379 0420 23       		.uleb128 0x23
+ 1380 0421 06000000 		.4byte	.LASF39
+ 1381 0425 04       		.byte	0x4
+ 1382 0426 DA       		.byte	0xda
+ 1383 0427 31040000 		.4byte	0x431
+ 1384 042b 21       		.uleb128 0x21
+ 1385 042c A5000000 		.4byte	0xa5
+ 1386 0430 00       		.byte	0
+ 1387 0431 24       		.uleb128 0x24
+ 1388 0432 F3000000 		.4byte	.LASF41
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 36
 
 
- 1395 0458 0B020000 		.4byte	.LASF42
- 1396 045c 04       		.byte	0x4
- 1397 045d 82       		.byte	0x82
- 1398 045e BF000000 		.4byte	0xbf
- 1399 0462 6C040000 		.4byte	0x46c
- 1400 0466 21       		.uleb128 0x21
- 1401 0467 A5000000 		.4byte	0xa5
- 1402 046b 00       		.byte	0
- 1403 046c 23       		.uleb128 0x23
- 1404 046d FC010000 		.4byte	.LASF43
- 1405 0471 04       		.byte	0x4
- 1406 0472 D8       		.byte	0xd8
- 1407 0473 7D040000 		.4byte	0x47d
- 1408 0477 21       		.uleb128 0x21
- 1409 0478 99000000 		.4byte	0x99
- 1410 047c 00       		.byte	0
- 1411 047d 24       		.uleb128 0x24
- 1412 047e 32000000 		.4byte	.LASF44
- 1413 0482 04       		.byte	0x4
- 1414 0483 BB       		.byte	0xbb
- 1415 0484 FE000000 		.4byte	0xfe
- 1416 0488 97040000 		.4byte	0x497
- 1417 048c 21       		.uleb128 0x21
- 1418 048d 8D000000 		.4byte	0x8d
- 1419 0491 21       		.uleb128 0x21
- 1420 0492 FE000000 		.4byte	0xfe
- 1421 0496 00       		.byte	0
- 1422 0497 25       		.uleb128 0x25
- 1423 0498 28010000 		.4byte	.LASF51
- 1424 049c 04       		.byte	0x4
- 1425 049d C1       		.byte	0xc1
- 1426 049e 21       		.uleb128 0x21
- 1427 049f 8D000000 		.4byte	0x8d
- 1428 04a3 00       		.byte	0
- 1429 04a4 00       		.byte	0
- 1430              		.section	.debug_abbrev,"",%progbits
- 1431              	.Ldebug_abbrev0:
- 1432 0000 01       		.uleb128 0x1
- 1433 0001 11       		.uleb128 0x11
- 1434 0002 01       		.byte	0x1
- 1435 0003 25       		.uleb128 0x25
- 1436 0004 0E       		.uleb128 0xe
- 1437 0005 13       		.uleb128 0x13
- 1438 0006 0B       		.uleb128 0xb
- 1439 0007 03       		.uleb128 0x3
- 1440 0008 0E       		.uleb128 0xe
- 1441 0009 1B       		.uleb128 0x1b
- 1442 000a 0E       		.uleb128 0xe
- 1443 000b 55       		.uleb128 0x55
- 1444 000c 17       		.uleb128 0x17
- 1445 000d 11       		.uleb128 0x11
- 1446 000e 01       		.uleb128 0x1
- 1447 000f 10       		.uleb128 0x10
- 1448 0010 17       		.uleb128 0x17
- 1449 0011 00       		.byte	0
- 1450 0012 00       		.byte	0
- 1451 0013 02       		.uleb128 0x2
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 37
+ 1389 0436 05       		.byte	0x5
+ 1390 0437 51       		.byte	0x51
+ 1391 0438 A5000000 		.4byte	0xa5
+ 1392 043c 46040000 		.4byte	0x446
+ 1393 0440 21       		.uleb128 0x21
+ 1394 0441 A5000000 		.4byte	0xa5
+ 1395 0445 00       		.byte	0
+ 1396 0446 23       		.uleb128 0x23
+ 1397 0447 04030000 		.4byte	.LASF40
+ 1398 044b 04       		.byte	0x4
+ 1399 044c 6C       		.byte	0x6c
+ 1400 044d 57040000 		.4byte	0x457
+ 1401 0451 21       		.uleb128 0x21
+ 1402 0452 A5000000 		.4byte	0xa5
+ 1403 0456 00       		.byte	0
+ 1404 0457 24       		.uleb128 0x24
+ 1405 0458 54020000 		.4byte	.LASF42
+ 1406 045c 04       		.byte	0x4
+ 1407 045d 82       		.byte	0x82
+ 1408 045e BF000000 		.4byte	0xbf
+ 1409 0462 6C040000 		.4byte	0x46c
+ 1410 0466 21       		.uleb128 0x21
+ 1411 0467 A5000000 		.4byte	0xa5
+ 1412 046b 00       		.byte	0
+ 1413 046c 23       		.uleb128 0x23
+ 1414 046d 45020000 		.4byte	.LASF43
+ 1415 0471 04       		.byte	0x4
+ 1416 0472 D8       		.byte	0xd8
+ 1417 0473 7D040000 		.4byte	0x47d
+ 1418 0477 21       		.uleb128 0x21
+ 1419 0478 99000000 		.4byte	0x99
+ 1420 047c 00       		.byte	0
+ 1421 047d 24       		.uleb128 0x24
+ 1422 047e 32000000 		.4byte	.LASF44
+ 1423 0482 04       		.byte	0x4
+ 1424 0483 BB       		.byte	0xbb
+ 1425 0484 FE000000 		.4byte	0xfe
+ 1426 0488 97040000 		.4byte	0x497
+ 1427 048c 21       		.uleb128 0x21
+ 1428 048d 8D000000 		.4byte	0x8d
+ 1429 0491 21       		.uleb128 0x21
+ 1430 0492 FE000000 		.4byte	0xfe
+ 1431 0496 00       		.byte	0
+ 1432 0497 25       		.uleb128 0x25
+ 1433 0498 71010000 		.4byte	.LASF51
+ 1434 049c 04       		.byte	0x4
+ 1435 049d C1       		.byte	0xc1
+ 1436 049e 21       		.uleb128 0x21
+ 1437 049f 8D000000 		.4byte	0x8d
+ 1438 04a3 00       		.byte	0
+ 1439 04a4 00       		.byte	0
+ 1440              		.section	.debug_abbrev,"",%progbits
+ 1441              	.Ldebug_abbrev0:
+ 1442 0000 01       		.uleb128 0x1
+ 1443 0001 11       		.uleb128 0x11
+ 1444 0002 01       		.byte	0x1
+ 1445 0003 25       		.uleb128 0x25
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 37
 
 
- 1452 0014 24       		.uleb128 0x24
- 1453 0015 00       		.byte	0
- 1454 0016 0B       		.uleb128 0xb
- 1455 0017 0B       		.uleb128 0xb
- 1456 0018 3E       		.uleb128 0x3e
- 1457 0019 0B       		.uleb128 0xb
- 1458 001a 03       		.uleb128 0x3
- 1459 001b 08       		.uleb128 0x8
- 1460 001c 00       		.byte	0
- 1461 001d 00       		.byte	0
- 1462 001e 03       		.uleb128 0x3
- 1463 001f 16       		.uleb128 0x16
- 1464 0020 00       		.byte	0
- 1465 0021 03       		.uleb128 0x3
- 1466 0022 0E       		.uleb128 0xe
- 1467 0023 3A       		.uleb128 0x3a
- 1468 0024 0B       		.uleb128 0xb
- 1469 0025 3B       		.uleb128 0x3b
- 1470 0026 0B       		.uleb128 0xb
- 1471 0027 49       		.uleb128 0x49
- 1472 0028 13       		.uleb128 0x13
- 1473 0029 00       		.byte	0
- 1474 002a 00       		.byte	0
- 1475 002b 04       		.uleb128 0x4
- 1476 002c 24       		.uleb128 0x24
- 1477 002d 00       		.byte	0
- 1478 002e 0B       		.uleb128 0xb
- 1479 002f 0B       		.uleb128 0xb
- 1480 0030 3E       		.uleb128 0x3e
- 1481 0031 0B       		.uleb128 0xb
- 1482 0032 03       		.uleb128 0x3
- 1483 0033 0E       		.uleb128 0xe
- 1484 0034 00       		.byte	0
- 1485 0035 00       		.byte	0
- 1486 0036 05       		.uleb128 0x5
- 1487 0037 0F       		.uleb128 0xf
- 1488 0038 00       		.byte	0
- 1489 0039 0B       		.uleb128 0xb
- 1490 003a 0B       		.uleb128 0xb
- 1491 003b 00       		.byte	0
- 1492 003c 00       		.byte	0
- 1493 003d 06       		.uleb128 0x6
- 1494 003e 0F       		.uleb128 0xf
- 1495 003f 00       		.byte	0
- 1496 0040 0B       		.uleb128 0xb
- 1497 0041 0B       		.uleb128 0xb
- 1498 0042 49       		.uleb128 0x49
- 1499 0043 13       		.uleb128 0x13
- 1500 0044 00       		.byte	0
- 1501 0045 00       		.byte	0
- 1502 0046 07       		.uleb128 0x7
- 1503 0047 15       		.uleb128 0x15
- 1504 0048 00       		.byte	0
- 1505 0049 27       		.uleb128 0x27
- 1506 004a 19       		.uleb128 0x19
- 1507 004b 00       		.byte	0
- 1508 004c 00       		.byte	0
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 38
+ 1446 0004 0E       		.uleb128 0xe
+ 1447 0005 13       		.uleb128 0x13
+ 1448 0006 0B       		.uleb128 0xb
+ 1449 0007 03       		.uleb128 0x3
+ 1450 0008 0E       		.uleb128 0xe
+ 1451 0009 1B       		.uleb128 0x1b
+ 1452 000a 0E       		.uleb128 0xe
+ 1453 000b 55       		.uleb128 0x55
+ 1454 000c 17       		.uleb128 0x17
+ 1455 000d 11       		.uleb128 0x11
+ 1456 000e 01       		.uleb128 0x1
+ 1457 000f 10       		.uleb128 0x10
+ 1458 0010 17       		.uleb128 0x17
+ 1459 0011 00       		.byte	0
+ 1460 0012 00       		.byte	0
+ 1461 0013 02       		.uleb128 0x2
+ 1462 0014 24       		.uleb128 0x24
+ 1463 0015 00       		.byte	0
+ 1464 0016 0B       		.uleb128 0xb
+ 1465 0017 0B       		.uleb128 0xb
+ 1466 0018 3E       		.uleb128 0x3e
+ 1467 0019 0B       		.uleb128 0xb
+ 1468 001a 03       		.uleb128 0x3
+ 1469 001b 08       		.uleb128 0x8
+ 1470 001c 00       		.byte	0
+ 1471 001d 00       		.byte	0
+ 1472 001e 03       		.uleb128 0x3
+ 1473 001f 16       		.uleb128 0x16
+ 1474 0020 00       		.byte	0
+ 1475 0021 03       		.uleb128 0x3
+ 1476 0022 0E       		.uleb128 0xe
+ 1477 0023 3A       		.uleb128 0x3a
+ 1478 0024 0B       		.uleb128 0xb
+ 1479 0025 3B       		.uleb128 0x3b
+ 1480 0026 0B       		.uleb128 0xb
+ 1481 0027 49       		.uleb128 0x49
+ 1482 0028 13       		.uleb128 0x13
+ 1483 0029 00       		.byte	0
+ 1484 002a 00       		.byte	0
+ 1485 002b 04       		.uleb128 0x4
+ 1486 002c 24       		.uleb128 0x24
+ 1487 002d 00       		.byte	0
+ 1488 002e 0B       		.uleb128 0xb
+ 1489 002f 0B       		.uleb128 0xb
+ 1490 0030 3E       		.uleb128 0x3e
+ 1491 0031 0B       		.uleb128 0xb
+ 1492 0032 03       		.uleb128 0x3
+ 1493 0033 0E       		.uleb128 0xe
+ 1494 0034 00       		.byte	0
+ 1495 0035 00       		.byte	0
+ 1496 0036 05       		.uleb128 0x5
+ 1497 0037 0F       		.uleb128 0xf
+ 1498 0038 00       		.byte	0
+ 1499 0039 0B       		.uleb128 0xb
+ 1500 003a 0B       		.uleb128 0xb
+ 1501 003b 00       		.byte	0
+ 1502 003c 00       		.byte	0
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 38
 
 
- 1509 004d 08       		.uleb128 0x8
- 1510 004e 16       		.uleb128 0x16
- 1511 004f 00       		.byte	0
- 1512 0050 03       		.uleb128 0x3
- 1513 0051 0E       		.uleb128 0xe
- 1514 0052 3A       		.uleb128 0x3a
- 1515 0053 0B       		.uleb128 0xb
- 1516 0054 3B       		.uleb128 0x3b
- 1517 0055 05       		.uleb128 0x5
- 1518 0056 49       		.uleb128 0x49
- 1519 0057 13       		.uleb128 0x13
- 1520 0058 00       		.byte	0
- 1521 0059 00       		.byte	0
- 1522 005a 09       		.uleb128 0x9
- 1523 005b 35       		.uleb128 0x35
- 1524 005c 00       		.byte	0
- 1525 005d 49       		.uleb128 0x49
- 1526 005e 13       		.uleb128 0x13
- 1527 005f 00       		.byte	0
- 1528 0060 00       		.byte	0
- 1529 0061 0A       		.uleb128 0xa
- 1530 0062 13       		.uleb128 0x13
- 1531 0063 01       		.byte	0x1
- 1532 0064 0B       		.uleb128 0xb
- 1533 0065 0B       		.uleb128 0xb
- 1534 0066 3A       		.uleb128 0x3a
- 1535 0067 0B       		.uleb128 0xb
- 1536 0068 3B       		.uleb128 0x3b
- 1537 0069 0B       		.uleb128 0xb
- 1538 006a 01       		.uleb128 0x1
- 1539 006b 13       		.uleb128 0x13
- 1540 006c 00       		.byte	0
- 1541 006d 00       		.byte	0
- 1542 006e 0B       		.uleb128 0xb
- 1543 006f 0D       		.uleb128 0xd
- 1544 0070 00       		.byte	0
- 1545 0071 03       		.uleb128 0x3
- 1546 0072 0E       		.uleb128 0xe
- 1547 0073 3A       		.uleb128 0x3a
- 1548 0074 0B       		.uleb128 0xb
- 1549 0075 3B       		.uleb128 0x3b
- 1550 0076 0B       		.uleb128 0xb
- 1551 0077 49       		.uleb128 0x49
- 1552 0078 13       		.uleb128 0x13
- 1553 0079 38       		.uleb128 0x38
- 1554 007a 0B       		.uleb128 0xb
- 1555 007b 00       		.byte	0
- 1556 007c 00       		.byte	0
- 1557 007d 0C       		.uleb128 0xc
- 1558 007e 2E       		.uleb128 0x2e
- 1559 007f 01       		.byte	0x1
- 1560 0080 03       		.uleb128 0x3
- 1561 0081 0E       		.uleb128 0xe
- 1562 0082 3A       		.uleb128 0x3a
- 1563 0083 0B       		.uleb128 0xb
- 1564 0084 3B       		.uleb128 0x3b
- 1565 0085 0B       		.uleb128 0xb
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 39
+ 1503 003d 06       		.uleb128 0x6
+ 1504 003e 0F       		.uleb128 0xf
+ 1505 003f 00       		.byte	0
+ 1506 0040 0B       		.uleb128 0xb
+ 1507 0041 0B       		.uleb128 0xb
+ 1508 0042 49       		.uleb128 0x49
+ 1509 0043 13       		.uleb128 0x13
+ 1510 0044 00       		.byte	0
+ 1511 0045 00       		.byte	0
+ 1512 0046 07       		.uleb128 0x7
+ 1513 0047 15       		.uleb128 0x15
+ 1514 0048 00       		.byte	0
+ 1515 0049 27       		.uleb128 0x27
+ 1516 004a 19       		.uleb128 0x19
+ 1517 004b 00       		.byte	0
+ 1518 004c 00       		.byte	0
+ 1519 004d 08       		.uleb128 0x8
+ 1520 004e 16       		.uleb128 0x16
+ 1521 004f 00       		.byte	0
+ 1522 0050 03       		.uleb128 0x3
+ 1523 0051 0E       		.uleb128 0xe
+ 1524 0052 3A       		.uleb128 0x3a
+ 1525 0053 0B       		.uleb128 0xb
+ 1526 0054 3B       		.uleb128 0x3b
+ 1527 0055 05       		.uleb128 0x5
+ 1528 0056 49       		.uleb128 0x49
+ 1529 0057 13       		.uleb128 0x13
+ 1530 0058 00       		.byte	0
+ 1531 0059 00       		.byte	0
+ 1532 005a 09       		.uleb128 0x9
+ 1533 005b 35       		.uleb128 0x35
+ 1534 005c 00       		.byte	0
+ 1535 005d 49       		.uleb128 0x49
+ 1536 005e 13       		.uleb128 0x13
+ 1537 005f 00       		.byte	0
+ 1538 0060 00       		.byte	0
+ 1539 0061 0A       		.uleb128 0xa
+ 1540 0062 13       		.uleb128 0x13
+ 1541 0063 01       		.byte	0x1
+ 1542 0064 0B       		.uleb128 0xb
+ 1543 0065 0B       		.uleb128 0xb
+ 1544 0066 3A       		.uleb128 0x3a
+ 1545 0067 0B       		.uleb128 0xb
+ 1546 0068 3B       		.uleb128 0x3b
+ 1547 0069 0B       		.uleb128 0xb
+ 1548 006a 01       		.uleb128 0x1
+ 1549 006b 13       		.uleb128 0x13
+ 1550 006c 00       		.byte	0
+ 1551 006d 00       		.byte	0
+ 1552 006e 0B       		.uleb128 0xb
+ 1553 006f 0D       		.uleb128 0xd
+ 1554 0070 00       		.byte	0
+ 1555 0071 03       		.uleb128 0x3
+ 1556 0072 0E       		.uleb128 0xe
+ 1557 0073 3A       		.uleb128 0x3a
+ 1558 0074 0B       		.uleb128 0xb
+ 1559 0075 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 39
 
 
- 1566 0086 27       		.uleb128 0x27
- 1567 0087 19       		.uleb128 0x19
- 1568 0088 11       		.uleb128 0x11
- 1569 0089 01       		.uleb128 0x1
- 1570 008a 12       		.uleb128 0x12
- 1571 008b 06       		.uleb128 0x6
- 1572 008c 40       		.uleb128 0x40
- 1573 008d 18       		.uleb128 0x18
- 1574 008e 9742     		.uleb128 0x2117
- 1575 0090 19       		.uleb128 0x19
- 1576 0091 01       		.uleb128 0x1
- 1577 0092 13       		.uleb128 0x13
- 1578 0093 00       		.byte	0
- 1579 0094 00       		.byte	0
- 1580 0095 0D       		.uleb128 0xd
- 1581 0096 05       		.uleb128 0x5
- 1582 0097 00       		.byte	0
- 1583 0098 03       		.uleb128 0x3
- 1584 0099 0E       		.uleb128 0xe
- 1585 009a 3A       		.uleb128 0x3a
- 1586 009b 0B       		.uleb128 0xb
- 1587 009c 3B       		.uleb128 0x3b
- 1588 009d 0B       		.uleb128 0xb
- 1589 009e 49       		.uleb128 0x49
- 1590 009f 13       		.uleb128 0x13
- 1591 00a0 02       		.uleb128 0x2
- 1592 00a1 18       		.uleb128 0x18
- 1593 00a2 00       		.byte	0
- 1594 00a3 00       		.byte	0
- 1595 00a4 0E       		.uleb128 0xe
- 1596 00a5 34       		.uleb128 0x34
- 1597 00a6 00       		.byte	0
- 1598 00a7 03       		.uleb128 0x3
- 1599 00a8 08       		.uleb128 0x8
- 1600 00a9 3A       		.uleb128 0x3a
- 1601 00aa 0B       		.uleb128 0xb
- 1602 00ab 3B       		.uleb128 0x3b
- 1603 00ac 0B       		.uleb128 0xb
- 1604 00ad 49       		.uleb128 0x49
- 1605 00ae 13       		.uleb128 0x13
- 1606 00af 02       		.uleb128 0x2
- 1607 00b0 17       		.uleb128 0x17
- 1608 00b1 00       		.byte	0
- 1609 00b2 00       		.byte	0
- 1610 00b3 0F       		.uleb128 0xf
- 1611 00b4 0B       		.uleb128 0xb
- 1612 00b5 01       		.byte	0x1
- 1613 00b6 11       		.uleb128 0x11
- 1614 00b7 01       		.uleb128 0x1
- 1615 00b8 12       		.uleb128 0x12
- 1616 00b9 06       		.uleb128 0x6
- 1617 00ba 00       		.byte	0
- 1618 00bb 00       		.byte	0
- 1619 00bc 10       		.uleb128 0x10
- 1620 00bd 34       		.uleb128 0x34
- 1621 00be 00       		.byte	0
- 1622 00bf 03       		.uleb128 0x3
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 40
+ 1560 0076 0B       		.uleb128 0xb
+ 1561 0077 49       		.uleb128 0x49
+ 1562 0078 13       		.uleb128 0x13
+ 1563 0079 38       		.uleb128 0x38
+ 1564 007a 0B       		.uleb128 0xb
+ 1565 007b 00       		.byte	0
+ 1566 007c 00       		.byte	0
+ 1567 007d 0C       		.uleb128 0xc
+ 1568 007e 2E       		.uleb128 0x2e
+ 1569 007f 01       		.byte	0x1
+ 1570 0080 03       		.uleb128 0x3
+ 1571 0081 0E       		.uleb128 0xe
+ 1572 0082 3A       		.uleb128 0x3a
+ 1573 0083 0B       		.uleb128 0xb
+ 1574 0084 3B       		.uleb128 0x3b
+ 1575 0085 0B       		.uleb128 0xb
+ 1576 0086 27       		.uleb128 0x27
+ 1577 0087 19       		.uleb128 0x19
+ 1578 0088 11       		.uleb128 0x11
+ 1579 0089 01       		.uleb128 0x1
+ 1580 008a 12       		.uleb128 0x12
+ 1581 008b 06       		.uleb128 0x6
+ 1582 008c 40       		.uleb128 0x40
+ 1583 008d 18       		.uleb128 0x18
+ 1584 008e 9742     		.uleb128 0x2117
+ 1585 0090 19       		.uleb128 0x19
+ 1586 0091 01       		.uleb128 0x1
+ 1587 0092 13       		.uleb128 0x13
+ 1588 0093 00       		.byte	0
+ 1589 0094 00       		.byte	0
+ 1590 0095 0D       		.uleb128 0xd
+ 1591 0096 05       		.uleb128 0x5
+ 1592 0097 00       		.byte	0
+ 1593 0098 03       		.uleb128 0x3
+ 1594 0099 0E       		.uleb128 0xe
+ 1595 009a 3A       		.uleb128 0x3a
+ 1596 009b 0B       		.uleb128 0xb
+ 1597 009c 3B       		.uleb128 0x3b
+ 1598 009d 0B       		.uleb128 0xb
+ 1599 009e 49       		.uleb128 0x49
+ 1600 009f 13       		.uleb128 0x13
+ 1601 00a0 02       		.uleb128 0x2
+ 1602 00a1 18       		.uleb128 0x18
+ 1603 00a2 00       		.byte	0
+ 1604 00a3 00       		.byte	0
+ 1605 00a4 0E       		.uleb128 0xe
+ 1606 00a5 34       		.uleb128 0x34
+ 1607 00a6 00       		.byte	0
+ 1608 00a7 03       		.uleb128 0x3
+ 1609 00a8 08       		.uleb128 0x8
+ 1610 00a9 3A       		.uleb128 0x3a
+ 1611 00aa 0B       		.uleb128 0xb
+ 1612 00ab 3B       		.uleb128 0x3b
+ 1613 00ac 0B       		.uleb128 0xb
+ 1614 00ad 49       		.uleb128 0x49
+ 1615 00ae 13       		.uleb128 0x13
+ 1616 00af 02       		.uleb128 0x2
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 40
 
 
- 1623 00c0 0E       		.uleb128 0xe
- 1624 00c1 3A       		.uleb128 0x3a
- 1625 00c2 0B       		.uleb128 0xb
- 1626 00c3 3B       		.uleb128 0x3b
- 1627 00c4 0B       		.uleb128 0xb
- 1628 00c5 49       		.uleb128 0x49
- 1629 00c6 13       		.uleb128 0x13
- 1630 00c7 02       		.uleb128 0x2
- 1631 00c8 17       		.uleb128 0x17
- 1632 00c9 00       		.byte	0
- 1633 00ca 00       		.byte	0
- 1634 00cb 11       		.uleb128 0x11
- 1635 00cc 26       		.uleb128 0x26
- 1636 00cd 00       		.byte	0
- 1637 00ce 49       		.uleb128 0x49
- 1638 00cf 13       		.uleb128 0x13
- 1639 00d0 00       		.byte	0
- 1640 00d1 00       		.byte	0
- 1641 00d2 12       		.uleb128 0x12
- 1642 00d3 2E       		.uleb128 0x2e
- 1643 00d4 00       		.byte	0
- 1644 00d5 03       		.uleb128 0x3
- 1645 00d6 0E       		.uleb128 0xe
- 1646 00d7 3A       		.uleb128 0x3a
- 1647 00d8 0B       		.uleb128 0xb
- 1648 00d9 3B       		.uleb128 0x3b
- 1649 00da 0B       		.uleb128 0xb
- 1650 00db 27       		.uleb128 0x27
- 1651 00dc 19       		.uleb128 0x19
- 1652 00dd 11       		.uleb128 0x11
- 1653 00de 01       		.uleb128 0x1
- 1654 00df 12       		.uleb128 0x12
- 1655 00e0 06       		.uleb128 0x6
- 1656 00e1 40       		.uleb128 0x40
- 1657 00e2 18       		.uleb128 0x18
- 1658 00e3 9742     		.uleb128 0x2117
- 1659 00e5 19       		.uleb128 0x19
- 1660 00e6 00       		.byte	0
- 1661 00e7 00       		.byte	0
- 1662 00e8 13       		.uleb128 0x13
- 1663 00e9 05       		.uleb128 0x5
- 1664 00ea 00       		.byte	0
- 1665 00eb 03       		.uleb128 0x3
- 1666 00ec 08       		.uleb128 0x8
- 1667 00ed 3A       		.uleb128 0x3a
- 1668 00ee 0B       		.uleb128 0xb
- 1669 00ef 3B       		.uleb128 0x3b
- 1670 00f0 0B       		.uleb128 0xb
- 1671 00f1 49       		.uleb128 0x49
- 1672 00f2 13       		.uleb128 0x13
- 1673 00f3 02       		.uleb128 0x2
- 1674 00f4 17       		.uleb128 0x17
- 1675 00f5 00       		.byte	0
- 1676 00f6 00       		.byte	0
- 1677 00f7 14       		.uleb128 0x14
- 1678 00f8 898201   		.uleb128 0x4109
- 1679 00fb 01       		.byte	0x1
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 41
+ 1617 00b0 17       		.uleb128 0x17
+ 1618 00b1 00       		.byte	0
+ 1619 00b2 00       		.byte	0
+ 1620 00b3 0F       		.uleb128 0xf
+ 1621 00b4 0B       		.uleb128 0xb
+ 1622 00b5 01       		.byte	0x1
+ 1623 00b6 11       		.uleb128 0x11
+ 1624 00b7 01       		.uleb128 0x1
+ 1625 00b8 12       		.uleb128 0x12
+ 1626 00b9 06       		.uleb128 0x6
+ 1627 00ba 00       		.byte	0
+ 1628 00bb 00       		.byte	0
+ 1629 00bc 10       		.uleb128 0x10
+ 1630 00bd 34       		.uleb128 0x34
+ 1631 00be 00       		.byte	0
+ 1632 00bf 03       		.uleb128 0x3
+ 1633 00c0 0E       		.uleb128 0xe
+ 1634 00c1 3A       		.uleb128 0x3a
+ 1635 00c2 0B       		.uleb128 0xb
+ 1636 00c3 3B       		.uleb128 0x3b
+ 1637 00c4 0B       		.uleb128 0xb
+ 1638 00c5 49       		.uleb128 0x49
+ 1639 00c6 13       		.uleb128 0x13
+ 1640 00c7 02       		.uleb128 0x2
+ 1641 00c8 17       		.uleb128 0x17
+ 1642 00c9 00       		.byte	0
+ 1643 00ca 00       		.byte	0
+ 1644 00cb 11       		.uleb128 0x11
+ 1645 00cc 26       		.uleb128 0x26
+ 1646 00cd 00       		.byte	0
+ 1647 00ce 49       		.uleb128 0x49
+ 1648 00cf 13       		.uleb128 0x13
+ 1649 00d0 00       		.byte	0
+ 1650 00d1 00       		.byte	0
+ 1651 00d2 12       		.uleb128 0x12
+ 1652 00d3 2E       		.uleb128 0x2e
+ 1653 00d4 00       		.byte	0
+ 1654 00d5 03       		.uleb128 0x3
+ 1655 00d6 0E       		.uleb128 0xe
+ 1656 00d7 3A       		.uleb128 0x3a
+ 1657 00d8 0B       		.uleb128 0xb
+ 1658 00d9 3B       		.uleb128 0x3b
+ 1659 00da 0B       		.uleb128 0xb
+ 1660 00db 27       		.uleb128 0x27
+ 1661 00dc 19       		.uleb128 0x19
+ 1662 00dd 11       		.uleb128 0x11
+ 1663 00de 01       		.uleb128 0x1
+ 1664 00df 12       		.uleb128 0x12
+ 1665 00e0 06       		.uleb128 0x6
+ 1666 00e1 40       		.uleb128 0x40
+ 1667 00e2 18       		.uleb128 0x18
+ 1668 00e3 9742     		.uleb128 0x2117
+ 1669 00e5 19       		.uleb128 0x19
+ 1670 00e6 00       		.byte	0
+ 1671 00e7 00       		.byte	0
+ 1672 00e8 13       		.uleb128 0x13
+ 1673 00e9 05       		.uleb128 0x5
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 41
 
 
- 1680 00fc 11       		.uleb128 0x11
- 1681 00fd 01       		.uleb128 0x1
- 1682 00fe 31       		.uleb128 0x31
- 1683 00ff 13       		.uleb128 0x13
- 1684 0100 00       		.byte	0
- 1685 0101 00       		.byte	0
- 1686 0102 15       		.uleb128 0x15
- 1687 0103 8A8201   		.uleb128 0x410a
- 1688 0106 00       		.byte	0
- 1689 0107 02       		.uleb128 0x2
- 1690 0108 18       		.uleb128 0x18
- 1691 0109 9142     		.uleb128 0x2111
- 1692 010b 18       		.uleb128 0x18
- 1693 010c 00       		.byte	0
- 1694 010d 00       		.byte	0
- 1695 010e 16       		.uleb128 0x16
- 1696 010f 898201   		.uleb128 0x4109
- 1697 0112 00       		.byte	0
- 1698 0113 11       		.uleb128 0x11
- 1699 0114 01       		.uleb128 0x1
- 1700 0115 31       		.uleb128 0x31
- 1701 0116 13       		.uleb128 0x13
- 1702 0117 00       		.byte	0
- 1703 0118 00       		.byte	0
- 1704 0119 17       		.uleb128 0x17
- 1705 011a 898201   		.uleb128 0x4109
- 1706 011d 01       		.byte	0x1
- 1707 011e 11       		.uleb128 0x11
- 1708 011f 01       		.uleb128 0x1
- 1709 0120 31       		.uleb128 0x31
- 1710 0121 13       		.uleb128 0x13
- 1711 0122 01       		.uleb128 0x1
- 1712 0123 13       		.uleb128 0x13
- 1713 0124 00       		.byte	0
- 1714 0125 00       		.byte	0
- 1715 0126 18       		.uleb128 0x18
- 1716 0127 2E       		.uleb128 0x2e
- 1717 0128 01       		.byte	0x1
- 1718 0129 3F       		.uleb128 0x3f
- 1719 012a 19       		.uleb128 0x19
- 1720 012b 03       		.uleb128 0x3
- 1721 012c 0E       		.uleb128 0xe
- 1722 012d 3A       		.uleb128 0x3a
- 1723 012e 0B       		.uleb128 0xb
- 1724 012f 3B       		.uleb128 0x3b
- 1725 0130 05       		.uleb128 0x5
- 1726 0131 27       		.uleb128 0x27
- 1727 0132 19       		.uleb128 0x19
- 1728 0133 11       		.uleb128 0x11
- 1729 0134 01       		.uleb128 0x1
- 1730 0135 12       		.uleb128 0x12
- 1731 0136 06       		.uleb128 0x6
- 1732 0137 40       		.uleb128 0x40
- 1733 0138 18       		.uleb128 0x18
- 1734 0139 9742     		.uleb128 0x2117
- 1735 013b 19       		.uleb128 0x19
- 1736 013c 01       		.uleb128 0x1
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 42
+ 1674 00ea 00       		.byte	0
+ 1675 00eb 03       		.uleb128 0x3
+ 1676 00ec 08       		.uleb128 0x8
+ 1677 00ed 3A       		.uleb128 0x3a
+ 1678 00ee 0B       		.uleb128 0xb
+ 1679 00ef 3B       		.uleb128 0x3b
+ 1680 00f0 0B       		.uleb128 0xb
+ 1681 00f1 49       		.uleb128 0x49
+ 1682 00f2 13       		.uleb128 0x13
+ 1683 00f3 02       		.uleb128 0x2
+ 1684 00f4 17       		.uleb128 0x17
+ 1685 00f5 00       		.byte	0
+ 1686 00f6 00       		.byte	0
+ 1687 00f7 14       		.uleb128 0x14
+ 1688 00f8 898201   		.uleb128 0x4109
+ 1689 00fb 01       		.byte	0x1
+ 1690 00fc 11       		.uleb128 0x11
+ 1691 00fd 01       		.uleb128 0x1
+ 1692 00fe 31       		.uleb128 0x31
+ 1693 00ff 13       		.uleb128 0x13
+ 1694 0100 00       		.byte	0
+ 1695 0101 00       		.byte	0
+ 1696 0102 15       		.uleb128 0x15
+ 1697 0103 8A8201   		.uleb128 0x410a
+ 1698 0106 00       		.byte	0
+ 1699 0107 02       		.uleb128 0x2
+ 1700 0108 18       		.uleb128 0x18
+ 1701 0109 9142     		.uleb128 0x2111
+ 1702 010b 18       		.uleb128 0x18
+ 1703 010c 00       		.byte	0
+ 1704 010d 00       		.byte	0
+ 1705 010e 16       		.uleb128 0x16
+ 1706 010f 898201   		.uleb128 0x4109
+ 1707 0112 00       		.byte	0
+ 1708 0113 11       		.uleb128 0x11
+ 1709 0114 01       		.uleb128 0x1
+ 1710 0115 31       		.uleb128 0x31
+ 1711 0116 13       		.uleb128 0x13
+ 1712 0117 00       		.byte	0
+ 1713 0118 00       		.byte	0
+ 1714 0119 17       		.uleb128 0x17
+ 1715 011a 898201   		.uleb128 0x4109
+ 1716 011d 01       		.byte	0x1
+ 1717 011e 11       		.uleb128 0x11
+ 1718 011f 01       		.uleb128 0x1
+ 1719 0120 31       		.uleb128 0x31
+ 1720 0121 13       		.uleb128 0x13
+ 1721 0122 01       		.uleb128 0x1
+ 1722 0123 13       		.uleb128 0x13
+ 1723 0124 00       		.byte	0
+ 1724 0125 00       		.byte	0
+ 1725 0126 18       		.uleb128 0x18
+ 1726 0127 2E       		.uleb128 0x2e
+ 1727 0128 01       		.byte	0x1
+ 1728 0129 3F       		.uleb128 0x3f
+ 1729 012a 19       		.uleb128 0x19
+ 1730 012b 03       		.uleb128 0x3
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 42
 
 
- 1737 013d 13       		.uleb128 0x13
- 1738 013e 00       		.byte	0
- 1739 013f 00       		.byte	0
- 1740 0140 19       		.uleb128 0x19
- 1741 0141 0B       		.uleb128 0xb
- 1742 0142 01       		.byte	0x1
- 1743 0143 11       		.uleb128 0x11
- 1744 0144 01       		.uleb128 0x1
- 1745 0145 12       		.uleb128 0x12
- 1746 0146 06       		.uleb128 0x6
- 1747 0147 01       		.uleb128 0x1
- 1748 0148 13       		.uleb128 0x13
- 1749 0149 00       		.byte	0
- 1750 014a 00       		.byte	0
- 1751 014b 1A       		.uleb128 0x1a
- 1752 014c 34       		.uleb128 0x34
- 1753 014d 00       		.byte	0
- 1754 014e 03       		.uleb128 0x3
- 1755 014f 0E       		.uleb128 0xe
- 1756 0150 3A       		.uleb128 0x3a
- 1757 0151 0B       		.uleb128 0xb
- 1758 0152 3B       		.uleb128 0x3b
- 1759 0153 05       		.uleb128 0x5
- 1760 0154 49       		.uleb128 0x49
- 1761 0155 13       		.uleb128 0x13
- 1762 0156 02       		.uleb128 0x2
- 1763 0157 18       		.uleb128 0x18
- 1764 0158 00       		.byte	0
- 1765 0159 00       		.byte	0
- 1766 015a 1B       		.uleb128 0x1b
- 1767 015b 13       		.uleb128 0x13
- 1768 015c 01       		.byte	0x1
- 1769 015d 0B       		.uleb128 0xb
- 1770 015e 0B       		.uleb128 0xb
- 1771 015f 3A       		.uleb128 0x3a
- 1772 0160 0B       		.uleb128 0xb
- 1773 0161 3B       		.uleb128 0x3b
- 1774 0162 05       		.uleb128 0x5
- 1775 0163 01       		.uleb128 0x1
- 1776 0164 13       		.uleb128 0x13
- 1777 0165 00       		.byte	0
- 1778 0166 00       		.byte	0
- 1779 0167 1C       		.uleb128 0x1c
- 1780 0168 0D       		.uleb128 0xd
- 1781 0169 00       		.byte	0
- 1782 016a 03       		.uleb128 0x3
- 1783 016b 0E       		.uleb128 0xe
- 1784 016c 3A       		.uleb128 0x3a
- 1785 016d 0B       		.uleb128 0xb
- 1786 016e 3B       		.uleb128 0x3b
- 1787 016f 05       		.uleb128 0x5
- 1788 0170 49       		.uleb128 0x49
- 1789 0171 13       		.uleb128 0x13
- 1790 0172 38       		.uleb128 0x38
- 1791 0173 0B       		.uleb128 0xb
- 1792 0174 00       		.byte	0
- 1793 0175 00       		.byte	0
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 43
+ 1731 012c 0E       		.uleb128 0xe
+ 1732 012d 3A       		.uleb128 0x3a
+ 1733 012e 0B       		.uleb128 0xb
+ 1734 012f 3B       		.uleb128 0x3b
+ 1735 0130 05       		.uleb128 0x5
+ 1736 0131 27       		.uleb128 0x27
+ 1737 0132 19       		.uleb128 0x19
+ 1738 0133 11       		.uleb128 0x11
+ 1739 0134 01       		.uleb128 0x1
+ 1740 0135 12       		.uleb128 0x12
+ 1741 0136 06       		.uleb128 0x6
+ 1742 0137 40       		.uleb128 0x40
+ 1743 0138 18       		.uleb128 0x18
+ 1744 0139 9742     		.uleb128 0x2117
+ 1745 013b 19       		.uleb128 0x19
+ 1746 013c 01       		.uleb128 0x1
+ 1747 013d 13       		.uleb128 0x13
+ 1748 013e 00       		.byte	0
+ 1749 013f 00       		.byte	0
+ 1750 0140 19       		.uleb128 0x19
+ 1751 0141 0B       		.uleb128 0xb
+ 1752 0142 01       		.byte	0x1
+ 1753 0143 11       		.uleb128 0x11
+ 1754 0144 01       		.uleb128 0x1
+ 1755 0145 12       		.uleb128 0x12
+ 1756 0146 06       		.uleb128 0x6
+ 1757 0147 01       		.uleb128 0x1
+ 1758 0148 13       		.uleb128 0x13
+ 1759 0149 00       		.byte	0
+ 1760 014a 00       		.byte	0
+ 1761 014b 1A       		.uleb128 0x1a
+ 1762 014c 34       		.uleb128 0x34
+ 1763 014d 00       		.byte	0
+ 1764 014e 03       		.uleb128 0x3
+ 1765 014f 0E       		.uleb128 0xe
+ 1766 0150 3A       		.uleb128 0x3a
+ 1767 0151 0B       		.uleb128 0xb
+ 1768 0152 3B       		.uleb128 0x3b
+ 1769 0153 05       		.uleb128 0x5
+ 1770 0154 49       		.uleb128 0x49
+ 1771 0155 13       		.uleb128 0x13
+ 1772 0156 02       		.uleb128 0x2
+ 1773 0157 18       		.uleb128 0x18
+ 1774 0158 00       		.byte	0
+ 1775 0159 00       		.byte	0
+ 1776 015a 1B       		.uleb128 0x1b
+ 1777 015b 13       		.uleb128 0x13
+ 1778 015c 01       		.byte	0x1
+ 1779 015d 0B       		.uleb128 0xb
+ 1780 015e 0B       		.uleb128 0xb
+ 1781 015f 3A       		.uleb128 0x3a
+ 1782 0160 0B       		.uleb128 0xb
+ 1783 0161 3B       		.uleb128 0x3b
+ 1784 0162 05       		.uleb128 0x5
+ 1785 0163 01       		.uleb128 0x1
+ 1786 0164 13       		.uleb128 0x13
+ 1787 0165 00       		.byte	0
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 43
 
 
- 1794 0176 1D       		.uleb128 0x1d
- 1795 0177 01       		.uleb128 0x1
- 1796 0178 01       		.byte	0x1
- 1797 0179 49       		.uleb128 0x49
- 1798 017a 13       		.uleb128 0x13
- 1799 017b 01       		.uleb128 0x1
- 1800 017c 13       		.uleb128 0x13
- 1801 017d 00       		.byte	0
- 1802 017e 00       		.byte	0
- 1803 017f 1E       		.uleb128 0x1e
- 1804 0180 21       		.uleb128 0x21
- 1805 0181 00       		.byte	0
- 1806 0182 49       		.uleb128 0x49
- 1807 0183 13       		.uleb128 0x13
- 1808 0184 2F       		.uleb128 0x2f
- 1809 0185 0B       		.uleb128 0xb
- 1810 0186 00       		.byte	0
- 1811 0187 00       		.byte	0
- 1812 0188 1F       		.uleb128 0x1f
- 1813 0189 34       		.uleb128 0x34
- 1814 018a 00       		.byte	0
- 1815 018b 03       		.uleb128 0x3
- 1816 018c 08       		.uleb128 0x8
- 1817 018d 3A       		.uleb128 0x3a
- 1818 018e 0B       		.uleb128 0xb
- 1819 018f 3B       		.uleb128 0x3b
- 1820 0190 05       		.uleb128 0x5
- 1821 0191 49       		.uleb128 0x49
- 1822 0192 13       		.uleb128 0x13
- 1823 0193 02       		.uleb128 0x2
- 1824 0194 17       		.uleb128 0x17
- 1825 0195 00       		.byte	0
- 1826 0196 00       		.byte	0
- 1827 0197 20       		.uleb128 0x20
- 1828 0198 2E       		.uleb128 0x2e
- 1829 0199 01       		.byte	0x1
- 1830 019a 3F       		.uleb128 0x3f
- 1831 019b 19       		.uleb128 0x19
- 1832 019c 03       		.uleb128 0x3
- 1833 019d 0E       		.uleb128 0xe
- 1834 019e 27       		.uleb128 0x27
- 1835 019f 19       		.uleb128 0x19
- 1836 01a0 49       		.uleb128 0x49
- 1837 01a1 13       		.uleb128 0x13
- 1838 01a2 34       		.uleb128 0x34
- 1839 01a3 19       		.uleb128 0x19
- 1840 01a4 3C       		.uleb128 0x3c
- 1841 01a5 19       		.uleb128 0x19
- 1842 01a6 01       		.uleb128 0x1
- 1843 01a7 13       		.uleb128 0x13
- 1844 01a8 00       		.byte	0
- 1845 01a9 00       		.byte	0
- 1846 01aa 21       		.uleb128 0x21
- 1847 01ab 05       		.uleb128 0x5
- 1848 01ac 00       		.byte	0
- 1849 01ad 49       		.uleb128 0x49
- 1850 01ae 13       		.uleb128 0x13
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 44
+ 1788 0166 00       		.byte	0
+ 1789 0167 1C       		.uleb128 0x1c
+ 1790 0168 0D       		.uleb128 0xd
+ 1791 0169 00       		.byte	0
+ 1792 016a 03       		.uleb128 0x3
+ 1793 016b 0E       		.uleb128 0xe
+ 1794 016c 3A       		.uleb128 0x3a
+ 1795 016d 0B       		.uleb128 0xb
+ 1796 016e 3B       		.uleb128 0x3b
+ 1797 016f 05       		.uleb128 0x5
+ 1798 0170 49       		.uleb128 0x49
+ 1799 0171 13       		.uleb128 0x13
+ 1800 0172 38       		.uleb128 0x38
+ 1801 0173 0B       		.uleb128 0xb
+ 1802 0174 00       		.byte	0
+ 1803 0175 00       		.byte	0
+ 1804 0176 1D       		.uleb128 0x1d
+ 1805 0177 01       		.uleb128 0x1
+ 1806 0178 01       		.byte	0x1
+ 1807 0179 49       		.uleb128 0x49
+ 1808 017a 13       		.uleb128 0x13
+ 1809 017b 01       		.uleb128 0x1
+ 1810 017c 13       		.uleb128 0x13
+ 1811 017d 00       		.byte	0
+ 1812 017e 00       		.byte	0
+ 1813 017f 1E       		.uleb128 0x1e
+ 1814 0180 21       		.uleb128 0x21
+ 1815 0181 00       		.byte	0
+ 1816 0182 49       		.uleb128 0x49
+ 1817 0183 13       		.uleb128 0x13
+ 1818 0184 2F       		.uleb128 0x2f
+ 1819 0185 0B       		.uleb128 0xb
+ 1820 0186 00       		.byte	0
+ 1821 0187 00       		.byte	0
+ 1822 0188 1F       		.uleb128 0x1f
+ 1823 0189 34       		.uleb128 0x34
+ 1824 018a 00       		.byte	0
+ 1825 018b 03       		.uleb128 0x3
+ 1826 018c 08       		.uleb128 0x8
+ 1827 018d 3A       		.uleb128 0x3a
+ 1828 018e 0B       		.uleb128 0xb
+ 1829 018f 3B       		.uleb128 0x3b
+ 1830 0190 05       		.uleb128 0x5
+ 1831 0191 49       		.uleb128 0x49
+ 1832 0192 13       		.uleb128 0x13
+ 1833 0193 02       		.uleb128 0x2
+ 1834 0194 17       		.uleb128 0x17
+ 1835 0195 00       		.byte	0
+ 1836 0196 00       		.byte	0
+ 1837 0197 20       		.uleb128 0x20
+ 1838 0198 2E       		.uleb128 0x2e
+ 1839 0199 01       		.byte	0x1
+ 1840 019a 3F       		.uleb128 0x3f
+ 1841 019b 19       		.uleb128 0x19
+ 1842 019c 03       		.uleb128 0x3
+ 1843 019d 0E       		.uleb128 0xe
+ 1844 019e 27       		.uleb128 0x27
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 44
 
 
- 1851 01af 00       		.byte	0
- 1852 01b0 00       		.byte	0
- 1853 01b1 22       		.uleb128 0x22
- 1854 01b2 2E       		.uleb128 0x2e
- 1855 01b3 00       		.byte	0
- 1856 01b4 3F       		.uleb128 0x3f
- 1857 01b5 19       		.uleb128 0x19
- 1858 01b6 03       		.uleb128 0x3
- 1859 01b7 0E       		.uleb128 0xe
- 1860 01b8 3A       		.uleb128 0x3a
- 1861 01b9 0B       		.uleb128 0xb
- 1862 01ba 3B       		.uleb128 0x3b
- 1863 01bb 0B       		.uleb128 0xb
- 1864 01bc 27       		.uleb128 0x27
- 1865 01bd 19       		.uleb128 0x19
- 1866 01be 3C       		.uleb128 0x3c
- 1867 01bf 19       		.uleb128 0x19
- 1868 01c0 00       		.byte	0
- 1869 01c1 00       		.byte	0
- 1870 01c2 23       		.uleb128 0x23
- 1871 01c3 2E       		.uleb128 0x2e
- 1872 01c4 01       		.byte	0x1
- 1873 01c5 3F       		.uleb128 0x3f
- 1874 01c6 19       		.uleb128 0x19
- 1875 01c7 03       		.uleb128 0x3
- 1876 01c8 0E       		.uleb128 0xe
- 1877 01c9 3A       		.uleb128 0x3a
- 1878 01ca 0B       		.uleb128 0xb
- 1879 01cb 3B       		.uleb128 0x3b
- 1880 01cc 0B       		.uleb128 0xb
- 1881 01cd 27       		.uleb128 0x27
- 1882 01ce 19       		.uleb128 0x19
- 1883 01cf 3C       		.uleb128 0x3c
- 1884 01d0 19       		.uleb128 0x19
- 1885 01d1 01       		.uleb128 0x1
- 1886 01d2 13       		.uleb128 0x13
- 1887 01d3 00       		.byte	0
- 1888 01d4 00       		.byte	0
- 1889 01d5 24       		.uleb128 0x24
- 1890 01d6 2E       		.uleb128 0x2e
- 1891 01d7 01       		.byte	0x1
- 1892 01d8 3F       		.uleb128 0x3f
- 1893 01d9 19       		.uleb128 0x19
- 1894 01da 03       		.uleb128 0x3
- 1895 01db 0E       		.uleb128 0xe
- 1896 01dc 3A       		.uleb128 0x3a
- 1897 01dd 0B       		.uleb128 0xb
- 1898 01de 3B       		.uleb128 0x3b
- 1899 01df 0B       		.uleb128 0xb
- 1900 01e0 27       		.uleb128 0x27
- 1901 01e1 19       		.uleb128 0x19
- 1902 01e2 49       		.uleb128 0x49
- 1903 01e3 13       		.uleb128 0x13
- 1904 01e4 3C       		.uleb128 0x3c
- 1905 01e5 19       		.uleb128 0x19
- 1906 01e6 01       		.uleb128 0x1
- 1907 01e7 13       		.uleb128 0x13
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 45
+ 1845 019f 19       		.uleb128 0x19
+ 1846 01a0 49       		.uleb128 0x49
+ 1847 01a1 13       		.uleb128 0x13
+ 1848 01a2 34       		.uleb128 0x34
+ 1849 01a3 19       		.uleb128 0x19
+ 1850 01a4 3C       		.uleb128 0x3c
+ 1851 01a5 19       		.uleb128 0x19
+ 1852 01a6 01       		.uleb128 0x1
+ 1853 01a7 13       		.uleb128 0x13
+ 1854 01a8 00       		.byte	0
+ 1855 01a9 00       		.byte	0
+ 1856 01aa 21       		.uleb128 0x21
+ 1857 01ab 05       		.uleb128 0x5
+ 1858 01ac 00       		.byte	0
+ 1859 01ad 49       		.uleb128 0x49
+ 1860 01ae 13       		.uleb128 0x13
+ 1861 01af 00       		.byte	0
+ 1862 01b0 00       		.byte	0
+ 1863 01b1 22       		.uleb128 0x22
+ 1864 01b2 2E       		.uleb128 0x2e
+ 1865 01b3 00       		.byte	0
+ 1866 01b4 3F       		.uleb128 0x3f
+ 1867 01b5 19       		.uleb128 0x19
+ 1868 01b6 03       		.uleb128 0x3
+ 1869 01b7 0E       		.uleb128 0xe
+ 1870 01b8 3A       		.uleb128 0x3a
+ 1871 01b9 0B       		.uleb128 0xb
+ 1872 01ba 3B       		.uleb128 0x3b
+ 1873 01bb 0B       		.uleb128 0xb
+ 1874 01bc 27       		.uleb128 0x27
+ 1875 01bd 19       		.uleb128 0x19
+ 1876 01be 3C       		.uleb128 0x3c
+ 1877 01bf 19       		.uleb128 0x19
+ 1878 01c0 00       		.byte	0
+ 1879 01c1 00       		.byte	0
+ 1880 01c2 23       		.uleb128 0x23
+ 1881 01c3 2E       		.uleb128 0x2e
+ 1882 01c4 01       		.byte	0x1
+ 1883 01c5 3F       		.uleb128 0x3f
+ 1884 01c6 19       		.uleb128 0x19
+ 1885 01c7 03       		.uleb128 0x3
+ 1886 01c8 0E       		.uleb128 0xe
+ 1887 01c9 3A       		.uleb128 0x3a
+ 1888 01ca 0B       		.uleb128 0xb
+ 1889 01cb 3B       		.uleb128 0x3b
+ 1890 01cc 0B       		.uleb128 0xb
+ 1891 01cd 27       		.uleb128 0x27
+ 1892 01ce 19       		.uleb128 0x19
+ 1893 01cf 3C       		.uleb128 0x3c
+ 1894 01d0 19       		.uleb128 0x19
+ 1895 01d1 01       		.uleb128 0x1
+ 1896 01d2 13       		.uleb128 0x13
+ 1897 01d3 00       		.byte	0
+ 1898 01d4 00       		.byte	0
+ 1899 01d5 24       		.uleb128 0x24
+ 1900 01d6 2E       		.uleb128 0x2e
+ 1901 01d7 01       		.byte	0x1
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 45
 
 
- 1908 01e8 00       		.byte	0
- 1909 01e9 00       		.byte	0
- 1910 01ea 25       		.uleb128 0x25
- 1911 01eb 2E       		.uleb128 0x2e
- 1912 01ec 01       		.byte	0x1
- 1913 01ed 3F       		.uleb128 0x3f
- 1914 01ee 19       		.uleb128 0x19
- 1915 01ef 03       		.uleb128 0x3
- 1916 01f0 0E       		.uleb128 0xe
- 1917 01f1 3A       		.uleb128 0x3a
- 1918 01f2 0B       		.uleb128 0xb
- 1919 01f3 3B       		.uleb128 0x3b
- 1920 01f4 0B       		.uleb128 0xb
- 1921 01f5 27       		.uleb128 0x27
- 1922 01f6 19       		.uleb128 0x19
- 1923 01f7 3C       		.uleb128 0x3c
- 1924 01f8 19       		.uleb128 0x19
- 1925 01f9 00       		.byte	0
- 1926 01fa 00       		.byte	0
- 1927 01fb 00       		.byte	0
- 1928              		.section	.debug_loc,"",%progbits
- 1929              	.Ldebug_loc0:
- 1930              	.LLST0:
- 1931 0000 02000000 		.4byte	.LVL1
- 1932 0004 08000000 		.4byte	.LVL2
- 1933 0008 0200     		.2byte	0x2
- 1934 000a 30       		.byte	0x30
- 1935 000b 9F       		.byte	0x9f
- 1936 000c 08000000 		.4byte	.LVL2
- 1937 0010 30000000 		.4byte	.LVL11
- 1938 0014 0100     		.2byte	0x1
- 1939 0016 57       		.byte	0x57
- 1940 0017 00000000 		.4byte	0
- 1941 001b 00000000 		.4byte	0
- 1942              	.LLST1:
- 1943 001f 02000000 		.4byte	.LVL1
- 1944 0023 08000000 		.4byte	.LVL2
- 1945 0027 0200     		.2byte	0x2
- 1946 0029 30       		.byte	0x30
- 1947 002a 9F       		.byte	0x9f
- 1948 002b 08000000 		.4byte	.LVL2
- 1949 002f 30000000 		.4byte	.LVL10
- 1950 0033 0100     		.2byte	0x1
- 1951 0035 55       		.byte	0x55
- 1952 0036 00000000 		.4byte	0
- 1953 003a 00000000 		.4byte	0
- 1954              	.LLST2:
- 1955 003e 0C000000 		.4byte	.LVL3
- 1956 0042 2C000000 		.4byte	.LVL9
- 1957 0046 0100     		.2byte	0x1
- 1958 0048 56       		.byte	0x56
- 1959 0049 00000000 		.4byte	0
- 1960 004d 00000000 		.4byte	0
- 1961              	.LLST3:
- 1962 0051 0E000000 		.4byte	.LVL4
- 1963 0055 24000000 		.4byte	.LVL7
- 1964 0059 0100     		.2byte	0x1
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 46
+ 1902 01d8 3F       		.uleb128 0x3f
+ 1903 01d9 19       		.uleb128 0x19
+ 1904 01da 03       		.uleb128 0x3
+ 1905 01db 0E       		.uleb128 0xe
+ 1906 01dc 3A       		.uleb128 0x3a
+ 1907 01dd 0B       		.uleb128 0xb
+ 1908 01de 3B       		.uleb128 0x3b
+ 1909 01df 0B       		.uleb128 0xb
+ 1910 01e0 27       		.uleb128 0x27
+ 1911 01e1 19       		.uleb128 0x19
+ 1912 01e2 49       		.uleb128 0x49
+ 1913 01e3 13       		.uleb128 0x13
+ 1914 01e4 3C       		.uleb128 0x3c
+ 1915 01e5 19       		.uleb128 0x19
+ 1916 01e6 01       		.uleb128 0x1
+ 1917 01e7 13       		.uleb128 0x13
+ 1918 01e8 00       		.byte	0
+ 1919 01e9 00       		.byte	0
+ 1920 01ea 25       		.uleb128 0x25
+ 1921 01eb 2E       		.uleb128 0x2e
+ 1922 01ec 01       		.byte	0x1
+ 1923 01ed 3F       		.uleb128 0x3f
+ 1924 01ee 19       		.uleb128 0x19
+ 1925 01ef 03       		.uleb128 0x3
+ 1926 01f0 0E       		.uleb128 0xe
+ 1927 01f1 3A       		.uleb128 0x3a
+ 1928 01f2 0B       		.uleb128 0xb
+ 1929 01f3 3B       		.uleb128 0x3b
+ 1930 01f4 0B       		.uleb128 0xb
+ 1931 01f5 27       		.uleb128 0x27
+ 1932 01f6 19       		.uleb128 0x19
+ 1933 01f7 3C       		.uleb128 0x3c
+ 1934 01f8 19       		.uleb128 0x19
+ 1935 01f9 00       		.byte	0
+ 1936 01fa 00       		.byte	0
+ 1937 01fb 00       		.byte	0
+ 1938              		.section	.debug_loc,"",%progbits
+ 1939              	.Ldebug_loc0:
+ 1940              	.LLST0:
+ 1941 0000 02000000 		.4byte	.LVL1
+ 1942 0004 08000000 		.4byte	.LVL2
+ 1943 0008 0200     		.2byte	0x2
+ 1944 000a 30       		.byte	0x30
+ 1945 000b 9F       		.byte	0x9f
+ 1946 000c 08000000 		.4byte	.LVL2
+ 1947 0010 30000000 		.4byte	.LVL11
+ 1948 0014 0100     		.2byte	0x1
+ 1949 0016 57       		.byte	0x57
+ 1950 0017 00000000 		.4byte	0
+ 1951 001b 00000000 		.4byte	0
+ 1952              	.LLST1:
+ 1953 001f 02000000 		.4byte	.LVL1
+ 1954 0023 08000000 		.4byte	.LVL2
+ 1955 0027 0200     		.2byte	0x2
+ 1956 0029 30       		.byte	0x30
+ 1957 002a 9F       		.byte	0x9f
+ 1958 002b 08000000 		.4byte	.LVL2
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 46
 
 
- 1965 005b 53       		.byte	0x53
- 1966 005c 26000000 		.4byte	.LVL8
- 1967 0060 2C000000 		.4byte	.LVL9
- 1968 0064 0100     		.2byte	0x1
- 1969 0066 53       		.byte	0x53
- 1970 0067 00000000 		.4byte	0
- 1971 006b 00000000 		.4byte	0
- 1972              	.LLST4:
- 1973 006f 00000000 		.4byte	.LVL12
- 1974 0073 09000000 		.4byte	.LVL14-1
- 1975 0077 0100     		.2byte	0x1
- 1976 0079 50       		.byte	0x50
- 1977 007a 09000000 		.4byte	.LVL14-1
- 1978 007e 0C000000 		.4byte	.LFE2
- 1979 0082 0400     		.2byte	0x4
- 1980 0084 F3       		.byte	0xf3
- 1981 0085 01       		.uleb128 0x1
- 1982 0086 50       		.byte	0x50
- 1983 0087 9F       		.byte	0x9f
- 1984 0088 00000000 		.4byte	0
- 1985 008c 00000000 		.4byte	0
- 1986              	.LLST5:
- 1987 0090 00000000 		.4byte	.LVL12
- 1988 0094 06000000 		.4byte	.LVL13
- 1989 0098 0100     		.2byte	0x1
- 1990 009a 51       		.byte	0x51
- 1991 009b 06000000 		.4byte	.LVL13
- 1992 009f 09000000 		.4byte	.LVL14-1
- 1993 00a3 0100     		.2byte	0x1
- 1994 00a5 52       		.byte	0x52
- 1995 00a6 09000000 		.4byte	.LVL14-1
- 1996 00aa 0C000000 		.4byte	.LFE2
- 1997 00ae 0400     		.2byte	0x4
- 1998 00b0 F3       		.byte	0xf3
- 1999 00b1 01       		.uleb128 0x1
- 2000 00b2 51       		.byte	0x51
- 2001 00b3 9F       		.byte	0x9f
- 2002 00b4 00000000 		.4byte	0
- 2003 00b8 00000000 		.4byte	0
- 2004              	.LLST6:
- 2005 00bc E0000000 		.4byte	.LVL23
- 2006 00c0 E4000000 		.4byte	.LVL24
- 2007 00c4 0200     		.2byte	0x2
- 2008 00c6 30       		.byte	0x30
- 2009 00c7 9F       		.byte	0x9f
- 2010 00c8 E4000000 		.4byte	.LVL24
- 2011 00cc 04010000 		.4byte	.LVL26
- 2012 00d0 0100     		.2byte	0x1
- 2013 00d2 54       		.byte	0x54
- 2014 00d3 06010000 		.4byte	.LVL27
- 2015 00d7 7A010000 		.4byte	.LVL31
- 2016 00db 0100     		.2byte	0x1
- 2017 00dd 54       		.byte	0x54
- 2018 00de 00000000 		.4byte	0
- 2019 00e2 00000000 		.4byte	0
- 2020              	.LLST7:
- 2021 00e6 E4000000 		.4byte	.LVL24
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 47
+ 1959 002f 30000000 		.4byte	.LVL10
+ 1960 0033 0100     		.2byte	0x1
+ 1961 0035 55       		.byte	0x55
+ 1962 0036 00000000 		.4byte	0
+ 1963 003a 00000000 		.4byte	0
+ 1964              	.LLST2:
+ 1965 003e 0C000000 		.4byte	.LVL3
+ 1966 0042 2C000000 		.4byte	.LVL9
+ 1967 0046 0100     		.2byte	0x1
+ 1968 0048 56       		.byte	0x56
+ 1969 0049 00000000 		.4byte	0
+ 1970 004d 00000000 		.4byte	0
+ 1971              	.LLST3:
+ 1972 0051 0E000000 		.4byte	.LVL4
+ 1973 0055 24000000 		.4byte	.LVL7
+ 1974 0059 0100     		.2byte	0x1
+ 1975 005b 53       		.byte	0x53
+ 1976 005c 26000000 		.4byte	.LVL8
+ 1977 0060 2C000000 		.4byte	.LVL9
+ 1978 0064 0100     		.2byte	0x1
+ 1979 0066 53       		.byte	0x53
+ 1980 0067 00000000 		.4byte	0
+ 1981 006b 00000000 		.4byte	0
+ 1982              	.LLST4:
+ 1983 006f 00000000 		.4byte	.LVL12
+ 1984 0073 09000000 		.4byte	.LVL14-1
+ 1985 0077 0100     		.2byte	0x1
+ 1986 0079 50       		.byte	0x50
+ 1987 007a 09000000 		.4byte	.LVL14-1
+ 1988 007e 0C000000 		.4byte	.LFE2
+ 1989 0082 0400     		.2byte	0x4
+ 1990 0084 F3       		.byte	0xf3
+ 1991 0085 01       		.uleb128 0x1
+ 1992 0086 50       		.byte	0x50
+ 1993 0087 9F       		.byte	0x9f
+ 1994 0088 00000000 		.4byte	0
+ 1995 008c 00000000 		.4byte	0
+ 1996              	.LLST5:
+ 1997 0090 00000000 		.4byte	.LVL12
+ 1998 0094 06000000 		.4byte	.LVL13
+ 1999 0098 0100     		.2byte	0x1
+ 2000 009a 51       		.byte	0x51
+ 2001 009b 06000000 		.4byte	.LVL13
+ 2002 009f 09000000 		.4byte	.LVL14-1
+ 2003 00a3 0100     		.2byte	0x1
+ 2004 00a5 52       		.byte	0x52
+ 2005 00a6 09000000 		.4byte	.LVL14-1
+ 2006 00aa 0C000000 		.4byte	.LFE2
+ 2007 00ae 0400     		.2byte	0x4
+ 2008 00b0 F3       		.byte	0xf3
+ 2009 00b1 01       		.uleb128 0x1
+ 2010 00b2 51       		.byte	0x51
+ 2011 00b3 9F       		.byte	0x9f
+ 2012 00b4 00000000 		.4byte	0
+ 2013 00b8 00000000 		.4byte	0
+ 2014              	.LLST6:
+ 2015 00bc E0000000 		.4byte	.LVL23
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 47
 
 
- 2022 00ea 04010000 		.4byte	.LVL26
- 2023 00ee 0B00     		.2byte	0xb
- 2024 00f0 74       		.byte	0x74
- 2025 00f1 00       		.sleb128 0
- 2026 00f2 36       		.byte	0x36
- 2027 00f3 1E       		.byte	0x1e
- 2028 00f4 03       		.byte	0x3
- 2029 00f5 00000000 		.4byte	cfg_memset_list.4781
- 2030 00f9 22       		.byte	0x22
- 2031 00fa 9F       		.byte	0x9f
- 2032 00fb 04010000 		.4byte	.LVL26
- 2033 00ff 06010000 		.4byte	.LVL27
- 2034 0103 0B00     		.2byte	0xb
- 2035 0105 74       		.byte	0x74
- 2036 0106 7F       		.sleb128 -1
- 2037 0107 36       		.byte	0x36
- 2038 0108 1E       		.byte	0x1e
- 2039 0109 03       		.byte	0x3
- 2040 010a 00000000 		.4byte	cfg_memset_list.4781
- 2041 010e 22       		.byte	0x22
- 2042 010f 9F       		.byte	0x9f
- 2043 0110 00000000 		.4byte	0
- 2044 0114 00000000 		.4byte	0
- 2045              		.section	.debug_aranges,"",%progbits
- 2046 0000 3C000000 		.4byte	0x3c
- 2047 0004 0200     		.2byte	0x2
- 2048 0006 00000000 		.4byte	.Ldebug_info0
- 2049 000a 04       		.byte	0x4
- 2050 000b 00       		.byte	0
- 2051 000c 0000     		.2byte	0
- 2052 000e 0000     		.2byte	0
- 2053 0010 00000000 		.4byte	.LFB5
- 2054 0014 32000000 		.4byte	.LFE5-.LFB5
- 2055 0018 00000000 		.4byte	.LFB7
- 2056 001c 20000000 		.4byte	.LFE7-.LFB7
- 2057 0020 00000000 		.4byte	.LFB2
- 2058 0024 0C000000 		.4byte	.LFE2-.LFB2
- 2059 0028 00000000 		.4byte	.LFB6
- 2060 002c D0000000 		.4byte	.LFE6-.LFB6
- 2061 0030 D0000000 		.4byte	.LFB8
- 2062 0034 E4000000 		.4byte	.LFE8-.LFB8
- 2063 0038 00000000 		.4byte	0
- 2064 003c 00000000 		.4byte	0
- 2065              		.section	.debug_ranges,"",%progbits
- 2066              	.Ldebug_ranges0:
- 2067 0000 00000000 		.4byte	.LFB5
- 2068 0004 32000000 		.4byte	.LFE5
- 2069 0008 00000000 		.4byte	.LFB7
- 2070 000c 20000000 		.4byte	.LFE7
- 2071 0010 00000000 		.4byte	.LFB2
- 2072 0014 0C000000 		.4byte	.LFE2
- 2073 0018 00000000 		.4byte	.LFB6
- 2074 001c D0000000 		.4byte	.LFE6
- 2075 0020 D0000000 		.4byte	.LFB8
- 2076 0024 B4010000 		.4byte	.LFE8
- 2077 0028 00000000 		.4byte	0
- 2078 002c 00000000 		.4byte	0
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 48
+ 2016 00c0 E4000000 		.4byte	.LVL24
+ 2017 00c4 0200     		.2byte	0x2
+ 2018 00c6 30       		.byte	0x30
+ 2019 00c7 9F       		.byte	0x9f
+ 2020 00c8 E4000000 		.4byte	.LVL24
+ 2021 00cc 04010000 		.4byte	.LVL26
+ 2022 00d0 0100     		.2byte	0x1
+ 2023 00d2 54       		.byte	0x54
+ 2024 00d3 06010000 		.4byte	.LVL27
+ 2025 00d7 86010000 		.4byte	.LVL31
+ 2026 00db 0100     		.2byte	0x1
+ 2027 00dd 54       		.byte	0x54
+ 2028 00de 00000000 		.4byte	0
+ 2029 00e2 00000000 		.4byte	0
+ 2030              	.LLST7:
+ 2031 00e6 E4000000 		.4byte	.LVL24
+ 2032 00ea 04010000 		.4byte	.LVL26
+ 2033 00ee 0B00     		.2byte	0xb
+ 2034 00f0 74       		.byte	0x74
+ 2035 00f1 00       		.sleb128 0
+ 2036 00f2 36       		.byte	0x36
+ 2037 00f3 1E       		.byte	0x1e
+ 2038 00f4 03       		.byte	0x3
+ 2039 00f5 00000000 		.4byte	cfg_memset_list.4781
+ 2040 00f9 22       		.byte	0x22
+ 2041 00fa 9F       		.byte	0x9f
+ 2042 00fb 04010000 		.4byte	.LVL26
+ 2043 00ff 06010000 		.4byte	.LVL27
+ 2044 0103 0B00     		.2byte	0xb
+ 2045 0105 74       		.byte	0x74
+ 2046 0106 7F       		.sleb128 -1
+ 2047 0107 36       		.byte	0x36
+ 2048 0108 1E       		.byte	0x1e
+ 2049 0109 03       		.byte	0x3
+ 2050 010a 00000000 		.4byte	cfg_memset_list.4781
+ 2051 010e 22       		.byte	0x22
+ 2052 010f 9F       		.byte	0x9f
+ 2053 0110 00000000 		.4byte	0
+ 2054 0114 00000000 		.4byte	0
+ 2055              		.section	.debug_aranges,"",%progbits
+ 2056 0000 3C000000 		.4byte	0x3c
+ 2057 0004 0200     		.2byte	0x2
+ 2058 0006 00000000 		.4byte	.Ldebug_info0
+ 2059 000a 04       		.byte	0x4
+ 2060 000b 00       		.byte	0
+ 2061 000c 0000     		.2byte	0
+ 2062 000e 0000     		.2byte	0
+ 2063 0010 00000000 		.4byte	.LFB5
+ 2064 0014 32000000 		.4byte	.LFE5-.LFB5
+ 2065 0018 00000000 		.4byte	.LFB7
+ 2066 001c 20000000 		.4byte	.LFE7-.LFB7
+ 2067 0020 00000000 		.4byte	.LFB2
+ 2068 0024 0C000000 		.4byte	.LFE2-.LFB2
+ 2069 0028 00000000 		.4byte	.LFB6
+ 2070 002c D0000000 		.4byte	.LFE6-.LFB6
+ 2071 0030 D0000000 		.4byte	.LFB8
+ 2072 0034 F8000000 		.4byte	.LFE8-.LFB8
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 48
 
 
- 2079              		.section	.debug_line,"",%progbits
- 2080              	.Ldebug_line0:
- 2081 0000 8B010000 		.section	.debug_str,"MS",%progbits,1
- 2081      0200E500 
- 2081      00000201 
- 2081      FB0E0D00 
- 2081      01010101 
- 2082              	.LASF19:
- 2083 0000 72656731 		.ascii	"reg16\000"
- 2083      3600
- 2084              	.LASF39:
- 2085 0006 43794465 		.ascii	"CyDelayCycles\000"
- 2085      6C617943 
- 2085      79636C65 
- 2085      7300
- 2086              	.LASF20:
- 2087 0014 72656733 		.ascii	"reg32\000"
- 2087      3200
- 2088              	.LASF11:
- 2089 001a 73697A65 		.ascii	"size_t\000"
- 2089      5F7400
- 2090              	.LASF48:
- 2091 0021 416E616C 		.ascii	"AnalogSetDefault\000"
- 2091      6F675365 
- 2091      74446566 
- 2091      61756C74 
- 2091      00
- 2092              	.LASF44:
- 2093 0032 4379496E 		.ascii	"CyIntSetVector\000"
- 2093      74536574 
- 2093      56656374 
- 2093      6F7200
- 2094              	.LASF23:
- 2095 0041 76616C75 		.ascii	"value\000"
- 2095      6500
- 2096              	.LASF28:
- 2097 0047 636F756E 		.ascii	"count\000"
- 2097      7400
- 2098              	.LASF31:
- 2099 004d 436C6F63 		.ascii	"ClockSetup\000"
- 2099      6B536574 
- 2099      757000
- 2100              	.LASF32:
- 2101 0058 63795F63 		.ascii	"cy_cfg_addr_table\000"
- 2101      66675F61 
- 2101      6464725F 
- 2101      7461626C 
- 2101      6500
- 2102              	.LASF33:
- 2103 006a 63795F63 		.ascii	"cy_cfg_data_table\000"
- 2103      66675F64 
- 2103      6174615F 
- 2103      7461626C 
- 2103      6500
- 2104              	.LASF24:
- 2105 007c 63795F63 		.ascii	"cy_cfg_addrvalue_t\000"
- 2105      66675F61 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 49
-
-
- 2105      64647276 
- 2105      616C7565 
- 2105      5F7400
- 2106              	.LASF15:
- 2107 008f 666C6F61 		.ascii	"float\000"
+ 2073 0038 00000000 		.4byte	0
+ 2074 003c 00000000 		.4byte	0
+ 2075              		.section	.debug_ranges,"",%progbits
+ 2076              	.Ldebug_ranges0:
+ 2077 0000 00000000 		.4byte	.LFB5
+ 2078 0004 32000000 		.4byte	.LFE5
+ 2079 0008 00000000 		.4byte	.LFB7
+ 2080 000c 20000000 		.4byte	.LFE7
+ 2081 0010 00000000 		.4byte	.LFB2
+ 2082 0014 0C000000 		.4byte	.LFE2
+ 2083 0018 00000000 		.4byte	.LFB6
+ 2084 001c D0000000 		.4byte	.LFE6
+ 2085 0020 D0000000 		.4byte	.LFB8
+ 2086 0024 C8010000 		.4byte	.LFE8
+ 2087 0028 00000000 		.4byte	0
+ 2088 002c 00000000 		.4byte	0
+ 2089              		.section	.debug_line,"",%progbits
+ 2090              	.Ldebug_line0:
+ 2091 0000 8D010000 		.section	.debug_str,"MS",%progbits,1
+ 2091      0200E500 
+ 2091      00000201 
+ 2091      FB0E0D00 
+ 2091      01010101 
+ 2092              	.LASF19:
+ 2093 0000 72656731 		.ascii	"reg16\000"
+ 2093      3600
+ 2094              	.LASF39:
+ 2095 0006 43794465 		.ascii	"CyDelayCycles\000"
+ 2095      6C617943 
+ 2095      79636C65 
+ 2095      7300
+ 2096              	.LASF20:
+ 2097 0014 72656733 		.ascii	"reg32\000"
+ 2097      3200
+ 2098              	.LASF11:
+ 2099 001a 73697A65 		.ascii	"size_t\000"
+ 2099      5F7400
+ 2100              	.LASF48:
+ 2101 0021 416E616C 		.ascii	"AnalogSetDefault\000"
+ 2101      6F675365 
+ 2101      74446566 
+ 2101      61756C74 
+ 2101      00
+ 2102              	.LASF44:
+ 2103 0032 4379496E 		.ascii	"CyIntSetVector\000"
+ 2103      74536574 
+ 2103      56656374 
+ 2103      6F7200
+ 2104              	.LASF23:
+ 2105 0041 76616C75 		.ascii	"value\000"
+ 2105      6500
+ 2106              	.LASF28:
+ 2107 0047 636F756E 		.ascii	"count\000"
  2107      7400
- 2108              	.LASF37:
- 2109 0095 6366675F 		.ascii	"cfg_memset_list\000"
- 2109      6D656D73 
- 2109      65745F6C 
- 2109      69737400 
- 2110              	.LASF35:
- 2111 00a5 73697A65 		.ascii	"size\000"
- 2111      00
- 2112              	.LASF41:
- 2113 00aa 43795379 		.ascii	"CySysClkWcoSetPowerMode\000"
- 2113      73436C6B 
- 2113      57636F53 
- 2113      6574506F 
- 2113      7765724D 
- 2114              	.LASF18:
- 2115 00c2 72656738 		.ascii	"reg8\000"
- 2115      00
- 2116              	.LASF6:
- 2117 00c7 6C6F6E67 		.ascii	"long unsigned int\000"
- 2117      20756E73 
- 2117      69676E65 
- 2117      6420696E 
- 2117      7400
- 2118              	.LASF12:
- 2119 00d9 75696E74 		.ascii	"uint8\000"
- 2119      3800
- 2120              	.LASF50:
- 2121 00df 43795379 		.ascii	"CySysClkWcoStart\000"
- 2121      73436C6B 
- 2121      57636F53 
- 2121      74617274 
- 2121      00
- 2122              	.LASF30:
- 2123 00f0 43594D45 		.ascii	"CYMEMZERO\000"
- 2123      4D5A4552 
- 2123      4F00
- 2124              	.LASF2:
- 2125 00fa 756E7369 		.ascii	"unsigned char\000"
- 2125      676E6564 
- 2125      20636861 
- 2125      7200
- 2126              	.LASF38:
- 2127 0108 6D656D73 		.ascii	"memset\000"
- 2127      657400
- 2128              	.LASF16:
- 2129 010f 646F7562 		.ascii	"double\000"
- 2129      6C6500
- 2130              	.LASF29:
- 2131 0116 6366675F 		.ascii	"cfg_write_bytes32\000"
- 2131      77726974 
- 2131      655F6279 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 50
+ 2108              	.LASF31:
+ 2109 004d 436C6F63 		.ascii	"ClockSetup\000"
+ 2109      6B536574 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 49
 
 
- 2131      74657333 
- 2131      3200
- 2132              	.LASF51:
- 2133 0128 4379496E 		.ascii	"CyIntEnable\000"
- 2133      74456E61 
- 2133      626C6500 
- 2134              	.LASF25:
- 2135 0134 61646472 		.ascii	"addr_table\000"
- 2135      5F746162 
- 2135      6C6500
- 2136              	.LASF13:
- 2137 013f 75696E74 		.ascii	"uint16\000"
- 2137      313600
- 2138              	.LASF26:
- 2139 0146 64617461 		.ascii	"data_table\000"
- 2139      5F746162 
- 2139      6C6500
- 2140              	.LASF17:
- 2141 0151 63797374 		.ascii	"cystatus\000"
- 2141      61747573 
- 2141      00
- 2142              	.LASF14:
- 2143 015a 75696E74 		.ascii	"uint32\000"
- 2143      333200
- 2144              	.LASF0:
- 2145 0161 756E7369 		.ascii	"unsigned int\000"
- 2145      676E6564 
- 2145      20696E74 
- 2145      00
- 2146              	.LASF49:
- 2147 016e 63796669 		.ascii	"cyfitter_cfg\000"
- 2147      74746572 
- 2147      5F636667 
- 2147      00
- 2148              	.LASF34:
- 2149 017b 61646472 		.ascii	"address\000"
- 2149      65737300 
- 2150              	.LASF8:
- 2151 0183 6C6F6E67 		.ascii	"long long unsigned int\000"
- 2151      206C6F6E 
- 2151      6720756E 
- 2151      7369676E 
- 2151      65642069 
- 2152              	.LASF21:
- 2153 019a 63796973 		.ascii	"cyisraddress\000"
- 2153      72616464 
- 2153      72657373 
- 2153      00
- 2154              	.LASF36:
- 2155 01a7 6366675F 		.ascii	"cfg_memset_t\000"
- 2155      6D656D73 
- 2155      65745F74 
- 2155      00
- 2156              	.LASF27:
- 2157 01b4 62617365 		.ascii	"baseAddr\000"
- 2157      41646472 
- 2157      00
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 51
+ 2109      757000
+ 2110              	.LASF32:
+ 2111 0058 63795F63 		.ascii	"cy_cfg_addr_table\000"
+ 2111      66675F61 
+ 2111      6464725F 
+ 2111      7461626C 
+ 2111      6500
+ 2112              	.LASF33:
+ 2113 006a 63795F63 		.ascii	"cy_cfg_data_table\000"
+ 2113      66675F64 
+ 2113      6174615F 
+ 2113      7461626C 
+ 2113      6500
+ 2114              	.LASF47:
+ 2115 007c 473A5C47 		.ascii	"G:\\GitHub_Code\\firmware_stone\\fw-stone\\fw-BLE-M"
+ 2115      69744875 
+ 2115      625F436F 
+ 2115      64655C66 
+ 2115      69726D77 
+ 2116 00ab 6F746F72 		.ascii	"otor\\fw-stone\\Stone.cydsn\000"
+ 2116      5C66772D 
+ 2116      73746F6E 
+ 2116      655C5374 
+ 2116      6F6E652E 
+ 2117              	.LASF24:
+ 2118 00c5 63795F63 		.ascii	"cy_cfg_addrvalue_t\000"
+ 2118      66675F61 
+ 2118      64647276 
+ 2118      616C7565 
+ 2118      5F7400
+ 2119              	.LASF15:
+ 2120 00d8 666C6F61 		.ascii	"float\000"
+ 2120      7400
+ 2121              	.LASF37:
+ 2122 00de 6366675F 		.ascii	"cfg_memset_list\000"
+ 2122      6D656D73 
+ 2122      65745F6C 
+ 2122      69737400 
+ 2123              	.LASF35:
+ 2124 00ee 73697A65 		.ascii	"size\000"
+ 2124      00
+ 2125              	.LASF41:
+ 2126 00f3 43795379 		.ascii	"CySysClkWcoSetPowerMode\000"
+ 2126      73436C6B 
+ 2126      57636F53 
+ 2126      6574506F 
+ 2126      7765724D 
+ 2127              	.LASF18:
+ 2128 010b 72656738 		.ascii	"reg8\000"
+ 2128      00
+ 2129              	.LASF6:
+ 2130 0110 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2130      20756E73 
+ 2130      69676E65 
+ 2130      6420696E 
+ 2130      7400
+ 2131              	.LASF12:
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 50
 
 
- 2158              	.LASF9:
- 2159 01bd 73697A65 		.ascii	"sizetype\000"
- 2159      74797065 
- 2159      00
- 2160              	.LASF46:
- 2161 01c6 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\cyfitter_cfg.c\000"
- 2161      6E657261 
- 2161      7465645F 
- 2161      536F7572 
- 2161      63655C50 
- 2162              	.LASF7:
- 2163 01ee 6C6F6E67 		.ascii	"long long int\000"
- 2163      206C6F6E 
- 2163      6720696E 
- 2163      7400
- 2164              	.LASF43:
- 2165 01fc 43794465 		.ascii	"CyDelayUs\000"
- 2165      6C617955 
- 2165      7300
- 2166              	.LASF10:
- 2167 0206 63686172 		.ascii	"char\000"
- 2167      00
- 2168              	.LASF42:
- 2169 020b 43795379 		.ascii	"CySysClkEcoStart\000"
- 2169      73436C6B 
- 2169      45636F53 
- 2169      74617274 
- 2169      00
- 2170              	.LASF45:
- 2171 021c 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 2171      4320342E 
- 2171      392E3320 
- 2171      32303135 
- 2171      30333033 
- 2172 024f 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 2172      20726576 
- 2172      6973696F 
- 2172      6E203232 
- 2172      31323230 
- 2173 0282 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 2173      66756E63 
- 2173      74696F6E 
- 2173      2D736563 
- 2173      74696F6E 
- 2174              	.LASF22:
- 2175 02aa 6F666673 		.ascii	"offset\000"
- 2175      657400
- 2176              	.LASF3:
- 2177 02b1 73686F72 		.ascii	"short int\000"
- 2177      7420696E 
- 2177      7400
- 2178              	.LASF40:
- 2179 02bb 43795379 		.ascii	"CySysClkWriteImoFreq\000"
- 2179      73436C6B 
- 2179      57726974 
- 2179      65496D6F 
- 2179      46726571 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccypc8SJ.s 			page 52
+ 2132 0122 75696E74 		.ascii	"uint8\000"
+ 2132      3800
+ 2133              	.LASF50:
+ 2134 0128 43795379 		.ascii	"CySysClkWcoStart\000"
+ 2134      73436C6B 
+ 2134      57636F53 
+ 2134      74617274 
+ 2134      00
+ 2135              	.LASF30:
+ 2136 0139 43594D45 		.ascii	"CYMEMZERO\000"
+ 2136      4D5A4552 
+ 2136      4F00
+ 2137              	.LASF2:
+ 2138 0143 756E7369 		.ascii	"unsigned char\000"
+ 2138      676E6564 
+ 2138      20636861 
+ 2138      7200
+ 2139              	.LASF38:
+ 2140 0151 6D656D73 		.ascii	"memset\000"
+ 2140      657400
+ 2141              	.LASF16:
+ 2142 0158 646F7562 		.ascii	"double\000"
+ 2142      6C6500
+ 2143              	.LASF29:
+ 2144 015f 6366675F 		.ascii	"cfg_write_bytes32\000"
+ 2144      77726974 
+ 2144      655F6279 
+ 2144      74657333 
+ 2144      3200
+ 2145              	.LASF51:
+ 2146 0171 4379496E 		.ascii	"CyIntEnable\000"
+ 2146      74456E61 
+ 2146      626C6500 
+ 2147              	.LASF25:
+ 2148 017d 61646472 		.ascii	"addr_table\000"
+ 2148      5F746162 
+ 2148      6C6500
+ 2149              	.LASF13:
+ 2150 0188 75696E74 		.ascii	"uint16\000"
+ 2150      313600
+ 2151              	.LASF26:
+ 2152 018f 64617461 		.ascii	"data_table\000"
+ 2152      5F746162 
+ 2152      6C6500
+ 2153              	.LASF17:
+ 2154 019a 63797374 		.ascii	"cystatus\000"
+ 2154      61747573 
+ 2154      00
+ 2155              	.LASF14:
+ 2156 01a3 75696E74 		.ascii	"uint32\000"
+ 2156      333200
+ 2157              	.LASF0:
+ 2158 01aa 756E7369 		.ascii	"unsigned int\000"
+ 2158      676E6564 
+ 2158      20696E74 
+ 2158      00
+ 2159              	.LASF49:
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 51
 
 
- 2180              	.LASF5:
- 2181 02d0 6C6F6E67 		.ascii	"long int\000"
- 2181      20696E74 
- 2181      00
- 2182              	.LASF1:
- 2183 02d9 7369676E 		.ascii	"signed char\000"
- 2183      65642063 
- 2183      68617200 
- 2184              	.LASF4:
- 2185 02e5 73686F72 		.ascii	"short unsigned int\000"
- 2185      7420756E 
- 2185      7369676E 
- 2185      65642069 
- 2185      6E7400
- 2186              	.LASF47:
- 2187 02f8 453A5C53 		.ascii	"E:\\Stone_Project\\fw-BLE-Motor\\fw-stone\\Stone.cy"
- 2187      746F6E65 
- 2187      5F50726F 
- 2187      6A656374 
- 2187      5C66772D 
- 2188 0327 64736E00 		.ascii	"dsn\000"
- 2189              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 2160 01b7 63796669 		.ascii	"cyfitter_cfg\000"
+ 2160      74746572 
+ 2160      5F636667 
+ 2160      00
+ 2161              	.LASF34:
+ 2162 01c4 61646472 		.ascii	"address\000"
+ 2162      65737300 
+ 2163              	.LASF8:
+ 2164 01cc 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2164      206C6F6E 
+ 2164      6720756E 
+ 2164      7369676E 
+ 2164      65642069 
+ 2165              	.LASF21:
+ 2166 01e3 63796973 		.ascii	"cyisraddress\000"
+ 2166      72616464 
+ 2166      72657373 
+ 2166      00
+ 2167              	.LASF36:
+ 2168 01f0 6366675F 		.ascii	"cfg_memset_t\000"
+ 2168      6D656D73 
+ 2168      65745F74 
+ 2168      00
+ 2169              	.LASF27:
+ 2170 01fd 62617365 		.ascii	"baseAddr\000"
+ 2170      41646472 
+ 2170      00
+ 2171              	.LASF9:
+ 2172 0206 73697A65 		.ascii	"sizetype\000"
+ 2172      74797065 
+ 2172      00
+ 2173              	.LASF46:
+ 2174 020f 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\cyfitter_cfg.c\000"
+ 2174      6E657261 
+ 2174      7465645F 
+ 2174      536F7572 
+ 2174      63655C50 
+ 2175              	.LASF7:
+ 2176 0237 6C6F6E67 		.ascii	"long long int\000"
+ 2176      206C6F6E 
+ 2176      6720696E 
+ 2176      7400
+ 2177              	.LASF43:
+ 2178 0245 43794465 		.ascii	"CyDelayUs\000"
+ 2178      6C617955 
+ 2178      7300
+ 2179              	.LASF10:
+ 2180 024f 63686172 		.ascii	"char\000"
+ 2180      00
+ 2181              	.LASF42:
+ 2182 0254 43795379 		.ascii	"CySysClkEcoStart\000"
+ 2182      73436C6B 
+ 2182      45636F53 
+ 2182      74617274 
+ 2182      00
+ 2183              	.LASF45:
+ 2184 0265 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccwRBDDd.s 			page 52
+
+
+ 2184      4320342E 
+ 2184      392E3320 
+ 2184      32303135 
+ 2184      30333033 
+ 2185 0298 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 2185      20726576 
+ 2185      6973696F 
+ 2185      6E203232 
+ 2185      31323230 
+ 2186 02cb 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2186      66756E63 
+ 2186      74696F6E 
+ 2186      2D736563 
+ 2186      74696F6E 
+ 2187              	.LASF22:
+ 2188 02f3 6F666673 		.ascii	"offset\000"
+ 2188      657400
+ 2189              	.LASF3:
+ 2190 02fa 73686F72 		.ascii	"short int\000"
+ 2190      7420696E 
+ 2190      7400
+ 2191              	.LASF40:
+ 2192 0304 43795379 		.ascii	"CySysClkWriteImoFreq\000"
+ 2192      73436C6B 
+ 2192      57726974 
+ 2192      65496D6F 
+ 2192      46726571 
+ 2193              	.LASF5:
+ 2194 0319 6C6F6E67 		.ascii	"long int\000"
+ 2194      20696E74 
+ 2194      00
+ 2195              	.LASF1:
+ 2196 0322 7369676E 		.ascii	"signed char\000"
+ 2196      65642063 
+ 2196      68617200 
+ 2197              	.LASF4:
+ 2198 032e 73686F72 		.ascii	"short unsigned int\000"
+ 2198      7420756E 
+ 2198      7369676E 
+ 2198      65642069 
+ 2198      6E7400
+ 2199              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

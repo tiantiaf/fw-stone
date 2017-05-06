@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 1
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -47,394 +47,423 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 1
   19:.\Stone_Motor.c **** uint8 status = MOTOR_INACTIVE;
   20:.\Stone_Motor.c **** uint16 ms_count = PERIOD_PER_CYCLE_RUN - 1;
   21:.\Stone_Motor.c **** 
-  22:.\Stone_Motor.c **** uint8 Stone_Motor[MOTOR_LENGTH];
-  23:.\Stone_Motor.c **** 
+  22:.\Stone_Motor.c **** volatile uint8 Stone_Motor[MOTOR_LENGTH];
+  23:.\Stone_Motor.c **** uint8 Motor_Running_Sequence[PERIOD_PER_CYCLE_RUN];
   24:.\Stone_Motor.c **** volatile uint8 Stone_Motor_Mode;
   25:.\Stone_Motor.c **** 
-  26:.\Stone_Motor.c **** void UpdateMotorPWM(uint8 index);
-  27:.\Stone_Motor.c **** 
-  28:.\Stone_Motor.c **** void StoneUpdateMotor()
-  29:.\Stone_Motor.c **** {
-  26              		.loc 1 29 0
+  26:.\Stone_Motor.c **** const uint8 Test[PERIOD_PER_CYCLE_RUN] = {  20, 25, 99, 99, 25, 20, 20, 20, 22, 22,
+  27:.\Stone_Motor.c ****                                             22, 23, 23, 24, 24, 26, 26, 27, 28, 28, 
+  28:.\Stone_Motor.c ****                                             29, 30, 30, 32, 35, 36, 37, 39, 42, 44, 
+  29:.\Stone_Motor.c ****                                             46, 50,
+  30:.\Stone_Motor.c ****                                             20, 25, 99, 99, 25, 20, 20, 20, 22, 22,
+  31:.\Stone_Motor.c ****                                             22, 23, 23, 24, 24, 26, 26, 27, 28, 28, 
+  32:.\Stone_Motor.c ****                                             29, 30, 30, 32, 35, 36, 37, 39, 42, 44, 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 2
+
+
+  33:.\Stone_Motor.c ****                                             46, 50, };
+  34:.\Stone_Motor.c **** 
+  35:.\Stone_Motor.c **** /*
+  36:.\Stone_Motor.c **** 
+  37:.\Stone_Motor.c **** const uint8 Test[PERIOD_PER_CYCLE_RUN] = {  20, 25, 99, 99, 25, 20, 20, 20, 22, 22,
+  38:.\Stone_Motor.c ****                                             22, 23, 23, 24, 24, 26, 26, 27, 28, 28, 
+  39:.\Stone_Motor.c ****                                             29, 30, 30, 32, 35, 36, 37, 39, 42, 44, 
+  40:.\Stone_Motor.c ****                                             46, 50,
+  41:.\Stone_Motor.c ****                                             20, 25, 99, 99, 25, 20, 20, 20, 22, 22,
+  42:.\Stone_Motor.c ****                                             22, 23, 23, 24, 24, 26, 26, 27, 28, 28, 
+  43:.\Stone_Motor.c ****                                             29, 30, 30, 32, 35, 36, 37, 39, 42, 44, 
+  44:.\Stone_Motor.c ****                                             46, 50, };
+  45:.\Stone_Motor.c **** 
+  46:.\Stone_Motor.c **** const uint8 Test[PERIOD_PER_CYCLE_RUN] = {25, 25, 25, 25, 25, 25, 20, 20, 99, 99,
+  47:.\Stone_Motor.c ****                                     50, 48, 46, 46, 45, 43, 43, 42, 40, 40,
+  48:.\Stone_Motor.c ****                                     38, 38, 38, 36, 35, 33, 33, 31, 31,
+  49:.\Stone_Motor.c ****                                     31, 30, 28, 28,
+  50:.\Stone_Motor.c ****                                     25, 25, 20, 25, 40, 50, 60, 25, 25,
+  51:.\Stone_Motor.c ****                                     25, 25, 25, 25, 25, 25, 20, 20, 20,
+  52:.\Stone_Motor.c ****                                     25, 25, 25, 25, 25, 25, 20, 20, 20,
+  53:.\Stone_Motor.c ****                                     20, 20, 20, 20 };*/
+  54:.\Stone_Motor.c **** 
+  55:.\Stone_Motor.c **** void UpdateMotorPWM(uint8 index);
+  56:.\Stone_Motor.c **** 
+  57:.\Stone_Motor.c **** void StoneUpdateMotor()
+  58:.\Stone_Motor.c **** {
+  26              		.loc 1 58 0
   27              		.cfi_startproc
   28 0000 08B5     		push	{r3, lr}
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 2
-
-
   29              		.cfi_def_cfa_offset 8
   30              		.cfi_offset 3, -8
   31              		.cfi_offset 14, -4
-  30:.\Stone_Motor.c ****     /* Mode 0, just on and off */
-  31:.\Stone_Motor.c ****     if (Stone_Motor[MOTOR_ON_INDEX] == MOTOR_ON)
-  32              		.loc 1 31 0
-  33 0002 0F4B     		ldr	r3, .L6
+  59:.\Stone_Motor.c ****     /* Mode 0, just on and off */
+  60:.\Stone_Motor.c ****     if (Stone_Motor[MOTOR_ON_INDEX] == MOTOR_ON)
+  32              		.loc 1 60 0
+  33 0002 104B     		ldr	r3, .L6
   34 0004 1B78     		ldrb	r3, [r3]
   35 0006 012B     		cmp	r3, #1
-  36 0008 11D1     		bne	.L2
-  32:.\Stone_Motor.c ****     {
-  33:.\Stone_Motor.c ****         Stone_Motor_Mode = Stone_Motor[MOTOR_MODE_INDEX];
-  37              		.loc 1 33 0
-  38 000a 0D4B     		ldr	r3, .L6
-  39 000c 5A78     		ldrb	r2, [r3, #1]
-  40 000e 0D4B     		ldr	r3, .L6+4
-  41 0010 1A70     		strb	r2, [r3]
-  34:.\Stone_Motor.c ****         
-  35:.\Stone_Motor.c ****         /* If Motor is set to be on, we decide which mode we want to be */
-  36:.\Stone_Motor.c ****         switch(Stone_Motor_Mode)
-  42              		.loc 1 36 0
-  43 0012 1B78     		ldrb	r3, [r3]
-  44 0014 DBB2     		uxtb	r3, r3
-  45 0016 012B     		cmp	r3, #1
-  46 0018 02D0     		beq	.L4
-  47 001a 022B     		cmp	r3, #2
-  48 001c 04D0     		beq	.L5
-  49 001e 0EE0     		b	.L1
-  50              	.L4:
-  37:.\Stone_Motor.c ****         {
-  38:.\Stone_Motor.c ****             case MODE1:
-  39:.\Stone_Motor.c ****                 Motor_Write(MOTOR_ON);
-  51              		.loc 1 39 0
-  52 0020 0120     		mov	r0, #1
-  53 0022 FFF7FEFF 		bl	Motor_Write
-  54              	.LVL0:
-  40:.\Stone_Motor.c ****                 break;
-  55              		.loc 1 40 0
-  56 0026 0AE0     		b	.L1
-  57              	.L5:
-  41:.\Stone_Motor.c ****             
-  42:.\Stone_Motor.c ****             case MODE2:
-  43:.\Stone_Motor.c ****                 InitStoneInterrupt();
-  58              		.loc 1 43 0
-  59 0028 FFF7FEFF 		bl	InitStoneInterrupt
-  60              	.LVL1:
-  44:.\Stone_Motor.c ****                 break;    
-  61              		.loc 1 44 0
-  62 002c 07E0     		b	.L1
-  63              	.L2:
-  45:.\Stone_Motor.c ****                 
-  46:.\Stone_Motor.c ****             default:
-  47:.\Stone_Motor.c ****                 break;
-  48:.\Stone_Motor.c ****                 
-  49:.\Stone_Motor.c ****         }
-  50:.\Stone_Motor.c ****         
-  51:.\Stone_Motor.c ****     } else {
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 3
+  36 0008 12D1     		bne	.L2
+  61:.\Stone_Motor.c ****     {
+  62:.\Stone_Motor.c ****         Stone_Motor_Mode = Stone_Motor[MOTOR_MODE_INDEX];
+  37              		.loc 1 62 0
+  38 000a 0E4B     		ldr	r3, .L6
+  39 000c 5B78     		ldrb	r3, [r3, #1]
+  40 000e DBB2     		uxtb	r3, r3
+  41 0010 0D4A     		ldr	r2, .L6+4
+  42 0012 1370     		strb	r3, [r2]
+  63:.\Stone_Motor.c ****         
+  64:.\Stone_Motor.c ****         /* If Motor is set to be on, we decide which mode we want to be */
+  65:.\Stone_Motor.c ****         switch(Stone_Motor_Mode)
+  43              		.loc 1 65 0
+  44 0014 1378     		ldrb	r3, [r2]
+  45 0016 DBB2     		uxtb	r3, r3
+  46 0018 002B     		cmp	r3, #0
+  47 001a 02D0     		beq	.L4
+  48 001c 012B     		cmp	r3, #1
+  49 001e 04D0     		beq	.L5
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 3
 
 
-  52:.\Stone_Motor.c ****         Motor_Write(MOTOR_OFF);
-  64              		.loc 1 52 0
-  65 002e 0020     		mov	r0, #0
-  66 0030 FFF7FEFF 		bl	Motor_Write
-  67              	.LVL2:
-  53:.\Stone_Motor.c ****         Stone_Motor_Mode = 0;
-  68              		.loc 1 53 0
-  69 0034 0022     		mov	r2, #0
-  70 0036 034B     		ldr	r3, .L6+4
-  71 0038 1A70     		strb	r2, [r3]
-  54:.\Stone_Motor.c ****         StopStoneInterrupt();
-  72              		.loc 1 54 0
-  73 003a FFF7FEFF 		bl	StopStoneInterrupt
-  74              	.LVL3:
-  75              	.L1:
-  55:.\Stone_Motor.c ****     }
-  56:.\Stone_Motor.c ****     
-  57:.\Stone_Motor.c **** }
-  76              		.loc 1 57 0
-  77              		@ sp needed
-  78 003e 08BD     		pop	{r3, pc}
-  79              	.L7:
-  80              		.align	2
-  81              	.L6:
-  82 0040 00000000 		.word	Stone_Motor
-  83 0044 00000000 		.word	Stone_Motor_Mode
-  84              		.cfi_endproc
-  85              	.LFE37:
-  86              		.size	StoneUpdateMotor, .-StoneUpdateMotor
-  87              		.section	.text.TRIGGER_ISR,"ax",%progbits
-  88              		.align	2
-  89              		.global	TRIGGER_ISR
-  90              		.code	16
-  91              		.thumb_func
-  92              		.type	TRIGGER_ISR, %function
-  93              	TRIGGER_ISR:
-  94              	.LFB38:
-  58:.\Stone_Motor.c **** 
-  59:.\Stone_Motor.c **** CY_ISR(TRIGGER_ISR) {
-  95              		.loc 1 59 0
-  96              		.cfi_startproc
-  97 0000 08B5     		push	{r3, lr}
-  98              		.cfi_def_cfa_offset 8
-  99              		.cfi_offset 3, -8
- 100              		.cfi_offset 14, -4
-  60:.\Stone_Motor.c **** 	Motor_Write(MOTOR_ON);
- 101              		.loc 1 60 0
- 102 0002 0120     		mov	r0, #1
- 103 0004 FFF7FEFF 		bl	Motor_Write
- 104              	.LVL4:
-  61:.\Stone_Motor.c **** }
- 105              		.loc 1 61 0
- 106              		@ sp needed
- 107 0008 08BD     		pop	{r3, pc}
- 108              		.cfi_endproc
- 109              	.LFE38:
- 110              		.size	TRIGGER_ISR, .-TRIGGER_ISR
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 4
+  50 0020 0EE0     		b	.L1
+  51              	.L4:
+  66:.\Stone_Motor.c ****         {
+  67:.\Stone_Motor.c ****             case MODE0:
+  68:.\Stone_Motor.c ****                 Motor_Write(MOTOR_ON);
+  52              		.loc 1 68 0
+  53 0022 0120     		mov	r0, #1
+  54 0024 FFF7FEFF 		bl	Motor_Write
+  55              	.LVL0:
+  69:.\Stone_Motor.c ****                 break;
+  56              		.loc 1 69 0
+  57 0028 0AE0     		b	.L1
+  58              	.L5:
+  70:.\Stone_Motor.c ****             
+  71:.\Stone_Motor.c ****             case MODE1:
+  72:.\Stone_Motor.c ****                 InitStoneInterrupt();
+  59              		.loc 1 72 0
+  60 002a FFF7FEFF 		bl	InitStoneInterrupt
+  61              	.LVL1:
+  73:.\Stone_Motor.c ****                 break;    
+  62              		.loc 1 73 0
+  63 002e 07E0     		b	.L1
+  64              	.L2:
+  74:.\Stone_Motor.c ****                 
+  75:.\Stone_Motor.c ****             default:
+  76:.\Stone_Motor.c ****                 break;
+  77:.\Stone_Motor.c ****                 
+  78:.\Stone_Motor.c ****         }
+  79:.\Stone_Motor.c ****         
+  80:.\Stone_Motor.c ****     } else {
+  81:.\Stone_Motor.c ****         Motor_Write(MOTOR_OFF);
+  65              		.loc 1 81 0
+  66 0030 0020     		mov	r0, #0
+  67 0032 FFF7FEFF 		bl	Motor_Write
+  68              	.LVL2:
+  82:.\Stone_Motor.c ****         Stone_Motor_Mode = 0;
+  69              		.loc 1 82 0
+  70 0036 0022     		mov	r2, #0
+  71 0038 034B     		ldr	r3, .L6+4
+  72 003a 1A70     		strb	r2, [r3]
+  83:.\Stone_Motor.c ****         StopStoneInterrupt();
+  73              		.loc 1 83 0
+  74 003c FFF7FEFF 		bl	StopStoneInterrupt
+  75              	.LVL3:
+  76              	.L1:
+  84:.\Stone_Motor.c ****     }
+  85:.\Stone_Motor.c ****     
+  86:.\Stone_Motor.c **** }
+  77              		.loc 1 86 0
+  78              		@ sp needed
+  79 0040 08BD     		pop	{r3, pc}
+  80              	.L7:
+  81 0042 C046     		.align	2
+  82              	.L6:
+  83 0044 00000000 		.word	Stone_Motor
+  84 0048 00000000 		.word	Stone_Motor_Mode
+  85              		.cfi_endproc
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 4
 
 
- 111 000a C046     		.section	.text.TC_ISR,"ax",%progbits
- 112              		.align	2
- 113              		.global	TC_ISR
- 114              		.code	16
- 115              		.thumb_func
- 116              		.type	TC_ISR, %function
- 117              	TC_ISR:
- 118              	.LFB39:
-  62:.\Stone_Motor.c **** 
-  63:.\Stone_Motor.c **** CY_ISR(TC_ISR) {
- 119              		.loc 1 63 0
- 120              		.cfi_startproc
- 121 0000 08B5     		push	{r3, lr}
- 122              		.cfi_def_cfa_offset 8
- 123              		.cfi_offset 3, -8
- 124              		.cfi_offset 14, -4
-  64:.\Stone_Motor.c **** 	Motor_Write(MOTOR_OFF);
- 125              		.loc 1 64 0
- 126 0002 0020     		mov	r0, #0
- 127 0004 FFF7FEFF 		bl	Motor_Write
- 128              	.LVL5:
-  65:.\Stone_Motor.c **** }
- 129              		.loc 1 65 0
- 130              		@ sp needed
- 131 0008 08BD     		pop	{r3, pc}
- 132              		.cfi_endproc
- 133              	.LFE39:
- 134              		.size	TC_ISR, .-TC_ISR
- 135 000a C046     		.section	.text.UpdateMotorPWM,"ax",%progbits
- 136              		.align	2
- 137              		.global	UpdateMotorPWM
- 138              		.code	16
- 139              		.thumb_func
- 140              		.type	UpdateMotorPWM, %function
- 141              	UpdateMotorPWM:
- 142              	.LFB41:
-  66:.\Stone_Motor.c **** 
-  67:.\Stone_Motor.c **** CY_ISR(MS_ISR) {
-  68:.\Stone_Motor.c ****     
-  69:.\Stone_Motor.c ****     if(ms_count == 0)
-  70:.\Stone_Motor.c ****     {
-  71:.\Stone_Motor.c ****        ms_count = PERIOD_PER_CYCLE_RUN - 1;
-  72:.\Stone_Motor.c ****     }
-  73:.\Stone_Motor.c ****     
-  74:.\Stone_Motor.c ****     UpdateMotorPWM(ms_count);
-  75:.\Stone_Motor.c ****     ms_count--;
-  76:.\Stone_Motor.c ****      
-  77:.\Stone_Motor.c **** }
-  78:.\Stone_Motor.c **** 
-  79:.\Stone_Motor.c **** void UpdateMotorPWM(uint8 index)
-  80:.\Stone_Motor.c **** {
- 143              		.loc 1 80 0
- 144              		.cfi_startproc
- 145              	.LVL6:
- 146 0000 08B5     		push	{r3, lr}
- 147              		.cfi_def_cfa_offset 8
- 148              		.cfi_offset 3, -8
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 5
+  86              	.LFE37:
+  87              		.size	StoneUpdateMotor, .-StoneUpdateMotor
+  88              		.section	.text.TRIGGER_ISR,"ax",%progbits
+  89              		.align	2
+  90              		.global	TRIGGER_ISR
+  91              		.code	16
+  92              		.thumb_func
+  93              		.type	TRIGGER_ISR, %function
+  94              	TRIGGER_ISR:
+  95              	.LFB38:
+  87:.\Stone_Motor.c **** 
+  88:.\Stone_Motor.c **** CY_ISR(TRIGGER_ISR) {
+  96              		.loc 1 88 0
+  97              		.cfi_startproc
+  98 0000 08B5     		push	{r3, lr}
+  99              		.cfi_def_cfa_offset 8
+ 100              		.cfi_offset 3, -8
+ 101              		.cfi_offset 14, -4
+  89:.\Stone_Motor.c **** 	Motor_Write(MOTOR_ON);
+ 102              		.loc 1 89 0
+ 103 0002 0120     		mov	r0, #1
+ 104 0004 FFF7FEFF 		bl	Motor_Write
+ 105              	.LVL4:
+  90:.\Stone_Motor.c **** }
+ 106              		.loc 1 90 0
+ 107              		@ sp needed
+ 108 0008 08BD     		pop	{r3, pc}
+ 109              		.cfi_endproc
+ 110              	.LFE38:
+ 111              		.size	TRIGGER_ISR, .-TRIGGER_ISR
+ 112 000a C046     		.section	.text.TC_ISR,"ax",%progbits
+ 113              		.align	2
+ 114              		.global	TC_ISR
+ 115              		.code	16
+ 116              		.thumb_func
+ 117              		.type	TC_ISR, %function
+ 118              	TC_ISR:
+ 119              	.LFB39:
+  91:.\Stone_Motor.c **** 
+  92:.\Stone_Motor.c **** CY_ISR(TC_ISR) {
+ 120              		.loc 1 92 0
+ 121              		.cfi_startproc
+ 122 0000 08B5     		push	{r3, lr}
+ 123              		.cfi_def_cfa_offset 8
+ 124              		.cfi_offset 3, -8
+ 125              		.cfi_offset 14, -4
+  93:.\Stone_Motor.c **** 	Motor_Write(MOTOR_OFF);
+ 126              		.loc 1 93 0
+ 127 0002 0020     		mov	r0, #0
+ 128 0004 FFF7FEFF 		bl	Motor_Write
+ 129              	.LVL5:
+  94:.\Stone_Motor.c **** }
+ 130              		.loc 1 94 0
+ 131              		@ sp needed
+ 132 0008 08BD     		pop	{r3, pc}
+ 133              		.cfi_endproc
+ 134              	.LFE39:
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 5
 
 
- 149              		.cfi_offset 14, -4
-  81:.\Stone_Motor.c ****     Stone_PWM_WriteCompare(Test[index]);
- 150              		.loc 1 81 0
- 151 0002 024B     		ldr	r3, .L11
- 152 0004 185C     		ldrb	r0, [r3, r0]
- 153              	.LVL7:
- 154 0006 FFF7FEFF 		bl	Stone_PWM_WriteCompare
- 155              	.LVL8:
-  82:.\Stone_Motor.c **** }
- 156              		.loc 1 82 0
- 157              		@ sp needed
- 158 000a 08BD     		pop	{r3, pc}
- 159              	.L12:
- 160              		.align	2
- 161              	.L11:
- 162 000c 00000000 		.word	.LANCHOR0
- 163              		.cfi_endproc
- 164              	.LFE41:
- 165              		.size	UpdateMotorPWM, .-UpdateMotorPWM
- 166              		.section	.text.MS_ISR,"ax",%progbits
- 167              		.align	2
- 168              		.global	MS_ISR
- 169              		.code	16
- 170              		.thumb_func
- 171              		.type	MS_ISR, %function
- 172              	MS_ISR:
- 173              	.LFB40:
-  67:.\Stone_Motor.c ****     
- 174              		.loc 1 67 0
- 175              		.cfi_startproc
- 176 0000 10B5     		push	{r4, lr}
- 177              		.cfi_def_cfa_offset 8
- 178              		.cfi_offset 4, -8
- 179              		.cfi_offset 14, -4
-  69:.\Stone_Motor.c ****     {
- 180              		.loc 1 69 0
- 181 0002 074B     		ldr	r3, .L15
- 182 0004 1B88     		ldrh	r3, [r3]
- 183 0006 002B     		cmp	r3, #0
- 184 0008 02D1     		bne	.L14
-  71:.\Stone_Motor.c ****     }
- 185              		.loc 1 71 0
- 186 000a 3F22     		mov	r2, #63
- 187 000c 044B     		ldr	r3, .L15
- 188 000e 1A80     		strh	r2, [r3]
- 189              	.L14:
-  74:.\Stone_Motor.c ****     ms_count--;
- 190              		.loc 1 74 0
- 191 0010 034C     		ldr	r4, .L15
- 192 0012 2078     		ldrb	r0, [r4]
- 193 0014 FFF7FEFF 		bl	UpdateMotorPWM
- 194              	.LVL9:
-  75:.\Stone_Motor.c ****      
- 195              		.loc 1 75 0
- 196 0018 2388     		ldrh	r3, [r4]
- 197 001a 013B     		sub	r3, r3, #1
- 198 001c 2380     		strh	r3, [r4]
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 6
+ 135              		.size	TC_ISR, .-TC_ISR
+ 136 000a C046     		.section	.text.UpdateMotorPWM,"ax",%progbits
+ 137              		.align	2
+ 138              		.global	UpdateMotorPWM
+ 139              		.code	16
+ 140              		.thumb_func
+ 141              		.type	UpdateMotorPWM, %function
+ 142              	UpdateMotorPWM:
+ 143              	.LFB41:
+  95:.\Stone_Motor.c **** 
+  96:.\Stone_Motor.c **** CY_ISR(MS_ISR) {
+  97:.\Stone_Motor.c ****     
+  98:.\Stone_Motor.c ****     if(ms_count == PERIOD_PER_CYCLE_RUN - 1)
+  99:.\Stone_Motor.c ****     {
+ 100:.\Stone_Motor.c ****        ms_count = 0;
+ 101:.\Stone_Motor.c ****     }
+ 102:.\Stone_Motor.c ****     
+ 103:.\Stone_Motor.c ****     UpdateMotorPWM(ms_count);
+ 104:.\Stone_Motor.c ****     ms_count++;
+ 105:.\Stone_Motor.c ****      
+ 106:.\Stone_Motor.c **** }
+ 107:.\Stone_Motor.c **** 
+ 108:.\Stone_Motor.c **** void UpdateMotorPWM(uint8 index)
+ 109:.\Stone_Motor.c **** {
+ 144              		.loc 1 109 0
+ 145              		.cfi_startproc
+ 146              	.LVL6:
+ 147 0000 08B5     		push	{r3, lr}
+ 148              		.cfi_def_cfa_offset 8
+ 149              		.cfi_offset 3, -8
+ 150              		.cfi_offset 14, -4
+ 110:.\Stone_Motor.c ****     Stone_PWM_WriteCompare(Motor_Running_Sequence[index]);
+ 151              		.loc 1 110 0
+ 152 0002 024B     		ldr	r3, .L11
+ 153 0004 185C     		ldrb	r0, [r3, r0]
+ 154              	.LVL7:
+ 155 0006 FFF7FEFF 		bl	Stone_PWM_WriteCompare
+ 156              	.LVL8:
+ 111:.\Stone_Motor.c **** }
+ 157              		.loc 1 111 0
+ 158              		@ sp needed
+ 159 000a 08BD     		pop	{r3, pc}
+ 160              	.L12:
+ 161              		.align	2
+ 162              	.L11:
+ 163 000c 00000000 		.word	Motor_Running_Sequence
+ 164              		.cfi_endproc
+ 165              	.LFE41:
+ 166              		.size	UpdateMotorPWM, .-UpdateMotorPWM
+ 167              		.section	.text.MS_ISR,"ax",%progbits
+ 168              		.align	2
+ 169              		.global	MS_ISR
+ 170              		.code	16
+ 171              		.thumb_func
+ 172              		.type	MS_ISR, %function
+ 173              	MS_ISR:
+ 174              	.LFB40:
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 6
 
 
-  77:.\Stone_Motor.c **** 
- 199              		.loc 1 77 0
- 200              		@ sp needed
- 201 001e 10BD     		pop	{r4, pc}
- 202              	.L16:
- 203              		.align	2
- 204              	.L15:
- 205 0020 00000000 		.word	.LANCHOR1
- 206              		.cfi_endproc
- 207              	.LFE40:
- 208              		.size	MS_ISR, .-MS_ISR
- 209              		.comm	Stone_Motor_Mode,1,1
- 210              		.comm	Stone_Motor,4,4
- 211              		.global	ms_count
- 212              		.global	status
- 213              		.global	Test
- 214              		.section	.rodata
- 215              		.align	2
- 216              		.set	.LANCHOR0,. + 0
- 217              		.type	Test, %object
- 218              		.size	Test, 64
- 219              	Test:
- 220 0000 19       		.byte	25
- 221 0001 19       		.byte	25
- 222 0002 19       		.byte	25
- 223 0003 19       		.byte	25
- 224 0004 19       		.byte	25
- 225 0005 19       		.byte	25
- 226 0006 14       		.byte	20
- 227 0007 14       		.byte	20
- 228 0008 63       		.byte	99
- 229 0009 63       		.byte	99
- 230 000a 32       		.byte	50
- 231 000b 30       		.byte	48
- 232 000c 2E       		.byte	46
- 233 000d 2E       		.byte	46
- 234 000e 2D       		.byte	45
- 235 000f 2B       		.byte	43
- 236 0010 2B       		.byte	43
- 237 0011 2A       		.byte	42
- 238 0012 28       		.byte	40
- 239 0013 28       		.byte	40
- 240 0014 26       		.byte	38
- 241 0015 26       		.byte	38
- 242 0016 26       		.byte	38
- 243 0017 24       		.byte	36
- 244 0018 23       		.byte	35
- 245 0019 21       		.byte	33
- 246 001a 21       		.byte	33
- 247 001b 1F       		.byte	31
- 248 001c 1F       		.byte	31
- 249 001d 1F       		.byte	31
- 250 001e 1E       		.byte	30
- 251 001f 1C       		.byte	28
- 252 0020 1C       		.byte	28
- 253 0021 19       		.byte	25
- 254 0022 19       		.byte	25
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 7
+  96:.\Stone_Motor.c ****     
+ 175              		.loc 1 96 0
+ 176              		.cfi_startproc
+ 177 0000 10B5     		push	{r4, lr}
+ 178              		.cfi_def_cfa_offset 8
+ 179              		.cfi_offset 4, -8
+ 180              		.cfi_offset 14, -4
+  98:.\Stone_Motor.c ****     {
+ 181              		.loc 1 98 0
+ 182 0002 074B     		ldr	r3, .L15
+ 183 0004 1B88     		ldrh	r3, [r3]
+ 184 0006 3F2B     		cmp	r3, #63
+ 185 0008 02D1     		bne	.L14
+ 100:.\Stone_Motor.c ****     }
+ 186              		.loc 1 100 0
+ 187 000a 0022     		mov	r2, #0
+ 188 000c 044B     		ldr	r3, .L15
+ 189 000e 1A80     		strh	r2, [r3]
+ 190              	.L14:
+ 103:.\Stone_Motor.c ****     ms_count++;
+ 191              		.loc 1 103 0
+ 192 0010 034C     		ldr	r4, .L15
+ 193 0012 2078     		ldrb	r0, [r4]
+ 194 0014 FFF7FEFF 		bl	UpdateMotorPWM
+ 195              	.LVL9:
+ 104:.\Stone_Motor.c ****      
+ 196              		.loc 1 104 0
+ 197 0018 2388     		ldrh	r3, [r4]
+ 198 001a 0133     		add	r3, r3, #1
+ 199 001c 2380     		strh	r3, [r4]
+ 106:.\Stone_Motor.c **** 
+ 200              		.loc 1 106 0
+ 201              		@ sp needed
+ 202 001e 10BD     		pop	{r4, pc}
+ 203              	.L16:
+ 204              		.align	2
+ 205              	.L15:
+ 206 0020 00000000 		.word	.LANCHOR0
+ 207              		.cfi_endproc
+ 208              	.LFE40:
+ 209              		.size	MS_ISR, .-MS_ISR
+ 210              		.global	Test
+ 211              		.comm	Stone_Motor_Mode,1,1
+ 212              		.comm	Motor_Running_Sequence,64,4
+ 213              		.comm	Stone_Motor,4,4
+ 214              		.global	ms_count
+ 215              		.global	status
+ 216              		.section	.rodata
+ 217              		.align	2
+ 218              		.type	Test, %object
+ 219              		.size	Test, 64
+ 220              	Test:
+ 221 0000 14       		.byte	20
+ 222 0001 19       		.byte	25
+ 223 0002 63       		.byte	99
+ 224 0003 63       		.byte	99
+ 225 0004 19       		.byte	25
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 7
 
 
- 255 0023 14       		.byte	20
- 256 0024 19       		.byte	25
- 257 0025 28       		.byte	40
- 258 0026 32       		.byte	50
- 259 0027 3C       		.byte	60
- 260 0028 19       		.byte	25
- 261 0029 19       		.byte	25
- 262 002a 19       		.byte	25
- 263 002b 19       		.byte	25
- 264 002c 19       		.byte	25
- 265 002d 19       		.byte	25
- 266 002e 19       		.byte	25
- 267 002f 19       		.byte	25
- 268 0030 14       		.byte	20
- 269 0031 14       		.byte	20
- 270 0032 14       		.byte	20
- 271 0033 19       		.byte	25
- 272 0034 19       		.byte	25
- 273 0035 19       		.byte	25
- 274 0036 19       		.byte	25
- 275 0037 19       		.byte	25
- 276 0038 19       		.byte	25
- 277 0039 14       		.byte	20
- 278 003a 14       		.byte	20
- 279 003b 14       		.byte	20
- 280 003c 14       		.byte	20
- 281 003d 14       		.byte	20
- 282 003e 14       		.byte	20
- 283 003f 14       		.byte	20
- 284              		.data
- 285              		.align	1
- 286              		.set	.LANCHOR1,. + 0
- 287              		.type	ms_count, %object
- 288              		.size	ms_count, 2
- 289              	ms_count:
- 290 0000 3F00     		.short	63
- 291              		.bss
- 292              		.type	status, %object
- 293              		.size	status, 1
- 294              	status:
- 295 0000 00       		.space	1
- 296              		.text
- 297              	.Letext0:
- 298              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
- 299              		.file 3 ".\\Stone_Motor_Sequence.h"
- 300              		.file 4 ".\\Stone_Init.h"
- 301              		.file 5 "Generated_Source\\PSoC4/BLE_STONE_Stack.h"
- 302              		.file 6 "Generated_Source\\PSoC4/Motor.h"
- 303              		.file 7 "Generated_Source\\PSoC4/Stone_PWM.h"
+ 226 0005 14       		.byte	20
+ 227 0006 14       		.byte	20
+ 228 0007 14       		.byte	20
+ 229 0008 16       		.byte	22
+ 230 0009 16       		.byte	22
+ 231 000a 16       		.byte	22
+ 232 000b 17       		.byte	23
+ 233 000c 17       		.byte	23
+ 234 000d 18       		.byte	24
+ 235 000e 18       		.byte	24
+ 236 000f 1A       		.byte	26
+ 237 0010 1A       		.byte	26
+ 238 0011 1B       		.byte	27
+ 239 0012 1C       		.byte	28
+ 240 0013 1C       		.byte	28
+ 241 0014 1D       		.byte	29
+ 242 0015 1E       		.byte	30
+ 243 0016 1E       		.byte	30
+ 244 0017 20       		.byte	32
+ 245 0018 23       		.byte	35
+ 246 0019 24       		.byte	36
+ 247 001a 25       		.byte	37
+ 248 001b 27       		.byte	39
+ 249 001c 2A       		.byte	42
+ 250 001d 2C       		.byte	44
+ 251 001e 2E       		.byte	46
+ 252 001f 32       		.byte	50
+ 253 0020 14       		.byte	20
+ 254 0021 19       		.byte	25
+ 255 0022 63       		.byte	99
+ 256 0023 63       		.byte	99
+ 257 0024 19       		.byte	25
+ 258 0025 14       		.byte	20
+ 259 0026 14       		.byte	20
+ 260 0027 14       		.byte	20
+ 261 0028 16       		.byte	22
+ 262 0029 16       		.byte	22
+ 263 002a 16       		.byte	22
+ 264 002b 17       		.byte	23
+ 265 002c 17       		.byte	23
+ 266 002d 18       		.byte	24
+ 267 002e 18       		.byte	24
+ 268 002f 1A       		.byte	26
+ 269 0030 1A       		.byte	26
+ 270 0031 1B       		.byte	27
+ 271 0032 1C       		.byte	28
+ 272 0033 1C       		.byte	28
+ 273 0034 1D       		.byte	29
+ 274 0035 1E       		.byte	30
+ 275 0036 1E       		.byte	30
+ 276 0037 20       		.byte	32
+ 277 0038 23       		.byte	35
+ 278 0039 24       		.byte	36
+ 279 003a 25       		.byte	37
+ 280 003b 27       		.byte	39
+ 281 003c 2A       		.byte	42
+ 282 003d 2C       		.byte	44
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 8
+
+
+ 283 003e 2E       		.byte	46
+ 284 003f 32       		.byte	50
+ 285              		.data
+ 286              		.align	1
+ 287              		.set	.LANCHOR0,. + 0
+ 288              		.type	ms_count, %object
+ 289              		.size	ms_count, 2
+ 290              	ms_count:
+ 291 0000 3F00     		.short	63
+ 292              		.bss
+ 293              		.type	status, %object
+ 294              		.size	status, 1
+ 295              	status:
+ 296 0000 00       		.space	1
+ 297              		.text
+ 298              	.Letext0:
+ 299              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 300              		.file 3 ".\\Stone_Init.h"
+ 301              		.file 4 "Generated_Source\\PSoC4/BLE_STONE_Stack.h"
+ 302              		.file 5 "Generated_Source\\PSoC4/Motor.h"
+ 303              		.file 6 "Generated_Source\\PSoC4/Stone_PWM.h"
  304              		.section	.debug_info,"",%progbits
  305              	.Ldebug_info0:
- 306 0000 E9030000 		.4byte	0x3e9
+ 306 0000 FF030000 		.4byte	0x3ff
  307 0004 0400     		.2byte	0x4
  308 0006 00000000 		.4byte	.Ldebug_abbrev0
  309 000a 04       		.byte	0x4
  310 000b 01       		.uleb128 0x1
- 311 000c F5030000 		.4byte	.LASF93
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 8
-
-
+ 311 000c 05040000 		.4byte	.LASF94
  312 0010 01       		.byte	0x1
- 313 0011 BF030000 		.4byte	.LASF94
- 314 0015 BB010000 		.4byte	.LASF95
+ 313 0011 CF030000 		.4byte	.LASF95
+ 314 0015 CB010000 		.4byte	.LASF96
  315 0019 00000000 		.4byte	.Ldebug_ranges0+0
  316 001d 00000000 		.4byte	0
  317 0021 00000000 		.4byte	.Ldebug_line0
  318 0025 02       		.uleb128 0x2
  319 0026 01       		.byte	0x1
  320 0027 06       		.byte	0x6
- 321 0028 5B050000 		.4byte	.LASF0
+ 321 0028 6B050000 		.4byte	.LASF0
  322 002c 02       		.uleb128 0x2
  323 002d 01       		.byte	0x1
  324 002e 08       		.byte	0x8
- 325 002f F1040000 		.4byte	.LASF1
+ 325 002f 01050000 		.4byte	.LASF1
  326 0033 02       		.uleb128 0x2
  327 0034 02       		.byte	0x2
  328 0035 05       		.byte	0x5
@@ -442,15 +471,18 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 1
  330 003a 02       		.uleb128 0x2
  331 003b 02       		.byte	0x2
  332 003c 07       		.byte	0x7
- 333 003d 70060000 		.4byte	.LASF3
+ 333 003d 80060000 		.4byte	.LASF3
  334 0041 02       		.uleb128 0x2
  335 0042 04       		.byte	0x4
  336 0043 05       		.byte	0x5
- 337 0044 09030000 		.4byte	.LASF4
+ 337 0044 19030000 		.4byte	.LASF4
  338 0048 02       		.uleb128 0x2
  339 0049 04       		.byte	0x4
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 9
+
+
  340 004a 07       		.byte	0x7
- 341 004b E6050000 		.4byte	.LASF5
+ 341 004b F6050000 		.4byte	.LASF5
  342 004f 02       		.uleb128 0x2
  343 0050 08       		.byte	0x8
  344 0051 05       		.byte	0x5
@@ -458,7 +490,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 1
  346 0056 02       		.uleb128 0x2
  347 0057 08       		.byte	0x8
  348 0058 07       		.byte	0x7
- 349 0059 E4020000 		.4byte	.LASF7
+ 349 0059 F4020000 		.4byte	.LASF7
  350 005d 03       		.uleb128 0x3
  351 005e 04       		.byte	0x4
  352 005f 05       		.byte	0x5
@@ -466,32 +498,29 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 1
  354 0064 02       		.uleb128 0x2
  355 0065 04       		.byte	0x4
  356 0066 07       		.byte	0x7
- 357 0067 A8090000 		.4byte	.LASF8
+ 357 0067 BF090000 		.4byte	.LASF8
  358 006b 04       		.uleb128 0x4
- 359 006c C5040000 		.4byte	.LASF9
+ 359 006c D5040000 		.4byte	.LASF9
  360 0070 02       		.byte	0x2
  361 0071 9801     		.2byte	0x198
  362 0073 2C000000 		.4byte	0x2c
  363 0077 04       		.uleb128 0x4
- 364 0078 8A010000 		.4byte	.LASF10
+ 364 0078 34070000 		.4byte	.LASF10
  365 007c 02       		.byte	0x2
  366 007d 9901     		.2byte	0x199
  367 007f 3A000000 		.4byte	0x3a
  368 0083 02       		.uleb128 0x2
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 9
-
-
  369 0084 04       		.byte	0x4
  370 0085 04       		.byte	0x4
- 371 0086 7B020000 		.4byte	.LASF11
+ 371 0086 8B020000 		.4byte	.LASF11
  372 008a 02       		.uleb128 0x2
  373 008b 08       		.byte	0x8
  374 008c 04       		.byte	0x4
- 375 008d C1070000 		.4byte	.LASF12
+ 375 008d D8070000 		.4byte	.LASF12
  376 0091 02       		.uleb128 0x2
  377 0092 01       		.byte	0x1
  378 0093 08       		.byte	0x8
- 379 0094 DA060000 		.4byte	.LASF13
+ 379 0094 EA060000 		.4byte	.LASF13
  380 0098 05       		.uleb128 0x5
  381 0099 6B000000 		.4byte	0x6b
  382 009d 02       		.uleb128 0x2
@@ -500,232 +529,232 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 1
  385 00a0 D1000000 		.4byte	.LASF14
  386 00a4 06       		.uleb128 0x6
  387 00a5 01       		.byte	0x1
- 388 00a6 05       		.byte	0x5
+ 388 00a6 04       		.byte	0x4
  389 00a7 4201     		.2byte	0x142
  390 00a9 61020000 		.4byte	0x261
  391 00ad 07       		.uleb128 0x7
- 392 00ae 25020000 		.4byte	.LASF15
+ 392 00ae 35020000 		.4byte	.LASF15
  393 00b2 00       		.sleb128 0
  394 00b3 07       		.uleb128 0x7
  395 00b4 59010000 		.4byte	.LASF16
  396 00b8 01       		.sleb128 1
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 10
+
+
  397 00b9 07       		.uleb128 0x7
- 398 00ba 2F090000 		.4byte	.LASF17
+ 398 00ba 46090000 		.4byte	.LASF17
  399 00be 02       		.sleb128 2
  400 00bf 07       		.uleb128 0x7
- 401 00c0 07080000 		.4byte	.LASF18
+ 401 00c0 1E080000 		.4byte	.LASF18
  402 00c4 03       		.sleb128 3
  403 00c5 07       		.uleb128 0x7
  404 00c6 FB000000 		.4byte	.LASF19
  405 00ca 04       		.sleb128 4
  406 00cb 07       		.uleb128 0x7
- 407 00cc EB070000 		.4byte	.LASF20
+ 407 00cc 02080000 		.4byte	.LASF20
  408 00d0 05       		.sleb128 5
  409 00d1 07       		.uleb128 0x7
  410 00d2 3E000000 		.4byte	.LASF21
  411 00d6 06       		.sleb128 6
  412 00d7 07       		.uleb128 0x7
- 413 00d8 65080000 		.4byte	.LASF22
+ 413 00d8 7C080000 		.4byte	.LASF22
  414 00dc 20       		.sleb128 32
  415 00dd 07       		.uleb128 0x7
- 416 00de F8050000 		.4byte	.LASF23
+ 416 00de 08060000 		.4byte	.LASF23
  417 00e2 21       		.sleb128 33
  418 00e3 07       		.uleb128 0x7
  419 00e4 00000000 		.4byte	.LASF24
  420 00e8 22       		.sleb128 34
  421 00e9 07       		.uleb128 0x7
- 422 00ea CF030000 		.4byte	.LASF25
+ 422 00ea DF030000 		.4byte	.LASF25
  423 00ee 23       		.sleb128 35
  424 00ef 07       		.uleb128 0x7
- 425 00f0 A8050000 		.4byte	.LASF26
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 10
-
-
+ 425 00f0 B8050000 		.4byte	.LASF26
  426 00f4 24       		.sleb128 36
  427 00f5 07       		.uleb128 0x7
  428 00f6 B7000000 		.4byte	.LASF27
  429 00fa 25       		.sleb128 37
  430 00fb 07       		.uleb128 0x7
- 431 00fc 63030000 		.4byte	.LASF28
+ 431 00fc 73030000 		.4byte	.LASF28
  432 0100 26       		.sleb128 38
  433 0101 07       		.uleb128 0x7
- 434 0102 44030000 		.4byte	.LASF29
+ 434 0102 54030000 		.4byte	.LASF29
  435 0106 27       		.sleb128 39
  436 0107 07       		.uleb128 0x7
- 437 0108 E0090000 		.4byte	.LASF30
+ 437 0108 F7090000 		.4byte	.LASF30
  438 010c 28       		.sleb128 40
  439 010d 07       		.uleb128 0x7
- 440 010e 30060000 		.4byte	.LASF31
+ 440 010e 40060000 		.4byte	.LASF31
  441 0112 29       		.sleb128 41
  442 0113 07       		.uleb128 0x7
- 443 0114 8A060000 		.4byte	.LASF32
+ 443 0114 9A060000 		.4byte	.LASF32
  444 0118 2A       		.sleb128 42
  445 0119 07       		.uleb128 0x7
- 446 011a 61070000 		.4byte	.LASF33
+ 446 011a 78070000 		.4byte	.LASF33
  447 011e 2B       		.sleb128 43
  448 011f 07       		.uleb128 0x7
- 449 0120 97010000 		.4byte	.LASF34
+ 449 0120 A7010000 		.4byte	.LASF34
  450 0124 2C       		.sleb128 44
  451 0125 07       		.uleb128 0x7
- 452 0126 9A020000 		.4byte	.LASF35
+ 452 0126 AA020000 		.4byte	.LASF35
  453 012a 2D       		.sleb128 45
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 11
+
+
  454 012b 07       		.uleb128 0x7
  455 012c 89000000 		.4byte	.LASF36
  456 0130 2E       		.sleb128 46
  457 0131 07       		.uleb128 0x7
- 458 0132 440A0000 		.4byte	.LASF37
+ 458 0132 5B0A0000 		.4byte	.LASF37
  459 0136 2F       		.sleb128 47
  460 0137 07       		.uleb128 0x7
  461 0138 DA000000 		.4byte	.LASF38
  462 013c 30       		.sleb128 48
  463 013d 07       		.uleb128 0x7
- 464 013e A1040000 		.4byte	.LASF39
+ 464 013e B1040000 		.4byte	.LASF39
  465 0142 31       		.sleb128 49
  466 0143 07       		.uleb128 0x7
- 467 0144 C3020000 		.4byte	.LASF40
+ 467 0144 D3020000 		.4byte	.LASF40
  468 0148 32       		.sleb128 50
  469 0149 07       		.uleb128 0x7
- 470 014a B3060000 		.4byte	.LASF41
+ 470 014a C3060000 		.4byte	.LASF41
  471 014e 33       		.sleb128 51
  472 014f 07       		.uleb128 0x7
  473 0150 57000000 		.4byte	.LASF42
  474 0154 C000     		.sleb128 64
  475 0156 07       		.uleb128 0x7
- 476 0157 CB050000 		.4byte	.LASF43
+ 476 0157 DB050000 		.4byte	.LASF43
  477 015b C100     		.sleb128 65
  478 015d 07       		.uleb128 0x7
- 479 015e 260A0000 		.4byte	.LASF44
+ 479 015e 3D0A0000 		.4byte	.LASF44
  480 0162 C200     		.sleb128 66
  481 0164 07       		.uleb128 0x7
  482 0165 6C010000 		.4byte	.LASF45
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 11
-
-
  483 0169 C300     		.sleb128 67
  484 016b 07       		.uleb128 0x7
- 485 016c CE080000 		.4byte	.LASF46
+ 485 016c E5080000 		.4byte	.LASF46
  486 0170 C400     		.sleb128 68
  487 0172 07       		.uleb128 0x7
- 488 0173 89080000 		.4byte	.LASF47
+ 488 0173 A0080000 		.4byte	.LASF47
  489 0177 C500     		.sleb128 69
  490 0179 07       		.uleb128 0x7
  491 017a 38010000 		.4byte	.LASF48
  492 017e C600     		.sleb128 70
  493 0180 07       		.uleb128 0x7
- 494 0181 3D050000 		.4byte	.LASF49
+ 494 0181 4D050000 		.4byte	.LASF49
  495 0185 C700     		.sleb128 71
  496 0187 07       		.uleb128 0x7
- 497 0188 81050000 		.4byte	.LASF50
+ 497 0188 91050000 		.4byte	.LASF50
  498 018c C800     		.sleb128 72
  499 018e 07       		.uleb128 0x7
- 500 018f 81020000 		.4byte	.LASF51
+ 500 018f 91020000 		.4byte	.LASF51
  501 0193 C900     		.sleb128 73
  502 0195 07       		.uleb128 0x7
- 503 0196 24070000 		.4byte	.LASF52
+ 503 0196 3B070000 		.4byte	.LASF52
  504 019a CA00     		.sleb128 74
  505 019c 07       		.uleb128 0x7
- 506 019d EC080000 		.4byte	.LASF53
+ 506 019d 03090000 		.4byte	.LASF53
  507 01a1 CB00     		.sleb128 75
  508 01a3 07       		.uleb128 0x7
- 509 01a4 67050000 		.4byte	.LASF54
+ 509 01a4 77050000 		.4byte	.LASF54
  510 01a8 CC00     		.sleb128 76
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 12
+
+
  511 01aa 07       		.uleb128 0x7
  512 01ab 24000000 		.4byte	.LASF55
  513 01af CD00     		.sleb128 77
  514 01b1 07       		.uleb128 0x7
- 515 01b2 B0080000 		.4byte	.LASF56
+ 515 01b2 C7080000 		.4byte	.LASF56
  516 01b6 CE00     		.sleb128 78
  517 01b8 07       		.uleb128 0x7
- 518 01b9 FF040000 		.4byte	.LASF57
+ 518 01b9 0F050000 		.4byte	.LASF57
  519 01bd CF00     		.sleb128 79
  520 01bf 07       		.uleb128 0x7
- 521 01c0 B5090000 		.4byte	.LASF58
+ 521 01c0 CC090000 		.4byte	.LASF58
  522 01c4 D000     		.sleb128 80
  523 01c6 07       		.uleb128 0x7
- 524 01c7 42070000 		.4byte	.LASF59
+ 524 01c7 59070000 		.4byte	.LASF59
  525 01cb D100     		.sleb128 81
  526 01cd 07       		.uleb128 0x7
- 527 01ce 8B030000 		.4byte	.LASF60
+ 527 01ce 9B030000 		.4byte	.LASF60
  528 01d2 D200     		.sleb128 82
  529 01d4 07       		.uleb128 0x7
- 530 01d5 23030000 		.4byte	.LASF61
+ 530 01d5 33030000 		.4byte	.LASF61
  531 01d9 D300     		.sleb128 83
  532 01db 07       		.uleb128 0x7
- 533 01dc 04020000 		.4byte	.LASF62
+ 533 01dc 14020000 		.4byte	.LASF62
  534 01e0 D400     		.sleb128 84
  535 01e2 07       		.uleb128 0x7
- 536 01e3 020A0000 		.4byte	.LASF63
+ 536 01e3 190A0000 		.4byte	.LASF63
  537 01e7 D500     		.sleb128 85
  538 01e9 07       		.uleb128 0x7
- 539 01ea 86090000 		.4byte	.LASF64
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 12
-
-
+ 539 01ea 9D090000 		.4byte	.LASF64
  540 01ee D600     		.sleb128 86
  541 01f0 07       		.uleb128 0x7
- 542 01f1 5D090000 		.4byte	.LASF65
+ 542 01f1 74090000 		.4byte	.LASF65
  543 01f5 D700     		.sleb128 87
  544 01f7 07       		.uleb128 0x7
- 545 01f8 4D060000 		.4byte	.LASF66
+ 545 01f8 5D060000 		.4byte	.LASF66
  546 01fc D800     		.sleb128 88
  547 01fe 07       		.uleb128 0x7
- 548 01ff CB040000 		.4byte	.LASF67
+ 548 01ff DB040000 		.4byte	.LASF67
  549 0203 F000     		.sleb128 112
  550 0205 07       		.uleb128 0x7
- 551 0206 3F080000 		.4byte	.LASF68
+ 551 0206 56080000 		.4byte	.LASF68
  552 020a F100     		.sleb128 113
  553 020c 07       		.uleb128 0x7
- 554 020d E8060000 		.4byte	.LASF69
+ 554 020d F8060000 		.4byte	.LASF69
  555 0211 F200     		.sleb128 114
  556 0213 07       		.uleb128 0x7
- 557 0214 3C020000 		.4byte	.LASF70
+ 557 0214 4C020000 		.4byte	.LASF70
  558 0218 F300     		.sleb128 115
  559 021a 07       		.uleb128 0x7
- 560 021b 83040000 		.4byte	.LASF71
+ 560 021b 93040000 		.4byte	.LASF71
  561 021f F400     		.sleb128 116
  562 0221 07       		.uleb128 0x7
- 563 0222 0F060000 		.4byte	.LASF72
+ 563 0222 1F060000 		.4byte	.LASF72
  564 0226 F500     		.sleb128 117
  565 0228 07       		.uleb128 0x7
- 566 0229 5A020000 		.4byte	.LASF73
+ 566 0229 6A020000 		.4byte	.LASF73
  567 022d F600     		.sleb128 118
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 13
+
+
  568 022f 07       		.uleb128 0x7
- 569 0230 20080000 		.4byte	.LASF74
+ 569 0230 37080000 		.4byte	.LASF74
  570 0234 F700     		.sleb128 119
  571 0236 07       		.uleb128 0x7
- 572 0237 9E070000 		.4byte	.LASF75
+ 572 0237 B5070000 		.4byte	.LASF75
  573 023b F800     		.sleb128 120
  574 023d 07       		.uleb128 0x7
- 575 023e C8070000 		.4byte	.LASF76
+ 575 023e DF070000 		.4byte	.LASF76
  576 0242 F900     		.sleb128 121
  577 0244 07       		.uleb128 0x7
- 578 0245 0B090000 		.4byte	.LASF77
+ 578 0245 22090000 		.4byte	.LASF77
  579 0249 FA00     		.sleb128 122
  580 024b 07       		.uleb128 0x7
- 581 024c 80070000 		.4byte	.LASF78
+ 581 024c 97070000 		.4byte	.LASF78
  582 0250 FA01     		.sleb128 250
  583 0252 07       		.uleb128 0x7
- 584 0253 1E050000 		.4byte	.LASF79
+ 584 0253 2E050000 		.4byte	.LASF79
  585 0257 FB01     		.sleb128 251
  586 0259 07       		.uleb128 0x7
- 587 025a FB020000 		.4byte	.LASF80
+ 587 025a 0B030000 		.4byte	.LASF80
  588 025e FF01     		.sleb128 255
  589 0260 00       		.byte	0
  590 0261 08       		.uleb128 0x8
- 591 0262 04070000 		.4byte	.LASF81
+ 591 0262 14070000 		.4byte	.LASF81
  592 0266 01       		.byte	0x1
- 593 0267 1C       		.byte	0x1c
+ 593 0267 39       		.byte	0x39
  594 0268 00000000 		.4byte	.LFB37
- 595 026c 48000000 		.4byte	.LFE37-.LFB37
+ 595 026c 4C000000 		.4byte	.LFE37-.LFB37
  596 0270 01       		.uleb128 0x1
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 13
-
-
  597 0271 9C       		.byte	0x9c
  598 0272 AF020000 		.4byte	0x2af
  599 0276 09       		.uleb128 0x9
- 600 0277 26000000 		.4byte	.LVL0
- 601 027b C0030000 		.4byte	0x3c0
+ 600 0277 28000000 		.4byte	.LVL0
+ 601 027b D6030000 		.4byte	0x3d6
  602 027f 89020000 		.4byte	0x289
  603 0283 0A       		.uleb128 0xa
  604 0284 01       		.uleb128 0x1
@@ -734,11 +763,11 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 1
  607 0287 31       		.byte	0x31
  608 0288 00       		.byte	0
  609 0289 0B       		.uleb128 0xb
- 610 028a 2C000000 		.4byte	.LVL1
- 611 028e D1030000 		.4byte	0x3d1
+ 610 028a 2E000000 		.4byte	.LVL1
+ 611 028e E7030000 		.4byte	0x3e7
  612 0292 09       		.uleb128 0x9
- 613 0293 34000000 		.4byte	.LVL2
- 614 0297 C0030000 		.4byte	0x3c0
+ 613 0293 36000000 		.4byte	.LVL2
+ 614 0297 D6030000 		.4byte	0x3d6
  615 029b A5020000 		.4byte	0x2a5
  616 029f 0A       		.uleb128 0xa
  617 02a0 01       		.uleb128 0x1
@@ -747,13 +776,16 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 1
  620 02a3 30       		.byte	0x30
  621 02a4 00       		.byte	0
  622 02a5 0B       		.uleb128 0xb
- 623 02a6 3E000000 		.4byte	.LVL3
- 624 02aa D8030000 		.4byte	0x3d8
+ 623 02a6 40000000 		.4byte	.LVL3
+ 624 02aa EE030000 		.4byte	0x3ee
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 14
+
+
  625 02ae 00       		.byte	0
  626 02af 08       		.uleb128 0x8
- 627 02b0 D4090000 		.4byte	.LASF82
+ 627 02b0 EB090000 		.4byte	.LASF82
  628 02b4 01       		.byte	0x1
- 629 02b5 3B       		.byte	0x3b
+ 629 02b5 58       		.byte	0x58
  630 02b6 00000000 		.4byte	.LFB38
  631 02ba 0A000000 		.4byte	.LFE38-.LFB38
  632 02be 01       		.uleb128 0x1
@@ -761,7 +793,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 1
  634 02c0 D4020000 		.4byte	0x2d4
  635 02c4 0C       		.uleb128 0xc
  636 02c5 08000000 		.4byte	.LVL4
- 637 02c9 C0030000 		.4byte	0x3c0
+ 637 02c9 D6030000 		.4byte	0x3d6
  638 02cd 0A       		.uleb128 0xa
  639 02ce 01       		.uleb128 0x1
  640 02cf 50       		.byte	0x50
@@ -772,18 +804,15 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 1
  645 02d4 08       		.uleb128 0x8
  646 02d5 31010000 		.4byte	.LASF83
  647 02d9 01       		.byte	0x1
- 648 02da 3F       		.byte	0x3f
+ 648 02da 5C       		.byte	0x5c
  649 02db 00000000 		.4byte	.LFB39
  650 02df 0A000000 		.4byte	.LFE39-.LFB39
  651 02e3 01       		.uleb128 0x1
  652 02e4 9C       		.byte	0x9c
  653 02e5 F9020000 		.4byte	0x2f9
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 14
-
-
  654 02e9 0C       		.uleb128 0xc
  655 02ea 08000000 		.4byte	.LVL5
- 656 02ee C0030000 		.4byte	0x3c0
+ 656 02ee D6030000 		.4byte	0x3d6
  657 02f2 0A       		.uleb128 0xa
  658 02f3 01       		.uleb128 0x1
  659 02f4 50       		.byte	0x50
@@ -792,28 +821,31 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 1
  662 02f7 00       		.byte	0
  663 02f8 00       		.byte	0
  664 02f9 08       		.uleb128 0x8
- 665 02fa 15070000 		.4byte	.LASF84
+ 665 02fa 25070000 		.4byte	.LASF84
  666 02fe 01       		.byte	0x1
- 667 02ff 4F       		.byte	0x4f
+ 667 02ff 6C       		.byte	0x6c
  668 0300 00000000 		.4byte	.LFB41
  669 0304 10000000 		.4byte	.LFE41-.LFB41
  670 0308 01       		.uleb128 0x1
  671 0309 9C       		.byte	0x9c
  672 030a 27030000 		.4byte	0x327
  673 030e 0D       		.uleb128 0xd
- 674 030f 91010000 		.4byte	.LASF96
+ 674 030f A1010000 		.4byte	.LASF97
  675 0313 01       		.byte	0x1
- 676 0314 4F       		.byte	0x4f
+ 676 0314 6C       		.byte	0x6c
  677 0315 6B000000 		.4byte	0x6b
  678 0319 00000000 		.4byte	.LLST0
  679 031d 0B       		.uleb128 0xb
  680 031e 0A000000 		.4byte	.LVL8
- 681 0322 DF030000 		.4byte	0x3df
+ 681 0322 F5030000 		.4byte	0x3f5
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 15
+
+
  682 0326 00       		.byte	0
  683 0327 08       		.uleb128 0x8
- 684 0328 C4050000 		.4byte	.LASF85
+ 684 0328 D4050000 		.4byte	.LASF85
  685 032c 01       		.byte	0x1
- 686 032d 43       		.byte	0x43
+ 686 032d 60       		.byte	0x60
  687 032e 00000000 		.4byte	.LFB40
  688 0332 24000000 		.4byte	.LFE40-.LFB40
  689 0336 01       		.uleb128 0x1
@@ -834,1004 +866,1020 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 1
  704 0357 7D000000 		.4byte	.LASF86
  705 035b 01       		.byte	0x1
  706 035c 16       		.byte	0x16
- 707 035d 46030000 		.4byte	0x346
+ 707 035d 67030000 		.4byte	0x367
  708 0361 05       		.uleb128 0x5
  709 0362 03       		.byte	0x3
  710 0363 00000000 		.4byte	Stone_Motor
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 15
+ 711 0367 05       		.uleb128 0x5
+ 712 0368 46030000 		.4byte	0x346
+ 713 036c 0E       		.uleb128 0xe
+ 714 036d 6B000000 		.4byte	0x6b
+ 715 0371 7C030000 		.4byte	0x37c
+ 716 0375 0F       		.uleb128 0xf
+ 717 0376 9D000000 		.4byte	0x9d
+ 718 037a 3F       		.byte	0x3f
+ 719 037b 00       		.byte	0
+ 720 037c 10       		.uleb128 0x10
+ 721 037d 6F090000 		.4byte	.LASF87
+ 722 0381 01       		.byte	0x1
+ 723 0382 1A       		.byte	0x1a
+ 724 0383 8D030000 		.4byte	0x38d
+ 725 0387 05       		.uleb128 0x5
+ 726 0388 03       		.byte	0x3
+ 727 0389 00000000 		.4byte	Test
+ 728 038d 11       		.uleb128 0x11
+ 729 038e 6C030000 		.4byte	0x36c
+ 730 0392 10       		.uleb128 0x10
+ 731 0393 8A010000 		.4byte	.LASF88
+ 732 0397 01       		.byte	0x1
+ 733 0398 17       		.byte	0x17
+ 734 0399 6C030000 		.4byte	0x36c
+ 735 039d 05       		.uleb128 0x5
+ 736 039e 03       		.byte	0x3
+ 737 039f 00000000 		.4byte	Motor_Running_Sequence
+ 738 03a3 10       		.uleb128 0x10
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 16
 
 
- 711 0367 0E       		.uleb128 0xe
- 712 0368 6B000000 		.4byte	0x6b
- 713 036c 77030000 		.4byte	0x377
- 714 0370 0F       		.uleb128 0xf
- 715 0371 9D000000 		.4byte	0x9d
- 716 0375 3F       		.byte	0x3f
- 717 0376 00       		.byte	0
- 718 0377 10       		.uleb128 0x10
- 719 0378 58090000 		.4byte	.LASF87
- 720 037c 03       		.byte	0x3
- 721 037d 15       		.byte	0x15
- 722 037e 88030000 		.4byte	0x388
- 723 0382 05       		.uleb128 0x5
- 724 0383 03       		.byte	0x3
- 725 0384 00000000 		.4byte	Test
- 726 0388 11       		.uleb128 0x11
- 727 0389 67030000 		.4byte	0x367
- 728 038d 10       		.uleb128 0x10
- 729 038e 83060000 		.4byte	.LASF88
- 730 0392 01       		.byte	0x1
- 731 0393 13       		.byte	0x13
- 732 0394 6B000000 		.4byte	0x6b
- 733 0398 05       		.uleb128 0x5
- 734 0399 03       		.byte	0x3
- 735 039a 00000000 		.4byte	status
- 736 039e 10       		.uleb128 0x10
- 737 039f DF060000 		.4byte	.LASF89
- 738 03a3 01       		.byte	0x1
- 739 03a4 14       		.byte	0x14
- 740 03a5 77000000 		.4byte	0x77
- 741 03a9 05       		.uleb128 0x5
- 742 03aa 03       		.byte	0x3
- 743 03ab 00000000 		.4byte	ms_count
- 744 03af 10       		.uleb128 0x10
- 745 03b0 12030000 		.4byte	.LASF90
- 746 03b4 01       		.byte	0x1
- 747 03b5 18       		.byte	0x18
- 748 03b6 98000000 		.4byte	0x98
- 749 03ba 05       		.uleb128 0x5
- 750 03bb 03       		.byte	0x3
- 751 03bc 00000000 		.4byte	Stone_Motor_Mode
- 752 03c0 12       		.uleb128 0x12
- 753 03c1 71000000 		.4byte	.LASF97
- 754 03c5 06       		.byte	0x6
- 755 03c6 33       		.byte	0x33
- 756 03c7 D1030000 		.4byte	0x3d1
- 757 03cb 13       		.uleb128 0x13
- 758 03cc 6B000000 		.4byte	0x6b
- 759 03d0 00       		.byte	0
- 760 03d1 14       		.uleb128 0x14
- 761 03d2 10010000 		.4byte	.LASF91
- 762 03d6 04       		.byte	0x4
- 763 03d7 13       		.byte	0x13
- 764 03d8 14       		.uleb128 0x14
- 765 03d9 AC030000 		.4byte	.LASF92
- 766 03dd 04       		.byte	0x4
- 767 03de 14       		.byte	0x14
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 16
+ 739 03a4 93060000 		.4byte	.LASF89
+ 740 03a8 01       		.byte	0x1
+ 741 03a9 13       		.byte	0x13
+ 742 03aa 6B000000 		.4byte	0x6b
+ 743 03ae 05       		.uleb128 0x5
+ 744 03af 03       		.byte	0x3
+ 745 03b0 00000000 		.4byte	status
+ 746 03b4 10       		.uleb128 0x10
+ 747 03b5 EF060000 		.4byte	.LASF90
+ 748 03b9 01       		.byte	0x1
+ 749 03ba 14       		.byte	0x14
+ 750 03bb 77000000 		.4byte	0x77
+ 751 03bf 05       		.uleb128 0x5
+ 752 03c0 03       		.byte	0x3
+ 753 03c1 00000000 		.4byte	ms_count
+ 754 03c5 10       		.uleb128 0x10
+ 755 03c6 22030000 		.4byte	.LASF91
+ 756 03ca 01       		.byte	0x1
+ 757 03cb 18       		.byte	0x18
+ 758 03cc 98000000 		.4byte	0x98
+ 759 03d0 05       		.uleb128 0x5
+ 760 03d1 03       		.byte	0x3
+ 761 03d2 00000000 		.4byte	Stone_Motor_Mode
+ 762 03d6 12       		.uleb128 0x12
+ 763 03d7 71000000 		.4byte	.LASF98
+ 764 03db 05       		.byte	0x5
+ 765 03dc 33       		.byte	0x33
+ 766 03dd E7030000 		.4byte	0x3e7
+ 767 03e1 13       		.uleb128 0x13
+ 768 03e2 6B000000 		.4byte	0x6b
+ 769 03e6 00       		.byte	0
+ 770 03e7 14       		.uleb128 0x14
+ 771 03e8 10010000 		.4byte	.LASF92
+ 772 03ec 03       		.byte	0x3
+ 773 03ed 15       		.byte	0x15
+ 774 03ee 14       		.uleb128 0x14
+ 775 03ef BC030000 		.4byte	.LASF93
+ 776 03f3 03       		.byte	0x3
+ 777 03f4 16       		.byte	0x16
+ 778 03f5 15       		.uleb128 0x15
+ 779 03f6 58090000 		.4byte	.LASF99
+ 780 03fa 06       		.byte	0x6
+ 781 03fb C3       		.byte	0xc3
+ 782 03fc 13       		.uleb128 0x13
+ 783 03fd 77000000 		.4byte	0x77
+ 784 0401 00       		.byte	0
+ 785 0402 00       		.byte	0
+ 786              		.section	.debug_abbrev,"",%progbits
+ 787              	.Ldebug_abbrev0:
+ 788 0000 01       		.uleb128 0x1
+ 789 0001 11       		.uleb128 0x11
+ 790 0002 01       		.byte	0x1
+ 791 0003 25       		.uleb128 0x25
+ 792 0004 0E       		.uleb128 0xe
+ 793 0005 13       		.uleb128 0x13
+ 794 0006 0B       		.uleb128 0xb
+ 795 0007 03       		.uleb128 0x3
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 17
 
 
- 768 03df 15       		.uleb128 0x15
- 769 03e0 41090000 		.4byte	.LASF98
- 770 03e4 07       		.byte	0x7
- 771 03e5 C3       		.byte	0xc3
- 772 03e6 13       		.uleb128 0x13
- 773 03e7 77000000 		.4byte	0x77
- 774 03eb 00       		.byte	0
- 775 03ec 00       		.byte	0
- 776              		.section	.debug_abbrev,"",%progbits
- 777              	.Ldebug_abbrev0:
- 778 0000 01       		.uleb128 0x1
- 779 0001 11       		.uleb128 0x11
- 780 0002 01       		.byte	0x1
- 781 0003 25       		.uleb128 0x25
- 782 0004 0E       		.uleb128 0xe
- 783 0005 13       		.uleb128 0x13
- 784 0006 0B       		.uleb128 0xb
- 785 0007 03       		.uleb128 0x3
- 786 0008 0E       		.uleb128 0xe
- 787 0009 1B       		.uleb128 0x1b
- 788 000a 0E       		.uleb128 0xe
- 789 000b 55       		.uleb128 0x55
- 790 000c 17       		.uleb128 0x17
- 791 000d 11       		.uleb128 0x11
- 792 000e 01       		.uleb128 0x1
- 793 000f 10       		.uleb128 0x10
- 794 0010 17       		.uleb128 0x17
- 795 0011 00       		.byte	0
- 796 0012 00       		.byte	0
- 797 0013 02       		.uleb128 0x2
- 798 0014 24       		.uleb128 0x24
- 799 0015 00       		.byte	0
- 800 0016 0B       		.uleb128 0xb
- 801 0017 0B       		.uleb128 0xb
- 802 0018 3E       		.uleb128 0x3e
- 803 0019 0B       		.uleb128 0xb
- 804 001a 03       		.uleb128 0x3
- 805 001b 0E       		.uleb128 0xe
- 806 001c 00       		.byte	0
- 807 001d 00       		.byte	0
- 808 001e 03       		.uleb128 0x3
- 809 001f 24       		.uleb128 0x24
- 810 0020 00       		.byte	0
- 811 0021 0B       		.uleb128 0xb
- 812 0022 0B       		.uleb128 0xb
- 813 0023 3E       		.uleb128 0x3e
- 814 0024 0B       		.uleb128 0xb
- 815 0025 03       		.uleb128 0x3
- 816 0026 08       		.uleb128 0x8
- 817 0027 00       		.byte	0
- 818 0028 00       		.byte	0
- 819 0029 04       		.uleb128 0x4
- 820 002a 16       		.uleb128 0x16
- 821 002b 00       		.byte	0
- 822 002c 03       		.uleb128 0x3
- 823 002d 0E       		.uleb128 0xe
- 824 002e 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 17
+ 796 0008 0E       		.uleb128 0xe
+ 797 0009 1B       		.uleb128 0x1b
+ 798 000a 0E       		.uleb128 0xe
+ 799 000b 55       		.uleb128 0x55
+ 800 000c 17       		.uleb128 0x17
+ 801 000d 11       		.uleb128 0x11
+ 802 000e 01       		.uleb128 0x1
+ 803 000f 10       		.uleb128 0x10
+ 804 0010 17       		.uleb128 0x17
+ 805 0011 00       		.byte	0
+ 806 0012 00       		.byte	0
+ 807 0013 02       		.uleb128 0x2
+ 808 0014 24       		.uleb128 0x24
+ 809 0015 00       		.byte	0
+ 810 0016 0B       		.uleb128 0xb
+ 811 0017 0B       		.uleb128 0xb
+ 812 0018 3E       		.uleb128 0x3e
+ 813 0019 0B       		.uleb128 0xb
+ 814 001a 03       		.uleb128 0x3
+ 815 001b 0E       		.uleb128 0xe
+ 816 001c 00       		.byte	0
+ 817 001d 00       		.byte	0
+ 818 001e 03       		.uleb128 0x3
+ 819 001f 24       		.uleb128 0x24
+ 820 0020 00       		.byte	0
+ 821 0021 0B       		.uleb128 0xb
+ 822 0022 0B       		.uleb128 0xb
+ 823 0023 3E       		.uleb128 0x3e
+ 824 0024 0B       		.uleb128 0xb
+ 825 0025 03       		.uleb128 0x3
+ 826 0026 08       		.uleb128 0x8
+ 827 0027 00       		.byte	0
+ 828 0028 00       		.byte	0
+ 829 0029 04       		.uleb128 0x4
+ 830 002a 16       		.uleb128 0x16
+ 831 002b 00       		.byte	0
+ 832 002c 03       		.uleb128 0x3
+ 833 002d 0E       		.uleb128 0xe
+ 834 002e 3A       		.uleb128 0x3a
+ 835 002f 0B       		.uleb128 0xb
+ 836 0030 3B       		.uleb128 0x3b
+ 837 0031 05       		.uleb128 0x5
+ 838 0032 49       		.uleb128 0x49
+ 839 0033 13       		.uleb128 0x13
+ 840 0034 00       		.byte	0
+ 841 0035 00       		.byte	0
+ 842 0036 05       		.uleb128 0x5
+ 843 0037 35       		.uleb128 0x35
+ 844 0038 00       		.byte	0
+ 845 0039 49       		.uleb128 0x49
+ 846 003a 13       		.uleb128 0x13
+ 847 003b 00       		.byte	0
+ 848 003c 00       		.byte	0
+ 849 003d 06       		.uleb128 0x6
+ 850 003e 04       		.uleb128 0x4
+ 851 003f 01       		.byte	0x1
+ 852 0040 0B       		.uleb128 0xb
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 18
 
 
- 825 002f 0B       		.uleb128 0xb
- 826 0030 3B       		.uleb128 0x3b
- 827 0031 05       		.uleb128 0x5
- 828 0032 49       		.uleb128 0x49
- 829 0033 13       		.uleb128 0x13
- 830 0034 00       		.byte	0
- 831 0035 00       		.byte	0
- 832 0036 05       		.uleb128 0x5
- 833 0037 35       		.uleb128 0x35
- 834 0038 00       		.byte	0
- 835 0039 49       		.uleb128 0x49
- 836 003a 13       		.uleb128 0x13
- 837 003b 00       		.byte	0
- 838 003c 00       		.byte	0
- 839 003d 06       		.uleb128 0x6
- 840 003e 04       		.uleb128 0x4
- 841 003f 01       		.byte	0x1
- 842 0040 0B       		.uleb128 0xb
- 843 0041 0B       		.uleb128 0xb
- 844 0042 3A       		.uleb128 0x3a
- 845 0043 0B       		.uleb128 0xb
- 846 0044 3B       		.uleb128 0x3b
- 847 0045 05       		.uleb128 0x5
- 848 0046 01       		.uleb128 0x1
- 849 0047 13       		.uleb128 0x13
- 850 0048 00       		.byte	0
- 851 0049 00       		.byte	0
- 852 004a 07       		.uleb128 0x7
- 853 004b 28       		.uleb128 0x28
- 854 004c 00       		.byte	0
- 855 004d 03       		.uleb128 0x3
- 856 004e 0E       		.uleb128 0xe
- 857 004f 1C       		.uleb128 0x1c
- 858 0050 0D       		.uleb128 0xd
- 859 0051 00       		.byte	0
- 860 0052 00       		.byte	0
- 861 0053 08       		.uleb128 0x8
- 862 0054 2E       		.uleb128 0x2e
- 863 0055 01       		.byte	0x1
- 864 0056 3F       		.uleb128 0x3f
- 865 0057 19       		.uleb128 0x19
- 866 0058 03       		.uleb128 0x3
- 867 0059 0E       		.uleb128 0xe
- 868 005a 3A       		.uleb128 0x3a
- 869 005b 0B       		.uleb128 0xb
- 870 005c 3B       		.uleb128 0x3b
- 871 005d 0B       		.uleb128 0xb
- 872 005e 27       		.uleb128 0x27
- 873 005f 19       		.uleb128 0x19
- 874 0060 11       		.uleb128 0x11
- 875 0061 01       		.uleb128 0x1
- 876 0062 12       		.uleb128 0x12
- 877 0063 06       		.uleb128 0x6
- 878 0064 40       		.uleb128 0x40
- 879 0065 18       		.uleb128 0x18
- 880 0066 9742     		.uleb128 0x2117
- 881 0068 19       		.uleb128 0x19
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 18
+ 853 0041 0B       		.uleb128 0xb
+ 854 0042 3A       		.uleb128 0x3a
+ 855 0043 0B       		.uleb128 0xb
+ 856 0044 3B       		.uleb128 0x3b
+ 857 0045 05       		.uleb128 0x5
+ 858 0046 01       		.uleb128 0x1
+ 859 0047 13       		.uleb128 0x13
+ 860 0048 00       		.byte	0
+ 861 0049 00       		.byte	0
+ 862 004a 07       		.uleb128 0x7
+ 863 004b 28       		.uleb128 0x28
+ 864 004c 00       		.byte	0
+ 865 004d 03       		.uleb128 0x3
+ 866 004e 0E       		.uleb128 0xe
+ 867 004f 1C       		.uleb128 0x1c
+ 868 0050 0D       		.uleb128 0xd
+ 869 0051 00       		.byte	0
+ 870 0052 00       		.byte	0
+ 871 0053 08       		.uleb128 0x8
+ 872 0054 2E       		.uleb128 0x2e
+ 873 0055 01       		.byte	0x1
+ 874 0056 3F       		.uleb128 0x3f
+ 875 0057 19       		.uleb128 0x19
+ 876 0058 03       		.uleb128 0x3
+ 877 0059 0E       		.uleb128 0xe
+ 878 005a 3A       		.uleb128 0x3a
+ 879 005b 0B       		.uleb128 0xb
+ 880 005c 3B       		.uleb128 0x3b
+ 881 005d 0B       		.uleb128 0xb
+ 882 005e 27       		.uleb128 0x27
+ 883 005f 19       		.uleb128 0x19
+ 884 0060 11       		.uleb128 0x11
+ 885 0061 01       		.uleb128 0x1
+ 886 0062 12       		.uleb128 0x12
+ 887 0063 06       		.uleb128 0x6
+ 888 0064 40       		.uleb128 0x40
+ 889 0065 18       		.uleb128 0x18
+ 890 0066 9742     		.uleb128 0x2117
+ 891 0068 19       		.uleb128 0x19
+ 892 0069 01       		.uleb128 0x1
+ 893 006a 13       		.uleb128 0x13
+ 894 006b 00       		.byte	0
+ 895 006c 00       		.byte	0
+ 896 006d 09       		.uleb128 0x9
+ 897 006e 898201   		.uleb128 0x4109
+ 898 0071 01       		.byte	0x1
+ 899 0072 11       		.uleb128 0x11
+ 900 0073 01       		.uleb128 0x1
+ 901 0074 31       		.uleb128 0x31
+ 902 0075 13       		.uleb128 0x13
+ 903 0076 01       		.uleb128 0x1
+ 904 0077 13       		.uleb128 0x13
+ 905 0078 00       		.byte	0
+ 906 0079 00       		.byte	0
+ 907 007a 0A       		.uleb128 0xa
+ 908 007b 8A8201   		.uleb128 0x410a
+ 909 007e 00       		.byte	0
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 19
 
 
- 882 0069 01       		.uleb128 0x1
- 883 006a 13       		.uleb128 0x13
- 884 006b 00       		.byte	0
- 885 006c 00       		.byte	0
- 886 006d 09       		.uleb128 0x9
- 887 006e 898201   		.uleb128 0x4109
- 888 0071 01       		.byte	0x1
- 889 0072 11       		.uleb128 0x11
- 890 0073 01       		.uleb128 0x1
- 891 0074 31       		.uleb128 0x31
- 892 0075 13       		.uleb128 0x13
- 893 0076 01       		.uleb128 0x1
- 894 0077 13       		.uleb128 0x13
- 895 0078 00       		.byte	0
- 896 0079 00       		.byte	0
- 897 007a 0A       		.uleb128 0xa
- 898 007b 8A8201   		.uleb128 0x410a
- 899 007e 00       		.byte	0
- 900 007f 02       		.uleb128 0x2
- 901 0080 18       		.uleb128 0x18
- 902 0081 9142     		.uleb128 0x2111
- 903 0083 18       		.uleb128 0x18
- 904 0084 00       		.byte	0
- 905 0085 00       		.byte	0
- 906 0086 0B       		.uleb128 0xb
- 907 0087 898201   		.uleb128 0x4109
- 908 008a 00       		.byte	0
- 909 008b 11       		.uleb128 0x11
- 910 008c 01       		.uleb128 0x1
- 911 008d 31       		.uleb128 0x31
- 912 008e 13       		.uleb128 0x13
- 913 008f 00       		.byte	0
- 914 0090 00       		.byte	0
- 915 0091 0C       		.uleb128 0xc
- 916 0092 898201   		.uleb128 0x4109
- 917 0095 01       		.byte	0x1
- 918 0096 11       		.uleb128 0x11
- 919 0097 01       		.uleb128 0x1
- 920 0098 31       		.uleb128 0x31
- 921 0099 13       		.uleb128 0x13
- 922 009a 00       		.byte	0
- 923 009b 00       		.byte	0
- 924 009c 0D       		.uleb128 0xd
- 925 009d 05       		.uleb128 0x5
- 926 009e 00       		.byte	0
- 927 009f 03       		.uleb128 0x3
- 928 00a0 0E       		.uleb128 0xe
- 929 00a1 3A       		.uleb128 0x3a
- 930 00a2 0B       		.uleb128 0xb
- 931 00a3 3B       		.uleb128 0x3b
- 932 00a4 0B       		.uleb128 0xb
- 933 00a5 49       		.uleb128 0x49
- 934 00a6 13       		.uleb128 0x13
- 935 00a7 02       		.uleb128 0x2
- 936 00a8 17       		.uleb128 0x17
- 937 00a9 00       		.byte	0
- 938 00aa 00       		.byte	0
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 19
+ 910 007f 02       		.uleb128 0x2
+ 911 0080 18       		.uleb128 0x18
+ 912 0081 9142     		.uleb128 0x2111
+ 913 0083 18       		.uleb128 0x18
+ 914 0084 00       		.byte	0
+ 915 0085 00       		.byte	0
+ 916 0086 0B       		.uleb128 0xb
+ 917 0087 898201   		.uleb128 0x4109
+ 918 008a 00       		.byte	0
+ 919 008b 11       		.uleb128 0x11
+ 920 008c 01       		.uleb128 0x1
+ 921 008d 31       		.uleb128 0x31
+ 922 008e 13       		.uleb128 0x13
+ 923 008f 00       		.byte	0
+ 924 0090 00       		.byte	0
+ 925 0091 0C       		.uleb128 0xc
+ 926 0092 898201   		.uleb128 0x4109
+ 927 0095 01       		.byte	0x1
+ 928 0096 11       		.uleb128 0x11
+ 929 0097 01       		.uleb128 0x1
+ 930 0098 31       		.uleb128 0x31
+ 931 0099 13       		.uleb128 0x13
+ 932 009a 00       		.byte	0
+ 933 009b 00       		.byte	0
+ 934 009c 0D       		.uleb128 0xd
+ 935 009d 05       		.uleb128 0x5
+ 936 009e 00       		.byte	0
+ 937 009f 03       		.uleb128 0x3
+ 938 00a0 0E       		.uleb128 0xe
+ 939 00a1 3A       		.uleb128 0x3a
+ 940 00a2 0B       		.uleb128 0xb
+ 941 00a3 3B       		.uleb128 0x3b
+ 942 00a4 0B       		.uleb128 0xb
+ 943 00a5 49       		.uleb128 0x49
+ 944 00a6 13       		.uleb128 0x13
+ 945 00a7 02       		.uleb128 0x2
+ 946 00a8 17       		.uleb128 0x17
+ 947 00a9 00       		.byte	0
+ 948 00aa 00       		.byte	0
+ 949 00ab 0E       		.uleb128 0xe
+ 950 00ac 01       		.uleb128 0x1
+ 951 00ad 01       		.byte	0x1
+ 952 00ae 49       		.uleb128 0x49
+ 953 00af 13       		.uleb128 0x13
+ 954 00b0 01       		.uleb128 0x1
+ 955 00b1 13       		.uleb128 0x13
+ 956 00b2 00       		.byte	0
+ 957 00b3 00       		.byte	0
+ 958 00b4 0F       		.uleb128 0xf
+ 959 00b5 21       		.uleb128 0x21
+ 960 00b6 00       		.byte	0
+ 961 00b7 49       		.uleb128 0x49
+ 962 00b8 13       		.uleb128 0x13
+ 963 00b9 2F       		.uleb128 0x2f
+ 964 00ba 0B       		.uleb128 0xb
+ 965 00bb 00       		.byte	0
+ 966 00bc 00       		.byte	0
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 20
 
 
- 939 00ab 0E       		.uleb128 0xe
- 940 00ac 01       		.uleb128 0x1
- 941 00ad 01       		.byte	0x1
- 942 00ae 49       		.uleb128 0x49
- 943 00af 13       		.uleb128 0x13
- 944 00b0 01       		.uleb128 0x1
- 945 00b1 13       		.uleb128 0x13
- 946 00b2 00       		.byte	0
- 947 00b3 00       		.byte	0
- 948 00b4 0F       		.uleb128 0xf
- 949 00b5 21       		.uleb128 0x21
- 950 00b6 00       		.byte	0
- 951 00b7 49       		.uleb128 0x49
- 952 00b8 13       		.uleb128 0x13
- 953 00b9 2F       		.uleb128 0x2f
- 954 00ba 0B       		.uleb128 0xb
- 955 00bb 00       		.byte	0
- 956 00bc 00       		.byte	0
- 957 00bd 10       		.uleb128 0x10
- 958 00be 34       		.uleb128 0x34
- 959 00bf 00       		.byte	0
- 960 00c0 03       		.uleb128 0x3
- 961 00c1 0E       		.uleb128 0xe
- 962 00c2 3A       		.uleb128 0x3a
- 963 00c3 0B       		.uleb128 0xb
- 964 00c4 3B       		.uleb128 0x3b
- 965 00c5 0B       		.uleb128 0xb
- 966 00c6 49       		.uleb128 0x49
- 967 00c7 13       		.uleb128 0x13
- 968 00c8 3F       		.uleb128 0x3f
- 969 00c9 19       		.uleb128 0x19
- 970 00ca 02       		.uleb128 0x2
- 971 00cb 18       		.uleb128 0x18
- 972 00cc 00       		.byte	0
- 973 00cd 00       		.byte	0
- 974 00ce 11       		.uleb128 0x11
- 975 00cf 26       		.uleb128 0x26
- 976 00d0 00       		.byte	0
- 977 00d1 49       		.uleb128 0x49
- 978 00d2 13       		.uleb128 0x13
- 979 00d3 00       		.byte	0
- 980 00d4 00       		.byte	0
- 981 00d5 12       		.uleb128 0x12
- 982 00d6 2E       		.uleb128 0x2e
- 983 00d7 01       		.byte	0x1
- 984 00d8 3F       		.uleb128 0x3f
- 985 00d9 19       		.uleb128 0x19
- 986 00da 03       		.uleb128 0x3
- 987 00db 0E       		.uleb128 0xe
- 988 00dc 3A       		.uleb128 0x3a
- 989 00dd 0B       		.uleb128 0xb
- 990 00de 3B       		.uleb128 0x3b
- 991 00df 0B       		.uleb128 0xb
- 992 00e0 27       		.uleb128 0x27
- 993 00e1 19       		.uleb128 0x19
- 994 00e2 3C       		.uleb128 0x3c
- 995 00e3 19       		.uleb128 0x19
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 20
+ 967 00bd 10       		.uleb128 0x10
+ 968 00be 34       		.uleb128 0x34
+ 969 00bf 00       		.byte	0
+ 970 00c0 03       		.uleb128 0x3
+ 971 00c1 0E       		.uleb128 0xe
+ 972 00c2 3A       		.uleb128 0x3a
+ 973 00c3 0B       		.uleb128 0xb
+ 974 00c4 3B       		.uleb128 0x3b
+ 975 00c5 0B       		.uleb128 0xb
+ 976 00c6 49       		.uleb128 0x49
+ 977 00c7 13       		.uleb128 0x13
+ 978 00c8 3F       		.uleb128 0x3f
+ 979 00c9 19       		.uleb128 0x19
+ 980 00ca 02       		.uleb128 0x2
+ 981 00cb 18       		.uleb128 0x18
+ 982 00cc 00       		.byte	0
+ 983 00cd 00       		.byte	0
+ 984 00ce 11       		.uleb128 0x11
+ 985 00cf 26       		.uleb128 0x26
+ 986 00d0 00       		.byte	0
+ 987 00d1 49       		.uleb128 0x49
+ 988 00d2 13       		.uleb128 0x13
+ 989 00d3 00       		.byte	0
+ 990 00d4 00       		.byte	0
+ 991 00d5 12       		.uleb128 0x12
+ 992 00d6 2E       		.uleb128 0x2e
+ 993 00d7 01       		.byte	0x1
+ 994 00d8 3F       		.uleb128 0x3f
+ 995 00d9 19       		.uleb128 0x19
+ 996 00da 03       		.uleb128 0x3
+ 997 00db 0E       		.uleb128 0xe
+ 998 00dc 3A       		.uleb128 0x3a
+ 999 00dd 0B       		.uleb128 0xb
+ 1000 00de 3B       		.uleb128 0x3b
+ 1001 00df 0B       		.uleb128 0xb
+ 1002 00e0 27       		.uleb128 0x27
+ 1003 00e1 19       		.uleb128 0x19
+ 1004 00e2 3C       		.uleb128 0x3c
+ 1005 00e3 19       		.uleb128 0x19
+ 1006 00e4 01       		.uleb128 0x1
+ 1007 00e5 13       		.uleb128 0x13
+ 1008 00e6 00       		.byte	0
+ 1009 00e7 00       		.byte	0
+ 1010 00e8 13       		.uleb128 0x13
+ 1011 00e9 05       		.uleb128 0x5
+ 1012 00ea 00       		.byte	0
+ 1013 00eb 49       		.uleb128 0x49
+ 1014 00ec 13       		.uleb128 0x13
+ 1015 00ed 00       		.byte	0
+ 1016 00ee 00       		.byte	0
+ 1017 00ef 14       		.uleb128 0x14
+ 1018 00f0 2E       		.uleb128 0x2e
+ 1019 00f1 00       		.byte	0
+ 1020 00f2 3F       		.uleb128 0x3f
+ 1021 00f3 19       		.uleb128 0x19
+ 1022 00f4 03       		.uleb128 0x3
+ 1023 00f5 0E       		.uleb128 0xe
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 21
 
 
- 996 00e4 01       		.uleb128 0x1
- 997 00e5 13       		.uleb128 0x13
- 998 00e6 00       		.byte	0
- 999 00e7 00       		.byte	0
- 1000 00e8 13       		.uleb128 0x13
- 1001 00e9 05       		.uleb128 0x5
- 1002 00ea 00       		.byte	0
- 1003 00eb 49       		.uleb128 0x49
- 1004 00ec 13       		.uleb128 0x13
- 1005 00ed 00       		.byte	0
- 1006 00ee 00       		.byte	0
- 1007 00ef 14       		.uleb128 0x14
- 1008 00f0 2E       		.uleb128 0x2e
- 1009 00f1 00       		.byte	0
- 1010 00f2 3F       		.uleb128 0x3f
- 1011 00f3 19       		.uleb128 0x19
- 1012 00f4 03       		.uleb128 0x3
- 1013 00f5 0E       		.uleb128 0xe
- 1014 00f6 3A       		.uleb128 0x3a
- 1015 00f7 0B       		.uleb128 0xb
- 1016 00f8 3B       		.uleb128 0x3b
- 1017 00f9 0B       		.uleb128 0xb
- 1018 00fa 27       		.uleb128 0x27
- 1019 00fb 19       		.uleb128 0x19
- 1020 00fc 3C       		.uleb128 0x3c
- 1021 00fd 19       		.uleb128 0x19
- 1022 00fe 00       		.byte	0
- 1023 00ff 00       		.byte	0
- 1024 0100 15       		.uleb128 0x15
- 1025 0101 2E       		.uleb128 0x2e
- 1026 0102 01       		.byte	0x1
- 1027 0103 3F       		.uleb128 0x3f
- 1028 0104 19       		.uleb128 0x19
- 1029 0105 03       		.uleb128 0x3
- 1030 0106 0E       		.uleb128 0xe
- 1031 0107 3A       		.uleb128 0x3a
- 1032 0108 0B       		.uleb128 0xb
- 1033 0109 3B       		.uleb128 0x3b
- 1034 010a 0B       		.uleb128 0xb
- 1035 010b 27       		.uleb128 0x27
- 1036 010c 19       		.uleb128 0x19
- 1037 010d 3C       		.uleb128 0x3c
- 1038 010e 19       		.uleb128 0x19
- 1039 010f 00       		.byte	0
- 1040 0110 00       		.byte	0
- 1041 0111 00       		.byte	0
- 1042              		.section	.debug_loc,"",%progbits
- 1043              	.Ldebug_loc0:
- 1044              	.LLST0:
- 1045 0000 00000000 		.4byte	.LVL6
- 1046 0004 06000000 		.4byte	.LVL7
- 1047 0008 0100     		.2byte	0x1
- 1048 000a 50       		.byte	0x50
- 1049 000b 06000000 		.4byte	.LVL7
- 1050 000f 10000000 		.4byte	.LFE41
- 1051 0013 0400     		.2byte	0x4
- 1052 0015 F3       		.byte	0xf3
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 21
+ 1024 00f6 3A       		.uleb128 0x3a
+ 1025 00f7 0B       		.uleb128 0xb
+ 1026 00f8 3B       		.uleb128 0x3b
+ 1027 00f9 0B       		.uleb128 0xb
+ 1028 00fa 27       		.uleb128 0x27
+ 1029 00fb 19       		.uleb128 0x19
+ 1030 00fc 3C       		.uleb128 0x3c
+ 1031 00fd 19       		.uleb128 0x19
+ 1032 00fe 00       		.byte	0
+ 1033 00ff 00       		.byte	0
+ 1034 0100 15       		.uleb128 0x15
+ 1035 0101 2E       		.uleb128 0x2e
+ 1036 0102 01       		.byte	0x1
+ 1037 0103 3F       		.uleb128 0x3f
+ 1038 0104 19       		.uleb128 0x19
+ 1039 0105 03       		.uleb128 0x3
+ 1040 0106 0E       		.uleb128 0xe
+ 1041 0107 3A       		.uleb128 0x3a
+ 1042 0108 0B       		.uleb128 0xb
+ 1043 0109 3B       		.uleb128 0x3b
+ 1044 010a 0B       		.uleb128 0xb
+ 1045 010b 27       		.uleb128 0x27
+ 1046 010c 19       		.uleb128 0x19
+ 1047 010d 3C       		.uleb128 0x3c
+ 1048 010e 19       		.uleb128 0x19
+ 1049 010f 00       		.byte	0
+ 1050 0110 00       		.byte	0
+ 1051 0111 00       		.byte	0
+ 1052              		.section	.debug_loc,"",%progbits
+ 1053              	.Ldebug_loc0:
+ 1054              	.LLST0:
+ 1055 0000 00000000 		.4byte	.LVL6
+ 1056 0004 06000000 		.4byte	.LVL7
+ 1057 0008 0100     		.2byte	0x1
+ 1058 000a 50       		.byte	0x50
+ 1059 000b 06000000 		.4byte	.LVL7
+ 1060 000f 10000000 		.4byte	.LFE41
+ 1061 0013 0400     		.2byte	0x4
+ 1062 0015 F3       		.byte	0xf3
+ 1063 0016 01       		.uleb128 0x1
+ 1064 0017 50       		.byte	0x50
+ 1065 0018 9F       		.byte	0x9f
+ 1066 0019 00000000 		.4byte	0
+ 1067 001d 00000000 		.4byte	0
+ 1068              		.section	.debug_aranges,"",%progbits
+ 1069 0000 3C000000 		.4byte	0x3c
+ 1070 0004 0200     		.2byte	0x2
+ 1071 0006 00000000 		.4byte	.Ldebug_info0
+ 1072 000a 04       		.byte	0x4
+ 1073 000b 00       		.byte	0
+ 1074 000c 0000     		.2byte	0
+ 1075 000e 0000     		.2byte	0
+ 1076 0010 00000000 		.4byte	.LFB37
+ 1077 0014 4C000000 		.4byte	.LFE37-.LFB37
+ 1078 0018 00000000 		.4byte	.LFB38
+ 1079 001c 0A000000 		.4byte	.LFE38-.LFB38
+ 1080 0020 00000000 		.4byte	.LFB39
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 22
 
 
- 1053 0016 01       		.uleb128 0x1
- 1054 0017 50       		.byte	0x50
- 1055 0018 9F       		.byte	0x9f
- 1056 0019 00000000 		.4byte	0
- 1057 001d 00000000 		.4byte	0
- 1058              		.section	.debug_aranges,"",%progbits
- 1059 0000 3C000000 		.4byte	0x3c
- 1060 0004 0200     		.2byte	0x2
- 1061 0006 00000000 		.4byte	.Ldebug_info0
- 1062 000a 04       		.byte	0x4
- 1063 000b 00       		.byte	0
- 1064 000c 0000     		.2byte	0
- 1065 000e 0000     		.2byte	0
- 1066 0010 00000000 		.4byte	.LFB37
- 1067 0014 48000000 		.4byte	.LFE37-.LFB37
- 1068 0018 00000000 		.4byte	.LFB38
- 1069 001c 0A000000 		.4byte	.LFE38-.LFB38
- 1070 0020 00000000 		.4byte	.LFB39
- 1071 0024 0A000000 		.4byte	.LFE39-.LFB39
- 1072 0028 00000000 		.4byte	.LFB41
- 1073 002c 10000000 		.4byte	.LFE41-.LFB41
- 1074 0030 00000000 		.4byte	.LFB40
- 1075 0034 24000000 		.4byte	.LFE40-.LFB40
- 1076 0038 00000000 		.4byte	0
- 1077 003c 00000000 		.4byte	0
- 1078              		.section	.debug_ranges,"",%progbits
- 1079              	.Ldebug_ranges0:
- 1080 0000 00000000 		.4byte	.LFB37
- 1081 0004 48000000 		.4byte	.LFE37
- 1082 0008 00000000 		.4byte	.LFB38
- 1083 000c 0A000000 		.4byte	.LFE38
- 1084 0010 00000000 		.4byte	.LFB39
- 1085 0014 0A000000 		.4byte	.LFE39
- 1086 0018 00000000 		.4byte	.LFB41
- 1087 001c 10000000 		.4byte	.LFE41
- 1088 0020 00000000 		.4byte	.LFB40
- 1089 0024 24000000 		.4byte	.LFE40
- 1090 0028 00000000 		.4byte	0
- 1091 002c 00000000 		.4byte	0
- 1092              		.section	.debug_line,"",%progbits
- 1093              	.Ldebug_line0:
- 1094 0000 10010000 		.section	.debug_str,"MS",%progbits,1
- 1094      0200A700 
- 1094      00000201 
- 1094      FB0E0D00 
- 1094      01010101 
- 1095              	.LASF24:
- 1096 0000 4359424C 		.ascii	"CYBLE_EVT_GAP_PASSKEY_ENTRY_REQUEST\000"
- 1096      455F4556 
- 1096      545F4741 
- 1096      505F5041 
- 1096      53534B45 
- 1097              	.LASF55:
- 1098 0024 4359424C 		.ascii	"CYBLE_EVT_GATTC_WRITE_RSP\000"
- 1098      455F4556 
- 1098      545F4741 
- 1098      5454435F 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 22
-
-
- 1098      57524954 
- 1099              	.LASF21:
- 1100 003e 4359424C 		.ascii	"CYBLE_EVT_MEMORY_REQUEST\000"
- 1100      455F4556 
- 1100      545F4D45 
- 1100      4D4F5259 
- 1100      5F524551 
- 1101              	.LASF42:
- 1102 0057 4359424C 		.ascii	"CYBLE_EVT_GATTC_ERROR_RSP\000"
- 1102      455F4556 
- 1102      545F4741 
- 1102      5454435F 
- 1102      4552524F 
- 1103              	.LASF97:
- 1104 0071 4D6F746F 		.ascii	"Motor_Write\000"
- 1104      725F5772 
- 1104      69746500 
- 1105              	.LASF86:
- 1106 007d 53746F6E 		.ascii	"Stone_Motor\000"
- 1106      655F4D6F 
- 1106      746F7200 
- 1107              	.LASF36:
- 1108 0089 4359424C 		.ascii	"CYBLE_EVT_GAP_KEYPRESS_NOTIFICATION\000"
+ 1081 0024 0A000000 		.4byte	.LFE39-.LFB39
+ 1082 0028 00000000 		.4byte	.LFB41
+ 1083 002c 10000000 		.4byte	.LFE41-.LFB41
+ 1084 0030 00000000 		.4byte	.LFB40
+ 1085 0034 24000000 		.4byte	.LFE40-.LFB40
+ 1086 0038 00000000 		.4byte	0
+ 1087 003c 00000000 		.4byte	0
+ 1088              		.section	.debug_ranges,"",%progbits
+ 1089              	.Ldebug_ranges0:
+ 1090 0000 00000000 		.4byte	.LFB37
+ 1091 0004 4C000000 		.4byte	.LFE37
+ 1092 0008 00000000 		.4byte	.LFB38
+ 1093 000c 0A000000 		.4byte	.LFE38
+ 1094 0010 00000000 		.4byte	.LFB39
+ 1095 0014 0A000000 		.4byte	.LFE39
+ 1096 0018 00000000 		.4byte	.LFB41
+ 1097 001c 10000000 		.4byte	.LFE41
+ 1098 0020 00000000 		.4byte	.LFB40
+ 1099 0024 24000000 		.4byte	.LFE40
+ 1100 0028 00000000 		.4byte	0
+ 1101 002c 00000000 		.4byte	0
+ 1102              		.section	.debug_line,"",%progbits
+ 1103              	.Ldebug_line0:
+ 1104 0000 F6000000 		.section	.debug_str,"MS",%progbits,1
+ 1104      02008B00 
+ 1104      00000201 
+ 1104      FB0E0D00 
+ 1104      01010101 
+ 1105              	.LASF24:
+ 1106 0000 4359424C 		.ascii	"CYBLE_EVT_GAP_PASSKEY_ENTRY_REQUEST\000"
+ 1106      455F4556 
+ 1106      545F4741 
+ 1106      505F5041 
+ 1106      53534B45 
+ 1107              	.LASF55:
+ 1108 0024 4359424C 		.ascii	"CYBLE_EVT_GATTC_WRITE_RSP\000"
  1108      455F4556 
  1108      545F4741 
- 1108      505F4B45 
- 1108      59505245 
- 1109              	.LASF2:
- 1110 00ad 73686F72 		.ascii	"short int\000"
- 1110      7420696E 
- 1110      7400
- 1111              	.LASF27:
- 1112 00b7 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_FAILED\000"
+ 1108      5454435F 
+ 1108      57524954 
+ 1109              	.LASF21:
+ 1110 003e 4359424C 		.ascii	"CYBLE_EVT_MEMORY_REQUEST\000"
+ 1110      455F4556 
+ 1110      545F4D45 
+ 1110      4D4F5259 
+ 1110      5F524551 
+ 1111              	.LASF42:
+ 1112 0057 4359424C 		.ascii	"CYBLE_EVT_GATTC_ERROR_RSP\000"
  1112      455F4556 
  1112      545F4741 
- 1112      505F4155 
- 1112      54485F46 
- 1113              	.LASF14:
- 1114 00d1 73697A65 		.ascii	"sizetype\000"
- 1114      74797065 
- 1114      00
- 1115              	.LASF38:
- 1116 00da 4359424C 		.ascii	"CYBLE_EVT_GAP_DATA_LENGTH_CHANGE\000"
- 1116      455F4556 
- 1116      545F4741 
- 1116      505F4441 
- 1116      54415F4C 
- 1117              	.LASF19:
- 1118 00fb 4359424C 		.ascii	"CYBLE_EVT_HCI_STATUS\000"
+ 1112      5454435F 
+ 1112      4552524F 
+ 1113              	.LASF98:
+ 1114 0071 4D6F746F 		.ascii	"Motor_Write\000"
+ 1114      725F5772 
+ 1114      69746500 
+ 1115              	.LASF86:
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 23
+
+
+ 1116 007d 53746F6E 		.ascii	"Stone_Motor\000"
+ 1116      655F4D6F 
+ 1116      746F7200 
+ 1117              	.LASF36:
+ 1118 0089 4359424C 		.ascii	"CYBLE_EVT_GAP_KEYPRESS_NOTIFICATION\000"
  1118      455F4556 
- 1118      545F4843 
- 1118      495F5354 
- 1118      41545553 
- 1119              	.LASF91:
- 1120 0110 496E6974 		.ascii	"InitStoneInterrupt\000"
- 1120      53746F6E 
- 1120      65496E74 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 23
-
-
- 1120      65727275 
- 1120      707400
- 1121              	.LASF6:
- 1122 0123 6C6F6E67 		.ascii	"long long int\000"
- 1122      206C6F6E 
- 1122      6720696E 
- 1122      7400
- 1123              	.LASF83:
- 1124 0131 54435F49 		.ascii	"TC_ISR\000"
- 1124      535200
- 1125              	.LASF48:
- 1126 0138 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BY_TYPE_RSP\000"
+ 1118      545F4741 
+ 1118      505F4B45 
+ 1118      59505245 
+ 1119              	.LASF2:
+ 1120 00ad 73686F72 		.ascii	"short int\000"
+ 1120      7420696E 
+ 1120      7400
+ 1121              	.LASF27:
+ 1122 00b7 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_FAILED\000"
+ 1122      455F4556 
+ 1122      545F4741 
+ 1122      505F4155 
+ 1122      54485F46 
+ 1123              	.LASF14:
+ 1124 00d1 73697A65 		.ascii	"sizetype\000"
+ 1124      74797065 
+ 1124      00
+ 1125              	.LASF38:
+ 1126 00da 4359424C 		.ascii	"CYBLE_EVT_GAP_DATA_LENGTH_CHANGE\000"
  1126      455F4556 
  1126      545F4741 
- 1126      5454435F 
- 1126      52454144 
- 1127              	.LASF16:
- 1128 0159 4359424C 		.ascii	"CYBLE_EVT_STACK_ON\000"
+ 1126      505F4441 
+ 1126      54415F4C 
+ 1127              	.LASF19:
+ 1128 00fb 4359424C 		.ascii	"CYBLE_EVT_HCI_STATUS\000"
  1128      455F4556 
- 1128      545F5354 
- 1128      41434B5F 
- 1128      4F4E00
- 1129              	.LASF45:
- 1130 016c 4359424C 		.ascii	"CYBLE_EVT_GATTS_XCNHG_MTU_REQ\000"
- 1130      455F4556 
- 1130      545F4741 
- 1130      5454535F 
- 1130      58434E48 
- 1131              	.LASF10:
- 1132 018a 75696E74 		.ascii	"uint16\000"
- 1132      313600
- 1133              	.LASF96:
- 1134 0191 696E6465 		.ascii	"index\000"
- 1134      7800
- 1135              	.LASF34:
- 1136 0197 4359424C 		.ascii	"CYBLE_EVT_GAP_KEYINFO_EXCHNGE_CMPLT\000"
+ 1128      545F4843 
+ 1128      495F5354 
+ 1128      41545553 
+ 1129              	.LASF92:
+ 1130 0110 496E6974 		.ascii	"InitStoneInterrupt\000"
+ 1130      53746F6E 
+ 1130      65496E74 
+ 1130      65727275 
+ 1130      707400
+ 1131              	.LASF6:
+ 1132 0123 6C6F6E67 		.ascii	"long long int\000"
+ 1132      206C6F6E 
+ 1132      6720696E 
+ 1132      7400
+ 1133              	.LASF83:
+ 1134 0131 54435F49 		.ascii	"TC_ISR\000"
+ 1134      535200
+ 1135              	.LASF48:
+ 1136 0138 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BY_TYPE_RSP\000"
  1136      455F4556 
  1136      545F4741 
- 1136      505F4B45 
- 1136      59494E46 
- 1137              	.LASF95:
- 1138 01bb 473A5C47 		.ascii	"G:\\GitHub_Code\\firmware_stone\\fw-stone\\fw-BLE-M"
- 1138      69744875 
- 1138      625F436F 
- 1138      64655C66 
- 1138      69726D77 
- 1139 01ea 6F746F72 		.ascii	"otor\\fw-stone\\Stone.cydsn\000"
- 1139      5C66772D 
- 1139      73746F6E 
- 1139      655C5374 
- 1139      6F6E652E 
- 1140              	.LASF62:
- 1141 0204 4359424C 		.ascii	"CYBLE_EVT_GATTS_HANDLE_VALUE_CNF\000"
- 1141      455F4556 
- 1141      545F4741 
- 1141      5454535F 
- 1141      48414E44 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 24
+ 1136      5454435F 
+ 1136      52454144 
+ 1137              	.LASF16:
+ 1138 0159 4359424C 		.ascii	"CYBLE_EVT_STACK_ON\000"
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 24
 
 
- 1142              	.LASF15:
- 1143 0225 4359424C 		.ascii	"CYBLE_EVT_HOST_INVALID\000"
- 1143      455F4556 
- 1143      545F484F 
- 1143      53545F49 
- 1143      4E56414C 
- 1144              	.LASF70:
- 1145 023c 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_CONN_IND\000"
- 1145      455F4556 
- 1145      545F4C32 
- 1145      4341505F 
- 1145      43424643 
- 1146              	.LASF73:
- 1147 025a 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DISCONN_CNF\000"
- 1147      455F4556 
- 1147      545F4C32 
- 1147      4341505F 
- 1147      43424643 
- 1148              	.LASF11:
- 1149 027b 666C6F61 		.ascii	"float\000"
- 1149      7400
- 1150              	.LASF51:
- 1151 0281 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_RSP\000"
+ 1138      455F4556 
+ 1138      545F5354 
+ 1138      41434B5F 
+ 1138      4F4E00
+ 1139              	.LASF45:
+ 1140 016c 4359424C 		.ascii	"CYBLE_EVT_GATTS_XCNHG_MTU_REQ\000"
+ 1140      455F4556 
+ 1140      545F4741 
+ 1140      5454535F 
+ 1140      58434E48 
+ 1141              	.LASF88:
+ 1142 018a 4D6F746F 		.ascii	"Motor_Running_Sequence\000"
+ 1142      725F5275 
+ 1142      6E6E696E 
+ 1142      675F5365 
+ 1142      7175656E 
+ 1143              	.LASF97:
+ 1144 01a1 696E6465 		.ascii	"index\000"
+ 1144      7800
+ 1145              	.LASF34:
+ 1146 01a7 4359424C 		.ascii	"CYBLE_EVT_GAP_KEYINFO_EXCHNGE_CMPLT\000"
+ 1146      455F4556 
+ 1146      545F4741 
+ 1146      505F4B45 
+ 1146      59494E46 
+ 1147              	.LASF96:
+ 1148 01cb 473A5C47 		.ascii	"G:\\GitHub_Code\\firmware_stone\\fw-stone\\fw-BLE-M"
+ 1148      69744875 
+ 1148      625F436F 
+ 1148      64655C66 
+ 1148      69726D77 
+ 1149 01fa 6F746F72 		.ascii	"otor\\fw-stone\\Stone.cydsn\000"
+ 1149      5C66772D 
+ 1149      73746F6E 
+ 1149      655C5374 
+ 1149      6F6E652E 
+ 1150              	.LASF62:
+ 1151 0214 4359424C 		.ascii	"CYBLE_EVT_GATTS_HANDLE_VALUE_CNF\000"
  1151      455F4556 
  1151      545F4741 
- 1151      5454435F 
- 1151      52454144 
- 1152              	.LASF35:
- 1153 029a 4359424C 		.ascii	"CYBLE_EVT_GAP_NUMERIC_COMPARISON_REQUEST\000"
+ 1151      5454535F 
+ 1151      48414E44 
+ 1152              	.LASF15:
+ 1153 0235 4359424C 		.ascii	"CYBLE_EVT_HOST_INVALID\000"
  1153      455F4556 
- 1153      545F4741 
- 1153      505F4E55 
- 1153      4D455249 
- 1154              	.LASF40:
- 1155 02c3 4359424C 		.ascii	"CYBLE_EVT_GAPC_DIRECT_ADV_REPORT\000"
+ 1153      545F484F 
+ 1153      53545F49 
+ 1153      4E56414C 
+ 1154              	.LASF70:
+ 1155 024c 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_CONN_IND\000"
  1155      455F4556 
- 1155      545F4741 
- 1155      50435F44 
- 1155      49524543 
- 1156              	.LASF7:
- 1157 02e4 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1157      206C6F6E 
- 1157      6720756E 
- 1157      7369676E 
- 1157      65642069 
- 1158              	.LASF80:
- 1159 02fb 4359424C 		.ascii	"CYBLE_EVT_MAX\000"
- 1159      455F4556 
- 1159      545F4D41 
- 1159      5800
- 1160              	.LASF4:
- 1161 0309 6C6F6E67 		.ascii	"long int\000"
- 1161      20696E74 
- 1161      00
- 1162              	.LASF90:
- 1163 0312 53746F6E 		.ascii	"Stone_Motor_Mode\000"
- 1163      655F4D6F 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 25
+ 1155      545F4C32 
+ 1155      4341505F 
+ 1155      43424643 
+ 1156              	.LASF73:
+ 1157 026a 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DISCONN_CNF\000"
+ 1157      455F4556 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 25
 
 
- 1163      746F725F 
- 1163      4D6F6465 
- 1163      00
- 1164              	.LASF61:
- 1165 0323 4359424C 		.ascii	"CYBLE_EVT_GATTC_HANDLE_VALUE_IND\000"
+ 1157      545F4C32 
+ 1157      4341505F 
+ 1157      43424643 
+ 1158              	.LASF11:
+ 1159 028b 666C6F61 		.ascii	"float\000"
+ 1159      7400
+ 1160              	.LASF51:
+ 1161 0291 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_RSP\000"
+ 1161      455F4556 
+ 1161      545F4741 
+ 1161      5454435F 
+ 1161      52454144 
+ 1162              	.LASF35:
+ 1163 02aa 4359424C 		.ascii	"CYBLE_EVT_GAP_NUMERIC_COMPARISON_REQUEST\000"
+ 1163      455F4556 
+ 1163      545F4741 
+ 1163      505F4E55 
+ 1163      4D455249 
+ 1164              	.LASF40:
+ 1165 02d3 4359424C 		.ascii	"CYBLE_EVT_GAPC_DIRECT_ADV_REPORT\000"
  1165      455F4556 
  1165      545F4741 
- 1165      5454435F 
- 1165      48414E44 
- 1166              	.LASF29:
- 1167 0344 4359424C 		.ascii	"CYBLE_EVT_GAP_DEVICE_CONNECTED\000"
- 1167      455F4556 
- 1167      545F4741 
- 1167      505F4445 
- 1167      56494345 
- 1168              	.LASF28:
- 1169 0363 4359424C 		.ascii	"CYBLE_EVT_GAPP_ADVERTISEMENT_START_STOP\000"
+ 1165      50435F44 
+ 1165      49524543 
+ 1166              	.LASF7:
+ 1167 02f4 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1167      206C6F6E 
+ 1167      6720756E 
+ 1167      7369676E 
+ 1167      65642069 
+ 1168              	.LASF80:
+ 1169 030b 4359424C 		.ascii	"CYBLE_EVT_MAX\000"
  1169      455F4556 
- 1169      545F4741 
- 1169      50505F41 
- 1169      44564552 
- 1170              	.LASF60:
- 1171 038b 4359424C 		.ascii	"CYBLE_EVT_GATTC_HANDLE_VALUE_NTF\000"
- 1171      455F4556 
- 1171      545F4741 
- 1171      5454435F 
- 1171      48414E44 
- 1172              	.LASF92:
- 1173 03ac 53746F70 		.ascii	"StopStoneInterrupt\000"
- 1173      53746F6E 
- 1173      65496E74 
- 1173      65727275 
- 1173      707400
- 1174              	.LASF94:
- 1175 03bf 2E5C5374 		.ascii	".\\Stone_Motor.c\000"
- 1175      6F6E655F 
- 1175      4D6F746F 
- 1175      722E6300 
- 1176              	.LASF25:
- 1177 03cf 4359424C 		.ascii	"CYBLE_EVT_GAP_PASSKEY_DISPLAY_REQUEST\000"
+ 1169      545F4D41 
+ 1169      5800
+ 1170              	.LASF4:
+ 1171 0319 6C6F6E67 		.ascii	"long int\000"
+ 1171      20696E74 
+ 1171      00
+ 1172              	.LASF91:
+ 1173 0322 53746F6E 		.ascii	"Stone_Motor_Mode\000"
+ 1173      655F4D6F 
+ 1173      746F725F 
+ 1173      4D6F6465 
+ 1173      00
+ 1174              	.LASF61:
+ 1175 0333 4359424C 		.ascii	"CYBLE_EVT_GATTC_HANDLE_VALUE_IND\000"
+ 1175      455F4556 
+ 1175      545F4741 
+ 1175      5454435F 
+ 1175      48414E44 
+ 1176              	.LASF29:
+ 1177 0354 4359424C 		.ascii	"CYBLE_EVT_GAP_DEVICE_CONNECTED\000"
  1177      455F4556 
  1177      545F4741 
- 1177      505F5041 
- 1177      53534B45 
- 1178              	.LASF93:
- 1179 03f5 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 1179      4320342E 
- 1179      392E3320 
- 1179      32303135 
- 1179      30333033 
- 1180 0428 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 1180      20726576 
- 1180      6973696F 
- 1180      6E203232 
- 1180      31323230 
- 1181 045b 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1181      66756E63 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 26
+ 1177      505F4445 
+ 1177      56494345 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 26
 
 
- 1181      74696F6E 
- 1181      2D736563 
- 1181      74696F6E 
- 1182              	.LASF71:
- 1183 0483 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_CONN_CNF\000"
- 1183      455F4556 
- 1183      545F4C32 
- 1183      4341505F 
- 1183      43424643 
- 1184              	.LASF39:
- 1185 04a1 4359424C 		.ascii	"CYBLE_EVT_GAP_ENHANCE_CONN_COMPLETE\000"
- 1185      455F4556 
- 1185      545F4741 
- 1185      505F454E 
- 1185      48414E43 
- 1186              	.LASF9:
- 1187 04c5 75696E74 		.ascii	"uint8\000"
- 1187      3800
- 1188              	.LASF67:
- 1189 04cb 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CONN_PARAM_UPDATE_REQ\000"
- 1189      455F4556 
- 1189      545F4C32 
- 1189      4341505F 
- 1189      434F4E4E 
- 1190              	.LASF1:
- 1191 04f1 756E7369 		.ascii	"unsigned char\000"
- 1191      676E6564 
- 1191      20636861 
- 1191      7200
- 1192              	.LASF57:
- 1193 04ff 4359424C 		.ascii	"CYBLE_EVT_GATTS_PREP_WRITE_REQ\000"
+ 1178              	.LASF28:
+ 1179 0373 4359424C 		.ascii	"CYBLE_EVT_GAPP_ADVERTISEMENT_START_STOP\000"
+ 1179      455F4556 
+ 1179      545F4741 
+ 1179      50505F41 
+ 1179      44564552 
+ 1180              	.LASF60:
+ 1181 039b 4359424C 		.ascii	"CYBLE_EVT_GATTC_HANDLE_VALUE_NTF\000"
+ 1181      455F4556 
+ 1181      545F4741 
+ 1181      5454435F 
+ 1181      48414E44 
+ 1182              	.LASF93:
+ 1183 03bc 53746F70 		.ascii	"StopStoneInterrupt\000"
+ 1183      53746F6E 
+ 1183      65496E74 
+ 1183      65727275 
+ 1183      707400
+ 1184              	.LASF95:
+ 1185 03cf 2E5C5374 		.ascii	".\\Stone_Motor.c\000"
+ 1185      6F6E655F 
+ 1185      4D6F746F 
+ 1185      722E6300 
+ 1186              	.LASF25:
+ 1187 03df 4359424C 		.ascii	"CYBLE_EVT_GAP_PASSKEY_DISPLAY_REQUEST\000"
+ 1187      455F4556 
+ 1187      545F4741 
+ 1187      505F5041 
+ 1187      53534B45 
+ 1188              	.LASF94:
+ 1189 0405 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1189      4320342E 
+ 1189      392E3320 
+ 1189      32303135 
+ 1189      30333033 
+ 1190 0438 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 1190      20726576 
+ 1190      6973696F 
+ 1190      6E203232 
+ 1190      31323230 
+ 1191 046b 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1191      66756E63 
+ 1191      74696F6E 
+ 1191      2D736563 
+ 1191      74696F6E 
+ 1192              	.LASF71:
+ 1193 0493 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_CONN_CNF\000"
  1193      455F4556 
- 1193      545F4741 
- 1193      5454535F 
- 1193      50524550 
- 1194              	.LASF79:
- 1195 051e 4359424C 		.ascii	"CYBLE_EVT_LE_PING_AUTH_TIMEOUT\000"
+ 1193      545F4C32 
+ 1193      4341505F 
+ 1193      43424643 
+ 1194              	.LASF39:
+ 1195 04b1 4359424C 		.ascii	"CYBLE_EVT_GAP_ENHANCE_CONN_COMPLETE\000"
  1195      455F4556 
- 1195      545F4C45 
- 1195      5F50494E 
- 1195      475F4155 
- 1196              	.LASF49:
- 1197 053d 4359424C 		.ascii	"CYBLE_EVT_GATTC_FIND_INFO_RSP\000"
- 1197      455F4556 
- 1197      545F4741 
- 1197      5454435F 
- 1197      46494E44 
- 1198              	.LASF0:
- 1199 055b 7369676E 		.ascii	"signed char\000"
- 1199      65642063 
- 1199      68617200 
- 1200              	.LASF54:
- 1201 0567 4359424C 		.ascii	"CYBLE_EVT_GATTS_WRITE_REQ\000"
- 1201      455F4556 
- 1201      545F4741 
- 1201      5454535F 
- 1201      57524954 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 27
+ 1195      545F4741 
+ 1195      505F454E 
+ 1195      48414E43 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 27
 
 
- 1202              	.LASF50:
- 1203 0581 4359424C 		.ascii	"CYBLE_EVT_GATTC_FIND_BY_TYPE_VALUE_RSP\000"
+ 1196              	.LASF9:
+ 1197 04d5 75696E74 		.ascii	"uint8\000"
+ 1197      3800
+ 1198              	.LASF67:
+ 1199 04db 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CONN_PARAM_UPDATE_REQ\000"
+ 1199      455F4556 
+ 1199      545F4C32 
+ 1199      4341505F 
+ 1199      434F4E4E 
+ 1200              	.LASF1:
+ 1201 0501 756E7369 		.ascii	"unsigned char\000"
+ 1201      676E6564 
+ 1201      20636861 
+ 1201      7200
+ 1202              	.LASF57:
+ 1203 050f 4359424C 		.ascii	"CYBLE_EVT_GATTS_PREP_WRITE_REQ\000"
  1203      455F4556 
  1203      545F4741 
- 1203      5454435F 
- 1203      46494E44 
- 1204              	.LASF26:
- 1205 05a8 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_COMPLETE\000"
+ 1203      5454535F 
+ 1203      50524550 
+ 1204              	.LASF79:
+ 1205 052e 4359424C 		.ascii	"CYBLE_EVT_LE_PING_AUTH_TIMEOUT\000"
  1205      455F4556 
- 1205      545F4741 
- 1205      505F4155 
- 1205      54485F43 
- 1206              	.LASF85:
- 1207 05c4 4D535F49 		.ascii	"MS_ISR\000"
- 1207      535200
- 1208              	.LASF43:
- 1209 05cb 4359424C 		.ascii	"CYBLE_EVT_GATT_CONNECT_IND\000"
- 1209      455F4556 
- 1209      545F4741 
- 1209      54545F43 
- 1209      4F4E4E45 
- 1210              	.LASF5:
- 1211 05e6 6C6F6E67 		.ascii	"long unsigned int\000"
- 1211      20756E73 
- 1211      69676E65 
- 1211      6420696E 
- 1211      7400
- 1212              	.LASF23:
- 1213 05f8 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_REQ\000"
+ 1205      545F4C45 
+ 1205      5F50494E 
+ 1205      475F4155 
+ 1206              	.LASF49:
+ 1207 054d 4359424C 		.ascii	"CYBLE_EVT_GATTC_FIND_INFO_RSP\000"
+ 1207      455F4556 
+ 1207      545F4741 
+ 1207      5454435F 
+ 1207      46494E44 
+ 1208              	.LASF0:
+ 1209 056b 7369676E 		.ascii	"signed char\000"
+ 1209      65642063 
+ 1209      68617200 
+ 1210              	.LASF54:
+ 1211 0577 4359424C 		.ascii	"CYBLE_EVT_GATTS_WRITE_REQ\000"
+ 1211      455F4556 
+ 1211      545F4741 
+ 1211      5454535F 
+ 1211      57524954 
+ 1212              	.LASF50:
+ 1213 0591 4359424C 		.ascii	"CYBLE_EVT_GATTC_FIND_BY_TYPE_VALUE_RSP\000"
  1213      455F4556 
  1213      545F4741 
- 1213      505F4155 
- 1213      54485F52 
- 1214              	.LASF72:
- 1215 060f 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DISCONN_IND\000"
+ 1213      5454435F 
+ 1213      46494E44 
+ 1214              	.LASF26:
+ 1215 05b8 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_COMPLETE\000"
  1215      455F4556 
- 1215      545F4C32 
- 1215      4341505F 
- 1215      43424643 
- 1216              	.LASF31:
- 1217 0630 4359424C 		.ascii	"CYBLE_EVT_GAP_ENCRYPT_CHANGE\000"
- 1217      455F4556 
- 1217      545F4741 
- 1217      505F454E 
- 1217      43525950 
- 1218              	.LASF66:
- 1219 064d 4359424C 		.ascii	"CYBLE_EVT_GATTC_LONG_PROCEDURE_END\000"
+ 1215      545F4741 
+ 1215      505F4155 
+ 1215      54485F43 
+ 1216              	.LASF85:
+ 1217 05d4 4D535F49 		.ascii	"MS_ISR\000"
+ 1217      535200
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 28
+
+
+ 1218              	.LASF43:
+ 1219 05db 4359424C 		.ascii	"CYBLE_EVT_GATT_CONNECT_IND\000"
  1219      455F4556 
  1219      545F4741 
- 1219      5454435F 
- 1219      4C4F4E47 
- 1220              	.LASF3:
- 1221 0670 73686F72 		.ascii	"short unsigned int\000"
- 1221      7420756E 
- 1221      7369676E 
- 1221      65642069 
- 1221      6E7400
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 28
-
-
- 1222              	.LASF88:
- 1223 0683 73746174 		.ascii	"status\000"
- 1223      757300
- 1224              	.LASF32:
- 1225 068a 4359424C 		.ascii	"CYBLE_EVT_GAP_CONNECTION_UPDATE_COMPLETE\000"
+ 1219      54545F43 
+ 1219      4F4E4E45 
+ 1220              	.LASF5:
+ 1221 05f6 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1221      20756E73 
+ 1221      69676E65 
+ 1221      6420696E 
+ 1221      7400
+ 1222              	.LASF23:
+ 1223 0608 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_REQ\000"
+ 1223      455F4556 
+ 1223      545F4741 
+ 1223      505F4155 
+ 1223      54485F52 
+ 1224              	.LASF72:
+ 1225 061f 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DISCONN_IND\000"
  1225      455F4556 
- 1225      545F4741 
- 1225      505F434F 
- 1225      4E4E4543 
- 1226              	.LASF41:
- 1227 06b3 4359424C 		.ascii	"CYBLE_EVT_GAP_SMP_NEGOTIATED_AUTH_INFO\000"
+ 1225      545F4C32 
+ 1225      4341505F 
+ 1225      43424643 
+ 1226              	.LASF31:
+ 1227 0640 4359424C 		.ascii	"CYBLE_EVT_GAP_ENCRYPT_CHANGE\000"
  1227      455F4556 
  1227      545F4741 
- 1227      505F534D 
- 1227      505F4E45 
- 1228              	.LASF13:
- 1229 06da 63686172 		.ascii	"char\000"
- 1229      00
- 1230              	.LASF89:
- 1231 06df 6D735F63 		.ascii	"ms_count\000"
- 1231      6F756E74 
- 1231      00
- 1232              	.LASF69:
- 1233 06e8 4359424C 		.ascii	"CYBLE_EVT_L2CAP_COMMAND_REJ\000"
- 1233      455F4556 
- 1233      545F4C32 
- 1233      4341505F 
- 1233      434F4D4D 
- 1234              	.LASF81:
- 1235 0704 53746F6E 		.ascii	"StoneUpdateMotor\000"
- 1235      65557064 
- 1235      6174654D 
- 1235      6F746F72 
- 1235      00
- 1236              	.LASF84:
- 1237 0715 55706461 		.ascii	"UpdateMotorPWM\000"
- 1237      74654D6F 
- 1237      746F7250 
- 1237      574D00
- 1238              	.LASF52:
- 1239 0724 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BLOB_RSP\000"
- 1239      455F4556 
- 1239      545F4741 
- 1239      5454435F 
- 1239      52454144 
- 1240              	.LASF59:
- 1241 0742 4359424C 		.ascii	"CYBLE_EVT_GATTC_EXEC_WRITE_RSP\000"
- 1241      455F4556 
- 1241      545F4741 
- 1241      5454435F 
- 1241      45584543 
- 1242              	.LASF33:
- 1243 0761 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_START_STOP\000"
+ 1227      505F454E 
+ 1227      43525950 
+ 1228              	.LASF66:
+ 1229 065d 4359424C 		.ascii	"CYBLE_EVT_GATTC_LONG_PROCEDURE_END\000"
+ 1229      455F4556 
+ 1229      545F4741 
+ 1229      5454435F 
+ 1229      4C4F4E47 
+ 1230              	.LASF3:
+ 1231 0680 73686F72 		.ascii	"short unsigned int\000"
+ 1231      7420756E 
+ 1231      7369676E 
+ 1231      65642069 
+ 1231      6E7400
+ 1232              	.LASF89:
+ 1233 0693 73746174 		.ascii	"status\000"
+ 1233      757300
+ 1234              	.LASF32:
+ 1235 069a 4359424C 		.ascii	"CYBLE_EVT_GAP_CONNECTION_UPDATE_COMPLETE\000"
+ 1235      455F4556 
+ 1235      545F4741 
+ 1235      505F434F 
+ 1235      4E4E4543 
+ 1236              	.LASF41:
+ 1237 06c3 4359424C 		.ascii	"CYBLE_EVT_GAP_SMP_NEGOTIATED_AUTH_INFO\000"
+ 1237      455F4556 
+ 1237      545F4741 
+ 1237      505F534D 
+ 1237      505F4E45 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 29
+
+
+ 1238              	.LASF13:
+ 1239 06ea 63686172 		.ascii	"char\000"
+ 1239      00
+ 1240              	.LASF90:
+ 1241 06ef 6D735F63 		.ascii	"ms_count\000"
+ 1241      6F756E74 
+ 1241      00
+ 1242              	.LASF69:
+ 1243 06f8 4359424C 		.ascii	"CYBLE_EVT_L2CAP_COMMAND_REJ\000"
  1243      455F4556 
- 1243      545F4741 
- 1243      50435F53 
- 1243      43414E5F 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 29
-
-
- 1244              	.LASF78:
- 1245 0780 4359424C 		.ascii	"CYBLE_EVT_PENDING_FLASH_WRITE\000"
- 1245      455F4556 
- 1245      545F5045 
- 1245      4E44494E 
- 1245      475F464C 
- 1246              	.LASF75:
- 1247 079e 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_RX_CREDIT_IND\000"
- 1247      455F4556 
- 1247      545F4C32 
- 1247      4341505F 
- 1247      43424643 
- 1248              	.LASF12:
- 1249 07c1 646F7562 		.ascii	"double\000"
- 1249      6C6500
- 1250              	.LASF76:
- 1251 07c8 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_TX_CREDIT_IND\000"
+ 1243      545F4C32 
+ 1243      4341505F 
+ 1243      434F4D4D 
+ 1244              	.LASF81:
+ 1245 0714 53746F6E 		.ascii	"StoneUpdateMotor\000"
+ 1245      65557064 
+ 1245      6174654D 
+ 1245      6F746F72 
+ 1245      00
+ 1246              	.LASF84:
+ 1247 0725 55706461 		.ascii	"UpdateMotorPWM\000"
+ 1247      74654D6F 
+ 1247      746F7250 
+ 1247      574D00
+ 1248              	.LASF10:
+ 1249 0734 75696E74 		.ascii	"uint16\000"
+ 1249      313600
+ 1250              	.LASF52:
+ 1251 073b 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BLOB_RSP\000"
  1251      455F4556 
- 1251      545F4C32 
- 1251      4341505F 
- 1251      43424643 
- 1252              	.LASF20:
- 1253 07eb 4359424C 		.ascii	"CYBLE_EVT_STACK_BUSY_STATUS\000"
+ 1251      545F4741 
+ 1251      5454435F 
+ 1251      52454144 
+ 1252              	.LASF59:
+ 1253 0759 4359424C 		.ascii	"CYBLE_EVT_GATTC_EXEC_WRITE_RSP\000"
  1253      455F4556 
- 1253      545F5354 
- 1253      41434B5F 
- 1253      42555359 
- 1254              	.LASF18:
- 1255 0807 4359424C 		.ascii	"CYBLE_EVT_HARDWARE_ERROR\000"
+ 1253      545F4741 
+ 1253      5454435F 
+ 1253      45584543 
+ 1254              	.LASF33:
+ 1255 0778 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_START_STOP\000"
  1255      455F4556 
- 1255      545F4841 
- 1255      52445741 
- 1255      52455F45 
- 1256              	.LASF74:
- 1257 0820 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DATA_READ\000"
+ 1255      545F4741 
+ 1255      50435F53 
+ 1255      43414E5F 
+ 1256              	.LASF78:
+ 1257 0797 4359424C 		.ascii	"CYBLE_EVT_PENDING_FLASH_WRITE\000"
  1257      455F4556 
- 1257      545F4C32 
- 1257      4341505F 
- 1257      43424643 
- 1258              	.LASF68:
- 1259 083f 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CONN_PARAM_UPDATE_RSP\000"
+ 1257      545F5045 
+ 1257      4E44494E 
+ 1257      475F464C 
+ 1258              	.LASF75:
+ 1259 07b5 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_RX_CREDIT_IND\000"
  1259      455F4556 
  1259      545F4C32 
  1259      4341505F 
- 1259      434F4E4E 
- 1260              	.LASF22:
- 1261 0865 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_PROGRESS_RESULT\000"
- 1261      455F4556 
- 1261      545F4741 
- 1261      50435F53 
- 1261      43414E5F 
- 1262              	.LASF47:
- 1263 0889 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BY_GROUP_TYPE_RSP\000"
+ 1259      43424643 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 30
+
+
+ 1260              	.LASF12:
+ 1261 07d8 646F7562 		.ascii	"double\000"
+ 1261      6C6500
+ 1262              	.LASF76:
+ 1263 07df 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_TX_CREDIT_IND\000"
  1263      455F4556 
- 1263      545F4741 
- 1263      5454435F 
- 1263      52454144 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 30
-
-
- 1264              	.LASF56:
- 1265 08b0 4359424C 		.ascii	"CYBLE_EVT_GATTS_WRITE_CMD_REQ\000"
+ 1263      545F4C32 
+ 1263      4341505F 
+ 1263      43424643 
+ 1264              	.LASF20:
+ 1265 0802 4359424C 		.ascii	"CYBLE_EVT_STACK_BUSY_STATUS\000"
  1265      455F4556 
- 1265      545F4741 
- 1265      5454535F 
- 1265      57524954 
- 1266              	.LASF46:
- 1267 08ce 4359424C 		.ascii	"CYBLE_EVT_GATTC_XCHNG_MTU_RSP\000"
+ 1265      545F5354 
+ 1265      41434B5F 
+ 1265      42555359 
+ 1266              	.LASF18:
+ 1267 081e 4359424C 		.ascii	"CYBLE_EVT_HARDWARE_ERROR\000"
  1267      455F4556 
- 1267      545F4741 
- 1267      5454435F 
- 1267      5843484E 
- 1268              	.LASF53:
- 1269 08ec 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_MULTI_RSP\000"
+ 1267      545F4841 
+ 1267      52445741 
+ 1267      52455F45 
+ 1268              	.LASF74:
+ 1269 0837 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DATA_READ\000"
  1269      455F4556 
- 1269      545F4741 
- 1269      5454435F 
- 1269      52454144 
- 1270              	.LASF77:
- 1271 090b 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DATA_WRITE_IND\000"
+ 1269      545F4C32 
+ 1269      4341505F 
+ 1269      43424643 
+ 1270              	.LASF68:
+ 1271 0856 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CONN_PARAM_UPDATE_RSP\000"
  1271      455F4556 
  1271      545F4C32 
  1271      4341505F 
- 1271      43424643 
- 1272              	.LASF17:
- 1273 092f 4359424C 		.ascii	"CYBLE_EVT_TIMEOUT\000"
+ 1271      434F4E4E 
+ 1272              	.LASF22:
+ 1273 087c 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_PROGRESS_RESULT\000"
  1273      455F4556 
- 1273      545F5449 
- 1273      4D454F55 
- 1273      5400
- 1274              	.LASF98:
- 1275 0941 53746F6E 		.ascii	"Stone_PWM_WriteCompare\000"
- 1275      655F5057 
- 1275      4D5F5772 
- 1275      69746543 
- 1275      6F6D7061 
- 1276              	.LASF87:
- 1277 0958 54657374 		.ascii	"Test\000"
- 1277      00
- 1278              	.LASF65:
- 1279 095d 4359424C 		.ascii	"CYBLE_EVT_GATTS_READ_CHAR_VAL_ACCESS_REQ\000"
+ 1273      545F4741 
+ 1273      50435F53 
+ 1273      43414E5F 
+ 1274              	.LASF47:
+ 1275 08a0 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BY_GROUP_TYPE_RSP\000"
+ 1275      455F4556 
+ 1275      545F4741 
+ 1275      5454435F 
+ 1275      52454144 
+ 1276              	.LASF56:
+ 1277 08c7 4359424C 		.ascii	"CYBLE_EVT_GATTS_WRITE_CMD_REQ\000"
+ 1277      455F4556 
+ 1277      545F4741 
+ 1277      5454535F 
+ 1277      57524954 
+ 1278              	.LASF46:
+ 1279 08e5 4359424C 		.ascii	"CYBLE_EVT_GATTC_XCHNG_MTU_RSP\000"
  1279      455F4556 
  1279      545F4741 
- 1279      5454535F 
- 1279      52454144 
- 1280              	.LASF64:
- 1281 0986 4359424C 		.ascii	"CYBLE_EVT_GATTC_STOP_CMD_COMPLETE\000"
+ 1279      5454435F 
+ 1279      5843484E 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 31
+
+
+ 1280              	.LASF53:
+ 1281 0903 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_MULTI_RSP\000"
  1281      455F4556 
  1281      545F4741 
  1281      5454435F 
- 1281      53544F50 
- 1282              	.LASF8:
- 1283 09a8 756E7369 		.ascii	"unsigned int\000"
- 1283      676E6564 
- 1283      20696E74 
- 1283      00
- 1284              	.LASF58:
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccH0J6EM.s 			page 31
-
-
- 1285 09b5 4359424C 		.ascii	"CYBLE_EVT_GATTS_EXEC_WRITE_REQ\000"
+ 1281      52454144 
+ 1282              	.LASF77:
+ 1283 0922 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DATA_WRITE_IND\000"
+ 1283      455F4556 
+ 1283      545F4C32 
+ 1283      4341505F 
+ 1283      43424643 
+ 1284              	.LASF17:
+ 1285 0946 4359424C 		.ascii	"CYBLE_EVT_TIMEOUT\000"
  1285      455F4556 
- 1285      545F4741 
- 1285      5454535F 
- 1285      45584543 
- 1286              	.LASF82:
- 1287 09d4 54524947 		.ascii	"TRIGGER_ISR\000"
- 1287      4745525F 
- 1287      49535200 
- 1288              	.LASF30:
- 1289 09e0 4359424C 		.ascii	"CYBLE_EVT_GAP_DEVICE_DISCONNECTED\000"
- 1289      455F4556 
- 1289      545F4741 
- 1289      505F4445 
- 1289      56494345 
- 1290              	.LASF63:
- 1291 0a02 4359424C 		.ascii	"CYBLE_EVT_GATTS_DATA_SIGNED_CMD_REQ\000"
+ 1285      545F5449 
+ 1285      4D454F55 
+ 1285      5400
+ 1286              	.LASF99:
+ 1287 0958 53746F6E 		.ascii	"Stone_PWM_WriteCompare\000"
+ 1287      655F5057 
+ 1287      4D5F5772 
+ 1287      69746543 
+ 1287      6F6D7061 
+ 1288              	.LASF87:
+ 1289 096f 54657374 		.ascii	"Test\000"
+ 1289      00
+ 1290              	.LASF65:
+ 1291 0974 4359424C 		.ascii	"CYBLE_EVT_GATTS_READ_CHAR_VAL_ACCESS_REQ\000"
  1291      455F4556 
  1291      545F4741 
  1291      5454535F 
- 1291      44415441 
- 1292              	.LASF44:
- 1293 0a26 4359424C 		.ascii	"CYBLE_EVT_GATT_DISCONNECT_IND\000"
+ 1291      52454144 
+ 1292              	.LASF64:
+ 1293 099d 4359424C 		.ascii	"CYBLE_EVT_GATTC_STOP_CMD_COMPLETE\000"
  1293      455F4556 
  1293      545F4741 
- 1293      54545F44 
- 1293      4953434F 
- 1294              	.LASF37:
- 1295 0a44 4359424C 		.ascii	"CYBLE_EVT_GAP_OOB_GENERATED_NOTIFICATION\000"
- 1295      455F4556 
- 1295      545F4741 
- 1295      505F4F4F 
- 1295      425F4745 
- 1296              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 1293      5454435F 
+ 1293      53544F50 
+ 1294              	.LASF8:
+ 1295 09bf 756E7369 		.ascii	"unsigned int\000"
+ 1295      676E6564 
+ 1295      20696E74 
+ 1295      00
+ 1296              	.LASF58:
+ 1297 09cc 4359424C 		.ascii	"CYBLE_EVT_GATTS_EXEC_WRITE_REQ\000"
+ 1297      455F4556 
+ 1297      545F4741 
+ 1297      5454535F 
+ 1297      45584543 
+ 1298              	.LASF82:
+ 1299 09eb 54524947 		.ascii	"TRIGGER_ISR\000"
+ 1299      4745525F 
+ 1299      49535200 
+ 1300              	.LASF30:
+ 1301 09f7 4359424C 		.ascii	"CYBLE_EVT_GAP_DEVICE_DISCONNECTED\000"
+ 1301      455F4556 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccbOrL40.s 			page 32
+
+
+ 1301      545F4741 
+ 1301      505F4445 
+ 1301      56494345 
+ 1302              	.LASF63:
+ 1303 0a19 4359424C 		.ascii	"CYBLE_EVT_GATTS_DATA_SIGNED_CMD_REQ\000"
+ 1303      455F4556 
+ 1303      545F4741 
+ 1303      5454535F 
+ 1303      44415441 
+ 1304              	.LASF44:
+ 1305 0a3d 4359424C 		.ascii	"CYBLE_EVT_GATT_DISCONNECT_IND\000"
+ 1305      455F4556 
+ 1305      545F4741 
+ 1305      54545F44 
+ 1305      4953434F 
+ 1306              	.LASF37:
+ 1307 0a5b 4359424C 		.ascii	"CYBLE_EVT_GAP_OOB_GENERATED_NOTIFICATION\000"
+ 1307      455F4556 
+ 1307      545F4741 
+ 1307      505F4F4F 
+ 1307      425F4745 
+ 1308              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

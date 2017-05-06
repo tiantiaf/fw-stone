@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccss7nsl.s 			page 1
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccLtW7h2.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccss7nsl.s 			page 1
   30:.\Generated_Source\PSoC4/BLE_STONE_HAL_INT.c **** CY_ISR(CyBLE_Bless_Interrupt)
   31:.\Generated_Source\PSoC4/BLE_STONE_HAL_INT.c **** {
   26              		.loc 1 31 0
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccss7nsl.s 			page 2
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccLtW7h2.s 			page 2
 
 
   27              		.cfi_startproc
@@ -93,17 +93,17 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccss7nsl.s 			page 1
   48 0006 00000000 		.4byte	.Ldebug_abbrev0
   49 000a 04       		.byte	0x4
   50 000b 01       		.uleb128 0x1
-  51 000c EB000000 		.4byte	.LASF13
+  51 000c F5000000 		.4byte	.LASF13
   52 0010 01       		.byte	0x1
   53 0011 1B000000 		.4byte	.LASF14
-  54 0015 79010000 		.4byte	.LASF15
+  54 0015 83010000 		.4byte	.LASF15
   55 0019 00000000 		.4byte	.Ldebug_ranges0+0
   56 001d 00000000 		.4byte	0
   57 0021 00000000 		.4byte	.Ldebug_line0
   58 0025 02       		.uleb128 0x2
   59 0026 01       		.byte	0x1
   60 0027 06       		.byte	0x6
-  61 0028 DF000000 		.4byte	.LASF0
+  61 0028 E9000000 		.4byte	.LASF0
   62 002c 02       		.uleb128 0x2
   63 002d 01       		.byte	0x1
   64 002e 08       		.byte	0x8
@@ -111,14 +111,14 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccss7nsl.s 			page 1
   66 0033 02       		.uleb128 0x2
   67 0034 02       		.byte	0x2
   68 0035 05       		.byte	0x5
-  69 0036 AC010000 		.4byte	.LASF2
+  69 0036 A9000000 		.4byte	.LASF2
   70 003a 02       		.uleb128 0x2
   71 003b 02       		.byte	0x2
   72 003c 07       		.byte	0x7
-  73 003d CC000000 		.4byte	.LASF3
+  73 003d D6000000 		.4byte	.LASF3
   74 0041 02       		.uleb128 0x2
   75 0042 04       		.byte	0x4
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccss7nsl.s 			page 3
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccLtW7h2.s 			page 3
 
 
   76 0043 05       		.byte	0x5
@@ -150,7 +150,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccss7nsl.s 			page 1
  102 0072 02       		.uleb128 0x2
  103 0073 08       		.byte	0x8
  104 0074 04       		.byte	0x4
- 105 0075 A9000000 		.4byte	.LASF10
+ 105 0075 B3000000 		.4byte	.LASF10
  106 0079 02       		.uleb128 0x2
  107 007a 01       		.byte	0x1
  108 007b 08       		.byte	0x8
@@ -158,7 +158,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccss7nsl.s 			page 1
  110 0080 02       		.uleb128 0x2
  111 0081 04       		.byte	0x4
  112 0082 07       		.byte	0x7
- 113 0083 B6010000 		.4byte	.LASF12
+ 113 0083 CC010000 		.4byte	.LASF12
  114 0087 04       		.uleb128 0x4
  115 0088 93000000 		.4byte	.LASF16
  116 008c 01       		.byte	0x1
@@ -173,12 +173,12 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccss7nsl.s 			page 1
  125 00a1 A6000000 		.4byte	0xa6
  126 00a5 00       		.byte	0
  127 00a6 06       		.uleb128 0x6
- 128 00a7 B0000000 		.4byte	.LASF17
+ 128 00a7 BA000000 		.4byte	.LASF17
  129 00ab 02       		.byte	0x2
  130 00ac 63       		.byte	0x63
  131 00ad 00       		.byte	0
  132              		.section	.debug_abbrev,"",%progbits
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccss7nsl.s 			page 4
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccLtW7h2.s 			page 4
 
 
  133              	.Ldebug_abbrev0:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccss7nsl.s 			page 1
  187 0035 19       		.uleb128 0x19
  188 0036 11       		.uleb128 0x11
  189 0037 01       		.uleb128 0x1
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccss7nsl.s 			page 5
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccLtW7h2.s 			page 5
 
 
  190 0038 12       		.uleb128 0x12
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccss7nsl.s 			page 1
  244 000c 00000000 		.4byte	0
  245              		.section	.debug_line,"",%progbits
  246              	.Ldebug_line0:
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccss7nsl.s 			page 6
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccLtW7h2.s 			page 6
 
 
  247 0000 73000000 		.section	.debug_str,"MS",%progbits,1
@@ -355,57 +355,61 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccss7nsl.s 			page 1
  267      6573735F 
  267      496E7465 
  267      72727570 
- 268              	.LASF10:
- 269 00a9 646F7562 		.ascii	"double\000"
- 269      6C6500
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccss7nsl.s 			page 7
+ 268              	.LASF2:
+ 269 00a9 73686F72 		.ascii	"short int\000"
+ 269      7420696E 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccLtW7h2.s 			page 7
 
 
- 270              	.LASF17:
- 271 00b0 4379426C 		.ascii	"CyBle_BleSSInterruptHandler\000"
- 271      655F426C 
- 271      65535349 
- 271      6E746572 
- 271      72757074 
- 272              	.LASF3:
- 273 00cc 73686F72 		.ascii	"short unsigned int\000"
- 273      7420756E 
- 273      7369676E 
- 273      65642069 
- 273      6E7400
- 274              	.LASF0:
- 275 00df 7369676E 		.ascii	"signed char\000"
- 275      65642063 
- 275      68617200 
- 276              	.LASF13:
- 277 00eb 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 277      4320342E 
- 277      392E3320 
- 277      32303135 
- 277      30333033 
- 278 011e 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 278      20726576 
- 278      6973696F 
- 278      6E203232 
- 278      31323230 
- 279 0151 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 279      66756E63 
- 279      74696F6E 
- 279      2D736563 
- 279      74696F6E 
- 280              	.LASF15:
- 281 0179 453A5C53 		.ascii	"E:\\Stone_Project\\fw-BLE-Motor\\fw-stone\\Stone.cy"
- 281      746F6E65 
- 281      5F50726F 
- 281      6A656374 
- 281      5C66772D 
- 282 01a8 64736E00 		.ascii	"dsn\000"
- 283              	.LASF2:
- 284 01ac 73686F72 		.ascii	"short int\000"
- 284      7420696E 
- 284      7400
+ 269      7400
+ 270              	.LASF10:
+ 271 00b3 646F7562 		.ascii	"double\000"
+ 271      6C6500
+ 272              	.LASF17:
+ 273 00ba 4379426C 		.ascii	"CyBle_BleSSInterruptHandler\000"
+ 273      655F426C 
+ 273      65535349 
+ 273      6E746572 
+ 273      72757074 
+ 274              	.LASF3:
+ 275 00d6 73686F72 		.ascii	"short unsigned int\000"
+ 275      7420756E 
+ 275      7369676E 
+ 275      65642069 
+ 275      6E7400
+ 276              	.LASF0:
+ 277 00e9 7369676E 		.ascii	"signed char\000"
+ 277      65642063 
+ 277      68617200 
+ 278              	.LASF13:
+ 279 00f5 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 279      4320342E 
+ 279      392E3320 
+ 279      32303135 
+ 279      30333033 
+ 280 0128 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 280      20726576 
+ 280      6973696F 
+ 280      6E203232 
+ 280      31323230 
+ 281 015b 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 281      66756E63 
+ 281      74696F6E 
+ 281      2D736563 
+ 281      74696F6E 
+ 282              	.LASF15:
+ 283 0183 473A5C47 		.ascii	"G:\\GitHub_Code\\firmware_stone\\fw-stone\\fw-BLE-M"
+ 283      69744875 
+ 283      625F436F 
+ 283      64655C66 
+ 283      69726D77 
+ 284 01b2 6F746F72 		.ascii	"otor\\fw-stone\\Stone.cydsn\000"
+ 284      5C66772D 
+ 284      73746F6E 
+ 284      655C5374 
+ 284      6F6E652E 
  285              	.LASF12:
- 286 01b6 73697A65 		.ascii	"sizetype\000"
+ 286 01cc 73697A65 		.ascii	"sizetype\000"
  286      74797065 
  286      00
  287              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

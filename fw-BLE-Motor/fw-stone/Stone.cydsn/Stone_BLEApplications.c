@@ -78,6 +78,10 @@ void CustomEventHandler(uint32 event, void * eventParam)
 
     	case CYBLE_EVT_GAP_DEVICE_CONNECTED:
     		/* This event is received when device is connected over GAP layer */
+            if (CyBle_GetState() == CYBLE_STATE_DISCONNECTED)
+    		{ 
+                negotiatedMtu            = 23;
+    		}
     		break;
 
     	case CYBLE_EVT_GAP_DEVICE_DISCONNECTED:
@@ -130,6 +134,8 @@ void CustomEventHandler(uint32 event, void * eventParam)
             {
                 Stone_Motor[MOTOR_ON_INDEX] = wrReqParam->handleValPair.value.val[MOTOR_ON_INDEX];
                 Stone_Motor[MOTOR_MODE_INDEX] = wrReqParam->handleValPair.value.val[MOTOR_MODE_INDEX];
+                Stone_Motor[MOTOR_TIME_INDEX] = wrReqParam->handleValPair.value.val[MOTOR_TIME_INDEX];
+                Stone_Motor[MOTOR_PWM_INDEX] = wrReqParam->handleValPair.value.val[MOTOR_PWM_INDEX];
                 
                 stoneMotorUpdateEnable = TRUE;
             }

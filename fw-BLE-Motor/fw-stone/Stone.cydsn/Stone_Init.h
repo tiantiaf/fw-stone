@@ -14,10 +14,16 @@
 #define STONE_INIT_H
 
 #include "main.h"
+#include "Stone_Motor.h"
+#include "Stone_Motor_Sequence.h"
     
 void InitializeSystem(void);
 void InitStoneInterrupt(void);
 void StopStoneInterrupt(void);
+void Stone_Sequence_Init(void);
+
+extern volatile uint8 Stone_Motor[MOTOR_LENGTH];
+extern uint8 Motor_Running_Sequence[PERIOD_PER_CYCLE_RUN];
 
 #endif
 

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAsM9AW.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
   30:.\Generated_Source\PSoC4/LED.c ****         #define LED_SetP4PinDriveMode(shift, mode)  \
   31:.\Generated_Source\PSoC4/LED.c ****         do { \
   32:.\Generated_Source\PSoC4/LED.c ****             LED_USBIO_CTRL_REG = (LED_USBIO_CTRL_REG & \
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 2
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAsM9AW.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/LED.c ****                                     (uint32)(~(uint32)(LED_DRIVE_MODE_IND_MASK << \
@@ -111,22 +111,22 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
   31 0002 1168     		ldr	r1, [r2]
   32 0004 034B     		ldr	r3, .L2+4
   33 0006 0B40     		and	r3, r1
-  34 0008 8001     		lsl	r0, r0, #6
+  34 0008 8004     		lsl	r0, r0, #18
   35              	.LVL1:
   36 000a 1843     		orr	r0, r3
   37 000c 1060     		str	r0, [r2]
   75:.\Generated_Source\PSoC4/LED.c ****     }
   38              		.loc 1 75 0
   39              		@ sp needed
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 3
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAsM9AW.s 			page 3
 
 
   40 000e 7047     		bx	lr
   41              	.L3:
   42              		.align	2
   43              	.L2:
-  44 0010 08010440 		.word	1074004232
-  45 0014 3FFEFFFF 		.word	-449
+  44 0010 08020440 		.word	1074004488
+  45 0014 FFFFE3FF 		.word	-1835009
   46              		.cfi_endproc
   47              	.LFE0:
   48              		.size	LED_SetDriveMode, .-LED_SetDriveMode
@@ -178,21 +178,21 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
   57              		.loc 1 112 0
   58              		.cfi_startproc
   59              	.LVL2:
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 4
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAsM9AW.s 			page 4
 
 
  113:.\Generated_Source\PSoC4/LED.c ****     uint8 drVal = (uint8)(LED_DR & (uint8)(~LED_MASK));
   60              		.loc 1 113 0
   61 0000 0449     		ldr	r1, .L5
   62 0002 0A68     		ldr	r2, [r1]
-  63 0004 FB23     		mov	r3, #251
+  63 0004 BF23     		mov	r3, #191
   64 0006 1A40     		and	r2, r3
   65              	.LVL3:
  114:.\Generated_Source\PSoC4/LED.c ****     drVal = (drVal | ((uint8)(value << LED_SHIFT) & LED_MASK));
   66              		.loc 1 114 0
-  67 0008 8000     		lsl	r0, r0, #2
+  67 0008 8001     		lsl	r0, r0, #6
   68              	.LVL4:
-  69 000a F73B     		sub	r3, r3, #247
+  69 000a 7F3B     		sub	r3, r3, #127
   70 000c 1840     		and	r0, r3
   71 000e 1043     		orr	r0, r2
   72              	.LVL5:
@@ -206,7 +206,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
   78              	.L6:
   79              		.align	2
   80              	.L5:
-  81 0014 00010440 		.word	1074004224
+  81 0014 00020440 		.word	1074004480
   82              		.cfi_endproc
   83              	.LFE1:
   84              		.size	LED_Write, .-LED_Write
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
  134:.\Generated_Source\PSoC4/LED.c **** *  \snippet LED_SUT.c usage_LED_Read  
  135:.\Generated_Source\PSoC4/LED.c **** *******************************************************************************/
  136:.\Generated_Source\PSoC4/LED.c **** uint8 LED_Read(void)
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 5
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAsM9AW.s 			page 5
 
 
  137:.\Generated_Source\PSoC4/LED.c **** {
@@ -248,7 +248,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
   95              		.loc 1 138 0
   96 0000 024B     		ldr	r3, .L8
   97 0002 1868     		ldr	r0, [r3]
-  98 0004 4007     		lsl	r0, r0, #29
+  98 0004 4006     		lsl	r0, r0, #25
   99 0006 C00F     		lsr	r0, r0, #31
  139:.\Generated_Source\PSoC4/LED.c **** }
  100              		.loc 1 139 0
@@ -257,7 +257,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
  103              	.L9:
  104 000a C046     		.align	2
  105              	.L8:
- 106 000c 04010440 		.word	1074004228
+ 106 000c 04020440 		.word	1074004484
  107              		.cfi_endproc
  108              	.LFE2:
  109              		.size	LED_Read, .-LED_Read
@@ -298,13 +298,13 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
  118              		.loc 1 165 0
  119              		.cfi_startproc
  166:.\Generated_Source\PSoC4/LED.c ****     return (uint8)((LED_DR & LED_MASK) >> LED_SHIFT);
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 6
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAsM9AW.s 			page 6
 
 
  120              		.loc 1 166 0
  121 0000 024B     		ldr	r3, .L11
  122 0002 1868     		ldr	r0, [r3]
- 123 0004 4007     		lsl	r0, r0, #29
+ 123 0004 4006     		lsl	r0, r0, #25
  124 0006 C00F     		lsr	r0, r0, #31
  167:.\Generated_Source\PSoC4/LED.c **** }
  125              		.loc 1 167 0
@@ -313,7 +313,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
  128              	.L12:
  129 000a C046     		.align	2
  130              	.L11:
- 131 000c 00010440 		.word	1074004224
+ 131 000c 00020440 		.word	1074004480
  132              		.cfi_endproc
  133              	.LFE3:
  134              		.size	LED_ReadDataReg, .-LED_ReadDataReg
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
  198:.\Generated_Source\PSoC4/LED.c **** * \sideeffect
  199:.\Generated_Source\PSoC4/LED.c **** *  It is recommended that the interrupt be disabled before calling this 
  200:.\Generated_Source\PSoC4/LED.c **** *  function to avoid unintended interrupt requests. Note that the interrupt
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 7
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAsM9AW.s 			page 7
 
 
  201:.\Generated_Source\PSoC4/LED.c **** *  type is port wide, and therefore will trigger for any enabled pin on the 
@@ -393,7 +393,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
  159              	.L15:
  160 000e C046     		.align	2
  161              	.L14:
- 162 0010 0C010440 		.word	1074004236
+ 162 0010 0C020440 		.word	1074004492
  163              		.cfi_endproc
  164              	.LFE4:
  165              		.size	LED_SetInterruptMode, .-LED_SetInterruptMode
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
  224:.\Generated_Source\PSoC4/LED.c **** * \return 
  225:.\Generated_Source\PSoC4/LED.c **** *  The right-shifted current value of the interrupt status register. Each pin 
  226:.\Generated_Source\PSoC4/LED.c **** *  has one bit set if it generated an interrupt event. For example, bit 0 is 
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 8
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAsM9AW.s 			page 8
 
 
  227:.\Generated_Source\PSoC4/LED.c **** *  for pin 0 and bit 1 is for pin 1 of the Pins component.
@@ -438,7 +438,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
  176              		.loc 1 238 0
  177 0000 034A     		ldr	r2, .L17
  178 0002 1068     		ldr	r0, [r2]
- 179 0004 0423     		mov	r3, #4
+ 179 0004 4023     		mov	r3, #64
  180 0006 1840     		and	r0, r3
  181              	.LVL9:
  239:.\Generated_Source\PSoC4/LED.c **** 	LED_INTSTAT = maskedStatus;
@@ -446,7 +446,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
  183 0008 1060     		str	r0, [r2]
  240:.\Generated_Source\PSoC4/LED.c ****     return maskedStatus >> LED_SHIFT;
  184              		.loc 1 240 0
- 185 000a 8008     		lsr	r0, r0, #2
+ 185 000a 8009     		lsr	r0, r0, #6
  186              	.LVL10:
  187 000c C0B2     		uxtb	r0, r0
  241:.\Generated_Source\PSoC4/LED.c **** }
@@ -456,7 +456,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
  191              	.L18:
  192              		.align	2
  193              	.L17:
- 194 0010 10010440 		.word	1074004240
+ 194 0010 10020440 		.word	1074004496
  195              		.cfi_endproc
  196              	.LFE5:
  197              		.size	LED_ClearInterrupt, .-LED_ClearInterrupt
@@ -470,48 +470,48 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
  205 0006 00000000 		.4byte	.Ldebug_abbrev0
  206 000a 04       		.byte	0x4
  207 000b 01       		.uleb128 0x1
- 208 000c 35010000 		.4byte	.LASF28
+ 208 000c 7E010000 		.4byte	.LASF28
  209 0010 01       		.byte	0x1
- 210 0011 42000000 		.4byte	.LASF29
- 211 0015 E8010000 		.4byte	.LASF30
+ 210 0011 8B000000 		.4byte	.LASF29
+ 211 0015 27000000 		.4byte	.LASF30
  212 0019 00000000 		.4byte	.Ldebug_ranges0+0
  213 001d 00000000 		.4byte	0
  214 0021 00000000 		.4byte	.Ldebug_line0
  215 0025 02       		.uleb128 0x2
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 9
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAsM9AW.s 			page 9
 
 
  216 0026 01       		.byte	0x1
  217 0027 06       		.byte	0x6
- 218 0028 DC010000 		.4byte	.LASF0
+ 218 0028 25020000 		.4byte	.LASF0
  219 002c 02       		.uleb128 0x2
  220 002d 01       		.byte	0x1
  221 002e 08       		.byte	0x8
- 222 002f 61000000 		.4byte	.LASF1
+ 222 002f AA000000 		.4byte	.LASF1
  223 0033 02       		.uleb128 0x2
  224 0034 02       		.byte	0x2
  225 0035 05       		.byte	0x5
- 226 0036 C3010000 		.4byte	.LASF2
+ 226 0036 0C020000 		.4byte	.LASF2
  227 003a 02       		.uleb128 0x2
  228 003b 02       		.byte	0x2
  229 003c 07       		.byte	0x7
- 230 003d 9A000000 		.4byte	.LASF3
+ 230 003d E3000000 		.4byte	.LASF3
  231 0041 02       		.uleb128 0x2
  232 0042 04       		.byte	0x4
  233 0043 05       		.byte	0x5
- 234 0044 D3010000 		.4byte	.LASF4
+ 234 0044 1C020000 		.4byte	.LASF4
  235 0048 02       		.uleb128 0x2
  236 0049 04       		.byte	0x4
  237 004a 07       		.byte	0x7
- 238 004b 88000000 		.4byte	.LASF5
+ 238 004b D1000000 		.4byte	.LASF5
  239 004f 02       		.uleb128 0x2
  240 0050 08       		.byte	0x8
  241 0051 05       		.byte	0x5
- 242 0052 15010000 		.4byte	.LASF6
+ 242 0052 5E010000 		.4byte	.LASF6
  243 0056 02       		.uleb128 0x2
  244 0057 08       		.byte	0x8
  245 0058 07       		.byte	0x7
- 246 0059 F9000000 		.4byte	.LASF7
+ 246 0059 42010000 		.4byte	.LASF7
  247 005d 03       		.uleb128 0x3
  248 005e 04       		.byte	0x4
  249 005f 05       		.byte	0x5
@@ -519,37 +519,37 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
  251 0064 02       		.uleb128 0x2
  252 0065 04       		.byte	0x4
  253 0066 07       		.byte	0x7
- 254 0067 EC000000 		.4byte	.LASF8
+ 254 0067 35010000 		.4byte	.LASF8
  255 006b 04       		.uleb128 0x4
- 256 006c CD010000 		.4byte	.LASF9
+ 256 006c 16020000 		.4byte	.LASF9
  257 0070 02       		.byte	0x2
  258 0071 9801     		.2byte	0x198
  259 0073 2C000000 		.4byte	0x2c
  260 0077 04       		.uleb128 0x4
- 261 0078 CD000000 		.4byte	.LASF10
+ 261 0078 16010000 		.4byte	.LASF10
  262 007c 02       		.byte	0x2
  263 007d 9901     		.2byte	0x199
  264 007f 3A000000 		.4byte	0x3a
  265 0083 04       		.uleb128 0x4
- 266 0084 DD000000 		.4byte	.LASF11
+ 266 0084 26010000 		.4byte	.LASF11
  267 0088 02       		.byte	0x2
  268 0089 9A01     		.2byte	0x19a
  269 008b 48000000 		.4byte	0x48
  270 008f 02       		.uleb128 0x2
  271 0090 04       		.byte	0x4
  272 0091 04       		.byte	0x4
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 10
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAsM9AW.s 			page 10
 
 
- 273 0092 3C000000 		.4byte	.LASF12
+ 273 0092 85000000 		.4byte	.LASF12
  274 0096 02       		.uleb128 0x2
  275 0097 08       		.byte	0x8
  276 0098 04       		.byte	0x4
- 277 0099 C6000000 		.4byte	.LASF13
+ 277 0099 0F010000 		.4byte	.LASF13
  278 009d 02       		.uleb128 0x2
  279 009e 01       		.byte	0x1
  280 009f 08       		.byte	0x8
- 281 00a0 30010000 		.4byte	.LASF14
+ 281 00a0 79010000 		.4byte	.LASF14
  282 00a4 04       		.uleb128 0x4
  283 00a5 00000000 		.4byte	.LASF15
  284 00a9 02       		.byte	0x2
@@ -567,7 +567,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
  296 00c5 9C       		.byte	0x9c
  297 00c6 DA000000 		.4byte	0xda
  298 00ca 07       		.uleb128 0x7
- 299 00cb 10010000 		.4byte	.LASF18
+ 299 00cb 59010000 		.4byte	.LASF18
  300 00cf 01       		.byte	0x1
  301 00d0 48       		.byte	0x48
  302 00d1 6B000000 		.4byte	0x6b
@@ -589,16 +589,16 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
  318 00f6 6B000000 		.4byte	0x6b
  319 00fa 21000000 		.4byte	.LLST1
  320 00fe 08       		.uleb128 0x8
- 321 00ff 6F000000 		.4byte	.LASF24
+ 321 00ff B8000000 		.4byte	.LASF24
  322 0103 01       		.byte	0x1
  323 0104 71       		.byte	0x71
  324 0105 6B000000 		.4byte	0x6b
  325 0109 42000000 		.4byte	.LLST2
  326 010d 00       		.byte	0
  327 010e 09       		.uleb128 0x9
- 328 010f AD000000 		.4byte	.LASF20
+ 328 010f F6000000 		.4byte	.LASF20
  329 0113 01       		.byte	0x1
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 11
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAsM9AW.s 			page 11
 
 
  330 0114 88       		.byte	0x88
@@ -608,7 +608,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
  334 0121 01       		.uleb128 0x1
  335 0122 9C       		.byte	0x9c
  336 0123 09       		.uleb128 0x9
- 337 0124 B6000000 		.4byte	.LASF21
+ 337 0124 FF000000 		.4byte	.LASF21
  338 0128 01       		.byte	0x1
  339 0129 A4       		.byte	0xa4
  340 012a 6B000000 		.4byte	0x6b
@@ -617,7 +617,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
  343 0136 01       		.uleb128 0x1
  344 0137 9C       		.byte	0x9c
  345 0138 06       		.uleb128 0x6
- 346 0139 27000000 		.4byte	.LASF22
+ 346 0139 70000000 		.4byte	.LASF22
  347 013d 01       		.byte	0x1
  348 013e CF       		.byte	0xcf
  349 013f 00000000 		.4byte	.LFB4
@@ -626,20 +626,20 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
  352 0148 9C       		.byte	0x9c
  353 0149 77010000 		.4byte	0x177
  354 014d 0A       		.uleb128 0xa
- 355 014e D4000000 		.4byte	.LASF23
+ 355 014e 1D010000 		.4byte	.LASF23
  356 0152 01       		.byte	0x1
  357 0153 CF       		.byte	0xcf
  358 0154 77000000 		.4byte	0x77
  359 0158 01       		.uleb128 0x1
  360 0159 50       		.byte	0x50
  361 015a 07       		.uleb128 0x7
- 362 015b 10010000 		.4byte	.LASF18
+ 362 015b 59010000 		.4byte	.LASF18
  363 015f 01       		.byte	0x1
  364 0160 CF       		.byte	0xcf
  365 0161 77000000 		.4byte	0x77
  366 0165 60000000 		.4byte	.LLST3
  367 0169 0B       		.uleb128 0xb
- 368 016a E4000000 		.4byte	.LASF25
+ 368 016a 2D010000 		.4byte	.LASF25
  369 016e 01       		.byte	0x1
  370 016f D1       		.byte	0xd1
  371 0170 83000000 		.4byte	0x83
@@ -647,7 +647,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
  373 0175 53       		.byte	0x53
  374 0176 00       		.byte	0
  375 0177 0C       		.uleb128 0xc
- 376 0178 75000000 		.4byte	.LASF26
+ 376 0178 BE000000 		.4byte	.LASF26
  377 017c 01       		.byte	0x1
  378 017d EC       		.byte	0xec
  379 017e 6B000000 		.4byte	0x6b
@@ -656,9 +656,9 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
  382 018a 01       		.uleb128 0x1
  383 018b 9C       		.byte	0x9c
  384 018c 08       		.uleb128 0x8
- 385 018d 23010000 		.4byte	.LASF27
+ 385 018d 6C010000 		.4byte	.LASF27
  386 0191 01       		.byte	0x1
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 12
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAsM9AW.s 			page 12
 
 
  387 0192 EE       		.byte	0xee
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
  441 002f 0B       		.uleb128 0xb
  442 0030 3B       		.uleb128 0x3b
  443 0031 05       		.uleb128 0x5
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 13
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAsM9AW.s 			page 13
 
 
  444 0032 49       		.uleb128 0x49
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
  498 0069 03       		.uleb128 0x3
  499 006a 0E       		.uleb128 0xe
  500 006b 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 14
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAsM9AW.s 			page 14
 
 
  501 006c 0B       		.uleb128 0xb
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
  555 00a3 3A       		.uleb128 0x3a
  556 00a4 0B       		.uleb128 0xb
  557 00a5 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 15
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAsM9AW.s 			page 15
 
 
  558 00a6 0B       		.uleb128 0xb
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
  612 002c 0A000000 		.4byte	.LVL4
  613 0030 18000000 		.4byte	.LFE1
  614 0034 0400     		.2byte	0x4
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 16
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAsM9AW.s 			page 16
 
 
  615 0036 F3       		.byte	0xf3
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
  669 0014 18000000 		.4byte	.LFE0-.LFB0
  670 0018 00000000 		.4byte	.LFB1
  671 001c 18000000 		.4byte	.LFE1-.LFB1
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 17
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAsM9AW.s 			page 17
 
 
  672 0020 00000000 		.4byte	.LFB2
@@ -1010,144 +1010,148 @@ ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 1
  707              	.LASF19:
  708 0021 76616C75 		.ascii	"value\000"
  708      6500
- 709              	.LASF22:
- 710 0027 4C45445F 		.ascii	"LED_SetInterruptMode\000"
- 710      53657449 
- 710      6E746572 
- 710      72757074 
- 710      4D6F6465 
- 711              	.LASF12:
- 712 003c 666C6F61 		.ascii	"float\000"
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 18
+ 709              	.LASF30:
+ 710 0027 473A5C47 		.ascii	"G:\\GitHub_Code\\firmware_stone\\fw-stone\\fw-BLE-M"
+ 710      69744875 
+ 710      625F436F 
+ 710      64655C66 
+ 710      69726D77 
+ 711 0056 6F746F72 		.ascii	"otor\\fw-stone\\Stone.cydsn\000"
+ 711      5C66772D 
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAsM9AW.s 			page 18
 
 
- 712      7400
- 713              	.LASF29:
- 714 0042 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\LED.c\000"
- 714      6E657261 
- 714      7465645F 
- 714      536F7572 
- 714      63655C50 
- 715              	.LASF1:
- 716 0061 756E7369 		.ascii	"unsigned char\000"
- 716      676E6564 
- 716      20636861 
- 716      7200
- 717              	.LASF24:
- 718 006f 64725661 		.ascii	"drVal\000"
- 718      6C00
- 719              	.LASF26:
- 720 0075 4C45445F 		.ascii	"LED_ClearInterrupt\000"
- 720      436C6561 
- 720      72496E74 
- 720      65727275 
- 720      707400
- 721              	.LASF5:
- 722 0088 6C6F6E67 		.ascii	"long unsigned int\000"
- 722      20756E73 
- 722      69676E65 
- 722      6420696E 
- 722      7400
- 723              	.LASF3:
- 724 009a 73686F72 		.ascii	"short unsigned int\000"
- 724      7420756E 
- 724      7369676E 
- 724      65642069 
- 724      6E7400
- 725              	.LASF20:
- 726 00ad 4C45445F 		.ascii	"LED_Read\000"
- 726      52656164 
- 726      00
- 727              	.LASF21:
- 728 00b6 4C45445F 		.ascii	"LED_ReadDataReg\000"
- 728      52656164 
- 728      44617461 
- 728      52656700 
- 729              	.LASF13:
- 730 00c6 646F7562 		.ascii	"double\000"
- 730      6C6500
- 731              	.LASF10:
- 732 00cd 75696E74 		.ascii	"uint16\000"
- 732      313600
- 733              	.LASF23:
- 734 00d4 706F7369 		.ascii	"position\000"
- 734      74696F6E 
- 734      00
- 735              	.LASF11:
- 736 00dd 75696E74 		.ascii	"uint32\000"
- 736      333200
- 737              	.LASF25:
- 738 00e4 696E7472 		.ascii	"intrCfg\000"
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 19
+ 711      73746F6E 
+ 711      655C5374 
+ 711      6F6E652E 
+ 712              	.LASF22:
+ 713 0070 4C45445F 		.ascii	"LED_SetInterruptMode\000"
+ 713      53657449 
+ 713      6E746572 
+ 713      72757074 
+ 713      4D6F6465 
+ 714              	.LASF12:
+ 715 0085 666C6F61 		.ascii	"float\000"
+ 715      7400
+ 716              	.LASF29:
+ 717 008b 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\LED.c\000"
+ 717      6E657261 
+ 717      7465645F 
+ 717      536F7572 
+ 717      63655C50 
+ 718              	.LASF1:
+ 719 00aa 756E7369 		.ascii	"unsigned char\000"
+ 719      676E6564 
+ 719      20636861 
+ 719      7200
+ 720              	.LASF24:
+ 721 00b8 64725661 		.ascii	"drVal\000"
+ 721      6C00
+ 722              	.LASF26:
+ 723 00be 4C45445F 		.ascii	"LED_ClearInterrupt\000"
+ 723      436C6561 
+ 723      72496E74 
+ 723      65727275 
+ 723      707400
+ 724              	.LASF5:
+ 725 00d1 6C6F6E67 		.ascii	"long unsigned int\000"
+ 725      20756E73 
+ 725      69676E65 
+ 725      6420696E 
+ 725      7400
+ 726              	.LASF3:
+ 727 00e3 73686F72 		.ascii	"short unsigned int\000"
+ 727      7420756E 
+ 727      7369676E 
+ 727      65642069 
+ 727      6E7400
+ 728              	.LASF20:
+ 729 00f6 4C45445F 		.ascii	"LED_Read\000"
+ 729      52656164 
+ 729      00
+ 730              	.LASF21:
+ 731 00ff 4C45445F 		.ascii	"LED_ReadDataReg\000"
+ 731      52656164 
+ 731      44617461 
+ 731      52656700 
+ 732              	.LASF13:
+ 733 010f 646F7562 		.ascii	"double\000"
+ 733      6C6500
+ 734              	.LASF10:
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAsM9AW.s 			page 19
 
 
- 738      43666700 
- 739              	.LASF8:
- 740 00ec 756E7369 		.ascii	"unsigned int\000"
- 740      676E6564 
- 740      20696E74 
- 740      00
- 741              	.LASF7:
- 742 00f9 6C6F6E67 		.ascii	"long long unsigned int\000"
- 742      206C6F6E 
- 742      6720756E 
- 742      7369676E 
- 742      65642069 
- 743              	.LASF18:
- 744 0110 6D6F6465 		.ascii	"mode\000"
- 744      00
- 745              	.LASF6:
- 746 0115 6C6F6E67 		.ascii	"long long int\000"
- 746      206C6F6E 
- 746      6720696E 
- 746      7400
- 747              	.LASF27:
- 748 0123 6D61736B 		.ascii	"maskedStatus\000"
- 748      65645374 
- 748      61747573 
- 748      00
- 749              	.LASF14:
- 750 0130 63686172 		.ascii	"char\000"
- 750      00
- 751              	.LASF28:
- 752 0135 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 752      4320342E 
- 752      392E3320 
- 752      32303135 
- 752      30333033 
- 753 0168 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 753      20726576 
- 753      6973696F 
- 753      6E203232 
- 753      31323230 
- 754 019b 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 754      66756E63 
- 754      74696F6E 
- 754      2D736563 
- 754      74696F6E 
- 755              	.LASF2:
- 756 01c3 73686F72 		.ascii	"short int\000"
- 756      7420696E 
- 756      7400
- 757              	.LASF9:
- 758 01cd 75696E74 		.ascii	"uint8\000"
- 758      3800
- 759              	.LASF4:
- 760 01d3 6C6F6E67 		.ascii	"long int\000"
- 760      20696E74 
- 760      00
- 761              	.LASF0:
- 762 01dc 7369676E 		.ascii	"signed char\000"
-ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccM7y0oU.s 			page 20
+ 735 0116 75696E74 		.ascii	"uint16\000"
+ 735      313600
+ 736              	.LASF23:
+ 737 011d 706F7369 		.ascii	"position\000"
+ 737      74696F6E 
+ 737      00
+ 738              	.LASF11:
+ 739 0126 75696E74 		.ascii	"uint32\000"
+ 739      333200
+ 740              	.LASF25:
+ 741 012d 696E7472 		.ascii	"intrCfg\000"
+ 741      43666700 
+ 742              	.LASF8:
+ 743 0135 756E7369 		.ascii	"unsigned int\000"
+ 743      676E6564 
+ 743      20696E74 
+ 743      00
+ 744              	.LASF7:
+ 745 0142 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 745      206C6F6E 
+ 745      6720756E 
+ 745      7369676E 
+ 745      65642069 
+ 746              	.LASF18:
+ 747 0159 6D6F6465 		.ascii	"mode\000"
+ 747      00
+ 748              	.LASF6:
+ 749 015e 6C6F6E67 		.ascii	"long long int\000"
+ 749      206C6F6E 
+ 749      6720696E 
+ 749      7400
+ 750              	.LASF27:
+ 751 016c 6D61736B 		.ascii	"maskedStatus\000"
+ 751      65645374 
+ 751      61747573 
+ 751      00
+ 752              	.LASF14:
+ 753 0179 63686172 		.ascii	"char\000"
+ 753      00
+ 754              	.LASF28:
+ 755 017e 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 755      4320342E 
+ 755      392E3320 
+ 755      32303135 
+ 755      30333033 
+ 756 01b1 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 756      20726576 
+ 756      6973696F 
+ 756      6E203232 
+ 756      31323230 
+ 757 01e4 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 757      66756E63 
+ 757      74696F6E 
+ 757      2D736563 
+ 757      74696F6E 
+ 758              	.LASF2:
+ 759 020c 73686F72 		.ascii	"short int\000"
+ARM GAS  C:\Users\tiantiaf\AppData\Local\Temp\ccAsM9AW.s 			page 20
 
 
- 762      65642063 
- 762      68617200 
- 763              	.LASF30:
- 764 01e8 453A5C53 		.ascii	"E:\\Stone_Project\\fw-BLE-Motor\\fw-stone\\Stone.cy"
- 764      746F6E65 
- 764      5F50726F 
- 764      6A656374 
- 764      5C66772D 
- 765 0217 64736E00 		.ascii	"dsn\000"
+ 759      7420696E 
+ 759      7400
+ 760              	.LASF9:
+ 761 0216 75696E74 		.ascii	"uint8\000"
+ 761      3800
+ 762              	.LASF4:
+ 763 021c 6C6F6E67 		.ascii	"long int\000"
+ 763      20696E74 
+ 763      00
+ 764              	.LASF0:
+ 765 0225 7369676E 		.ascii	"signed char\000"
+ 765      65642063 
+ 765      68617200 
  766              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

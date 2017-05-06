@@ -1,8 +1,8 @@
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/CortexM0/ARM_GCC_493/Debug/CyBootAsmGnu.o : E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cyfittergnu.inc 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/CortexM0/ARM_GCC_493/Debug/CyBootAsmGnu.o : G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cyfittergnu.inc 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc : 
 
-E:/Stone_Project/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cyfittergnu.inc : 
+G:/GitHub_Code/firmware_stone/fw-stone/fw-BLE-Motor/fw-stone/Stone.cydsn/Generated_Source/PSoC4/cyfittergnu.inc : 
 

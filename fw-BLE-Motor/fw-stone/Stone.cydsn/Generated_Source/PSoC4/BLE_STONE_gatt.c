@@ -141,6 +141,15 @@ CYBLE_STATE_T cyBle_state;
 uint8 cyBle_attValuesCCCD[CYBLE_GATT_DB_CCCD_COUNT];
 #endif /* CYBLE_GATT_DB_CCCD_COUNT != 0u */
 
+const uint8 cyBle_attUuid128[][16u] = {
+    /* STONE_BLE */
+    { 0xFBu, 0x34u, 0x9Bu, 0x5Fu, 0x80u, 0x00u, 0x00u, 0x80u, 0x00u, 0x10u, 0x00u, 0x00u, 0xBBu, 0xCBu, 0x00u, 0x00u },
+    /* CTR_LED */
+    { 0xFBu, 0x34u, 0x9Bu, 0x5Fu, 0x80u, 0x00u, 0x00u, 0x80u, 0x00u, 0x10u, 0x00u, 0x00u, 0xB2u, 0xCBu, 0x00u, 0x00u },
+    /* CTR_MOTOR */
+    { 0xFBu, 0x34u, 0x9Bu, 0x5Fu, 0x80u, 0x00u, 0x00u, 0x80u, 0x00u, 0x10u, 0x00u, 0x00u, 0xB1u, 0xCBu, 0x00u, 0x00u },
+};
+
 CYBLE_GATTS_ATT_GEN_VAL_LEN_T cyBle_attValuesLen[CYBLE_GATT_DB_ATT_VAL_COUNT] = {
     { 0x0008u, (void *)&cyBle_attValues[0] }, /* Device Name */
     { 0x0002u, (void *)&cyBle_attValues[8] }, /* Appearance */
@@ -148,8 +157,11 @@ CYBLE_GATTS_ATT_GEN_VAL_LEN_T cyBle_attValuesLen[CYBLE_GATT_DB_ATT_VAL_COUNT] = 
     { 0x0001u, (void *)&cyBle_attValues[18] }, /* Central Address Resolution */
     { 0x0004u, (void *)&cyBle_attValues[19] }, /* Service Changed */
     { 0x0002u, (void *)&cyBle_attValuesCCCD[0] }, /* Client Characteristic Configuration */
+    { 0x0010u, (void *)&cyBle_attUuid128[0] }, /* STONE_BLE UUID */
+    { 0x0010u, (void *)&cyBle_attUuid128[1] }, /* CTR_LED UUID */
     { 0x0004u, (void *)&cyBle_attValues[23] }, /* CTR_LED */
     { 0x0007u, (void *)&cyBle_attValues[27] }, /* Characteristic User Description */
+    { 0x0010u, (void *)&cyBle_attUuid128[2] }, /* CTR_MOTOR UUID */
     { 0x0004u, (void *)&cyBle_attValues[34] }, /* CTR_MOTOR */
     { 0x0009u, (void *)&cyBle_attValues[38] }, /* Characteristic User Description */
 };
@@ -168,13 +180,13 @@ const CYBLE_GATTS_DB_T cyBle_gattDB[0x14u] = {
     { 0x000Bu, 0x2803u /* Characteristic                      */, 0x00002001u /* ind   */, 0x000Du, {{0x2A05u, NULL}}                           },
     { 0x000Cu, 0x2A05u /* Service Changed                     */, 0x00002000u /* ind   */, 0x000Du, {{0x0004u, (void *)&cyBle_attValuesLen[4]}} },
     { 0x000Du, 0x2902u /* Client Characteristic Configuration */, 0x00000A04u /* rd,wr */, 0x000Du, {{0x0002u, (void *)&cyBle_attValuesLen[5]}} },
-    { 0x000Eu, 0x2800u /* Primary service                     */, 0x00000001u /*       */, 0x0014u, {{0xCBBBu, NULL}}                           },
-    { 0x000Fu, 0x2803u /* Characteristic                      */, 0x00000A01u /* rd,wr */, 0x0011u, {{0xcbb2u, NULL}}                           },
-    { 0x0010u, 0xcbb2u /* CTR_LED                             */, 0x00010A04u /* rd,wr */, 0x0011u, {{0x0004u, (void *)&cyBle_attValuesLen[6]}} },
-    { 0x0011u, 0x2901u /* Characteristic User Description     */, 0x00010201u /* rd    */, 0x0011u, {{0x0007u, (void *)&cyBle_attValuesLen[7]}} },
-    { 0x0012u, 0x2803u /* Characteristic                      */, 0x00000A01u /* rd,wr */, 0x0014u, {{0xcbb1u, NULL}}                           },
-    { 0x0013u, 0xcbb1u /* CTR_MOTOR                           */, 0x00010A04u /* rd,wr */, 0x0014u, {{0x0004u, (void *)&cyBle_attValuesLen[8]}} },
-    { 0x0014u, 0x2901u /* Characteristic User Description     */, 0x00010201u /* rd    */, 0x0014u, {{0x0009u, (void *)&cyBle_attValuesLen[9]}} },
+    { 0x000Eu, 0x2800u /* Primary service                     */, 0x00080001u /*       */, 0x0014u, {{0x0010u, (void *)&cyBle_attValuesLen[6]}} },
+    { 0x000Fu, 0x2803u /* Characteristic                      */, 0x00000A01u /* rd,wr */, 0x0011u, {{0x0010u, (void *)&cyBle_attValuesLen[7]}} },
+    { 0x0010u, 0xcbb2u /* CTR_LED                             */, 0x00090A04u /* rd,wr */, 0x0011u, {{0x0004u, (void *)&cyBle_attValuesLen[8]}} },
+    { 0x0011u, 0x2901u /* Characteristic User Description     */, 0x00010201u /* rd    */, 0x0011u, {{0x0007u, (void *)&cyBle_attValuesLen[9]}} },
+    { 0x0012u, 0x2803u /* Characteristic                      */, 0x00000A01u /* rd,wr */, 0x0014u, {{0x0010u, (void *)&cyBle_attValuesLen[10]}} },
+    { 0x0013u, 0xcbb1u /* CTR_MOTOR                           */, 0x00090A04u /* rd,wr */, 0x0014u, {{0x0004u, (void *)&cyBle_attValuesLen[11]}} },
+    { 0x0014u, 0x2901u /* Characteristic User Description     */, 0x00010201u /* rd    */, 0x0014u, {{0x0009u, (void *)&cyBle_attValuesLen[12]}} },
 };
 
 
